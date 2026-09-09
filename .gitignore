@@ -1,0 +1,19 @@
+node_modules/
+.next/
+.env
+.env.local
+*.log
+
+# Archivos del entorno del sistema (no son parte del proyecto)
+.cache/
+.config/
+.npm/
+.npm-global/
+.ssh/
+.wget-hsts
+.gitconfig
+
+# Archivos internos de la sesión de Claude Code / Cowork (settings, tokens,
+# hooks) — NUNCA se comitean. Solo las definiciones de agentes son del proyecto.
+.claude/*
+!.claude/agents/

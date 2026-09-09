@@ -1,0 +1,32 @@
+{
+  "ley_suprema": "memoria/PRINCIPIOS-DEL-EQUIPO.md",
+  "idea_actual_puntero": "memoria/ideas/IDEA-ACTUAL.md",
+  "nota_equipo_abierto": "Todos los agentes son 100% generalistas (ver ley_suprema). Ninguno tiene rubro hardcodeado: el rubro sale siempre de la idea a la que apunta idea_actual_puntero.",
+  "agentes": [
+    { "id": "director", "nombre": "director-estrategia", "archivo": ".claude/agents/director-estrategia.md" },
+    { "id": "pesimista", "nombre": "agente-pesimista", "archivo": ".claude/agents/agente-pesimista.md" },
+    { "id": "finanzas", "nombre": "agente-finanzas", "archivo": ".claude/agents/agente-finanzas.md" },
+    { "id": "compras", "nombre": "agente-compras-procurement", "archivo": ".claude/agents/agente-compras-procurement.md" },
+    { "id": "analista", "nombre": "agente-analista", "archivo": ".claude/agents/agente-analista.md" },
+    { "id": "marketing", "nombre": "agente-marketing", "archivo": ".claude/agents/agente-marketing.md" },
+    { "id": "legal", "nombre": "agente-legal", "archivo": ".claude/agents/agente-legal.md" },
+    { "id": "operaciones", "nombre": "agente-operaciones", "archivo": ".claude/agents/agente-operaciones.md" },
+    { "id": "producto", "nombre": "agente-producto", "archivo": ".claude/agents/agente-producto.md" },
+    { "id": "tecnologia", "nombre": "agente-tecnologia", "archivo": ".claude/agents/agente-tecnologia.md" },
+    { "id": "closer", "nombre": "agente-closer", "archivo": ".claude/agents/agente-closer.md" },
+    { "id": "talento", "nombre": "agente-talento", "archivo": ".claude/agents/agente-talento.md" },
+    { "id": "cliente", "nombre": "agente-cliente", "archivo": ".claude/agents/agente-cliente.md" }
+  ],
+  "sub_agentes_marketing_extendidos": [
+    { "id": "marketing-copywriting", "archivo": ".claude/agents/marketing/marketing-copywriting.md" },
+    { "id": "marketing-paid-media", "archivo": ".claude/agents/marketing/marketing-paid-media.md" },
+    { "id": "marketing-social-organic", "archivo": ".claude/agents/marketing/marketing-social-organic.md" },
+    { "id": "marketing-seo-content", "archivo": ".claude/agents/marketing/marketing-seo-content.md" },
+    { "id": "marketing-crm-retention", "archivo": ".claude/agents/marketing/marketing-crm-retention.md" }
+  ],
+  "modos": {
+    "modo1_idea_empresa": ["director", "pesimista", "analista", "finanzas", "compras"],
+    "modo2_capital_idea": ["analista", "finanzas", "compras", "pesimista"],
+    "modo3_mejorar_negocio": ["operaciones", "compras", "finanzas", "talento", "cliente", "producto", "legal"]
+  }
+}
