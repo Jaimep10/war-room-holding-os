@@ -50,8 +50,34 @@ function envVar(name, fallback) {
 const AGENTS_SOURCE_PATH = envVar("AGENTS_SOURCE_PATH", ".claude/agents");
 const IDEAS_PATH = envVar("IDEAS_PATH", "memoria/ideas");
 const PRINCIPIO_PATH = envVar("PRINCIPIO_PATH", "memoria/PRINCIPIOS-DEL-EQUIPO.md");
+const SISTEMA_PATH = envVar("SISTEMA_PATH", "memoria/sistema.md");
+
+const TONO_BRUTAL_INSTRUCCION_ACTIVA = "Activa puteada constructiva. Sin anestesia.";
+
+/**
+ * Instrucción de tono a anteponer/agregar al prompt, según el toggle
+ * "Modo Amable" / "Modo Brutal (Roast Me)" del dashboard (ver src/App.tsx).
+ * El fondo (score, veredicto, Informe de Autopsia de memoria/sistema.md) NUNCA
+ * cambia con esto — solo cambia la forma de la respuesta.
+ */
+function buildTonoSuffix(tono) {
+  if (tono === "amable") {
+    return [
+      "\n\n# TONO ACTIVO: MODO AMABLE",
+      "modo_tono: amable",
+      "Suaviza la forma (sin sarcasmo, sin adjetivos duros). El score, el veredicto y el Informe de",
+      "Autopsia (si aplica) se mantienen EXACTAMENTE igual — no se suaviza el fondo, solo la frase.",
+    ].join("\n");
+  }
+  return ["\n\n# TONO ACTIVO: MODO BRUTAL (ROAST ME)", "modo_tono: brutal", TONO_BRUTAL_INSTRUCCION_ACTIVA].join(
+    "\n"
+  );
+}
 
 const manifest = require("./agents-manifest.json");
+
+/** IDs de los 13 agentes core a los que aplica memoria/sistema.md (excluye sub-agentes de marketing). */
+const AGENTES_CORE_IDS = (manifest.agentes || []).map((a) => a.id);
 
 function readIfExists(absPath) {
   return fs.existsSync(absPath) ? fs.readFileSync(absPath, "utf-8") : "";
@@ -98,8 +124,13 @@ function getIdeaActualPointer() {
  * Devuelve el system prompt completo y listo para enviar a un LLM para el
  * agente `agenteId` (ej. "pesimista", "finanzas", "director", "marketing-copywriting").
  * Lanza un error si el agente no existe ni en el manifiesto ni por convención de nombres.
+ *
+ * @param {string} agenteId
+ * @param {"amable"|"brutal"} [tono="brutal"] Tono del toggle del dashboard (ver src/App.tsx).
+ *   "brutal" es el default porque es el default de memoria/sistema.md. El fondo (score,
+ *   veredicto, Informe de Autopsia) nunca cambia con el tono — solo la forma de la respuesta.
  */
-function getAgenteSystemPrompt(agenteId) {
+function getAgenteSystemPrompt(agenteId, tono = "brutal") {
   const principios = readIfExists(path.join(ROOT, PRINCIPIO_PATH));
 
   const agentFile = resolveAgentFile(agenteId);
@@ -109,6 +140,9 @@ function getAgenteSystemPrompt(agenteId) {
     );
   }
   const agentBody = stripFrontmatter(fs.readFileSync(agentFile, "utf-8")).trim();
+
+  const esCore = AGENTES_CORE_IDS.includes(agenteId);
+  const sistema = esCore ? readIfExists(path.join(ROOT, SISTEMA_PATH)) : "";
 
   const { raw: punteroRaw, archivo: ideaFile } = getIdeaActualPointer();
   const ideaContent = ideaFile ? readIfExists(path.join(ROOT, IDEAS_PATH, ideaFile)) : "";
@@ -123,6 +157,9 @@ function getAgenteSystemPrompt(agenteId) {
   return [
     "# LEY SUPREMA DEL EQUIPO (memoria/PRINCIPIOS-DEL-EQUIPO.md)",
     principios || "_(no se encontró PRINCIPIOS-DEL-EQUIPO.md)_",
+    esCore
+      ? `\n\n# PERSONALIDAD BASE (memoria/sistema.md)\n\n${sistema || "_(no se encontró sistema.md)_"}`
+      : "",
     "\n\n# PUNTERO DE IDEA ACTUAL (memoria/ideas/IDEA-ACTUAL.md)",
     punteroRaw || "_(no existe IDEA-ACTUAL.md todavía)_",
     ideaFile
@@ -131,17 +168,27 @@ function getAgenteSystemPrompt(agenteId) {
     `\n\n# DEFINICIÓN DEL AGENTE (${agenteId})`,
     agentBody,
     bibliotecaContent ? `\n\n# BIBLIOTECA DEL AGENTE${bibliotecaContent}` : "",
+    esCore ? buildTonoSuffix(tono === "amable" ? "amable" : "brutal") : "",
   ].join("\n");
 }
 
-module.exports = { getAgenteSystemPrompt, resolveAgentFile, manifest, ROOT };
+module.exports = {
+  getAgenteSystemPrompt,
+  resolveAgentFile,
+  buildTonoSuffix,
+  AGENTES_CORE_IDS,
+  manifest,
+  ROOT,
+};
 
-// Auto-prueba: `node dashboard-emergent/api-wrapper.js pesimista`
+// Auto-prueba: `node dashboard-emergent/api-wrapper.js pesimista brutal`
+//              `node dashboard-emergent/api-wrapper.js pesimista amable`
 if (require.main === module) {
   const id = process.argv[2] || "pesimista";
+  const tono = process.argv[3] === "amable" ? "amable" : "brutal";
   try {
-    const prompt = getAgenteSystemPrompt(id);
-    console.log(`--- system prompt para "${id}" (${prompt.length} caracteres) ---\n`);
+    const prompt = getAgenteSystemPrompt(id, tono);
+    console.log(`--- system prompt para "${id}" [tono: ${tono}] (${prompt.length} caracteres) ---\n`);
     console.log(prompt.slice(0, 1200) + (prompt.length > 1200 ? "\n... (truncado)" : ""));
   } catch (err) {
     console.error("ERROR:", err.message);
