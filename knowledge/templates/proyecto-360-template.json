@@ -1,0 +1,44 @@
+{
+  "proyecto": "",
+  "fecha_creacion": "",
+  "estado_general": "incompleto",
+  "dimensiones": {
+    "plan_gestion": {
+      "estado": "pendiente",
+      "quien_hace_que": "",
+      "en_cuanto_tiempo": ""
+    },
+    "modelo_negocio": {
+      "estado": "pendiente",
+      "como_entra_el_dinero": "",
+      "margen": "",
+      "recurrencia": ""
+    },
+    "canales_venta": {
+      "estado": "pendiente",
+      "donde_se_vende_hoy": ""
+    },
+    "cliente_ideal": {
+      "estado": "pendiente",
+      "dolor": "",
+      "edad": "",
+      "presupuesto": "",
+      "miedo": ""
+    },
+    "caracteristicas_producto": {
+      "estado": "pendiente",
+      "que_incluye": "",
+      "que_no_incluye": ""
+    },
+    "ubicacion_logistica": {
+      "estado": "pendiente",
+      "por_que_esa_zona": "",
+      "competencia_ahi": ""
+    },
+    "destrezas_equipo": {
+      "estado": "pendiente",
+      "que_sabe_hacer_el_fundador": "",
+      "que_debe_contratar": ""
+    }
+  }
+}
