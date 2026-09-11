@@ -3,14 +3,15 @@
 import { IdeaSummary } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Radar, ShieldAlert, Lightbulb, Wallet, TrendingUp } from "lucide-react";
+import { Radar, ShieldAlert, Lightbulb, Wallet, TrendingUp, Building2 } from "lucide-react";
 
-export type Modo = "idea-empresa" | "capital-idea" | "negocio-existente";
+export type Modo = "idea-empresa" | "capital-idea" | "negocio-existente" | "clientes-productos";
 
 const MODOS: { key: Modo; label: string; icon: React.ReactNode }[] = [
   { key: "idea-empresa", label: "Idea → Empresa", icon: <Lightbulb size={13} /> },
   { key: "capital-idea", label: "Capital → Idea", icon: <Wallet size={13} /> },
   { key: "negocio-existente", label: "Mejorar Negocio", icon: <TrendingUp size={13} /> },
+  { key: "clientes-productos", label: "Clientes/Productos", icon: <Building2 size={13} /> },
 ];
 
 export default function Header({
@@ -80,12 +81,12 @@ export default function Header({
               ))}
             </select>
           </div>
-        ) : (
+        ) : modo !== "clientes-productos" ? (
           <div className="flex flex-col items-end">
             <label className="text-[10px] uppercase tracking-wide text-gray-500 mb-0.5">IDEA-ACTUAL</label>
             <div className="text-xs text-gray-300 max-w-[260px] truncate">{currentFile ?? "—"}</div>
           </div>
-        )}
+        ) : null}
 
         <Button variant="outline" size="sm" onClick={onOpenDemo}>
           <ShieldAlert size={14} />

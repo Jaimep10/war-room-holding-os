@@ -40,3 +40,19 @@ export interface DeliverableDef {
   agente: string;
   label: string;
 }
+
+// ---------- Clientes (clientes/<slug>/) y Productos (producto/<slug>/) ----------
+
+export interface ClienteSummary {
+  slug: string;
+  nombre: string;
+  archivos: string[]; // .md sueltos en la raíz de la carpeta del cliente
+  kitRedes: string[]; // archivos dentro de kit-redes/, si existe
+  modoAbierto: boolean; // detectado por README.md mencionando "Modo Abierto"
+}
+
+export interface ProductoSummary {
+  slug: string;
+  nombre: string;
+  archivos: string[];
+}

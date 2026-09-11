@@ -8,6 +8,7 @@ import KanbanBoard from "@/components/KanbanBoard";
 import WarRoomPanel from "@/components/WarRoomPanel";
 import CapitalIdeaMode from "@/components/CapitalIdeaMode";
 import NegocioExistenteMode from "@/components/NegocioExistenteMode";
+import ClientesProductosPanel from "@/components/ClientesProductosPanel";
 import OpenTeamModal from "@/components/OpenTeamModal";
 
 export default function Dashboard({
@@ -94,6 +95,8 @@ export default function Dashboard({
       {modo === "capital-idea" && <CapitalIdeaMode onGenerated={onModeGenerated} />}
 
       {modo === "negocio-existente" && <NegocioExistenteMode onGenerated={onModeGenerated} />}
+
+      {modo === "clientes-productos" && <ClientesProductosPanel />}
 
       <WarRoomPanel agents={agents} apiKeyConfigured={apiKeyConfigured} />
 
