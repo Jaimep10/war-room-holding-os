@@ -1,0 +1,35 @@
+{
+  "rubro": "Cafeterías de especialidad en Quito, Ecuador",
+  "tam_real_ecuador": "No hay una cifra oficial exclusiva de 'café de especialidad' en Ecuador. Lo verificable: el sector de cafeterías (general, no solo especialidad) en Ecuador tenía 13.407 establecimientos a fines de 2023 (crecimiento del 48% en 5 años); dentro de ese universo, la cadena Sweet & Coffee facturó USD 64.7 millones en 2023 (+19% vs 2022) y Juan Valdez cerca de USD 22 millones (+21% vs 2022) — fuente: https://www.primicias.ec/economia/dia-internacional-cafe-cafeterias-produccion-starbucks-80168/. Un dato histórico más antiguo (2018) reporta que seis cafeterías reunieron en conjunto USD 81 millones en ventas, pero esa fuente (elproductor.com) dio error 403 al intentar verificar el detalle completo, por lo que se usa como referencia parcial. No se encontró una cifra específica de TAM/SAM en dólares solo para el segmento 'especialidad' (grano trazable, tueste artesanal, tercera ola) en Quito o Ecuador.",
+  "competencia": [
+    "FANKØR (Quito, Calle Whymper y Av. Francisco de Orellana) - ranking #4 Top 100 Sudamérica 2025, degustación de 3 filtrados USD 15",
+    "Café Guayasamín (Quito, varias sedes incl. República de El Salvador y Portugal) - ranking #21 Top 100 Sudamérica 2025, espresso/filtrado/flat white USD 3-4",
+    "Stratto | Bodega de Café (Quito, La Floresta, Vizcaya y Valladolid) - ranking #54 Top 100 Sudamérica 2025, espresso/filtrado desde USD 2.25",
+    "Sweet & Coffee (cadena nacional, grupo Dulcafe) - líder del mercado masivo de cafeterías con USD 64.7M en ventas 2023, no es especialidad pura pero es la referencia de escala",
+    "Juan Valdez Ecuador (cadena, franquicia colombiana) - USD 22M en ventas 2023, compite en el segmento premium/gourmet cercano a especialidad",
+    "Starbucks - entró a Ecuador en agosto 2024 con locales en centros comerciales de Quito, presión adicional sobre el segmento premium"
+  ],
+  "precios_reales": "Rango real observado en cafeterías de especialidad de Quito (fuente: Primicias, ranking Top 100 Sudamérica 2025): bebidas de especialidad estándar (espresso, filtrado, flat white) entre USD 2.25 y USD 4.00; bebidas de firma/especiales entre USD 3.50 y 3.75 (ej. 'Sunrise coffee', 'Honey Peachment'); experiencias premium tipo cata (degustación de 3 filtrados en FANKØR) hasta USD 15.00. No se encontró un promedio ponderado oficial del mercado de Quito, solo estos puntos de precio verificados por local.",
+  "regulacion": "Para operar una cafetería en Quito se requiere, según fuentes municipales y de gestoría (bomberosquito.gob.ec y expertax.ec): 1) RUC (gratuito), 2) Patente Municipal (gratuita), 3) LUAE - Licencia Metropolitana Única de Actividades Económicas, trámite digital gratuito vía pam.quito.gob.ec que integra la inspección de prevención de incendios de Bomberos Quito (obligatoria antes de la autorización final), 4) Permiso de Bomberos (costo variable, renovación anual), 5) PAF - Permiso Anual de Funcionamiento, USD 20-50 según categoría del establecimiento, 6) Permiso ARCSA (costo variable, trámite de 48h tras el pago) para establecimientos que manipulan/venden alimentos, 7) Registro en Ministerio de Turismo y en el Registro de Turismo de Quito (procesos de ~10-15 días hábiles), 8) Permiso Ambiental vía sistema SUIA (MAATE) si aplica, 9) Licencia del Ministerio de Salud Pública (MSP) con inspección sanitaria y renovación anual. Fuentes: https://www.bomberosquito.gob.ec/prevencion-y-seguridad-contra-incendios/luae-y-permisos-de-funcionamiento/ y https://expertax.ec/permisos-de-funcionamiento-minimarket-tiendas-panaderias-quito/",
+  "proveedores": [
+    "Cosecha Roja - fabricante ecuatoriano, café + cafeteras/molinos industriales (cosecharoja.ec)",
+    "Hoja Verde Gourmet - productor ecuatoriano de café y chocolate para hoteles/restaurantes/cafeterías",
+    "Café Minerva - comercializadora, café tostado y molido, grano entero, máquinas expendedoras",
+    "World of Coffee - importador de máquinas, molinos, equipos e insumos para cafetería",
+    "Grupo ile - fabricante, café entre su portafolio junto a aceites, salsas y condimentos",
+    "No se encontró un directorio consolidado y verificado exclusivamente de tostadores de café de especialidad (trazabilidad de finca) en Ecuador con precios de mayoreo publicados - fuente no disponible"
+  ],
+  "riesgo_principal": "Compresión de márgenes por dos frentes simultáneos: (1) entrada de cadenas internacionales con capital fuerte (Starbucks llegó a Quito en agosto 2024) y cadenas nacionales ya dominantes en escala (Sweet & Coffee con USD 64.7M en ventas 2023, +19% interanual) que compiten por el mismo real estate y tráfico de clientes premium; y (2) déficit estructural de materia prima local: Ecuador solo produce ~150.000 sacos de café al año contra una demanda nacional de ~300.000 sacos, es decir cubre apenas el 50% del consumo y el resto se importa de Brasil, Vietnam, Colombia y Centroamérica, lo que presiona costos y disponibilidad de grano de calidad consistente para el segmento de especialidad. Fuente: https://www.primicias.ec/economia/dia-internacional-cafe-cafeterias-produccion-starbucks-80168/",
+  "oportunidad": "El segmento de especialidad en Quito ya tiene validación externa de calidad: tres cafeterías quiteñas (FANKØR #4, Café Guayasamín #21, Stratto #54) entraron al Top 100 Sudamérica 2025, lo que da visibilidad regional y narrativa de 'destino de café de especialidad' aprovechable para turismo y prensa. Además, el consumo per cápita de café en Ecuador está creciendo (5%-10% de crecimiento reciente reportado) y el país cultiva un café de origen con reputación internacional (subastas de café ecuatoriano llegaron a USD 100/libra), lo que da un ángulo de storytelling de trazabilidad de finca que las cadenas masivas (Sweet & Coffee, Starbucks) no pueden replicar fácilmente. Fuentes: https://www.primicias.ec/economia/dia-internacional-cafe-cafeterias-produccion-starbucks-80168/ y https://www.elcomercio.com/actualidad/negocios/cafe-ecuatoriano-precio-libra-subasta/",
+  "fuentes": [
+    "https://www.primicias.ec/economia/dia-internacional-cafe-cafeterias-produccion-starbucks-80168/",
+    "https://www.primicias.ec/entretenimiento/gastronomia/tres-mejores-cafeterias-quito-top100-sudamerica-menu-precios-109194/",
+    "https://www.quitoinforma.gob.ec/2025/11/23/tres-cafeterias-quitenas-conquistan-el-top-100-sudamerica-2025/",
+    "https://www.primicias.ec/entretenimiento/gastronomia/mejores-cafeterias-ecuador2026-best-coffee-shop-ranking-129424/",
+    "https://www.bomberosquito.gob.ec/prevencion-y-seguridad-contra-incendios/luae-y-permisos-de-funcionamiento/",
+    "https://expertax.ec/permisos-de-funcionamiento-minimarket-tiendas-panaderias-quito/",
+    "https://hosteleriaecuador.com/cafe/",
+    "https://www.elcomercio.com/actualidad/negocios/cafe-ecuatoriano-precio-libra-subasta/",
+    "https://elproductor.com/2018/09/seis-cafeterias-endulzan-sus-finanzas-con-81-millones/"
+  ]
+}
