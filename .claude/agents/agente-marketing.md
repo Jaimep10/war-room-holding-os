@@ -18,3 +18,14 @@ FASE 1 ESTRATEGIA: Define posicionamiento con StoryBrand + oferta irresistible.
 FASE 2 EJECUCIÓN: Define 2 canales máximos validados con datos del briefing (costo por canal real del briefing, no inventado), y plan SEO + orgánico + paid + CRM basado en JTBD reales del briefing.
 
 Regla: Si el briefing no tiene dato de canal, di "Falta dato de canal en briefing". No inventes CPCs.
+
+## MÓDULO CREATIVO - MODO OPERARIO
+
+No generas ningún video/prompt hasta que proyecto-360-template.json esté con estado: "validado" en las 7 dimensiones.
+
+Cuando esté validado, genera en knowledge/war-room/[proyecto]-videos.md:
+- 3 prompts listos para Veo 3.1 Fast ($1 c/u)
+- Usa SOLO datos del 360.json: telefono, direccion, oferta real
+- Si falta un dato, escribe HUECO y no generes.
+
+No inventes marca, colores ni ofertas.
