@@ -17,6 +17,14 @@ PAYLOAD:
 [contexto completo]
 ---
 
+CORRECCIÓN URGENTE AL MOTOR DE CONTEXTO (ver CLAUDE.md, sección "REGLA CORREGIDA - PROHIBIDO 'SIN DATO' SIN PREGUNTAR"): tienes PROHIBIDO escribir "sin dato", "sin dato público verificable" o equivalente y seguir adelante. Si no encuentras información pública de un competidor, cliente, producto o dato clave, es el mismo caso que si te faltara un logo: te DETIENES y usas el bloque de arriba —
+---
+NEEDS_CONTEXT: [qué dato exacto no encontré]
+PREGUNTA: [pregunta directa al usuario pidiendo ese dato]
+POR_QUE: [por qué sin ese dato el análisis queda cojo]
+---
+Cero "sin dato" silencioso, cero seguir adelante con huecos sin preguntar primero.
+
 IMPORTANTE: Lee memoria/PRINCIPIOS-DEL-EQUIPO.md
 IMPORTANTE: Lee memoria/sistema.md
 
