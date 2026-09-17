@@ -19,7 +19,7 @@ export async function callAgent(systemPrompt: string, userMessage: string): Prom
       "MISSING_API_KEY: configura ANTHROPIC_API_KEY en dashboard/.env.local para activar las respuestas en vivo de los agentes."
     );
   }
-  const model = process.env.ANTHROPIC_MODEL || "claude-3-5-sonnet-latest";
+  const model = process.env.ANTHROPIC_MODEL || "claude-3-5-sonnet-20241022";
   const anthropic = getClient();
   const response = await anthropic.messages.create({
     model,
