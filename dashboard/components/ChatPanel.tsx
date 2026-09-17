@@ -21,6 +21,8 @@ import {
   Brain,
   Plus,
   Calculator,
+  Flame,
+  Wrench,
 } from "lucide-react";
 import {
   ProjectMemory,
@@ -36,9 +38,19 @@ import {
 } from "@/lib/projectMemory";
 import { downloadBlob } from "@/lib/utils";
 
-type Mode = "single" | "multi" | "team";
+type Mode = "single" | "multi" | "team" | "warroom";
 
 const AGENTE_ANALISTA_SLUG = "agente-analista";
+
+// Fase 3 — Reunión War Room: cadena fija Estrategia -> Marketing -> Finanzas -> Resumen final
+// del analista. Etiquetas solo para pintar el hilo en el chat; el orden real vive en
+// app/api/war-room/route.ts.
+const WARROOM_THREAD_LABELS: Record<string, string> = {
+  "director-estrategia": "🎯 Estrategia",
+  "agente-marketing": "📣 Marketing",
+  "agente-finanzas": "💰 Finanzas",
+  "agente-analista": "🧭 Resumen final (Analista)",
+};
 
 interface PdfAttachment {
   title: string;
@@ -293,6 +305,32 @@ export default function ChatPanel({
     downloadBlob(ultimoExcel.blob, ultimoExcel.filename);
   }
 
+  // Bloques de PDF/Excel adjunto listos para inyectar en cualquier llamada (chat normal o
+  // Reunión War Room) — extraído para no duplicar esta lógica de Fase 2 en dos lados.
+  function buildBloquesAdjuntos(): string[] {
+    const bloquesAdjuntos: string[] = [];
+    if (pdfAttachment) {
+      bloquesAdjuntos.push(
+        `DOCUMENTO DEL USUARIO: ${pdfAttachment.title}\nCONTENIDO:\n${pdfAttachment.text}${
+          pdfAttachment.truncated
+            ? `\n\n_(truncado — el PDF original tiene ${pdfAttachment.originalChars} caracteres, se muestran los primeros ${pdfAttachment.text.length})_`
+            : ""
+        }\n---\nInstrucción: Usa este documento como fuente principal. No inventes datos que estén aquí.`
+      );
+    }
+    if (excelAttachment) {
+      for (const hoja of excelAttachment.hojas) {
+        const previewTxt = hoja.filas.map((f) => f.map((v) => (v === null ? "" : v)).join(" | ")).join("\n");
+        bloquesAdjuntos.push(
+          `DATOS EXCEL: Hoja "${hoja.nombre}" (archivo ${excelAttachment.archivo}) con columnas [${hoja.columnas.join(
+            ", "
+          )}] y ${hoja.totalFilas} filas. Primeras filas:\n${previewTxt || "(sin filas de datos)"}\n---\nInstrucción: Usa estos datos reales para tus cálculos. No inventes cifras que no estén en la tabla.`
+        );
+      }
+    }
+    return bloquesAdjuntos;
+  }
+
   async function send() {
     setLoading(true);
     setResults([]);
@@ -305,6 +343,46 @@ export default function ChatPanel({
         } else {
           setResults(data.results);
           setIdeaLabel(data.idea ? `${data.idea.title} (${data.idea.giro})` : null);
+        }
+      } else if (mode === "warroom") {
+        // Reunión War Room (Fase 3): Estrategia -> Marketing -> Finanzas -> Resumen final del
+        // analista, en cadena real (cada uno ve al anterior), sobre el MISMO proyecto. Misma
+        // exigencia de Principio #2 que agente-analista: no se abre sin tipoNegocio definido.
+        if (projectId && (!memory || !memory.tipoNegocio)) {
+          setResults([
+            {
+              agent: "sistema",
+              ok: false,
+              text: 'Antes de lanzar la Reunión War Room, define arriba en "Memoria del Proyecto" si este negocio es Producto, Servicio o Híbrido — el equipo lo necesita para no adivinar (Principio #2).',
+            },
+          ]);
+          setLoading(false);
+          return;
+        }
+
+        const bloquesAdjuntos = buildBloquesAdjuntos();
+        const memoriaBlock = memory ? buildMemoriaContextBlock(memory) : "";
+        const contextoExtra = [memoriaBlock, ...bloquesAdjuntos].filter(Boolean).join("\n\n---\n\n");
+
+        const res = await fetch("/api/war-room", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ contextoExtra, instruccion: message || undefined }),
+        });
+        const data = await res.json();
+        if (data.error) {
+          setResults([{ agent: "sistema", ok: false, text: data.error }]);
+        } else {
+          setResults(data.results);
+          setIdeaLabel(data.idea ? `${data.idea.title} (${data.idea.giro})` : null);
+
+          if (projectId) {
+            let updated = memory;
+            for (const r of data.results as AgentResponse[]) {
+              if (r.ok) updated = addDecision(projectId, r.agent, r.text);
+            }
+            if (updated) setMemory(updated);
+          }
         }
       } else {
         // Si hay un PDF o Excel adjunto, el pase va SIEMPRE a agente-analista (sin importar
@@ -335,26 +413,7 @@ export default function ChatPanel({
           return;
         }
 
-        const bloquesAdjuntos: string[] = [];
-        if (pdfAttachment) {
-          bloquesAdjuntos.push(
-            `DOCUMENTO DEL USUARIO: ${pdfAttachment.title}\nCONTENIDO:\n${pdfAttachment.text}${
-              pdfAttachment.truncated
-                ? `\n\n_(truncado — el PDF original tiene ${pdfAttachment.originalChars} caracteres, se muestran los primeros ${pdfAttachment.text.length})_`
-                : ""
-            }\n---\nInstrucción: Usa este documento como fuente principal. No inventes datos que estén aquí.`
-          );
-        }
-        if (excelAttachment) {
-          for (const hoja of excelAttachment.hojas) {
-            const previewTxt = hoja.filas.map((f) => f.map((v) => (v === null ? "" : v)).join(" | ")).join("\n");
-            bloquesAdjuntos.push(
-              `DATOS EXCEL: Hoja "${hoja.nombre}" (archivo ${excelAttachment.archivo}) con columnas [${hoja.columnas.join(
-                ", "
-              )}] y ${hoja.totalFilas} filas. Primeras filas:\n${previewTxt || "(sin filas de datos)"}\n---\nInstrucción: Usa estos datos reales para tus cálculos. No inventes cifras que no estén en la tabla.`
-            );
-          }
-        }
+        const bloquesAdjuntos = buildBloquesAdjuntos();
 
         const baseMessage = bloquesAdjuntos.length
           ? `${bloquesAdjuntos.join("\n\n---\n\n")}\n\n---\n\n### Instrucción del usuario\n\n${
@@ -590,7 +649,17 @@ export default function ChatPanel({
         <Button size="sm" variant={mode === "team" ? "primary" : "outline"} onClick={() => setMode("team")}>
           <MessageSquare size={13} /> REUNIÓN TODO EL EQUIPO
         </Button>
+        <Button size="sm" variant={mode === "warroom" ? "primary" : "outline"} onClick={() => setMode("warroom")}>
+          <Flame size={13} /> 🔥 Lanzar Reunión War Room
+        </Button>
       </div>
+
+      {mode === "warroom" && (
+        <div className="text-[11px] text-gray-400 mb-2 rounded-md border border-base-700 bg-base-900 px-2.5 py-1.5">
+          Cadena real: 🎯 Estrategia → 📣 Marketing → 💰 Finanzas → 🧭 Resumen final del analista. Cada agente ve
+          completo lo que dijo el anterior sobre este mismo proyecto — no es una ronda en paralelo.
+        </div>
+      )}
 
       {mode === "single" && (
         <select
@@ -754,21 +823,42 @@ export default function ChatPanel({
 
       {ideaLabel && <div className="text-[11px] text-gray-500 mb-2">Sobre: {ideaLabel}</div>}
 
-      <div className="flex-1 overflow-y-auto space-y-3 pr-1">
+      <div className="flex-1 overflow-y-auto space-y-1.5 pr-1">
         {results.map((r, i) => (
-          <div key={i} className="rounded-lg border border-base-700 bg-base-850 p-3">
-            <div className="flex items-center gap-2 mb-1.5">
-              <Badge className={r.ok ? "bg-accent-500/20 text-accent-400" : "bg-red-500/20 text-red-400"}>
-                {r.agent}
-              </Badge>
-            </div>
-            {r.ok ? (
-              <div className="markdown-body text-xs text-gray-300">
-                <ReactMarkdown>{r.text}</ReactMarkdown>
-              </div>
-            ) : (
-              <div className="text-xs text-red-300">{r.text}</div>
+          <div key={i}>
+            {mode === "warroom" && i > 0 && (
+              <div className="text-center text-gray-600 text-xs leading-none py-0.5">↓</div>
             )}
+            <div className="rounded-lg border border-base-700 bg-base-850 p-3">
+              <div className="flex items-center gap-2 mb-1.5">
+                <Badge className={r.ok ? "bg-accent-500/20 text-accent-400" : "bg-red-500/20 text-red-400"}>
+                  {mode === "warroom" ? `${i + 1}. ${WARROOM_THREAD_LABELS[r.agent] || r.agent}` : r.agent}
+                </Badge>
+              </div>
+              {r.ok ? (
+                <div className="markdown-body text-xs text-gray-300">
+                  <ReactMarkdown>{r.text}</ReactMarkdown>
+                </div>
+              ) : (
+                <div className="text-xs text-red-300">{r.text}</div>
+              )}
+              {r.herramientas && r.herramientas.length > 0 && (
+                <details className="mt-2 border-t border-base-700 pt-1.5">
+                  <summary className="text-[10px] text-gray-500 cursor-pointer flex items-center gap-1">
+                    <Wrench size={10} /> Herramientas reales usadas ({r.herramientas.length})
+                  </summary>
+                  <div className="mt-1 space-y-1">
+                    {r.herramientas.map((h, hi) => (
+                      <div key={hi} className="text-[10px] text-gray-400 bg-base-900 rounded px-1.5 py-1">
+                        <span className="text-accent-400">{h.name}</span>(
+                        {JSON.stringify(h.input)}) →{" "}
+                        <span className="text-gray-300">{JSON.stringify(h.result)}</span>
+                      </div>
+                    ))}
+                  </div>
+                </details>
+              )}
+            </div>
           </div>
         ))}
       </div>

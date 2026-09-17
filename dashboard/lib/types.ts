@@ -29,10 +29,18 @@ export interface AgentSummary {
   relPath: string;
 }
 
+export interface HerramientaUsada {
+  name: string;
+  input: any;
+  result: any;
+}
+
 export interface AgentResponse {
   agent: string;
   ok: boolean;
   text: string;
+  /** Fase 3: qué herramientas reales (calcularFinanzas/buscarMercado) usó el agente, si usó alguna. */
+  herramientas?: HerramientaUsada[];
 }
 
 export interface DeliverableDef {

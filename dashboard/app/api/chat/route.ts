@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { buildAgentSystemPrompt, findAgentBySlug, getIdeaActual, readIdea } from "@/lib/memoria";
-import { callAgent } from "@/lib/anthropic";
+import { callAgentWithTools } from "@/lib/anthropic";
 import type { AgentResponse } from "@/lib/types";
 
 export async function POST(req: NextRequest) {
@@ -29,11 +29,19 @@ export async function POST(req: NextRequest) {
     try {
       const systemPrompt = buildAgentSystemPrompt(agent.relPath);
       const userMessage = `## IDEA ACTIVA (memoria/ideas/${idea.file})\n\n${idea.content}\n\n---\n\n## Instrucción del usuario\n\n${message}`;
-      const text = await callAgent(systemPrompt, userMessage);
-      results.push({ agent: agent.slug, ok: true, text });
+      // Fase 3: tool-calling real — si el agente pide precio/costo/gastos fijos y ya los
+      // tiene, calcularFinanzas se ejecuta de verdad (no lo inventa). Igual con buscarMercado
+      // (hoy simulado, ver aviso en lib/tools.ts).
+      const { text, toolCalls } = await callAgentWithTools(systemPrompt, userMessage);
+      results.push({
+        agent: agent.slug,
+        ok: true,
+        text,
+        ...(toolCalls.length ? { herramientas: toolCalls } : {}),
+      });
     } catch (err: any) {
       const msg = String(err?.message || err);
-      results.push({ agent: agent.slug, ok: false, text: msg });
+      results.push({ agent: slug, ok: false, text: msg });
     }
   }
 
