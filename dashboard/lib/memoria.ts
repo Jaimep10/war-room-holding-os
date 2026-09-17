@@ -109,6 +109,28 @@ export function updateIdeaStage(file: string, etapa: string) {
   fs.writeFileSync(full, rebuilt, "utf-8");
 }
 
+// NUEVO (aditivo, no reemplaza updateIdeaStage): guarda el resultado numerico del
+// analisis automatico de Filtro 1 y avanza la etapa en un solo paso. No toca ninguna
+// funcion existente de este archivo.
+export interface Filtro1Analysis {
+  score_pesimista: number;
+  riesgo: string;
+  confianza_pesimista: number;
+  etapa: string;
+}
+
+export function updateIdeaAnalysis(file: string, analysis: Filtro1Analysis) {
+  const full = path.join(IDEAS_DIR, file);
+  const raw = fs.readFileSync(full, "utf-8");
+  const parsed = matter(raw);
+  parsed.data.score_pesimista = analysis.score_pesimista;
+  parsed.data.riesgo = analysis.riesgo;
+  parsed.data.confianza_pesimista = analysis.confianza_pesimista;
+  parsed.data.etapa = analysis.etapa;
+  const rebuilt = matter.stringify(parsed.content, parsed.data);
+  fs.writeFileSync(full, rebuilt, "utf-8");
+}
+
 function nextIdeaNumber(): number {
   const files = fs.existsSync(IDEAS_DIR)
     ? fs.readdirSync(IDEAS_DIR).filter((f) => /^IDEA-\d+-.*\.md$/.test(f))
