@@ -1,13 +1,25 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AgentResponse, AgentSummary } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import ReactMarkdown from "react-markdown";
-import { AlertTriangle, MessageSquare, Users, User, FileUp, FileText, X, Loader2 } from "lucide-react";
+import { AlertTriangle, MessageSquare, Users, User, FileUp, FileText, X, Loader2, Brain, Plus } from "lucide-react";
+import {
+  ProjectMemory,
+  TipoNegocio,
+  loadProjectMemory,
+  setTipoNegocio,
+  setDescripcion as saveDescripcionMemoria,
+  addArchivoSubido,
+  addContextoClave,
+  removeContextoClave,
+  addDecision,
+  buildMemoriaContextBlock,
+} from "@/lib/projectMemory";
 
 type Mode = "single" | "multi" | "team";
 
@@ -24,9 +36,13 @@ interface PdfAttachment {
 export default function ChatPanel({
   agents,
   apiKeyConfigured,
+  projectId,
+  projectLabel,
 }: {
   agents: AgentSummary[];
   apiKeyConfigured: boolean;
+  projectId: string | null;
+  projectLabel?: string | null;
 }) {
   const [mode, setMode] = useState<Mode>("single");
   const [singleAgent, setSingleAgent] = useState(agents[0]?.slug ?? "");
@@ -41,8 +57,37 @@ export default function ChatPanel({
   const [pdfError, setPdfError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const [memory, setMemory] = useState<ProjectMemory | null>(null);
+  const [contextoInput, setContextoInput] = useState("");
+
+  // Aislamiento estricto (Principio #2, Parte B): cada vez que cambia el proyecto activo,
+  // se recarga SU memoria propia y se limpia todo el estado efímero del chat — nada de un
+  // proyecto puede colarse en el siguiente, aunque sea la misma pestaña/conversación.
+  useEffect(() => {
+    setMemory(projectId ? loadProjectMemory(projectId) : null);
+    setMessage("");
+    setResults([]);
+    setIdeaLabel(null);
+    setPdfAttachment(null);
+    setPdfError(null);
+    setContextoInput("");
+  }, [projectId]);
+
   function toggleMulti(slug: string) {
     setMultiSelected((prev) => (prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]));
+  }
+
+  function handleSetTipo(tipo: TipoNegocio) {
+    if (!projectId) return;
+    setTipoNegocio(projectId, tipo);
+    const updated = addDecision(projectId, "dashboard", `Tipo de negocio definido por el usuario: ${tipo}.`);
+    setMemory(updated);
+  }
+
+  function addContexto() {
+    if (!projectId || !contextoInput.trim()) return;
+    setMemory(addContextoClave(projectId, contextoInput.trim()));
+    setContextoInput("");
   }
 
   async function onPdfSelected(e: React.ChangeEvent<HTMLInputElement>) {
@@ -73,6 +118,15 @@ export default function ChatPanel({
           originalChars: data.originalChars ?? data.text.length,
           paginas: data.paginas ?? null,
         });
+        if (projectId) {
+          setMemory(
+            addArchivoSubido(projectId, {
+              titulo: data.title,
+              chars: data.originalChars ?? data.text.length,
+              agregadoEn: new Date().toISOString(),
+            })
+          );
+        }
       }
     } catch (err: any) {
       setPdfError(String(err?.message || err));
@@ -109,7 +163,26 @@ export default function ChatPanel({
           return;
         }
 
-        const finalMessage = pdfAttachment
+        const targetsAnalista = agentSlugs.includes(AGENTE_ANALISTA_SLUG);
+
+        // Motor de Contexto / Principio #2: si el pase va a agente-analista y este proyecto
+        // todavía no tiene tipoNegocio definido, el agente "debe preguntar primero" — lo
+        // resolvemos aquí mismo, bloqueando el envío hasta que se responda arriba en
+        // "Memoria del Proyecto", en vez de gastar una llamada real solo para recibir un
+        // NEEDS_CONTEXT.
+        if (targetsAnalista && projectId && (!memory || !memory.tipoNegocio)) {
+          setResults([
+            {
+              agent: "sistema",
+              ok: false,
+              text: 'Antes de consultar a agente-analista, define arriba en "Memoria del Proyecto" si este negocio es Producto, Servicio o Híbrido — lo necesita para no adivinar (Principio #2).',
+            },
+          ]);
+          setLoading(false);
+          return;
+        }
+
+        const baseMessage = pdfAttachment
           ? `## Documento adjunto: "${pdfAttachment.title}.pdf"${
               pdfAttachment.paginas ? ` (${pdfAttachment.paginas} páginas)` : ""
             }\n\n${pdfAttachment.text}${
@@ -120,6 +193,15 @@ export default function ChatPanel({
               message || "Analiza el documento adjunto y dame tu dictamen, citando el título del archivo."
             }`
           : message || undefined;
+
+        const memoriaBlock = targetsAnalista && memory ? buildMemoriaContextBlock(memory) : "";
+        const finalMessage = memoriaBlock
+          ? `${memoriaBlock}\n\n---\n\n${
+              typeof baseMessage === "string"
+                ? baseMessage
+                : "Da tu dictamen sobre la idea activa, siguiendo tu formato de respuesta, tomando en cuenta la memoria del proyecto de arriba."
+            }`
+          : baseMessage;
 
         const res = await fetch("/api/chat", {
           method: "POST",
@@ -132,6 +214,17 @@ export default function ChatPanel({
         } else {
           setResults(data.results);
           setIdeaLabel(data.idea ? `${data.idea.title} (${data.idea.giro})` : null);
+
+          if (projectId) {
+            const analistaResults: AgentResponse[] = (data.results || []).filter(
+              (r: AgentResponse) => r.ok && r.agent === AGENTE_ANALISTA_SLUG
+            );
+            let updated = memory;
+            for (const r of analistaResults) {
+              updated = addDecision(projectId, r.agent, r.text);
+            }
+            if (updated) setMemory(updated);
+          }
         }
       }
     } finally {
@@ -148,6 +241,110 @@ export default function ChatPanel({
             No hay <code>ANTHROPIC_API_KEY</code> configurada — los agentes van a devolver un aviso en vez de una
             respuesta real. Cópiala en <code>dashboard/.env.local</code>.
           </span>
+        </div>
+      )}
+
+      {projectId && memory && (
+        <div className="rounded-lg border border-base-700 bg-base-850 p-2.5 mb-3">
+          <div className="flex items-center justify-between mb-1.5 gap-2">
+            <div className="flex items-center gap-1.5 text-[11px] font-semibold text-gray-300 min-w-0">
+              <Brain size={13} className="text-accent-400 shrink-0" />
+              <span className="truncate">Memoria del Proyecto{projectLabel ? ` · ${projectLabel}` : ""}</span>
+            </div>
+            {memory.tipoNegocio && (
+              <Badge className="bg-accent-500/20 text-accent-400 uppercase shrink-0">{memory.tipoNegocio}</Badge>
+            )}
+          </div>
+
+          {!memory.tipoNegocio && (
+            <div className="rounded-md border border-yellow-600/30 bg-yellow-500/10 p-2 mb-2">
+              <div className="text-[11px] text-yellow-300 mb-1.5">
+                ¿Qué tipo de negocio es este proyecto? agente-analista lo necesita antes de opinar (Principio #2 —
+                nunca se asume).
+              </div>
+              <div className="flex gap-1.5">
+                <Button size="sm" variant="outline" onClick={() => handleSetTipo("producto")}>
+                  Producto
+                </Button>
+                <Button size="sm" variant="outline" onClick={() => handleSetTipo("servicio")}>
+                  Servicio
+                </Button>
+                <Button size="sm" variant="outline" onClick={() => handleSetTipo("hibrido")}>
+                  Híbrido
+                </Button>
+              </div>
+            </div>
+          )}
+
+          <Textarea
+            value={memory.descripcion}
+            onChange={(e) => setMemory((prev) => (prev ? { ...prev, descripcion: e.target.value } : prev))}
+            onBlur={(e) => {
+              if (projectId) setMemory(saveDescripcionMemoria(projectId, e.target.value));
+            }}
+            placeholder="Descripción libre del proyecto (opcional) — se guarda y se le manda al analista..."
+            rows={2}
+            className="text-xs mb-2"
+          />
+
+          {memory.contextoClave.length > 0 && (
+            <div className="flex flex-wrap gap-1 mb-2">
+              {memory.contextoClave.map((c) => (
+                <span
+                  key={c}
+                  className="inline-flex items-center gap-1 text-[10px] bg-base-800 border border-base-600 rounded-full px-2 py-0.5 text-gray-300"
+                >
+                  {c}
+                  <button
+                    onClick={() => projectId && setMemory(removeContextoClave(projectId, c))}
+                    className="text-gray-500 hover:text-red-300"
+                  >
+                    <X size={10} />
+                  </button>
+                </span>
+              ))}
+            </div>
+          )}
+
+          <div className="flex items-center gap-1.5">
+            <input
+              value={contextoInput}
+              onChange={(e) => setContextoInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  addContexto();
+                }
+              }}
+              placeholder="Agregar contexto clave (ej: margen objetivo 35%)..."
+              className="flex-1 bg-base-900 border border-base-600 rounded-md px-2 py-1 text-[11px] text-gray-200 focus:outline-none focus:ring-1 focus:ring-accent-500/50"
+            />
+            <Button size="sm" variant="outline" onClick={addContexto} disabled={!contextoInput.trim()}>
+              <Plus size={12} />
+            </Button>
+          </div>
+
+          {memory.historialDecisiones.length > 0 && (
+            <details className="mt-2">
+              <summary className="text-[10px] text-gray-500 cursor-pointer">
+                Historial de decisiones ({memory.historialDecisiones.length})
+              </summary>
+              <div className="mt-1 space-y-1 max-h-24 overflow-y-auto pr-1">
+                {memory.historialDecisiones
+                  .slice()
+                  .reverse()
+                  .map((d, i) => (
+                    <div key={i} className="text-[10px] text-gray-500">
+                      <span className="text-gray-400">
+                        [{d.fecha.slice(0, 10)}] {d.agente}:
+                      </span>{" "}
+                      {d.resumen.slice(0, 140)}
+                      {d.resumen.length > 140 ? "…" : ""}
+                    </div>
+                  ))}
+              </div>
+            </details>
+          )}
         </div>
       )}
 

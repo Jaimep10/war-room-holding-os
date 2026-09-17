@@ -3,7 +3,7 @@
 import { IdeaSummary } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Radar, ShieldAlert, Lightbulb, Wallet, TrendingUp, Building2 } from "lucide-react";
+import { Radar, ShieldAlert, Lightbulb, Wallet, TrendingUp, Building2, FolderPlus } from "lucide-react";
 
 export type Modo = "idea-empresa" | "capital-idea" | "negocio-existente" | "clientes-productos";
 
@@ -19,6 +19,7 @@ export default function Header({
   currentFile,
   onSelectIdea,
   onOpenDemo,
+  onNewProject,
   rubroActual,
   modo,
   onModoChange,
@@ -28,6 +29,7 @@ export default function Header({
   currentFile: string | null;
   onSelectIdea: (file: string) => void;
   onOpenDemo: () => void;
+  onNewProject: () => void;
   rubroActual: string | null;
   modo: Modo;
   onModoChange: (m: Modo) => void;
@@ -66,20 +68,26 @@ export default function Header({
         {modo === "idea-empresa" ? (
           <div className="flex flex-col items-end">
             <label className="text-[10px] uppercase tracking-wide text-gray-500 mb-0.5">
-              IDEA-ACTUAL {rubroActual ? `· ${rubroActual}` : ""}
+              PROYECTO ACTIVO {rubroActual ? `· ${rubroActual}` : ""}
             </label>
-            <select
-              value={currentFile ?? ""}
-              onChange={(e) => onSelectIdea(e.target.value)}
-              className="bg-base-800 border border-base-600 text-sm text-gray-100 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-accent-500/50 min-w-[260px]"
-            >
-              {ideas.length === 0 && <option value="">Sin ideas todavía</option>}
-              {ideas.map((idea) => (
-                <option key={idea.file} value={idea.file}>
-                  {idea.id} — {idea.title}
-                </option>
-              ))}
-            </select>
+            <div className="flex items-center gap-1.5">
+              <select
+                value={currentFile ?? ""}
+                onChange={(e) => onSelectIdea(e.target.value)}
+                className="bg-base-800 border border-base-600 text-sm text-gray-100 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-accent-500/50 min-w-[260px]"
+              >
+                {ideas.length === 0 && <option value="">Sin proyectos todavía</option>}
+                {ideas.map((idea) => (
+                  <option key={idea.file} value={idea.file}>
+                    {idea.id} — {idea.title}
+                  </option>
+                ))}
+              </select>
+              <Button variant="outline" size="sm" onClick={onNewProject} title="Crea un proyecto nuevo con memoria y contexto limpios">
+                <FolderPlus size={13} />
+                Nuevo Proyecto
+              </Button>
+            </div>
           </div>
         ) : modo !== "clientes-productos" ? (
           <div className="flex flex-col items-end">

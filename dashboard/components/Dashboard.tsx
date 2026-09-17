@@ -59,6 +59,17 @@ export default function Dashboard({
     await Promise.all([refreshIdeas(), refreshCurrent()]);
   }
 
+  async function onNewProject() {
+    // "Nuevo Proyecto" = aislamiento estricto (Principio #2, Parte B): crea un IDEA-N nuevo,
+    // que automáticamente pasa a ser IDEA-ACTUAL. Al no existir todavía su
+    // warroom_memoria_{projectId} en localStorage, el Chat arranca con memoria 100% limpia
+    // para este proyecto — sin mezclar nada de ningún otro proyecto/idea.
+    const descripcion = window.prompt("Describe brevemente el nuevo proyecto (una o dos líneas):");
+    if (!descripcion || !descripcion.trim()) return;
+    await onCreateIdea(descripcion.trim());
+    if (modo !== "idea-empresa") setModo("idea-empresa");
+  }
+
   async function onStageChange(file: string, etapa: string) {
     setIdeas((prev) => prev.map((i) => (i.file === file ? { ...i, etapa } : i)));
     await fetch("/api/ideas/stage", {
@@ -79,6 +90,7 @@ export default function Dashboard({
         currentFile={pointer.archivo}
         onSelectIdea={onSelectIdea}
         onOpenDemo={() => setDemoOpen(true)}
+        onNewProject={onNewProject}
         rubroActual={pointer.rubro}
         modo={modo}
         onModoChange={setModo}
@@ -98,7 +110,14 @@ export default function Dashboard({
 
       {modo === "clientes-productos" && <ClientesProductosPanel />}
 
-      <WarRoomPanel agents={agents} apiKeyConfigured={apiKeyConfigured} />
+      <WarRoomPanel
+        agents={agents}
+        apiKeyConfigured={apiKeyConfigured}
+        projectId={pointer.archivo}
+        projectLabel={
+          pointer.archivo ? ideas.find((i) => i.file === pointer.archivo)?.title ?? pointer.ideaId : null
+        }
+      />
 
       <OpenTeamModal open={demoOpen} onOpenChange={setDemoOpen} />
     </div>
