@@ -7,7 +7,21 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import ReactMarkdown from "react-markdown";
-import { AlertTriangle, MessageSquare, Users, User, FileUp, FileText, X, Loader2, Brain, Plus } from "lucide-react";
+import {
+  AlertTriangle,
+  MessageSquare,
+  Users,
+  User,
+  FileUp,
+  FileText,
+  FileSpreadsheet,
+  Download,
+  X,
+  Loader2,
+  Brain,
+  Plus,
+  Calculator,
+} from "lucide-react";
 import {
   ProjectMemory,
   TipoNegocio,
@@ -20,6 +34,7 @@ import {
   addDecision,
   buildMemoriaContextBlock,
 } from "@/lib/projectMemory";
+import { downloadBlob } from "@/lib/utils";
 
 type Mode = "single" | "multi" | "team";
 
@@ -31,6 +46,24 @@ interface PdfAttachment {
   truncated: boolean;
   originalChars: number;
   paginas: number | null;
+}
+
+interface ExcelHoja {
+  nombre: string;
+  columnas: string[];
+  filas: (string | number | null)[][];
+  totalFilas: number;
+}
+
+interface ExcelAttachment {
+  archivo: string;
+  hojas: ExcelHoja[];
+}
+
+interface UltimoExcel {
+  blob: Blob;
+  filename: string;
+  etiqueta: string;
 }
 
 export default function ChatPanel({
@@ -57,6 +90,16 @@ export default function ChatPanel({
   const [pdfError, setPdfError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const [excelAttachment, setExcelAttachment] = useState<ExcelAttachment | null>(null);
+  const [uploadingExcel, setUploadingExcel] = useState(false);
+  const [excelError, setExcelError] = useState<string | null>(null);
+  const excelInputRef = useRef<HTMLInputElement>(null);
+
+  const [ultimoExcel, setUltimoExcel] = useState<UltimoExcel | null>(null);
+  const [finanzasForm, setFinanzasForm] = useState({ precio: "", costo: "", unidadesMes: "", gastosFijos: "", crecimiento: "" });
+  const [generandoExcel, setGenerandoExcel] = useState<"cotizacion" | "completo" | null>(null);
+  const [finanzasError, setFinanzasError] = useState<string | null>(null);
+
   const [memory, setMemory] = useState<ProjectMemory | null>(null);
   const [contextoInput, setContextoInput] = useState("");
 
@@ -70,7 +113,11 @@ export default function ChatPanel({
     setIdeaLabel(null);
     setPdfAttachment(null);
     setPdfError(null);
+    setExcelAttachment(null);
+    setExcelError(null);
     setContextoInput("");
+    setUltimoExcel(null);
+    setFinanzasError(null);
   }, [projectId]);
 
   function toggleMulti(slug: string) {
@@ -140,6 +187,112 @@ export default function ChatPanel({
     setPdfError(null);
   }
 
+  async function onExcelSelected(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+
+    const name = file.name.toLowerCase();
+    if (!name.endsWith(".xlsx") && !name.endsWith(".xlsm") && !name.endsWith(".xls") && !name.endsWith(".csv")) {
+      setExcelError("Solo se aceptan archivos Excel (.xlsx/.xlsm/.xls) o .csv.");
+      return;
+    }
+
+    setUploadingExcel(true);
+    setExcelError(null);
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      const res = await fetch("/api/chat/upload-excel", { method: "POST", body: formData });
+      const data = await res.json();
+      if (data.error) {
+        setExcelError(data.error);
+        setExcelAttachment(null);
+      } else {
+        setExcelAttachment({ archivo: data.archivo, hojas: data.hojas });
+        if (projectId) {
+          const totalFilas = (data.hojas as ExcelHoja[]).reduce((acc, h) => acc + h.totalFilas, 0);
+          setMemory(
+            addArchivoSubido(projectId, {
+              titulo: data.archivo,
+              chars: totalFilas,
+              agregadoEn: new Date().toISOString(),
+              tipo: "excel",
+            })
+          );
+        }
+      }
+    } catch (err: any) {
+      setExcelError(String(err?.message || err));
+    } finally {
+      setUploadingExcel(false);
+    }
+  }
+
+  function clearExcel() {
+    setExcelAttachment(null);
+    setExcelError(null);
+  }
+
+  async function generarExcelFinanciero(modo: "cotizacion" | "completo") {
+    const precio = Number(finanzasForm.precio);
+    const costo = Number(finanzasForm.costo);
+    const unidadesMes = Number(finanzasForm.unidadesMes);
+    const gastosFijos = Number(finanzasForm.gastosFijos) || 0;
+    const crecimientoMensualPct = Number(finanzasForm.crecimiento) / 100 || 0;
+
+    if (!Number.isFinite(precio) || !Number.isFinite(costo) || !Number.isFinite(unidadesMes)) {
+      setFinanzasError("Completa al menos precio, costo y unidades/mes (numéricos).");
+      return;
+    }
+    if (precio <= costo) {
+      setFinanzasError("El precio debe ser mayor al costo.");
+      return;
+    }
+
+    setGenerandoExcel(modo);
+    setFinanzasError(null);
+    try {
+      const url = modo === "cotizacion" ? "/api/finanzas/excel" : "/api/finanzas/excel-completo";
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ precio, costo, unidadesMes, gastosFijos, crecimientoMensualPct }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "No se pudo generar el Excel.");
+      }
+      const blob = await res.blob();
+      const cd = res.headers.get("Content-Disposition") || "";
+      const match = cd.match(/filename="([^"]+)"/);
+      const filename = match ? match[1] : `WarRoom-${modo}-${new Date().toISOString().slice(0, 10)}.xlsx`;
+      const etiqueta = modo === "cotizacion" ? "Cotización rápida" : "Financiero completo (P&G + Flujo 12m + P.E.)";
+
+      downloadBlob(blob, filename);
+      setUltimoExcel({ blob, filename, etiqueta });
+
+      if (projectId) {
+        setMemory(
+          addDecision(
+            projectId,
+            "dashboard",
+            `Excel generado (${etiqueta}): precio $${precio}, costo $${costo}, ${unidadesMes} uds/mes, gastos fijos $${gastosFijos}.`
+          )
+        );
+      }
+    } catch (err: any) {
+      setFinanzasError(String(err?.message || err));
+    } finally {
+      setGenerandoExcel(null);
+    }
+  }
+
+  function descargarUltimoExcel() {
+    if (!ultimoExcel) return;
+    downloadBlob(ultimoExcel.blob, ultimoExcel.filename);
+  }
+
   async function send() {
     setLoading(true);
     setResults([]);
@@ -154,10 +307,10 @@ export default function ChatPanel({
           setIdeaLabel(data.idea ? `${data.idea.title} (${data.idea.giro})` : null);
         }
       } else {
-        // Si hay un PDF adjunto, el pase va SIEMPRE a agente-analista (sin importar qué
-        // agente esté seleccionado en el modo actual) — es el que recibe el contexto del
-        // documento, según el flujo de "Subir PDF".
-        const agentSlugs = pdfAttachment ? [AGENTE_ANALISTA_SLUG] : mode === "single" ? [singleAgent] : multiSelected;
+        // Si hay un PDF o Excel adjunto, el pase va SIEMPRE a agente-analista (sin importar
+        // qué agente esté seleccionado en el modo actual) — es el que recibe el documento.
+        const hayAdjunto = !!pdfAttachment || !!excelAttachment;
+        const agentSlugs = hayAdjunto ? [AGENTE_ANALISTA_SLUG] : mode === "single" ? [singleAgent] : multiSelected;
         if (!agentSlugs.length) {
           setLoading(false);
           return;
@@ -182,15 +335,30 @@ export default function ChatPanel({
           return;
         }
 
-        const baseMessage = pdfAttachment
-          ? `## Documento adjunto: "${pdfAttachment.title}.pdf"${
-              pdfAttachment.paginas ? ` (${pdfAttachment.paginas} páginas)` : ""
-            }\n\n${pdfAttachment.text}${
+        const bloquesAdjuntos: string[] = [];
+        if (pdfAttachment) {
+          bloquesAdjuntos.push(
+            `DOCUMENTO DEL USUARIO: ${pdfAttachment.title}\nCONTENIDO:\n${pdfAttachment.text}${
               pdfAttachment.truncated
-                ? `\n\n_(Texto truncado por longitud — el PDF original tiene ${pdfAttachment.originalChars} caracteres, se enviaron los primeros ${pdfAttachment.text.length}.)_`
+                ? `\n\n_(truncado — el PDF original tiene ${pdfAttachment.originalChars} caracteres, se muestran los primeros ${pdfAttachment.text.length})_`
                 : ""
-            }\n\n---\n\n### Instrucción específica sobre este documento\n\n${
-              message || "Analiza el documento adjunto y dame tu dictamen, citando el título del archivo."
+            }\n---\nInstrucción: Usa este documento como fuente principal. No inventes datos que estén aquí.`
+          );
+        }
+        if (excelAttachment) {
+          for (const hoja of excelAttachment.hojas) {
+            const previewTxt = hoja.filas.map((f) => f.map((v) => (v === null ? "" : v)).join(" | ")).join("\n");
+            bloquesAdjuntos.push(
+              `DATOS EXCEL: Hoja "${hoja.nombre}" (archivo ${excelAttachment.archivo}) con columnas [${hoja.columnas.join(
+                ", "
+              )}] y ${hoja.totalFilas} filas. Primeras filas:\n${previewTxt || "(sin filas de datos)"}\n---\nInstrucción: Usa estos datos reales para tus cálculos. No inventes cifras que no estén en la tabla.`
+            );
+          }
+        }
+
+        const baseMessage = bloquesAdjuntos.length
+          ? `${bloquesAdjuntos.join("\n\n---\n\n")}\n\n---\n\n### Instrucción del usuario\n\n${
+              message || "Analiza el/los documento(s) adjunto(s) y dame tu dictamen, citando la fuente."
             }`
           : message || undefined;
 
@@ -345,6 +513,70 @@ export default function ChatPanel({
               </div>
             </details>
           )}
+
+          <details className="mt-2">
+            <summary className="text-[10px] text-gray-500 cursor-pointer flex items-center gap-1">
+              <Calculator size={11} /> Cotización rápida (Excel con fórmulas reales)
+            </summary>
+            <div className="mt-2 grid grid-cols-2 gap-1.5">
+              <input
+                type="number"
+                value={finanzasForm.precio}
+                onChange={(e) => setFinanzasForm((p) => ({ ...p, precio: e.target.value }))}
+                placeholder="Precio de venta"
+                className="bg-base-900 border border-base-600 rounded-md px-2 py-1 text-[11px] text-gray-200 focus:outline-none focus:ring-1 focus:ring-accent-500/50"
+              />
+              <input
+                type="number"
+                value={finanzasForm.costo}
+                onChange={(e) => setFinanzasForm((p) => ({ ...p, costo: e.target.value }))}
+                placeholder="Costo unitario"
+                className="bg-base-900 border border-base-600 rounded-md px-2 py-1 text-[11px] text-gray-200 focus:outline-none focus:ring-1 focus:ring-accent-500/50"
+              />
+              <input
+                type="number"
+                value={finanzasForm.unidadesMes}
+                onChange={(e) => setFinanzasForm((p) => ({ ...p, unidadesMes: e.target.value }))}
+                placeholder="Unidades/mes"
+                className="bg-base-900 border border-base-600 rounded-md px-2 py-1 text-[11px] text-gray-200 focus:outline-none focus:ring-1 focus:ring-accent-500/50"
+              />
+              <input
+                type="number"
+                value={finanzasForm.gastosFijos}
+                onChange={(e) => setFinanzasForm((p) => ({ ...p, gastosFijos: e.target.value }))}
+                placeholder="Gastos fijos/mes"
+                className="bg-base-900 border border-base-600 rounded-md px-2 py-1 text-[11px] text-gray-200 focus:outline-none focus:ring-1 focus:ring-accent-500/50"
+              />
+              <input
+                type="number"
+                value={finanzasForm.crecimiento}
+                onChange={(e) => setFinanzasForm((p) => ({ ...p, crecimiento: e.target.value }))}
+                placeholder="Crecimiento %/mes (opcional)"
+                className="col-span-2 bg-base-900 border border-base-600 rounded-md px-2 py-1 text-[11px] text-gray-200 focus:outline-none focus:ring-1 focus:ring-accent-500/50"
+              />
+            </div>
+            {finanzasError && <div className="text-[10px] text-red-300 mt-1.5">{finanzasError}</div>}
+            <div className="flex gap-1.5 mt-1.5">
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => generarExcelFinanciero("cotizacion")}
+                disabled={generandoExcel !== null}
+              >
+                {generandoExcel === "cotizacion" ? <Loader2 size={12} className="animate-spin" /> : null}
+                Excel cotización
+              </Button>
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => generarExcelFinanciero("completo")}
+                disabled={generandoExcel !== null}
+              >
+                {generandoExcel === "completo" ? <Loader2 size={12} className="animate-spin" /> : null}
+                Excel financiero completo
+              </Button>
+            </div>
+          </details>
         </div>
       )}
 
@@ -394,20 +626,36 @@ export default function ChatPanel({
             className="hidden"
             onChange={onPdfSelected}
           />
+          <input
+            ref={excelInputRef}
+            type="file"
+            accept=".xlsx,.xlsm,.xls,.csv"
+            className="hidden"
+            onChange={onExcelSelected}
+          />
 
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center gap-1.5 mb-2 flex-wrap">
+            <Button size="sm" variant="outline" onClick={() => fileInputRef.current?.click()} disabled={uploadingPdf}>
+              {uploadingPdf ? <Loader2 size={13} className="animate-spin" /> : <FileUp size={13} />}
+              {uploadingPdf ? "Extrayendo..." : "📄 Subir PDF"}
+            </Button>
             <Button
               size="sm"
               variant="outline"
-              onClick={() => fileInputRef.current?.click()}
-              disabled={uploadingPdf}
+              onClick={() => excelInputRef.current?.click()}
+              disabled={uploadingExcel}
             >
-              {uploadingPdf ? <Loader2 size={13} className="animate-spin" /> : <FileUp size={13} />}
-              {uploadingPdf ? "Extrayendo texto..." : "Subir PDF"}
+              {uploadingExcel ? <Loader2 size={13} className="animate-spin" /> : <FileSpreadsheet size={13} />}
+              {uploadingExcel ? "Leyendo..." : "📊 Subir Excel"}
             </Button>
-            {pdfAttachment && (
-              <span className="text-[10px] text-gray-500">
-                Se enviará a <span className="text-accent-400">{AGENTE_ANALISTA_SLUG}</span> con el PDF como contexto
+            <Button size="sm" variant="outline" onClick={descargarUltimoExcel} disabled={!ultimoExcel}>
+              <Download size={13} />
+              📥 Descargar último Excel
+            </Button>
+            {(pdfAttachment || excelAttachment) && (
+              <span className="text-[10px] text-gray-500 w-full">
+                Se enviará a <span className="text-accent-400">{AGENTE_ANALISTA_SLUG}</span> con el/los documento(s)
+                como contexto
               </span>
             )}
           </div>
@@ -417,18 +665,72 @@ export default function ChatPanel({
               {pdfError}
             </div>
           )}
+          {excelError && (
+            <div className="text-[11px] text-red-300 mb-2 border border-red-600/30 bg-red-500/10 rounded-lg px-2.5 py-1.5">
+              {excelError}
+            </div>
+          )}
 
           {pdfAttachment && (
-            <div className="flex items-center gap-2 mb-2 rounded-lg border border-accent-500/30 bg-accent-500/10 px-2.5 py-1.5 text-[11px] text-accent-300">
-              <FileText size={13} className="shrink-0" />
-              <span className="truncate flex-1">
-                {pdfAttachment.title}.pdf
-                {pdfAttachment.paginas ? ` · ${pdfAttachment.paginas} pág.` : ""}
-                {pdfAttachment.truncated ? " · texto truncado" : ""}
-              </span>
-              <button onClick={clearPdf} className="text-accent-300 hover:text-red-300 shrink-0" title="Quitar PDF">
-                <X size={13} />
-              </button>
+            <div className="mb-2 rounded-lg border border-accent-500/30 bg-accent-500/10 px-2.5 py-1.5 text-[11px] text-accent-300">
+              <div className="flex items-center gap-2">
+                <FileText size={13} className="shrink-0" />
+                <span className="truncate flex-1">
+                  ✅ PDF leído: {pdfAttachment.title} - {pdfAttachment.paginas ?? "?"} páginas
+                  {pdfAttachment.truncated ? " · texto truncado" : ""}
+                </span>
+                <button onClick={clearPdf} className="text-accent-300 hover:text-red-300 shrink-0" title="Quitar PDF">
+                  <X size={13} />
+                </button>
+              </div>
+            </div>
+          )}
+
+          {excelAttachment && (
+            <div className="mb-2 rounded-lg border border-accent-500/30 bg-accent-500/10 px-2.5 py-1.5 text-[11px] text-accent-300">
+              <div className="flex items-center gap-2 mb-1.5">
+                <FileSpreadsheet size={13} className="shrink-0" />
+                <span className="truncate flex-1">
+                  ✅ Excel leído: {excelAttachment.archivo} - {excelAttachment.hojas.length} hoja
+                  {excelAttachment.hojas.length !== 1 ? "s" : ""}
+                </span>
+                <button
+                  onClick={clearExcel}
+                  className="text-accent-300 hover:text-red-300 shrink-0"
+                  title="Quitar Excel"
+                >
+                  <X size={13} />
+                </button>
+              </div>
+              {excelAttachment.hojas.slice(0, 1).map((hoja) => (
+                <div key={hoja.nombre} className="overflow-x-auto">
+                  <div className="text-[10px] text-accent-200 mb-1">
+                    Hoja "{hoja.nombre}" · {hoja.totalFilas} filas · preview primeras {hoja.filas.length}
+                  </div>
+                  <table className="text-[10px] text-gray-300 border-collapse">
+                    <thead>
+                      <tr>
+                        {hoja.columnas.map((c, i) => (
+                          <th key={i} className="border border-base-600 bg-base-800 px-1.5 py-0.5 text-left whitespace-nowrap">
+                            {c || `Col ${i + 1}`}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {hoja.filas.map((fila, ri) => (
+                        <tr key={ri}>
+                          {fila.map((val, ci) => (
+                            <td key={ci} className="border border-base-700 px-1.5 py-0.5 whitespace-nowrap">
+                              {val === null ? "" : String(val)}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ))}
             </div>
           )}
 
@@ -436,7 +738,7 @@ export default function ChatPanel({
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder={
-              pdfAttachment
+              pdfAttachment || excelAttachment
                 ? "Instrucción sobre el documento adjunto (opcional)..."
                 : "Pregunta o instrucción para el agente (opcional — si lo dejas vacío, pide su dictamen estándar)..."
             }

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { FileText, Download, Loader2, FileDown } from "lucide-react";
 import { DeliverableDef } from "@/lib/types";
-import { markdownToPdf } from "@/lib/markdownToPdf";
+import { generarPDF } from "@/lib/pdfGenerator";
 
 const DELIVERABLES: DeliverableDef[] = [
   { tipo: "Manual Operativo", agente: "agente-operaciones", label: "Manual Operativo" },
@@ -17,7 +17,13 @@ const DELIVERABLES: DeliverableDef[] = [
   { tipo: "Plan de Retención", agente: "marketing-crm-retention", label: "Plan Retención" },
 ];
 
-export default function DeliverablesPanel({ apiKeyConfigured }: { apiKeyConfigured: boolean }) {
+export default function DeliverablesPanel({
+  apiKeyConfigured,
+  projectId,
+}: {
+  apiKeyConfigured: boolean;
+  projectId: string | null;
+}) {
   const [files, setFiles] = useState<string[]>([]);
   const [loadingTipo, setLoadingTipo] = useState<string | null>(null);
   const [pdfLoadingTipo, setPdfLoadingTipo] = useState<string | null>(null);
@@ -63,9 +69,7 @@ export default function DeliverablesPanel({ apiKeyConfigured }: { apiKeyConfigur
         throw new Error(data.error || "No se pudo leer el entregable.");
       }
       const markdown = await res.text();
-      const fecha = new Date().toISOString().slice(0, 10);
-      const filename = `entregable-${d.agente}-${fecha}.pdf`;
-      markdownToPdf(markdown, filename);
+      generarPDF(markdown, d.tipo, projectId);
     } catch (err: any) {
       setError(String(err?.message || err));
     } finally {

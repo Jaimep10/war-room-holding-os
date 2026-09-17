@@ -14,8 +14,9 @@ export type TipoNegocio = "producto" | "servicio" | "hibrido";
 
 export interface ArchivoSubido {
   titulo: string;
-  chars: number;
+  chars: number; // para excel/csv: total de filas de datos (aprox. de tamaño, no bytes)
   agregadoEn: string; // ISO date
+  tipo?: "pdf" | "excel";
 }
 
 export interface DecisionHistorial {

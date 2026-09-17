@@ -32,7 +32,7 @@ export default function WarRoomPanel({
           />
         </TabsContent>
         <TabsContent value="entregables" className="flex-1 overflow-hidden">
-          <DeliverablesPanel apiKeyConfigured={apiKeyConfigured} />
+          <DeliverablesPanel apiKeyConfigured={apiKeyConfigured} projectId={projectId} />
         </TabsContent>
       </Tabs>
     </div>

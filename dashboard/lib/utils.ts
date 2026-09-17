@@ -5,6 +5,18 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+/** Dispara la descarga de un Blob ya en memoria (ej. la respuesta binaria de una ruta de API). */
+export function downloadBlob(blob: Blob, filename: string) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
 export function riskColor(riesgo: string | null): string {
   if (!riesgo) return "bg-base-600 text-gray-300";
   const r = riesgo.toLowerCase();
