@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { FileText, Download, Loader2 } from "lucide-react";
+import { FileText, Download, Loader2, FileDown } from "lucide-react";
 import { DeliverableDef } from "@/lib/types";
+import { markdownToPdf } from "@/lib/markdownToPdf";
 
 const DELIVERABLES: DeliverableDef[] = [
   { tipo: "Manual Operativo", agente: "agente-operaciones", label: "Manual Operativo" },
@@ -19,6 +20,7 @@ const DELIVERABLES: DeliverableDef[] = [
 export default function DeliverablesPanel({ apiKeyConfigured }: { apiKeyConfigured: boolean }) {
   const [files, setFiles] = useState<string[]>([]);
   const [loadingTipo, setLoadingTipo] = useState<string | null>(null);
+  const [pdfLoadingTipo, setPdfLoadingTipo] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   async function refreshFiles() {
@@ -48,6 +50,26 @@ export default function DeliverablesPanel({ apiKeyConfigured }: { apiKeyConfigur
       }
     } finally {
       setLoadingTipo(null);
+    }
+  }
+
+  async function downloadPdf(d: DeliverableDef) {
+    setPdfLoadingTipo(d.tipo);
+    setError(null);
+    try {
+      const res = await fetch(`/api/deliverables/file?file=${encodeURIComponent(fileNameFor(d))}`);
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "No se pudo leer el entregable.");
+      }
+      const markdown = await res.text();
+      const fecha = new Date().toISOString().slice(0, 10);
+      const filename = `entregable-${d.agente}-${fecha}.pdf`;
+      markdownToPdf(markdown, filename);
+    } catch (err: any) {
+      setError(String(err?.message || err));
+    } finally {
+      setPdfLoadingTipo(null);
     }
   }
 
@@ -86,10 +108,24 @@ export default function DeliverablesPanel({ apiKeyConfigured }: { apiKeyConfigur
                     target="_blank"
                     rel="noreferrer"
                     className="text-gray-400 hover:text-accent-400 p-1.5 rounded-md hover:bg-base-800"
-                    title="Descargar"
+                    title="Descargar Markdown"
                   >
                     <Download size={14} />
                   </a>
+                )}
+                {exists && (
+                  <button
+                    onClick={() => downloadPdf(d)}
+                    disabled={pdfLoadingTipo === d.tipo}
+                    className="text-gray-400 hover:text-accent-400 p-1.5 rounded-md hover:bg-base-800 disabled:opacity-50"
+                    title="Descargar PDF"
+                  >
+                    {pdfLoadingTipo === d.tipo ? (
+                      <Loader2 size={14} className="animate-spin" />
+                    ) : (
+                      <FileDown size={14} />
+                    )}
+                  </button>
                 )}
                 <Button size="sm" variant={exists ? "outline" : "primary"} onClick={() => generate(d)} disabled={loadingTipo === d.tipo || !apiKeyConfigured}>
                   {loadingTipo === d.tipo ? <Loader2 size={12} className="animate-spin" /> : null}
