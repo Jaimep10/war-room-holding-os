@@ -1,5 +1,12 @@
 import Anthropic from "@anthropic-ai/sdk";
-import { AGENT_TOOLS, executeTool, EjecucionTool } from "./tools";
+import { AGENT_TOOLS, ejecutarHerramienta } from "./tools";
+
+/** V2 (Tavily): tools.ts ya no exporta este tipo, se define aquí para no romper el resto del código. */
+export interface EjecucionTool {
+  name: string;
+  input: any;
+  result: any;
+}
 
 let client: Anthropic | null = null;
 
@@ -76,7 +83,7 @@ export async function callAgentWithTools(
 
     const toolResults: Anthropic.ToolResultBlockParam[] = [];
     for (const block of toolUseBlocks) {
-      const result = await executeTool(block.name, block.input);
+      const result = await ejecutarHerramienta(block.name, block.input);
       toolCalls.push({ name: block.name, input: block.input, result });
       toolResults.push({
         type: "tool_result",
