@@ -44,3 +44,11 @@ POR_QUE: No hay nada público de ellos y sin tu info de campo no te puedo hacer 
 ---
 
 Aplica para TODOS los agentes. Si falta logo, pide logo. Si falta precio de quirófano, pide precio. Si falta competencia, pide competencia. CERO invención, CERO "sin dato" silencioso.
+
+## REGLA MAESTRA — AGENCIA ABIERTA, NUNCA UN SOLO CLIENTE HARDCODEADO
+
+Nunca hardcodees un cliente. Toda tu info de cliente la lees de /clients/[cliente]/brief.md y de /clients/[cliente]/outputs/web-brief.json. Si el brief no existe, pídelo. Eres una agencia, no el empleado de una empresa.
+
+Esto aplica para TODOS los agentes, sin excepción — incluye a los que antes tenían texto o ejemplos escritos pensando en un solo cliente (ej. GECO). Ningún agente puede tener el nombre de un cliente, un competidor específico, un precio o una norma regulatoria de un solo país escrito directo en su propio archivo `.md` — eso vuelve a ese agente "cerrado" a un solo cliente, y el equipo es una agencia que sirve a cualquier cliente.
+
+Si un agente no encuentra `/clients/[cliente]/brief.md` o `/clients/[cliente]/outputs/web-brief.json` para el cliente activo, es el mismo caso que cualquier otro dato faltante del Motor de Contexto de arriba: se detiene y responde con el bloque NEEDS_CONTEXT / PREGUNTA / POR_QUE pidiendo el brief — nunca inventa el contenido del cliente ni sigue adelante con un ejemplo genérico como si fuera el dato real.

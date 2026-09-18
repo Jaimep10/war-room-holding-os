@@ -1,0 +1,48 @@
+{
+  "_nota": "Plantilla del esquema de web-brief.json (regla CLAUDE.md: agencia abierta). No existia ningun web-brief.json real en el repo para 'reestructurar' -- se creo esta plantilla desde cero. Todos los valores son placeholders de esquema, no datos reales de ningun cliente. Copiar esta carpeta a /clients/[slug-del-cliente]/outputs/web-brief.json y llenar con el brief real de ESE cliente.",
+  "cliente": "<slug-del-cliente, ej: geco-acabados-hospitalarios>",
+  "publico_para_web": {
+    "_nota": "Todo lo que hay aqui adentro es lo UNICO que agente-web-wordpress puede leer y mostrar.",
+    "propuestaValor": "<propuesta de valor del brief del cliente, en su propio lenguaje>",
+    "kits": [
+      {
+        "nombre": "<nombre comercial del kit/paquete, ej: Kit Consultorio Certificado>",
+        "m2": 0,
+        "incluye": ["<item 1>", "<item 2>"],
+        "precioFinalPublico": 0,
+        "garantia": "<garantia real que ofrece el cliente, si el brief la declara>",
+        "certificaciones": ["<certificacion o norma que el brief declare, si aplica>"]
+      }
+    ],
+    "comparativaCompetencia": [
+      {
+        "competidor": "<nombre real del competidor que el brief del cliente identifique>",
+        "diferenciador": "<por que el cliente gana esa comparacion, segun el brief>"
+      }
+    ],
+    "ganchosRiesgoUrgencia": [
+      "<gancho real de riesgo/urgencia que el brief declare, ej: evitar una clausura regulatoria -- nunca inventado>"
+    ],
+    "ctaWhatsapp": "<numero o link real de contacto del cliente>"
+  },
+  "privado_solo_finanzas": {
+    "_nota": "SOLO agente-finanzas y el orquestador pueden leer esta seccion. agente-web-wordpress tiene prohibido mostrar cualquier campo de aqui (costo, margen, proveedor).",
+    "kits": [
+      {
+        "nombre": "<debe calzar 1 a 1 con publico_para_web.kits[].nombre>",
+        "costoMaterial": 0,
+        "costoInstalacion": 0,
+        "costoRealTotal": 0,
+        "margenPorc": 0,
+        "margenUsd": 0,
+        "proveedor": "<proveedor real del cliente>"
+      }
+    ]
+  },
+  "_reglas": [
+    "agente-web-wordpress SOLO lee publico_para_web -- nunca privado_solo_finanzas.",
+    "privado_solo_finanzas es exclusivo de agente-finanzas y del orquestador (director-estrategia).",
+    "Prohibido copiar o filtrar un campo de privado_solo_finanzas hacia publico_para_web.",
+    "Si falta un dato real para llenar cualquier campo, no se inventa: se pide al usuario (NEEDS_CONTEXT)."
+  ]
+}
