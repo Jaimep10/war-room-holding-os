@@ -17,3 +17,4 @@ node_modules/
 # hooks) — NUNCA se comitean. Solo las definiciones de agentes son del proyecto.
 .claude/*
 !.claude/agents/
+_to_delete/
