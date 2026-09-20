@@ -10,13 +10,27 @@ export interface EjecucionTool {
 
 let client: Anthropic | null = null;
 
+/**
+ * Lee ANTHROPIC_API_KEY de .env.local y la limpia: quita saltos de línea (\r, \n)
+ * y espacios al principio/final. Un copy/paste al .env.local a veces deja un
+ * salto de línea o espacio colgando (ej. `echo "ANTHROPIC_API_KEY=..." >> .env.local`
+ * mal cerrado, o un editor que agrega \r) y eso rompe el header Authorization real
+ * contra la API de Anthropic con un error que parece "key inválida" sin serlo.
+ */
+function getAnthropicApiKey(): string | undefined {
+  const raw = process.env.ANTHROPIC_API_KEY;
+  if (!raw) return undefined;
+  const limpia = raw.replace(/[\r\n]/g, "").trim();
+  return limpia || undefined;
+}
+
 export function hasApiKey(): boolean {
-  return Boolean(process.env.ANTHROPIC_API_KEY);
+  return Boolean(getAnthropicApiKey());
 }
 
 function getClient(): Anthropic {
   if (!client) {
-    client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+    client = new Anthropic({ apiKey: getAnthropicApiKey() });
   }
   return client;
 }
