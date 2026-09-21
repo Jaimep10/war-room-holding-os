@@ -4,6 +4,7 @@ import { IdeaSummary } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Radar, ShieldAlert, Lightbulb, Wallet, TrendingUp, Building2, FolderPlus } from "lucide-react";
+import ClearButton from "@/components/ClearButton";
 
 export type Modo = "idea-empresa" | "capital-idea" | "negocio-existente" | "clientes-productos";
 
@@ -100,6 +101,8 @@ export default function Header({
           <ShieldAlert size={14} />
           Prueba: Equipo Abierto
         </Button>
+
+        <ClearButton />
       </div>
     </header>
   );
