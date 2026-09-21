@@ -90,7 +90,11 @@ export default function ChatPanel({
   projectLabel?: string | null;
 }) {
   const [mode, setMode] = useState<Mode>("single");
-  const [singleAgent, setSingleAgent] = useState(agents[0]?.slug ?? "");
+  // Sin preselección: antes esto arrancaba en agents[0]?.slug, y como listarAgentes()
+  // ordena alfabético, SIEMPRE quedaba agente-00-consultor-whatsapp por defecto sin que
+  // la persona lo eligiera -- eso es justo la sensación de "clon" que se reportó (parecía
+  // que un solo agente respondía siempre). Ahora arranca vacío y el select obliga a elegir.
+  const [singleAgent, setSingleAgent] = useState("");
   const [multiSelected, setMultiSelected] = useState<string[]>([]);
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -388,8 +392,20 @@ export default function ChatPanel({
         // Si hay un PDF o Excel adjunto, el pase va SIEMPRE a agente-analista (sin importar
         // qué agente esté seleccionado en el modo actual) — es el que recibe el documento.
         const hayAdjunto = !!pdfAttachment || !!excelAttachment;
-        const agentSlugs = hayAdjunto ? [AGENTE_ANALISTA_SLUG] : mode === "single" ? [singleAgent] : multiSelected;
+        const agentSlugs = hayAdjunto
+          ? [AGENTE_ANALISTA_SLUG]
+          : mode === "single"
+          ? singleAgent
+            ? [singleAgent]
+            : []
+          : multiSelected;
+
         if (!agentSlugs.length) {
+          if (mode === "single" && !hayAdjunto) {
+            setResults([
+              { agent: "sistema", ok: false, text: "Elegí primero a qué agente le vas a hablar (arriba en el selector) — no hay uno por defecto." },
+            ]);
+          }
           setLoading(false);
           return;
         }
@@ -667,6 +683,9 @@ export default function ChatPanel({
           onChange={(e) => setSingleAgent(e.target.value)}
           className="bg-base-800 border border-base-600 text-sm text-gray-100 rounded-lg px-3 py-1.5 mb-2 focus:outline-none focus:ring-2 focus:ring-accent-500/50"
         >
+          <option value="" disabled>
+            -- Elegí un agente --
+          </option>
           {agents.map((a) => (
             <option key={a.slug} value={a.slug}>
               {a.slug}

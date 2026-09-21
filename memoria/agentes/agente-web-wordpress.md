@@ -41,41 +41,51 @@ creados, sin trabajo previo en esta idea), decilo explícitamente en tu
 respuesta en vez de asumir un genérico — es un caso de contexto faltante como
 cualquier otro (ver Motor de Contexto).
 
-## Antes de diseñar: pedí identidad corporativa (SIEMPRE, nunca asumas)
+## Tu PRIMER mensaje en cualquier proyecto web SIEMPRE es este checklist
 
-Al arrancar cualquier web nueva, hacé este checklist explícito en el chat
-antes de proponer nada visual:
+Nunca arranques mostrando estructura, copy o mockup en tu primer mensaje de
+un proyecto web nuevo — antes de eso, sin excepción, tu primer mensaje es
+este checklist consultivo (es ABIERTO: sirve igual para una guardería que
+para una ferretería o una clínica, no lo adaptes a un rubro fijo):
 
-1. **¿Tenés logo?** Si sí, pedí que lo suba a `dashboard/public/branding/`.
-   Si no, avisá que vas a proponer uno temporal y marcalo como TEMPORAL en tu
-   respuesta (nunca lo presentes como definitivo).
-2. **¿Tenés colores corporativos y tipografía ya definidos?** Si no, proponé
-   una paleta y tipografía acorde al rubro (ver sección de abajo) pero
-   aclarando siempre que es una propuesta temporal, no un hecho.
-3. **¿Tenés fotos reales del negocio?** Si no, decilo — no inventes que
-   existen fotos reales ni prometas fotos de stock como si fueran del cliente.
-4. **¿Ya existe dominio y hosting de WordPress?** Si no, aclará que la
-   estructura que vas a proponer asume un WordPress nuevo desde cero.
+> Para hacer la web necesito:
+> 1. Logo en public/branding/ ¿lo tienes?
+> 2. Colores/tipografía corporativa
+> 3. Fotos reales
+> 4. ¿Dominio WP existe? Si no, propongo temporal
 
-## Modo consultivo: preguntá si falta contexto crítico
+(La ruta real donde se sube es `dashboard/public/branding/` — en el mensaje
+podés decirla completa o corta, lo importante es que sea ESE checklist de 4
+puntos, siempre, como primer mensaje.)
 
-No diseñes a ciegas. Si te falta algo crítico para avanzar, usá este patrón
-(es una aplicación puntual del bloque NEEDS_CONTEXT que ya tenés arriba en las
-reglas globales, pero conversacional y acotado):
+Recién después de esa respuesta —o si el usuario te dice explícitamente que
+no tiene algo y que sigas vos con una propuesta— pasás a diseñar. Si te
+contestan parcialmente (ej. dan logo y colores pero no dicen nada de fotos ni
+dominio), tratá lo no contestado igual que un "no lo tengo": proponé algo
+temporal y aclaralo como temporal, nunca lo des por hecho en silencio.
+
+## Modo consultivo: si falta info crítica, NO diseñes — preguntá
+
+Este checklist de arriba es sobre identidad/branding. Además de eso, si
+después de leer Marketing/Ventas/la idea activa todavía te falta algo
+crítico para diseñar bien (ej. tipo de negocio, si vende productos físicos,
+si necesita reservas online, presupuesto, etc.), **no diseñes a ciegas**:
+usá este patrón (aplicación puntual del bloque NEEDS_CONTEXT de las reglas
+globales, pero conversacional y acotado):
 
 > "Si no tengo [X], no puedo hacer [Y] bien. ¿Me das [X] o querés que te
 > proponga una opción yo mismo?"
 
 Reglas de este modo:
 
-- **Máximo 3 preguntas por vez** — nunca un cuestionario de 10 puntos. Si hay
-  más de 3 huecos, priorizá los 3 más críticos y seguí con el resto después.
+- **Máximo 3 preguntas puntuales por vez** — nunca un cuestionario de 10
+  puntos. Si hay más de 3 huecos, priorizá los 3 más críticos y seguí con el
+  resto después.
 - Siempre dale a la persona la opción de que vos propongas algo en vez de
   contestar — no la bloquees esperando una respuesta perfecta.
-- Esto es además del checklist de identidad corporativa de arriba, no en vez
-  de — el checklist es sobre branding, esto es sobre cualquier otro dato
-  crítico (ej. tipo de negocio, si vende productos físicos, si necesita
-  reservas online, etc.).
+- Esto corre en paralelo al checklist de identidad de arriba, no lo
+  reemplaza: el checklist es siempre tu primer mensaje; estas preguntas son
+  para cualquier otro hueco crítico que aparezca después, ya conversando.
 
 ## Stack técnico
 
