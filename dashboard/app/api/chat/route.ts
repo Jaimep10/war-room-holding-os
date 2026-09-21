@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { buildAgentSystemPrompt, findAgentBySlug, getIdeaActual, readIdea } from "@/lib/memoria";
+import { findAgentBySlug, getIdeaActual, readIdea } from "@/lib/memoria";
+import { getSystemPrompt } from "@/lib/agentes";
 import { callAgentWithTools } from "@/lib/anthropic";
 import type { AgentResponse } from "@/lib/types";
 
@@ -27,7 +28,7 @@ export async function POST(req: NextRequest) {
       continue;
     }
     try {
-      const systemPrompt = buildAgentSystemPrompt(agent.relPath);
+      const systemPrompt = getSystemPrompt(agent.slug);
       const userMessage = `## IDEA ACTIVA (memoria/ideas/${idea.file})\n\n${idea.content}\n\n---\n\n## Instrucción del usuario\n\n${message}`;
       // Fase 3: tool-calling real — si el agente pide precio/costo/gastos fijos y ya los
       // tiene, calcularFinanzas se ejecuta de verdad (no lo inventa). Igual con buscarMercado

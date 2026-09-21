@@ -11,9 +11,33 @@ export const ENTREGABLES_DIR = path.join(IDEAS_DIR, "entregables");
 export const AGENTS_ROOT = path.join(process.cwd(), "..", ".claude", "agents");
 export const PRINCIPIOS_PATH = path.join(MEMORIA_ROOT, "PRINCIPIOS-DEL-EQUIPO.md");
 export const IDEA_ACTUAL_PATH = path.join(IDEAS_DIR, "IDEA-ACTUAL.md");
+// Memoria INDIVIDUAL por agente (anti-clon): memoria/agentes/<slug>.md.
+// Cada agente lee SOLO su propio archivo -- nunca el de otro agente, y nunca
+// "toda la memoria" junta. Ver readAgentMemoria() más abajo.
+export const AGENTES_MEMORIA_DIR = path.join(MEMORIA_ROOT, "agentes");
 
 function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+}
+
+/**
+ * Devuelve la ruta de memoria individual de UN agente. Abierto: no hardcodea
+ * ningún slug -- funciona para cualquier agente que exista o se cree a futuro.
+ */
+export function agentMemoriaPath(slug: string): string {
+  return path.join(AGENTES_MEMORIA_DIR, `${slug}.md`);
+}
+
+/**
+ * Lee la memoria individual de UN agente (memoria/agentes/<slug>.md) y NADA
+ * más -- ni la de otros agentes ni el resto de memoria/. Si el agente todavía
+ * no tiene archivo propio, devuelve "" en vez de fallar (memoria vacía, no
+ * error) para no bloquear a un agente nuevo que aún no fue entrenado.
+ */
+export function readAgentMemoria(slug: string): string {
+  const full = agentMemoriaPath(slug);
+  if (!fs.existsSync(full)) return "";
+  return fs.readFileSync(full, "utf-8");
 }
 
 export function slugify(text: string, maxWords = 5): string {
@@ -355,6 +379,11 @@ export function buildCombinedSystemPrompt(agentSlugs: string[]): string {
         parts.push(`\n\n### 📖 ${p}\n\n${fs.readFileSync(litFull, "utf-8")}`);
       }
     }
+    // Memoria individual de ESTE especialista únicamente (anti-clon: nunca la de otro).
+    const memoriaIndividual = readAgentMemoria(slug);
+    if (memoriaIndividual) {
+      parts.push(`\n\n#### Memoria individual de ${slug} (memoria/agentes/${slug}.md)\n\n${memoriaIndividual}`);
+    }
   }
 
   return parts.join("\n");
@@ -404,11 +433,20 @@ function extractBiblioteca(agentBody: string): string[] {
   return Array.from(paths);
 }
 
+/**
+ * Construye el systemPrompt de UN agente. Anti-clon: cada llamada usa
+ * agentRelPath para leer SOLO la definición de ESE agente (nunca la de otro)
+ * y SOLO su propia memoria individual (memoria/agentes/<slug>.md) -- nunca
+ * "toda la memoria global". La idea activa (el proyecto puntual) no entra
+ * acá: la agrega el caller como userMessage (ver app/api/chat/route.ts),
+ * porque es contexto del proyecto, no del agente.
+ */
 export function buildAgentSystemPrompt(agentRelPath: string): string {
   const agentFull = path.join(AGENTS_ROOT, agentRelPath);
   const raw = fs.readFileSync(agentFull, "utf-8");
   const parsed = matter(raw);
   const agentBody = parsed.content.trim();
+  const slug = (parsed.data.name as string) || agentRelPath.replace(/\.md$/, "");
 
   const principios = fs.existsSync(PRINCIPIOS_PATH)
     ? fs.readFileSync(PRINCIPIOS_PATH, "utf-8")
@@ -425,6 +463,8 @@ export function buildAgentSystemPrompt(agentRelPath: string): string {
     })
     .join("");
 
+  const memoriaIndividual = readAgentMemoria(slug);
+
   return [
     "# LEY SUPREMA DEL EQUIPO (léela primero, aplica por encima de todo lo demás)",
     principios,
@@ -432,6 +472,8 @@ export function buildAgentSystemPrompt(agentRelPath: string): string {
     agentBody,
     "\n\n# TU BIBLIOTECA (contenido completo de los frameworks que debes aplicar)",
     bibliotecaContent || "_(sin archivos de biblioteca detectados)_",
+    `\n\n# TU MEMORIA INDIVIDUAL (memoria/agentes/${slug}.md — SOLO tuya, ningún otro agente la ve)`,
+    memoriaIndividual || "_(todavía no tenés memoria individual guardada)_",
   ].join("\n");
 }
 
