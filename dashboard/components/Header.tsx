@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Radar, ShieldAlert, Lightbulb, Wallet, TrendingUp, Building2, FolderPlus } from "lucide-react";
 import ClearButton from "@/components/ClearButton";
+import ClearCacheButton from "@/components/ClearCacheButton";
 
 export type Modo = "idea-empresa" | "capital-idea" | "negocio-existente" | "clientes-productos";
 
@@ -102,6 +103,7 @@ export default function Header({
           Prueba: Equipo Abierto
         </Button>
 
+        <ClearCacheButton />
         <ClearButton />
       </div>
     </header>
