@@ -64,7 +64,7 @@ export async function callAgentWithTools(
     );
   }
   const { useTools = true, maxToolRounds = 4 } = options;
-  const model = process.env.ANTHROPIC_MODEL || "claude-3-5-sonnet-20241022";
+  const model = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-5-20250929";
   const anthropic = getClient();
 
   const messages: Anthropic.MessageParam[] = [{ role: "user", content: userMessage }];
