@@ -2,3 +2,8 @@ node_modules
 .next
 .env.local
 *.tsbuildinfo
+
+# Logo/fotos/paleta que sube el usuario vía agente-web-wordpress -- son
+# archivos del cliente activo, no del código del proyecto.
+public/branding/*
+!public/branding/README.md

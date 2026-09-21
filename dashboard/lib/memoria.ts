@@ -357,6 +357,7 @@ export function createNegocioExistente(inputs: NegocioInputs): { file: string; i
 export function buildCombinedSystemPrompt(agentSlugs: string[]): string {
   const principios = fs.existsSync(PRINCIPIOS_PATH) ? fs.readFileSync(PRINCIPIOS_PATH, "utf-8") : "";
   const seenLiteratura = new Set<string>();
+  const seenAgenteReferenciado = new Set<string>();
   const parts: string[] = [
     "# LEY SUPREMA DEL EQUIPO (léela primero, aplica por encima de todo lo demás)",
     principios,
@@ -383,6 +384,15 @@ export function buildCombinedSystemPrompt(agentSlugs: string[]): string {
     const memoriaIndividual = readAgentMemoria(slug);
     if (memoriaIndividual) {
       parts.push(`\n\n#### Memoria individual de ${slug} (memoria/agentes/${slug}.md)\n\n${memoriaIndividual}`);
+    }
+    // Agentes que ESTE especialista declaró que necesita (backticks en su propia memoria).
+    for (const refSlug of extractAgentesReferenciados(memoriaIndividual, slug)) {
+      if (seenAgenteReferenciado.has(refSlug)) continue;
+      seenAgenteReferenciado.add(refSlug);
+      const refContenido = readAgentMemoria(refSlug);
+      if (refContenido) {
+        parts.push(`\n\n#### 🔗 memoria/agentes/${refSlug}.md (referenciado por ${slug})\n\n${refContenido}`);
+      }
     }
   }
 
@@ -434,6 +444,24 @@ function extractBiblioteca(agentBody: string): string[] {
 }
 
 /**
+ * Dependencias de contexto entre agentes -- ABIERTO, no hardcodeado en código.
+ * Un agente declara, en SU PROPIO archivo memoria/agentes/<slug>.md, de qué
+ * otros agentes necesita leer contexto citando su ruta entre backticks (ej.
+ * `memoria/agentes/agente-marketing.md`). buildAgentSystemPrompt escanea eso
+ * y le inyecta la memoria de esos agentes referenciados -- solo un nivel (no
+ * sigue referencias dentro de las memorias referenciadas, para evitar cadenas
+ * o ciclos), y nunca se referencia a sí mismo (ya tiene su propia sección).
+ */
+function extractAgentesReferenciados(memoriaBody: string, ownSlug: string): string[] {
+  const slugs = new Set<string>();
+  const matches = memoriaBody.matchAll(/`memoria\/agentes\/([a-zA-Z0-9_-]+)\.md`/g);
+  for (const m of matches) {
+    if (m[1] !== ownSlug) slugs.add(m[1]);
+  }
+  return Array.from(slugs);
+}
+
+/**
  * Construye el systemPrompt de UN agente. Anti-clon: cada llamada usa
  * agentRelPath para leer SOLO la definición de ESE agente (nunca la de otro)
  * y SOLO su propia memoria individual (memoria/agentes/<slug>.md) -- nunca
@@ -465,6 +493,19 @@ export function buildAgentSystemPrompt(agentRelPath: string): string {
 
   const memoriaIndividual = readAgentMemoria(slug);
 
+  // Contexto de otros agentes que ESTE agente declaró que necesita, citando
+  // sus rutas entre backticks dentro de su propia memoria (ver
+  // extractAgentesReferenciados arriba). Ejemplo real: agente-web-wordpress
+  // referencia a agente-marketing y agente-closer para no diseñar a ciegas.
+  const agentesReferenciados = extractAgentesReferenciados(memoriaIndividual, slug);
+  const contextoOtrosAgentes = agentesReferenciados
+    .map((refSlug) => {
+      const contenido = readAgentMemoria(refSlug);
+      if (!contenido) return "";
+      return `\n\n### 🔗 memoria/agentes/${refSlug}.md (referenciado por vos)\n\n${contenido}`;
+    })
+    .join("");
+
   return [
     "# LEY SUPREMA DEL EQUIPO (léela primero, aplica por encima de todo lo demás)",
     principios,
@@ -474,6 +515,12 @@ export function buildAgentSystemPrompt(agentRelPath: string): string {
     bibliotecaContent || "_(sin archivos de biblioteca detectados)_",
     `\n\n# TU MEMORIA INDIVIDUAL (memoria/agentes/${slug}.md — SOLO tuya, ningún otro agente la ve)`,
     memoriaIndividual || "_(todavía no tenés memoria individual guardada)_",
+    ...(agentesReferenciados.length
+      ? [
+          "\n\n# CONTEXTO DE OTROS AGENTES QUE VOS MISMO DECLARASTE QUE NECESITÁS",
+          contextoOtrosAgentes || "_(los agentes referenciados todavía no tienen memoria individual guardada)_",
+        ]
+      : []),
   ].join("\n");
 }
 
