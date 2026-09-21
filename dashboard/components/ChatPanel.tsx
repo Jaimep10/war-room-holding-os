@@ -90,6 +90,14 @@ export default function ChatPanel({
   projectLabel?: string | null;
 }) {
   const [mode, setMode] = useState<Mode>("single");
+  // Toast rojo de bloqueo (ej. "elegí un agente antes de enviar") -- se autolimpia solo,
+  // no depende de que el usuario cierre nada ni se guarda en ningún storage.
+  const [toast, setToast] = useState<string | null>(null);
+  useEffect(() => {
+    if (!toast) return;
+    const t = setTimeout(() => setToast(null), 3500);
+    return () => clearTimeout(t);
+  }, [toast]);
   // Sin preselección: antes esto arrancaba en agents[0]?.slug, y como listarAgentes()
   // ordena alfabético, SIEMPRE quedaba agente-00-consultor-whatsapp por defecto sin que
   // la persona lo eligiera -- eso es justo la sensación de "clon" que se reportó (parecía
@@ -402,9 +410,7 @@ export default function ChatPanel({
 
         if (!agentSlugs.length) {
           if (mode === "single" && !hayAdjunto) {
-            setResults([
-              { agent: "sistema", ok: false, text: "Elegí primero a qué agente le vas a hablar (arriba en el selector) — no hay uno por defecto." },
-            ]);
+            setToast("⚠️ Selecciona un agente primero");
           }
           setLoading(false);
           return;
@@ -477,6 +483,15 @@ export default function ChatPanel({
 
   return (
     <div className="flex flex-col h-full">
+      {toast && (
+        <div
+          role="alert"
+          className="fixed top-4 right-4 z-50 flex items-center gap-2 rounded-lg bg-red-600 text-white text-sm font-semibold px-4 py-2.5 shadow-lg animate-in fade-in slide-in-from-top-2"
+        >
+          {toast}
+        </div>
+      )}
+
       {!apiKeyConfigured && (
         <div className="flex items-start gap-2 rounded-lg border border-yellow-600/30 bg-yellow-500/10 text-yellow-300 text-[11px] px-3 py-2 mb-3">
           <AlertTriangle size={14} className="mt-0.5 shrink-0" />
