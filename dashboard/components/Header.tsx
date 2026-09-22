@@ -38,7 +38,7 @@ export default function Header({
   totalAgentes: number;
 }) {
   return (
-    <header className="col-span-4 flex flex-wrap items-center justify-between gap-3 border-b border-base-700 bg-base-900/80 px-5 py-3 rounded-xl mb-4">
+    <header className="shrink-0 flex flex-wrap items-center justify-between gap-3 border-b border-base-700 bg-base-900/80 px-5 py-3 rounded-xl">
       <div className="flex items-center gap-2.5">
         <div className="w-8 h-8 rounded-lg bg-accent-500/20 flex items-center justify-center text-accent-400">
           <Radar size={18} />

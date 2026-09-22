@@ -17,7 +17,7 @@ export default function WarRoomPanel({
   projectLabel?: string | null;
 }) {
   return (
-    <div className="col-span-1 rounded-xl border border-base-700 bg-base-900/60 p-4 flex flex-col overflow-hidden">
+    <div className="flex-1 min-h-0 rounded-xl border border-base-700 bg-base-900/60 p-4 flex flex-col overflow-hidden">
       <Tabs defaultValue="chat" className="flex flex-col h-full">
         <TabsList className="mb-3 self-start">
           <TabsTrigger value="chat">Chat Equipo</TabsTrigger>

@@ -4,11 +4,12 @@ import { useState } from "react";
 import { AgentSummary, IdeaActualPointer, IdeaSummary } from "@/lib/types";
 import Header, { Modo } from "@/components/Header";
 import IntakeColumn from "@/components/IntakeColumn";
-import KanbanBoard from "@/components/KanbanBoard";
 import WarRoomPanel from "@/components/WarRoomPanel";
 import CapitalIdeaMode from "@/components/CapitalIdeaMode";
 import NegocioExistenteMode from "@/components/NegocioExistenteMode";
 import ClientesProductosPanel from "@/components/ClientesProductosPanel";
+import ClientesSidebar from "@/components/ClientesSidebar";
+import AccionRapida from "@/components/AccionRapida";
 import OpenTeamModal from "@/components/OpenTeamModal";
 
 export default function Dashboard({
@@ -28,6 +29,9 @@ export default function Dashboard({
   );
   const [modo, setModo] = useState<Modo>("idea-empresa");
   const [demoOpen, setDemoOpen] = useState(false);
+  // Cliente activo para Acción Rápida / sidebar -- vive acá (no en localStorage) porque es
+  // una selección de la sesión de trabajo, no un dato persistente del cliente en sí.
+  const [clienteActivoSlug, setClienteActivoSlug] = useState<string | null>(null);
 
   async function refreshIdeas() {
     const res = await fetch("/api/ideas");
@@ -84,7 +88,13 @@ export default function Dashboard({
   }
 
   return (
-    <div className="grid grid-cols-4 gap-4 p-4 h-screen">
+    // Layout 80/20: sidebar de clientes (colapsable, ~20%) a la izquierda + columna
+    // principal (~80%) a la derecha, con el Chat/War Room ocupando la mayor parte del
+    // alto (arriba) y la caja de escribir la orden grande y fija abajo (ver ChatPanel).
+    // Antes esto era un grid-cols-4 con el Kanban de 4 columnas (col-span-2, casi siempre
+    // "Sin ideas aquí") comiéndose la mitad de la pantalla -- se sacó de acá (el archivo
+    // components/KanbanBoard.tsx sigue existiendo, solo se dejó de renderizar).
+    <div className="flex flex-col h-screen p-4 gap-4">
       <Header
         ideas={ideas}
         currentFile={pointer.archivo}
@@ -97,27 +107,56 @@ export default function Dashboard({
         totalAgentes={agents.length}
       />
 
-      {modo === "idea-empresa" && (
-        <>
-          <IntakeColumn onCreateIdea={onCreateIdea} />
-          <KanbanBoard ideas={ideas} onStageChange={onStageChange} />
-        </>
-      )}
+      <div className="flex flex-1 gap-4 overflow-hidden min-h-0">
+        <ClientesSidebar clienteActivoSlug={clienteActivoSlug} onSelectCliente={setClienteActivoSlug} />
 
-      {modo === "capital-idea" && <CapitalIdeaMode onGenerated={onModeGenerated} />}
+        <div className="flex-1 flex flex-col gap-3 overflow-hidden min-w-0 min-h-0">
+          <AccionRapida
+            agents={agents}
+            clienteActivoSlug={clienteActivoSlug}
+            onClienteChange={setClienteActivoSlug}
+            hasActiveIdea={!!pointer.archivo}
+          />
 
-      {modo === "negocio-existente" && <NegocioExistenteMode onGenerated={onModeGenerated} />}
+          {modo === "idea-empresa" && (
+            <details className="shrink-0 rounded-xl border border-base-700 bg-base-900/60 p-3">
+              <summary className="text-xs font-semibold text-gray-300 cursor-pointer list-none">
+                ➕ Nueva idea desde cero (Idea Intake)
+              </summary>
+              <div className="mt-2 max-h-[38vh] overflow-y-auto">
+                <IntakeColumn onCreateIdea={onCreateIdea} />
+              </div>
+            </details>
+          )}
 
-      {modo === "clientes-productos" && <ClientesProductosPanel />}
+          {modo === "capital-idea" && (
+            <div className="grid grid-cols-3 gap-4 shrink-0 max-h-[42vh]">
+              <CapitalIdeaMode onGenerated={onModeGenerated} />
+            </div>
+          )}
 
-      <WarRoomPanel
-        agents={agents}
-        apiKeyConfigured={apiKeyConfigured}
-        projectId={pointer.archivo}
-        projectLabel={
-          pointer.archivo ? ideas.find((i) => i.file === pointer.archivo)?.title ?? pointer.ideaId : null
-        }
-      />
+          {modo === "negocio-existente" && (
+            <div className="grid grid-cols-3 gap-4 shrink-0 max-h-[42vh]">
+              <NegocioExistenteMode onGenerated={onModeGenerated} />
+            </div>
+          )}
+
+          {modo === "clientes-productos" && (
+            <div className="grid grid-cols-3 gap-4 shrink-0 max-h-[42vh]">
+              <ClientesProductosPanel />
+            </div>
+          )}
+
+          <WarRoomPanel
+            agents={agents}
+            apiKeyConfigured={apiKeyConfigured}
+            projectId={pointer.archivo}
+            projectLabel={
+              pointer.archivo ? ideas.find((i) => i.file === pointer.archivo)?.title ?? pointer.ideaId : null
+            }
+          />
+        </div>
+      </div>
 
       <OpenTeamModal open={demoOpen} onOpenChange={setDemoOpen} />
     </div>

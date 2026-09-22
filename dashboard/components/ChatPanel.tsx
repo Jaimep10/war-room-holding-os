@@ -13,7 +13,6 @@ import {
   Users,
   User,
   FileUp,
-  FileText,
   FileSpreadsheet,
   Download,
   X,
@@ -509,8 +508,8 @@ export default function ChatPanel({
       )}
 
       {projectId && memory && (
-        <div className="rounded-lg border border-base-700 bg-base-850 p-2.5 mb-3">
-          <div className="flex items-center justify-between mb-1.5 gap-2">
+        <details className="rounded-lg border border-base-700 bg-base-850 p-2.5 mb-2 shrink-0">
+          <summary className="flex items-center justify-between mb-1.5 gap-2 cursor-pointer list-none">
             <div className="flex items-center gap-1.5 text-[11px] font-semibold text-gray-300 min-w-0">
               <Brain size={13} className="text-accent-400 shrink-0" />
               <span className="truncate">Memoria del Proyecto{projectLabel ? ` · ${projectLabel}` : ""}</span>
@@ -518,7 +517,7 @@ export default function ChatPanel({
             {memory.tipoNegocio && (
               <Badge className="bg-accent-500/20 text-accent-400 uppercase shrink-0">{memory.tipoNegocio}</Badge>
             )}
-          </div>
+          </summary>
 
           {!memory.tipoNegocio && (
             <div className="rounded-md border border-yellow-600/30 bg-yellow-500/10 p-2 mb-2">
@@ -673,205 +672,19 @@ export default function ChatPanel({
               </Button>
             </div>
           </details>
-        </div>
+        </details>
       )}
 
-      <div className="flex items-center gap-1.5 mb-3">
-        <Button size="sm" variant={mode === "single" ? "primary" : "outline"} onClick={() => setMode("single")}>
-          <User size={13} /> 1 agente
-        </Button>
-        <Button size="sm" variant={mode === "multi" ? "primary" : "outline"} onClick={() => setMode("multi")}>
-          <Users size={13} /> Varios
-        </Button>
-        <Button size="sm" variant={mode === "team" ? "primary" : "outline"} onClick={() => setMode("team")}>
-          <MessageSquare size={13} /> REUNIÓN TODO EL EQUIPO
-        </Button>
-        <Button size="sm" variant={mode === "warroom" ? "primary" : "outline"} onClick={() => setMode("warroom")}>
-          <Flame size={13} /> 🔥 Lanzar Reunión War Room
-        </Button>
-      </div>
+      {ideaLabel && <div className="text-[11px] text-gray-500 mb-1 shrink-0">Sobre: {ideaLabel}</div>}
 
-      {mode === "warroom" && (
-        <div className="text-[11px] text-gray-400 mb-2 rounded-md border border-base-700 bg-base-900 px-2.5 py-1.5">
-          Cadena real: 🎯 Estrategia → 📣 Marketing → 💰 Finanzas → 🧭 Resumen final del analista. Cada agente ve
-          completo lo que dijo el anterior sobre este mismo proyecto — no es una ronda en paralelo.
-        </div>
-      )}
-
-      {mode === "single" && (
-        <select
-          value={singleAgent}
-          onChange={(e) => setSingleAgent(e.target.value)}
-          className="bg-base-800 border border-base-600 text-sm text-gray-100 rounded-lg px-3 py-1.5 mb-2 focus:outline-none focus:ring-2 focus:ring-accent-500/50"
-        >
-          <option value="" disabled>
-            -- Elegí un agente --
-          </option>
-          {agents.map((a) => (
-            <option key={a.slug} value={a.slug}>
-              {a.slug}
-            </option>
-          ))}
-        </select>
-      )}
-
-      {mode === "multi" && (
-        <div className="grid grid-cols-2 gap-1.5 mb-2 max-h-32 overflow-y-auto border border-base-700 rounded-lg p-2 bg-base-900">
-          {agents.map((a) => (
-            <label key={a.slug} className="flex items-center gap-1.5 text-xs text-gray-300 cursor-pointer">
-              <Checkbox checked={multiSelected.includes(a.slug)} onCheckedChange={() => toggleMulti(a.slug)} />
-              {a.slug}
-            </label>
-          ))}
-        </div>
-      )}
-
-      {mode !== "team" && (
-        <>
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="application/pdf,.pdf"
-            className="hidden"
-            onChange={onPdfSelected}
-          />
-          <input
-            ref={excelInputRef}
-            type="file"
-            accept=".xlsx,.xlsm,.xls,.csv"
-            className="hidden"
-            onChange={onExcelSelected}
-          />
-
-          <div className="flex items-center gap-1.5 mb-2 flex-wrap">
-            <Button size="sm" variant="outline" onClick={() => fileInputRef.current?.click()} disabled={uploadingPdf}>
-              {uploadingPdf ? <Loader2 size={13} className="animate-spin" /> : <FileUp size={13} />}
-              {uploadingPdf ? "Extrayendo..." : "📄 Subir PDF"}
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => excelInputRef.current?.click()}
-              disabled={uploadingExcel}
-            >
-              {uploadingExcel ? <Loader2 size={13} className="animate-spin" /> : <FileSpreadsheet size={13} />}
-              {uploadingExcel ? "Leyendo..." : "📊 Subir Excel"}
-            </Button>
-            <Button size="sm" variant="outline" onClick={descargarUltimoExcel} disabled={!ultimoExcel}>
-              <Download size={13} />
-              📥 Descargar último Excel
-            </Button>
-            {(pdfAttachment || excelAttachment) && (
-              <span className="text-[10px] text-gray-500 w-full">
-                Se enviará a <span className="text-accent-400">{AGENTE_ANALISTA_SLUG}</span> con el/los documento(s)
-                como contexto
-              </span>
-            )}
+      {/* RESPUESTA/CHAT -- grande, ocupa todo el espacio que sobra por encima del compositor */}
+      <div className="flex-1 min-h-0 overflow-y-auto space-y-1.5 pr-1">
+        {results.length === 0 && (
+          <div className="h-full flex items-center justify-center text-center text-xs text-gray-600 px-6">
+            Las respuestas del equipo van a aparecer acá arriba. Escribí tu orden en la caja grande de abajo y
+            tocá Enviar.
           </div>
-
-          {pdfError && (
-            <div className="text-[11px] text-red-300 mb-2 border border-red-600/30 bg-red-500/10 rounded-lg px-2.5 py-1.5">
-              {pdfError}
-            </div>
-          )}
-          {excelError && (
-            <div className="text-[11px] text-red-300 mb-2 border border-red-600/30 bg-red-500/10 rounded-lg px-2.5 py-1.5">
-              {excelError}
-            </div>
-          )}
-
-          {pdfAttachment && (
-            <div className="mb-2 rounded-lg border border-accent-500/30 bg-accent-500/10 px-2.5 py-1.5 text-[11px] text-accent-300">
-              <div className="flex items-center gap-2">
-                <FileText size={13} className="shrink-0" />
-                <span className="truncate flex-1">
-                  ✅ PDF leído: {pdfAttachment.title} - {pdfAttachment.paginas ?? "?"} páginas
-                  {pdfAttachment.truncated ? " · texto truncado" : ""}
-                </span>
-                <button onClick={clearPdf} className="text-accent-300 hover:text-red-300 shrink-0" title="Quitar PDF">
-                  <X size={13} />
-                </button>
-              </div>
-              {pdfAttachment.viaVision && (
-                <div className="mt-1 text-[10px] text-yellow-300">
-                  📷 Este PDF no tenía texto real (son fotos/escaneo) -- lo de arriba es lo que
-                  describió visión AI mirando{" "}
-                  {pdfAttachment.paginasProcesadas ?? pdfAttachment.paginas ?? "las"} página(s), no
-                  texto real del documento.
-                </div>
-              )}
-            </div>
-          )}
-
-          {excelAttachment && (
-            <div className="mb-2 rounded-lg border border-accent-500/30 bg-accent-500/10 px-2.5 py-1.5 text-[11px] text-accent-300">
-              <div className="flex items-center gap-2 mb-1.5">
-                <FileSpreadsheet size={13} className="shrink-0" />
-                <span className="truncate flex-1">
-                  ✅ Excel leído: {excelAttachment.archivo} - {excelAttachment.hojas.length} hoja
-                  {excelAttachment.hojas.length !== 1 ? "s" : ""}
-                </span>
-                <button
-                  onClick={clearExcel}
-                  className="text-accent-300 hover:text-red-300 shrink-0"
-                  title="Quitar Excel"
-                >
-                  <X size={13} />
-                </button>
-              </div>
-              {excelAttachment.hojas.slice(0, 1).map((hoja) => (
-                <div key={hoja.nombre} className="overflow-x-auto">
-                  <div className="text-[10px] text-accent-200 mb-1">
-                    Hoja "{hoja.nombre}" · {hoja.totalFilas} filas · preview primeras {hoja.filas.length}
-                  </div>
-                  <table className="text-[10px] text-gray-300 border-collapse">
-                    <thead>
-                      <tr>
-                        {hoja.columnas.map((c, i) => (
-                          <th key={i} className="border border-base-600 bg-base-800 px-1.5 py-0.5 text-left whitespace-nowrap">
-                            {c || `Col ${i + 1}`}
-                          </th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {hoja.filas.map((fila, ri) => (
-                        <tr key={ri}>
-                          {fila.map((val, ci) => (
-                            <td key={ci} className="border border-base-700 px-1.5 py-0.5 whitespace-nowrap">
-                              {val === null ? "" : String(val)}
-                            </td>
-                          ))}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              ))}
-            </div>
-          )}
-
-          <Textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            placeholder={
-              pdfAttachment || excelAttachment
-                ? "Instrucción sobre el documento adjunto (opcional)..."
-                : "Pregunta o instrucción para el agente (opcional — si lo dejas vacío, pide su dictamen estándar)..."
-            }
-            rows={2}
-            className="mb-2"
-          />
-        </>
-      )}
-
-      <Button onClick={send} disabled={loading} className="mb-3 self-start">
-        {loading ? "Consultando al equipo..." : "Enviar"}
-      </Button>
-
-      {ideaLabel && <div className="text-[11px] text-gray-500 mb-2">Sobre: {ideaLabel}</div>}
-
-      <div className="flex-1 overflow-y-auto space-y-1.5 pr-1">
+        )}
         {results.map((r, i) => (
           <div key={i}>
             {mode === "warroom" && i > 0 && (
@@ -909,6 +722,143 @@ export default function ChatPanel({
             </div>
           </div>
         ))}
+      </div>
+
+      {/* CAJA PARA ESCRIBIR LA ORDEN -- grande, fija abajo (~30% del alto del panel) */}
+      <div className="shrink-0 h-[30vh] min-h-[220px] flex flex-col gap-1.5 border-t border-base-700 pt-2 mt-2">
+        <div className="flex items-center gap-1.5 flex-wrap shrink-0">
+          <Button size="sm" variant={mode === "single" ? "primary" : "outline"} onClick={() => setMode("single")}>
+            <User size={13} /> 1 agente
+          </Button>
+          <Button size="sm" variant={mode === "multi" ? "primary" : "outline"} onClick={() => setMode("multi")}>
+            <Users size={13} /> Varios
+          </Button>
+          <Button size="sm" variant={mode === "team" ? "primary" : "outline"} onClick={() => setMode("team")}>
+            <MessageSquare size={13} /> REUNIÓN TODO EL EQUIPO
+          </Button>
+          <Button size="sm" variant={mode === "warroom" ? "primary" : "outline"} onClick={() => setMode("warroom")}>
+            <Flame size={13} /> 🔥 War Room
+          </Button>
+
+          {mode === "single" && (
+            <select
+              value={singleAgent}
+              onChange={(e) => setSingleAgent(e.target.value)}
+              className="bg-base-800 border border-base-600 text-xs text-gray-100 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-accent-500/50"
+            >
+              <option value="" disabled>
+                -- Elegí un agente --
+              </option>
+              {agents.map((a) => (
+                <option key={a.slug} value={a.slug}>
+                  {a.slug}
+                </option>
+              ))}
+            </select>
+          )}
+
+          {mode !== "team" && (
+            <>
+              <Button size="sm" variant="outline" onClick={() => fileInputRef.current?.click()} disabled={uploadingPdf}>
+                {uploadingPdf ? <Loader2 size={13} className="animate-spin" /> : <FileUp size={13} />}
+                {uploadingPdf ? "Extrayendo..." : "📄 PDF"}
+              </Button>
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => excelInputRef.current?.click()}
+                disabled={uploadingExcel}
+              >
+                {uploadingExcel ? <Loader2 size={13} className="animate-spin" /> : <FileSpreadsheet size={13} />}
+                {uploadingExcel ? "Leyendo..." : "📊 Excel"}
+              </Button>
+              <Button size="sm" variant="outline" onClick={descargarUltimoExcel} disabled={!ultimoExcel}>
+                <Download size={13} />
+              </Button>
+            </>
+          )}
+        </div>
+
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="application/pdf,.pdf"
+          className="hidden"
+          onChange={onPdfSelected}
+        />
+        <input
+          ref={excelInputRef}
+          type="file"
+          accept=".xlsx,.xlsm,.xls,.csv"
+          className="hidden"
+          onChange={onExcelSelected}
+        />
+
+        {mode === "warroom" && (
+          <div className="text-[11px] text-gray-400 rounded-md border border-base-700 bg-base-900 px-2.5 py-1 shrink-0">
+            Cadena real: 🎯 Estrategia → 📣 Marketing → 💰 Finanzas → 🧭 Resumen final del analista.
+          </div>
+        )}
+
+        {mode === "multi" && (
+          <div className="grid grid-cols-3 gap-1 max-h-16 overflow-y-auto border border-base-700 rounded-lg p-1.5 bg-base-900 shrink-0">
+            {agents.map((a) => (
+              <label key={a.slug} className="flex items-center gap-1 text-[10px] text-gray-300 cursor-pointer">
+                <Checkbox checked={multiSelected.includes(a.slug)} onCheckedChange={() => toggleMulti(a.slug)} />
+                <span className="truncate">{a.slug}</span>
+              </label>
+            ))}
+          </div>
+        )}
+
+        {(pdfError || excelError) && (
+          <div className="text-[11px] text-red-300 border border-red-600/30 bg-red-500/10 rounded-lg px-2.5 py-1 shrink-0">
+            {pdfError || excelError}
+          </div>
+        )}
+
+        {(pdfAttachment || excelAttachment) && (
+          <div className="text-[10px] text-accent-300 bg-accent-500/10 border border-accent-500/30 rounded-lg px-2.5 py-1 shrink-0 truncate">
+            {pdfAttachment && (
+              <>
+                ✅ PDF: {pdfAttachment.title} ({pdfAttachment.paginas ?? "?"} pág.)
+                {pdfAttachment.viaVision ? " · 📷 leído por visión AI, no es texto real" : ""}{" "}
+                <button onClick={clearPdf} className="text-accent-300 hover:text-red-300 ml-1">
+                  <X size={11} className="inline" />
+                </button>
+              </>
+            )}
+            {excelAttachment && (
+              <>
+                ✅ Excel: {excelAttachment.archivo} ({excelAttachment.hojas.length} hoja
+                {excelAttachment.hojas.length !== 1 ? "s" : ""}){" "}
+                <button onClick={clearExcel} className="text-accent-300 hover:text-red-300 ml-1">
+                  <X size={11} className="inline" />
+                </button>
+              </>
+            )}
+            {(pdfAttachment || excelAttachment) && (
+              <span className="ml-1">
+                → va a <span className="text-accent-400">{AGENTE_ANALISTA_SLUG}</span>
+              </span>
+            )}
+          </div>
+        )}
+
+        <Textarea
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder={
+            pdfAttachment || excelAttachment
+              ? "Instrucción sobre el documento adjunto (opcional)..."
+              : "Escribí tu orden acá — pregunta o instrucción para el equipo (opcional, si lo dejás vacío pide el dictamen estándar)..."
+          }
+          className="flex-1 min-h-0 text-sm resize-none"
+        />
+
+        <Button onClick={send} disabled={loading} className="self-end shrink-0">
+          {loading ? "Consultando al equipo..." : "Enviar"}
+        </Button>
       </div>
     </div>
   );
