@@ -8,6 +8,8 @@ import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.js";
 // su export WorkerMessageHandler en runtime, ver explicación completa abajo.
 // @ts-ignore
 import * as pdfjsWorker from "pdfjs-dist/legacy/build/pdf.worker.js";
+import { createCanvas } from "@napi-rs/canvas";
+import { callVision } from "@/lib/anthropic";
 
 // --- Fix real de "Setting up fake worker failed: Cannot find module './pdf.worker.js'" ---
 // En Node, pdfjs-dist arma un "fake worker" (corre el parser en el mismo hilo en vez de un
@@ -29,10 +31,40 @@ import * as pdfjsWorker from "pdfjs-dist/legacy/build/pdf.worker.js";
 (globalThis as any).pdfjsWorker = pdfjsWorker;
 (pdfjsLib as any).GlobalWorkerOptions.workerSrc = "";
 
+// --- Fallback a visión AI cuando el PDF no tiene texto real (son fotos/escaneos) ---
+// pdfjs-dist, en Node, por defecto usa una NodeCanvasFactory que hace `require("canvas")`
+// puertas adentro para poder renderizar páginas a imagen (page.render) -- y ese paquete
+// "canvas" está instalado pero con el binario nativo roto en este entorno (mismo tipo de
+// problema que el del worker: falta 'build/Release/canvas.node'). En vez de pelear con esa
+// compilación nativa, le pasamos a pdfjs nuestra PROPIA fábrica de canvas basada en
+// "@napi-rs/canvas" (trae binarios precompilados, no necesita compilar nada) -- pdfjs solo
+// necesita un objeto con create/reset/destroy, no exige que sea el paquete "canvas" en sí.
+class NapiCanvasFactory {
+  create(width: number, height: number) {
+    if (width <= 0 || height <= 0) throw new Error("Tamaño de canvas inválido");
+    const canvas = createCanvas(width, height);
+    return { canvas, context: canvas.getContext("2d") };
+  }
+  reset(canvasAndContext: { canvas: any }, width: number, height: number) {
+    if (!canvasAndContext.canvas) throw new Error("Canvas no especificado");
+    canvasAndContext.canvas.width = width;
+    canvasAndContext.canvas.height = height;
+  }
+  destroy(canvasAndContext: { canvas: any; context: any }) {
+    if (!canvasAndContext.canvas) throw new Error("Canvas no especificado");
+    canvasAndContext.canvas.width = 0;
+    canvasAndContext.canvas.height = 0;
+    canvasAndContext.canvas = null;
+    canvasAndContext.context = null;
+  }
+}
+
 export const runtime = "nodejs";
 
 const MAX_BYTES = 15 * 1024 * 1024; // 15MB
 const MAX_CHARS_CONTEXTO = 8000; // primeros 8000 caracteres, tal como se pidió
+const MAX_PAGINAS_VISION = 5; // cuántas páginas como máximo se mandan a visión (costo/tiempo)
+const MAX_LADO_PX = 1600; // lado más largo de cada imagen mandada a visión, para no pasarse de payload
 
 export async function POST(req: NextRequest) {
   let formData: FormData;
@@ -70,9 +102,74 @@ export async function POST(req: NextRequest) {
     }
     fullText = fullText.trim();
 
+    let viaVision = false;
+    let paginasProcesadas: number | null = null;
+
+    if (!fullText) {
+      // Sin texto real en la capa de texto del PDF -- probablemente son fotos/escaneos
+      // (justo el caso reportado). En vez de rendirnos con "no se pudo extraer texto",
+      // renderizamos las páginas a imagen y se las mandamos a visión AI (el mismo modelo
+      // Claude que ya usan los agentes) para que las describa/transcriba.
+      try {
+        const canvasFactory = new NapiCanvasFactory();
+        const totalAProcesar = Math.min(pdf.numPages, MAX_PAGINAS_VISION);
+        const imagenes: { mediaType: "image/png"; base64: string }[] = [];
+
+        for (let i = 1; i <= totalAProcesar; i++) {
+          const page = await pdf.getPage(i);
+          const viewportBase = page.getViewport({ scale: 1 });
+          const scale = Math.min(2, MAX_LADO_PX / Math.max(viewportBase.width, viewportBase.height));
+          const viewport = page.getViewport({ scale: Math.max(scale, 0.1) });
+
+          const canvasAndContext = canvasFactory.create(Math.ceil(viewport.width), Math.ceil(viewport.height));
+          await page.render({
+            canvasContext: canvasAndContext.context,
+            viewport,
+            canvasFactory,
+          }).promise;
+
+          const png: Buffer = canvasAndContext.canvas.toBuffer("image/png");
+          imagenes.push({ mediaType: "image/png", base64: png.toString("base64") });
+          canvasFactory.destroy(canvasAndContext);
+        }
+
+        const instruccion = [
+          `Este PDF no tiene texto extraíble (son fotos o un escaneo) -- son ${pdf.numPages} página(s), acá tenés las primeras ${imagenes.length}.`,
+          "Describí y transcribí TODO lo que se ve en cada imagen, en español: si hay texto (aunque sea manuscrito o en una foto), transcribilo tal cual; si son fotos de un lugar/producto/persona, describí en detalle lo relevante para un negocio (qué se ve, estado, contexto).",
+          "Organizá tu respuesta por página, con un encabezado tipo '## Página N' para cada una. No inventes datos que no se vean en la imagen -- si algo no se distingue bien, decilo en vez de adivinar.",
+        ].join("\n\n");
+
+        const descripcion = await callVision(imagenes, instruccion);
+
+        if (descripcion.trim()) {
+          fullText = descripcion.trim();
+          viaVision = true;
+          paginasProcesadas = imagenes.length;
+        }
+      } catch (visionErr: any) {
+        const msg = String(visionErr?.message || visionErr);
+        if (msg.startsWith("MISSING_API_KEY")) {
+          return NextResponse.json(
+            {
+              error:
+                "Ese PDF no tiene texto real (son fotos/escaneo) -- para leerlo hace falta mandarlo a visión AI, y no hay ANTHROPIC_API_KEY configurada en dashboard/.env.local. Configurala y probá de nuevo.",
+            },
+            { status: 424 }
+          );
+        }
+        return NextResponse.json(
+          { error: `No se pudo generar ni analizar imágenes de las páginas del PDF: ${msg}` },
+          { status: 502 }
+        );
+      }
+    }
+
     if (!fullText) {
       return NextResponse.json(
-        { error: "No se pudo extraer texto de ese PDF (¿es un escaneo sin OCR?)." },
+        {
+          error:
+            "No se pudo extraer texto de ese PDF ni describirlo por visión AI (¿está vacío o corrupto?).",
+        },
         { status: 422 }
       );
     }
@@ -87,6 +184,10 @@ export async function POST(req: NextRequest) {
       truncated,
       originalChars: fullText.length,
       paginas: pdf.numPages ?? null,
+      // Transparencia (Motor de Contexto): si esto es true, `text` NO es texto real del PDF,
+      // es lo que describió/transcribió el modelo mirando las imágenes de las páginas.
+      viaVision,
+      ...(paginasProcesadas !== null ? { paginasProcesadas } : {}),
     });
   } catch (err: any) {
     return NextResponse.json({ error: String(err?.message || err) }, { status: 502 });

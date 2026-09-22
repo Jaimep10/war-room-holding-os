@@ -58,6 +58,10 @@ interface PdfAttachment {
   truncated: boolean;
   originalChars: number;
   paginas: number | null;
+  // true si `text` no es texto real del PDF sino lo que describió/transcribió visión AI
+  // (PDF de solo fotos/escaneo, sin capa de texto) -- ver app/api/chat/upload-pdf/route.ts.
+  viaVision?: boolean;
+  paginasProcesadas?: number;
 }
 
 interface ExcelHoja {
@@ -188,6 +192,8 @@ export default function ChatPanel({
           truncated: !!data.truncated,
           originalChars: data.originalChars ?? data.text.length,
           paginas: data.paginas ?? null,
+          viaVision: !!data.viaVision,
+          paginasProcesadas: data.paginasProcesadas,
         });
         if (projectId) {
           setMemory(
@@ -786,6 +792,14 @@ export default function ChatPanel({
                   <X size={13} />
                 </button>
               </div>
+              {pdfAttachment.viaVision && (
+                <div className="mt-1 text-[10px] text-yellow-300">
+                  📷 Este PDF no tenía texto real (son fotos/escaneo) -- lo de arriba es lo que
+                  describió visión AI mirando{" "}
+                  {pdfAttachment.paginasProcesadas ?? pdfAttachment.paginas ?? "las"} página(s), no
+                  texto real del documento.
+                </div>
+              )}
             </div>
           )}
 

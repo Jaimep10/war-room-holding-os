@@ -121,6 +121,57 @@ export async function callAgent(
   return result.text;
 }
 
+export interface ImagenParaVision {
+  mediaType: "image/png" | "image/jpeg";
+  /** Base64 SIN el prefijo "data:image/...;base64,", igual que espera la API de Anthropic. */
+  base64: string;
+}
+
+/**
+ * Llamada de visión simple: manda una o más imágenes + una instrucción de texto al mismo
+ * modelo Claude que ya usan los agentes (misma key, mismo ANTHROPIC_MODEL), sin systemPrompt
+ * de agente ni tool-calling -- es un caso de uso distinto a callAgent/callAgentWithTools.
+ *
+ * Pensada para app/api/chat/upload-pdf/route.ts: cuando un PDF no tiene texto real (son
+ * fotos/escaneos), lo que se devuelve como "texto extraído" en realidad es la
+ * descripción/transcripción que da el modelo mirando las imágenes de las páginas -- no es
+ * texto real del documento, así que quien reciba el resultado debe poder distinguirlo (ver
+ * el campo `viaVision` en ese endpoint. Motor de Contexto: nunca se presenta esto como si
+ * fuera texto real del PDF).
+ */
+export async function callVision(imagenes: ImagenParaVision[], instruccion: string): Promise<string> {
+  if (!hasApiKey()) {
+    throw new Error(
+      "MISSING_API_KEY: configura ANTHROPIC_API_KEY en dashboard/.env.local para activar las respuestas en vivo de los agentes."
+    );
+  }
+  if (!imagenes.length) {
+    throw new Error("callVision necesita al menos una imagen.");
+  }
+
+  const model = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-5-20250929";
+  const anthropic = getClient();
+
+  const content: Array<Anthropic.TextBlockParam | Anthropic.ImageBlockParam> = [
+    ...imagenes.map(
+      (img): Anthropic.ImageBlockParam => ({
+        type: "image",
+        source: { type: "base64", media_type: img.mediaType, data: img.base64 },
+      })
+    ),
+    { type: "text", text: instruccion },
+  ];
+
+  const response = await anthropic.messages.create({
+    model,
+    max_tokens: 2000,
+    messages: [{ role: "user", content }],
+  });
+
+  const textBlock = response.content.find((b) => b.type === "text");
+  return textBlock && textBlock.type === "text" ? textBlock.text : "";
+}
+
 /**
  * Intenta extraer un bloque JSON (array u objeto) de una respuesta de texto libre.
  * Prioriza un bloque ```json ... ``` explícito; si no existe, busca el primer
