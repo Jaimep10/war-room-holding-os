@@ -74,22 +74,30 @@ tomado de la pizarra "Today's Schedule" del salón. Vive en
 `clientes/estrellitas-day-care/outputs/web-preview.html` y está publicado
 como Artifact privado del usuario.
 
-Esta versión deja explícito y a la vista (sección "Contacto e inscripciones")
-qué datos reales todavía faltan para poder lanzarlo de verdad — nunca se
-inventaron:
+También existe un segundo entregable, hecho por el agente `agente-web-wordpress`,
+en `clientes/estrellitas-day-care/outputs/web-wordpress-ejemplo.md`: el mismo
+contenido pero en bloques nativos de Gutenberg, listo para importarse a un
+WordPress real vía `crearPaginaWordpress()` (siempre como borrador, nunca
+publicado automáticamente).
 
-- Dirección del local.
-- Teléfono / WhatsApp de contacto.
-- Horario de atención al público (distinto del horario diario de
-  actividades, que ese sí ya es real y sí está en la web).
-- Tarifas y proceso de inscripción.
-- Edades que se atienden.
-- ¿Dominio y hosting ya existen, para conectar esto a `/api/hostinger/deploy`?
+## Datos reales de contacto/operación confirmados (24-sep-2026)
+
+El usuario confirmó estos datos reales por chat — ya se pueden usar en
+cualquier pieza de este cliente, dejaron de ser "falta completar":
+
+- **Dirección:** 132-31 114th Street, South Ozone Park, NY, 11420.
+- **Horario de atención al público:** 7:00 am a 6:00 pm.
+- **Edades que se atienden:** desde los 2 meses hasta los 10 años.
+- **Trayectoria:** más de 20 años en el rubro.
+- **Metodología:** lúdica — "los niños aprenden jugando".
 
 ## Falta completar (pedir al usuario, no inventar)
 
-- Los 6 puntos de la sección de arriba (dirección, teléfono, horario de
-  atención, tarifas, edades, dominio/hosting).
+- **Teléfono / WhatsApp de contacto** — todavía no confirmado. Es un bloqueo
+  real para el botón de CTA de WhatsApp que pidió el usuario: sin el número
+  real, ese botón no puede armarse (no se inventa un número de ejemplo).
+- Tarifas y proceso de inscripción.
+- ¿Dominio y hosting ya existen, para conectar esto a `/api/hostinger/deploy`?
 - Confirmar si la paleta de colores del logo (amarillo, celeste, coral,
   naranja) es la identidad oficial de la marca más allá del logo mismo.
 - Confirmar si la sombra detrás de la estrella (ver nota arriba) debe

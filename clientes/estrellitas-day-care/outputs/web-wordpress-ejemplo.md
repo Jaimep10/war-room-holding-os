@@ -1,11 +1,17 @@
-# Web WordPress — ejemplo de página de Inicio (Estrellitas Day Care)
+# Web WordPress — ejemplo de página de Inicio (Estrellitas Day Care) — v2
 
 > Generado por el Agente Web WordPress. Cliente activo: `estrellitas-day-care`.
 > Fuente de datos: `clientes/estrellitas-day-care/README.md` (único origen de
-> verdad) + las fotos reales en `clientes/estrellitas-day-care/assets/fotos/`
-> + el logo digitalizado en `clientes/estrellitas-day-care/assets/branding/`.
-> No se usó ningún dato, precio, dirección, teléfono ni copy que no esté
-> declarado en esas fuentes.
+> verdad, sección "Datos reales de contacto/operación confirmados") + el
+> brief de `agente-marketing` para este mismo pedido (headline, subtítulos,
+> bullets y texto de CTA) + las fotos reales en
+> `clientes/estrellitas-day-care/assets/fotos/` + el logo digitalizado en
+> `clientes/estrellitas-day-care/assets/branding/`. No se usó ningún dato,
+> precio, dirección ni copy que no esté declarado en esas fuentes.
+>
+> Esta es la **v2** de este entregable: mejora directa sobre
+> `web-wordpress-ejemplo.md` v1 (mismo archivo, sobrescrito). Ver el
+> **Changelog** al final para el detalle exacto de qué cambió.
 
 ## Qué es esto y qué NO es
 
@@ -19,85 +25,115 @@ ese es una vista previa visual; esto de acá es el **bloque de contenido
 WordPress real del cliente, en cuanto exista dominio + Application Password
 (`WP_ADMIN_USER` / `WP_ADMIN_APP_PASSWORD`) configurados.
 
-Todavía no lo mandé al endpoint porque, según el propio README, faltan datos
-de contacto reales y todavía no sabemos si el dominio/hosting del cliente
-ya están listos (ver sección "Lo que falta" abajo) — publicar antes de eso
-dejaría un sitio real con huecos de cara al público. El endpoint además crea
-la página como **borrador (`draft`)** por defecto, nunca publicada
-automáticamente, así que aun mandándolo ya, no quedaría visible al público
-sin un paso explícito adicional.
+Todavía no lo mandé al endpoint porque sigue faltando el teléfono/WhatsApp
+real (bloqueo real para el botón de CTA) y todavía no sabemos si el
+dominio/hosting del cliente ya están listos (ver "Lo que falta" abajo). El
+endpoint además crea la página como **borrador (`draft`)** por defecto,
+nunca publicada automáticamente.
 
 ## Por qué son bloques nativos de Gutenberg y no un solo bloque de HTML
 
-Usé `core/heading`, `core/paragraph`, `core/image`, `core/gallery`,
+Sigo usando `core/heading`, `core/paragraph`, `core/image`, `core/gallery`,
 `core/columns`/`core/column`, `core/list`/`core/list-item`, `core/buttons`/
-`core/button` y `core/group` (para fondos de color y el "gajo" circular
-decorativo) — **cero `core/html` de bloque único**. La diferencia práctica:
-con bloques nativos, el usuario entra al editor de WordPress y puede hacer
-clic directo sobre una foto para reemplazarla, sobre un párrafo para
-reescribirlo, o arrastrar una columna, sin tocar código. Un bloque gigante
-de HTML crudo se vería en el editor como una sola caja opaca de código —
-technically funciona, pero no es editable a golpe de clic, que es
-justamente lo que pidió el usuario para poder "agregar fotos e información
-fácilmente" él mismo más adelante.
+`core/button` y `core/group` — **cero `core/html` de bloque único**. El
+usuario puede seguir editando cada foto, párrafo o botón a golpe de clic en
+el editor de WordPress.
 
-## Estilo (inspiración, no copia)
+## Novedad importante: el pedido de "fotos que van cambiando" (carrusel/slider)
+
+El usuario pidió que las fotos no queden solo en una galería estática en
+grilla, sino que "vayan cambiando" (una especie de carrusel/slider
+rotativo). Voy a ser honesto acá en vez de fingir que esto ya está resuelto
+con bloques nativos:
+
+**WordPress nativo (Gutenberg core) NO trae de fábrica un bloque de
+carrusel/slider con auto-rotación.** El bloque `core/gallery` que usé abajo
+es una **grilla estática** — muestra todas las fotos a la vez, no las va
+rotando sola. No existe un `core/slideshow` en el core de Gutenberg (a
+diferencia de lo que uno podría suponer). Decirte lo contrario sería
+inventar una capacidad que WordPress no tiene.
+
+Estas son las opciones reales, de más simple/editable sin código a más
+compleja:
+
+1. **(Recomendada) Plugin de slider, sobre el bloque `core/gallery` que ya
+   armé.** Dos caminos posibles dentro de esta opción:
+   - Si el sitio ya usa (o instala) **Jetpack**, este trae un ajuste nativo
+     de "Tiled Galleries" / modo **Slideshow** que convierte una galería
+     normal en un carrusel con flechas y auto-avance, configurable desde el
+     mismo panel de bloque sin tocar código.
+   - Si no se quiere Jetpack completo (trae muchas otras funciones), un
+     plugin dedicado y liviano como **Smart Slider 3** o **MetaSlider**
+     agrega un bloque de Gutenberg propio tipo "Carrusel" donde se eligen
+     las fotos desde la Biblioteca de Medios y se configura tiempo de
+     rotación, todo desde el editor visual, sin código.
+   - Esta es la opción que recomiendo como principal porque el cliente
+     puede después agregar o sacar fotos él mismo, sin depender de nadie
+     que edite código.
+2. **Bloque "Slideshow" nativo del tema (si el tema lo trae).** Algunos
+   temas de bloques modernos (FSE, "Full Site Editing") incluyen su propio
+   bloque de slideshow como parte del tema, no de WordPress core. Esto
+   depende 100% de qué tema esté activo en el sitio real — no lo sabemos
+   todavía porque no está confirmado el dominio/hosting.
+3. **Bloque de código a medida (HTML/CSS/JS embebido) — último recurso, no
+   recomendación principal.** Técnicamente se puede lograr un carrusel a
+   mano con un bloque de código personalizado, pero esto rompe la regla que
+   yo mismo seguí en la v1 de "cero `core/html` de bloque único": quedaría
+   como una caja opaca que el cliente no puede editar por clic, y cualquier
+   cambio futuro (agregar una foto, cambiar el tiempo de rotación) requiere
+   que alguien vuelva a tocar código. Lo dejo documentado por transparencia,
+   no porque lo recomiende.
+
+**No puedo decidir cuál de las opciones 1 o 2 aplica hasta que se confirme
+el dominio y qué plugins/tema están disponibles en el hosting real** — eso
+ya está anotado como pendiente en el README ("¿Dominio y hosting ya
+existen...?"). Mientras tanto, dejé el bloque `core/gallery` funcionando tal
+cual (grilla estática real, no inventé un slider que no existe en el
+contenido de abajo) y anoté en el propio contenido de la página una nota
+para el cliente explicando esto mismo en una sola línea.
+
+## Estilo (inspiración, no copia) — sin cambios respecto a v1
 
 Como pidió el usuario: tomé de `headstartdaycare.org` solo la idea de
 estilo (colores saturados y alegres, titular grande con personalidad,
 elemento circular decorativo tipo insignia) — nunca su estructura, su copy
-ni su layout exacto. Los tres colores que usé (amarillo, naranja/coral y
-celeste) **no los inventé**: los extraje directamente de los píxeles reales
-del logo digitalizado (`estrellitas-logo.png`) con una muestra de color
-programática, así que son la paleta real de la marca, no una elegida al
-azar por mí. El README ya deja anotado que falta confirmar con el cliente
-si esta paleta es la identidad oficial más allá del logo — eso sigue
-pendiente, no lo resolví yo acá.
+ni su layout exacto. Los tres colores (amarillo, naranja/coral y celeste)
+se extrajeron directo de los píxeles reales del logo digitalizado, no son
+una elección al azar. Sigue pendiente confirmar con el cliente si esta
+paleta es la identidad oficial más allá del logo.
 
-Nota de diseño (no incluida en el contenido, porque no es algo que se pueda
-forzar de forma nativa/editable sin saber el tema del sitio): si más
-adelante se quiere una tipografía tipo marcador/manuscrita para los
-títulos (ej. Fredoka, Baloo 2, Patrick Hand), eso se configura una sola vez
-en el tema (Apariencia → Editor → Estilos → Tipografía) o instalando esas
-Google Fonts en el sitio — no lo metí a la fuerza en el HTML del contenido
-para no romper la edición nativa por bloques ni depender de un tema que no
-conozco.
+## Estructura de la página (secciones) — v2
 
-## Estructura de la página (secciones)
-
-1. **Aviso de ejemplo** (párrafo destacado arriba de todo, para que se note
-   en el editor que esto es un borrador de estructura).
-2. **Hero**: logo real + insignia circular "¡Bienvenidos!" + título
-   "Estrellitas Day Care" + subtítulo descriptivo (giro real: guardería
-   infantil) + botones "Escríbenos" / "Ver el patio de juegos".
-3. **Nuestro patio de juegos**: galería nativa (`core/gallery`) con las 6
-   fotos reales del patio (`patio-01` a `patio-06`), cada una con su
-   descripción real tomada del README.
-4. **Nuestro salón y nuestro día**: columnas con las fotos reales del salón
-   (`salon-02-actividad-grupal.png`, `salon-01-pizarra-horario.jpg`) y una
-   lista (`core/list`) con el **horario real** tal como se transcribió de
-   la pizarra "Today's Schedule" (mismo dato real ya usado en
-   `web-preview.html` — no se volvió a inventar), incluida la nota honesta
-   de que un par de bloques de la pizarra no se pudieron leer con certeza.
-5. **Bienvenida "Back to School"**: columnas con las 2 fotos reales del
-   evento.
-6. **Contacto e inscripciones**: lista con los 5 datos que el README marca
-   como pendientes, cada uno como su propio párrafo/ítem editable con el
-   texto `[Completar: ...]` bien visible (dirección, teléfono/WhatsApp,
-   horario de atención al público, tarifas y proceso de inscripción,
-   edades atendidas) — nunca se inventó ningún valor. El botón de WhatsApp
-   también queda marcado como `[Completar link real]` en vez de un número
-   inventado.
+1. **Aviso de ejemplo** (actualizado a v2).
+2. **Hero** (mejorado): logo real + insignia "¡Bienvenidos!" + **headline de
+   marketing** "Más de 20 años ayudando a que tus hijos aprendan jugando" +
+   subtítulos de marketing con los datos reales (edades, ubicación, horario)
+   + botón **CTA de WhatsApp** ("Escríbenos por WhatsApp") + botón
+   secundario "Ver el patio de juegos".
+3. **Nueva sección — Por qué elegirnos**: 4 bullets con los hechos
+   confirmados (trayectoria, edades, horario, metodología), tal como los
+   definió `agente-marketing`, ningún bullet nuevo agregado por mí.
+4. **Nueva sección — Así aprenden jugando**: 3 fotos reales (patio y salón)
+   con una micro-frase corta cada una conectando la foto con un aprendizaje
+   concreto, siguiendo la idea de diseño del brief de marketing.
+5. **Nuestro patio de juegos**: galería nativa (`core/gallery`, grilla
+   estática — ver nota de arriba sobre el pedido de carrusel) con las 6
+   fotos reales del patio.
+6. **Nuestro salón y nuestro día**: sin cambios respecto a v1 (fotos del
+   salón + horario real de la pizarra).
+7. **Bienvenida "Back to School"**: sin cambios respecto a v1.
+8. **Contacto e inscripciones** (actualizado): dirección, horario de
+   atención al público y edades **ya completos con los datos reales** (ya
+   no son `[Completar: ...]`). Solo quedan pendientes teléfono/WhatsApp y
+   tarifas/proceso de inscripción — genuinamente no confirmados todavía. El
+   botón de WhatsApp usa el texto sugerido por marketing y un `href="#"`
+   con nota visible de que falta el número real.
 
 ## Contenido listo para `contenidoHtml`
 
-Este bloque completo es el valor que iría en `CrearPaginaParams.contenidoHtml`
-(y `titulo: "Inicio"`, `dominio` del cliente, `estado: "draft"` para no
-publicar de una) al llamar `crearPaginaWordpress()` / `/api/hostinger/deploy`.
-
 ```html
 <!-- wp:paragraph {"style":{"color":{"background":"#FDEBD0","text":"#7A4B00"},"spacing":{"padding":{"top":"12px","right":"16px","bottom":"12px","left":"16px"}},"border":{"radius":"12px"}},"fontSize":"small"} -->
-<p class="has-background has-text-color has-small-font-size" style="border-radius:12px;background-color:#FDEBD0;color:#7A4B00;padding-top:12px;padding-right:16px;padding-bottom:12px;padding-left:16px">Ejemplo de estructura de página para Estrellitas Day Care — armado con bloques nativos de WordPress para que se pueda completar (fotos, textos, datos de contacto) haciendo clic directo en el editor, sin tocar código. Faltan datos reales marcados como <strong>[Completar: ...]</strong> más abajo — no se inventaron.</p>
+<p class="has-background has-text-color has-small-font-size" style="border-radius:12px;background-color:#FDEBD0;color:#7A4B00;padding-top:12px;padding-right:16px;padding-bottom:12px;padding-left:16px">Ejemplo de estructura de página (v2) para Estrellitas Day Care — armado con bloques nativos de WordPress, editable haciendo clic directo en el editor. Solo quedan pendientes <strong>teléfono/WhatsApp</strong> y <strong>tarifas/proceso de inscripción</strong> — marcados como <strong>[Completar: ...]</strong> más abajo, sin inventar.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"align":"full","style":{"color":{"background":"#F0CC3C"},"spacing":{"padding":{"top":"56px","right":"24px","bottom":"56px","left":"24px"}}},"layout":{"type":"constrained"}} -->
@@ -115,24 +151,132 @@ publicar de una) al llamar `crearPaginaWordpress()` / `/api/hostinger/deploy`.
 </div>
 <!-- /wp:group -->
 
-<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"46px","fontWeight":"800"},"color":{"text":"#2B2B2B"}}} -->
-<h1 class="wp-block-heading has-text-align-center has-text-color" style="color:#2B2B2B;font-size:46px;font-weight:800">Estrellitas Day Care</h1>
+<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"42px","fontWeight":"800","lineHeight":"1.15"}},"color":{"text":"#2B2B2B"}} -->
+<h1 class="wp-block-heading has-text-align-center has-text-color" style="color:#2B2B2B;font-size:42px;font-weight:800;line-height:1.15">Más de 20 años ayudando a que tus hijos aprendan jugando</h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"20px"},"color":{"text":"#2B2B2B"}}} -->
-<p class="has-text-align-center has-text-color" style="color:#2B2B2B;font-size:20px">Guardería infantil. Así es un día en Estrellitas: patio de juegos, rutina diaria y momentos en familia.</p>
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"19px"},"color":{"text":"#2B2B2B"}}} -->
+<p class="has-text-align-center has-text-color" style="color:#2B2B2B;font-size:19px">Cuidado infantil de 2 meses a 10 años, en South Ozone Park, NY.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"19px"},"color":{"text":"#2B2B2B"}}} -->
+<p class="has-text-align-center has-text-color" style="color:#2B2B2B;font-size:19px">Un lugar seguro donde jugar es la forma de aprender — todos los días, de 7am a 6pm.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {"style":{"color":{"background":"#E46C30","text":"#FFFFFF"},"border":{"radius":"999px"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button has-text-color has-background" href="#contacto" style="border-radius:999px;color:#FFFFFF;background-color:#E46C30">Escríbenos</a></div>
+<!-- wp:button {"style":{"color":{"background":"#25D366","text":"#FFFFFF"},"border":{"radius":"999px"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button has-text-color has-background" href="#contacto" style="border-radius:999px;color:#FFFFFF;background-color:#25D366">📲 Escríbenos por WhatsApp</a></div>
 <!-- /wp:button -->
 <!-- wp:button {"className":"is-style-outline","style":{"border":{"radius":"999px"}}} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#patio" style="border-radius:999px">Ver el patio de juegos</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"anchor":"por-que-elegirnos","style":{"spacing":{"padding":{"top":"48px","right":"24px","bottom":"48px","left":"24px"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" id="por-que-elegirnos" style="padding-top:48px;padding-right:24px;padding-bottom:48px;padding-left:24px">
+
+<!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">¿Por qué elegirnos?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+
+<!-- wp:column {"style":{"color":{"background":"#FFF6DC"},"spacing":{"padding":{"top":"20px","right":"16px","bottom":"20px","left":"16px"}},"border":{"radius":"14px"}}} -->
+<div class="wp-block-column has-background" style="border-radius:14px;background-color:#FFF6DC;padding-top:20px;padding-right:16px;padding-bottom:20px;padding-left:16px">
+<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size">⭐</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><strong>+20 años</strong> de trayectoria cuidando y educando a familias de South Ozone Park.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"style":{"color":{"background":"#FFF6DC"},"spacing":{"padding":{"top":"20px","right":"16px","bottom":"20px","left":"16px"}},"border":{"radius":"14px"}}} -->
+<div class="wp-block-column has-background" style="border-radius:14px;background-color:#FFF6DC;padding-top:20px;padding-right:16px;padding-bottom:20px;padding-left:16px">
+<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size">👶</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Atendemos <strong>desde los 2 meses hasta los 10 años</strong>.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"style":{"color":{"background":"#FFF6DC"},"spacing":{"padding":{"top":"20px","right":"16px","bottom":"20px","left":"16px"}},"border":{"radius":"14px"}}} -->
+<div class="wp-block-column has-background" style="border-radius:14px;background-color:#FFF6DC;padding-top:20px;padding-right:16px;padding-bottom:20px;padding-left:16px">
+<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size">🕖</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Horario de <strong>7am a 6pm</strong>, todos los días hábiles.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"style":{"color":{"background":"#FFF6DC"},"spacing":{"padding":{"top":"20px","right":"16px","bottom":"20px","left":"16px"}},"border":{"radius":"14px"}}} -->
+<div class="wp-block-column has-background" style="border-radius:14px;background-color:#FFF6DC;padding-top:20px;padding-right:16px;padding-bottom:20px;padding-left:16px">
+<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size">🧩</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Metodología lúdica: <strong>los niños aprenden jugando</strong>, no memorizando.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"anchor":"asi-aprenden-jugando","style":{"color":{"background":"#FFF9EC"},"spacing":{"padding":{"top":"56px","right":"24px","bottom":"56px","left":"24px"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-background" id="asi-aprenden-jugando" style="background-color:#FFF9EC;padding-top:56px;padding-right:24px;padding-bottom:56px;padding-left:24px">
+
+<!-- wp:heading {"textAlign":"center","style":{"color":{"text":"#E46C30"}}} -->
+<h2 class="wp-block-heading has-text-align-center has-text-color" style="color:#E46C30">Así aprenden jugando</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Nuestra metodología no es solo una frase: se ve todos los días en el patio y en el salón.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"16px"}}} -->
+<figure class="wp-block-image size-large has-custom-border"><img src="https://TU-DOMINIO.com/wp-content/uploads/2026/09/patio-05-autos-de-juguete.jpg" alt="Niños compartiendo los carritos de juguete en el patio" style="border-radius:16px"/><figcaption class="wp-element-caption"><strong>Aquí aprenden a compartir turnos.</strong></figcaption></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"16px"}}} -->
+<figure class="wp-block-image size-large has-custom-border"><img src="https://TU-DOMINIO.com/wp-content/uploads/2026/09/salon-01-pizarra-horario.jpg" alt="Pizarra con el horario del salón" style="border-radius:16px"/><figcaption class="wp-element-caption"><strong>Aquí aprenden rutina y organización.</strong></figcaption></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"16px"}}} -->
+<figure class="wp-block-image size-large has-custom-border"><img src="https://TU-DOMINIO.com/wp-content/uploads/2026/09/salon-02-actividad-grupal.png" alt="Cuidadora con niños en actividad grupal en el salón" style="border-radius:16px"/><figcaption class="wp-element-caption"><strong>Aquí aprenden trabajando en equipo.</strong></figcaption></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
 
 </div>
 <!-- /wp:group -->
@@ -146,6 +290,10 @@ publicar de una) al llamar `crearPaginaWordpress()` / `/api/hostinger/deploy`.
 
 <!-- wp:paragraph {"align":"center"} -->
 <p class="has-text-align-center">Fotos reales del patio de Estrellitas: casita, tobogán, columpios, carritos y área de picnic.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"italic"}},"fontSize":"small"} -->
+<p class="has-text-align-center has-small-font-size" style="font-style:italic">Nota para el cliente: por ahora esta es una galería fija (todas las fotos se ven a la vez). Convertirla en un carrusel rotativo requiere un plugin de slider — ver la sección "Novedad: fotos que van cambiando" del documento fuente de esta página.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:gallery {"columns":3,"linkTo":"none","sizeSlug":"large"} -->
@@ -298,7 +446,7 @@ publicar de una) al llamar `crearPaginaWordpress()` / `/api/hostinger/deploy`.
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","style":{"color":{"text":"#FFFFFF"}}} -->
-<p class="has-text-align-center has-text-color" style="color:#FFFFFF">Esta es una página de ejemplo. Estos son los datos reales que todavía faltan para poder publicar el sitio de verdad — nunca se inventan, se completan cuando el negocio los confirme.</p>
+<p class="has-text-align-center has-text-color" style="color:#FFFFFF">Visítanos o escríbenos. Solo faltan confirmar el teléfono/WhatsApp y las tarifas — el resto ya son datos reales.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"color":{"background":"#FFFFFF"},"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}},"border":{"radius":"16px"}},"layout":{"type":"constrained"}} -->
@@ -307,19 +455,19 @@ publicar de una) al llamar `crearPaginaWordpress()` / `/api/hostinger/deploy`.
 <!-- wp:list -->
 <ul class="wp-block-list">
 <!-- wp:list-item -->
-<li><strong>Dirección:</strong> [Completar: dirección real del local]</li>
+<li><strong>Dirección:</strong> 132-31 114th Street, South Ozone Park, NY, 11420.</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li><strong>Teléfono / WhatsApp:</strong> [Completar: número real de contacto]</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li><strong>Horario de atención al público:</strong> [Completar: horario real, distinto del horario diario de actividades de arriba]</li>
+<li><strong>Horario de atención al público:</strong> 7:00 am a 6:00 pm.</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li><strong>Tarifas y proceso de inscripción:</strong> [Completar: tarifas reales y pasos para inscribirse]</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li><strong>Edades que se atienden:</strong> [Completar: rango de edades real]</li>
+<li><strong>Edades que se atienden:</strong> desde los 2 meses hasta los 10 años.</li>
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->
@@ -329,11 +477,15 @@ publicar de una) al llamar `crearPaginaWordpress()` / `/api/hostinger/deploy`.
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {"style":{"color":{"background":"#E46C30","text":"#FFFFFF"},"border":{"radius":"999px"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button has-text-color has-background" href="#" style="border-radius:999px;color:#FFFFFF;background-color:#E46C30">Escríbenos por WhatsApp [Completar link real]</a></div>
+<!-- wp:button {"style":{"color":{"background":"#25D366","text":"#FFFFFF"},"border":{"radius":"999px"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button has-text-color has-background" href="#" style="border-radius:999px;color:#FFFFFF;background-color:#25D366">📲 Escríbenos por WhatsApp</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
+
+<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#FFFFFF"},"typography":{"fontStyle":"italic"}},"fontSize":"small"} -->
+<p class="has-text-align-center has-text-color has-small-font-size" style="color:#FFFFFF;font-style:italic">[Completar: link real de WhatsApp — formato wa.me/NUMERO — reemplazar el href="#" del botón de arriba en cuanto el cliente confirme el número]</p>
+<!-- /wp:paragraph -->
 
 </div>
 <!-- /wp:group -->
@@ -347,53 +499,63 @@ publicar de una) al llamar `crearPaginaWordpress()` / `/api/hostinger/deploy`.
    `salon-01-pizarra-horario.jpg`, `salon-02-actividad-grupal.png`,
    `evento-01-back-to-school-bebe.png`, `evento-02-back-to-school-nino.png`.
 2. Los `src="https://TU-DOMINIO.com/wp-content/uploads/..."` de arriba son
-   **placeholders con el nombre de archivo real** — no URLs inventadas de la
-   nada. Una vez subidas las fotos, cada bloque de imagen se puede abrir en
-   el editor y usar "Reemplazar" → elegir el archivo ya subido (así WordPress
-   asigna el ID de medio correcto), en vez de editar la URL a mano.
-3. Completar los 5 `[Completar: ...]` de la sección de Contacto con los
-   datos reales cuando el cliente los confirme.
-4. Confirmar dominio + `WP_ADMIN_USER` / `WP_ADMIN_APP_PASSWORD` en
+   **placeholders con el nombre de archivo real** — no URLs inventadas.
+   Reemplazar en el editor con "Reemplazar" → elegir el archivo ya subido.
+3. **Reemplazar el `href="#"` del botón de WhatsApp** (aparece dos veces: en
+   el Hero y en Contacto) por el link real `https://wa.me/NUMERO` en cuanto
+   el cliente confirme el teléfono. Hasta entonces, el botón queda visible
+   pero sin destino funcional — se avisa con la nota en itálica debajo del
+   botón de Contacto.
+4. Completar los 2 `[Completar: ...]` que quedan (teléfono/WhatsApp,
+   tarifas) cuando el cliente los confirme.
+5. Definir e instalar la opción de slider elegida (Jetpack, Smart Slider 3
+   o MetaSlider) una vez que se confirme el dominio/hosting y qué plugins
+   admite ese plan — ver la sección de arriba sobre el pedido de carrusel.
+6. Confirmar dominio + `WP_ADMIN_USER` / `WP_ADMIN_APP_PASSWORD` en
    `dashboard/.env.local` para poder llamar `crearPaginaWordpress()`.
 
-## Capacidad 2 (JSON para Elementor Pro) — qué hace y por qué no la usé acá
+## Capacidad 2 (JSON para Elementor Pro) — sin cambios respecto a v1
 
-Mi Capacidad 2 es generar un **JSON importable para Elementor Pro**: la
-especificación de diseño de una página con secciones más elaboradas que un
-tema estándar de Gutenberg puede lograr con dificultad — un Hero con la
-propuesta de valor ya maquetada a nivel pixel, una comparativa visual vs la
-competencia real del cliente, tarjetas de kits/paquetes con precios reales,
-una tabla de cumplimiento normativo (cuando el rubro del cliente lo exige),
-y un CTA de contacto con más control visual fino (superposiciones,
-animaciones de entrada, columnas asimétricas) del que da Gutenberg nativo.
-
-**No la usé en esta tarea por dos motivos concretos, no por preferencia:**
-
-1. **No hay pieza que la importe todavía.** El JSON de Elementor es hoy solo
-   una especificación de diseño — no existe (todavía no se construyó) un
-   endpoint o script que tome ese JSON y lo empuje a un WordPress real, a
-   diferencia de la Capacidad 1, que sí tiene ese camino completo hoy
-   (`crearPaginaWordpress()` → `/wp-json/wp/v2/pages`).
-2. **Requiere Elementor Pro instalado y licenciado en ese sitio específico.**
-   No sé (y no me corresponde asumir) si el WordPress de Estrellitas va a
-   tener Elementor Pro — eso depende de qué plan de hosting/plugins se
-   contrate. Sin esa licencia activa en el sitio de destino, ese JSON no se
-   podría ni importar aunque existiera la pieza de conexión.
-
-Por eso, para lograr un diseño más elaborado y a medida *hoy mismo*, el
-camino real es seguir escribiendo HTML/bloques nativos a medida (Capacidad
-1, como en este documento) en vez de depender de una pieza que todavía no
-existe. Si en algún momento se decide invertir en Elementor Pro + construir
-esa pieza de importación, la Capacidad 2 pasaría a ser la opción para un
-rediseño más ambicioso de este mismo contenido.
+Sigue sin usarse por los mismos dos motivos de la v1: (1) no existe todavía
+una pieza que importe ese JSON a un WordPress real, y (2) requeriría
+Elementor Pro instalado y licenciado en el sitio de destino, algo que no
+está confirmado. El camino real hoy para un diseño a medida sigue siendo
+HTML/bloques nativos (Capacidad 1), como en este documento.
 
 ## Falta completar (heredado del README, sin resolver acá)
 
-- Dirección del local.
-- Teléfono / WhatsApp de contacto.
-- Horario de atención al público.
+- Teléfono / WhatsApp de contacto — bloquea el link funcional del botón CTA.
 - Tarifas y proceso de inscripción.
-- Edades que se atienden.
-- Confirmar dominio y hosting reales para conectar a `/api/hostinger/deploy`.
+- Confirmar dominio y hosting reales para conectar a `/api/hostinger/deploy`
+  y para saber qué plugin de slider está disponible en ese hosting.
 - Confirmar si la paleta extraída del logo (amarillo/naranja/celeste) es la
   identidad oficial de marca más allá del logo mismo.
+
+## Changelog — qué cambió respecto a la v1
+
+- **Headline y subtítulos del Hero** reemplazados por el copy exacto del
+  brief de `agente-marketing`: "Más de 20 años ayudando a que tus hijos
+  aprendan jugando" + los dos subtítulos con edades/ubicación y
+  horario/metodología.
+- **Botón CTA de WhatsApp** agregado en el Hero y reforzado en Contacto,
+  con el texto sugerido por marketing ("Escríbenos por WhatsApp"), color
+  distintivo (verde WhatsApp) y `href="#"` con nota visible de que el link
+  real (`wa.me/NUMERO`) sigue pendiente — nunca se inventó un número.
+- **Nueva sección "¿Por qué elegirnos?"** con los 4 bullets de hechos
+  confirmados del brief de marketing (trayectoria, edades, horario,
+  metodología), ningún bullet nuevo agregado por este agente.
+- **Nueva sección "Así aprenden jugando"** con 3 fotos reales (carritos del
+  patio, pizarra del salón, actividad grupal) y las 3 micro-frases
+  sugeridas por marketing, cada una conectada a una foto real coherente.
+- **Sección de Contacto actualizada**: dirección, horario de atención al
+  público y edades ahora son datos reales (ya no `[Completar: ...]`). Solo
+  quedan pendientes teléfono/WhatsApp y tarifas/proceso de inscripción.
+- **Nueva sección honesta sobre el pedido de carrusel/slider**: se explica
+  que Gutenberg core no trae un bloque de slider nativo, y se documentan
+  las 3 opciones reales (plugin de slider — recomendada —, bloque de
+  slideshow del tema si lo trae, o código a medida como último recurso), en
+  vez de simular que ya existe una solución nativa. La galería del patio
+  sigue siendo una grilla estática por ahora, con una nota visible para el
+  cliente explicándolo.
+- Aviso de ejemplo, changelog y numeración de "Estructura de la página"
+  actualizados para reflejar la v2.
