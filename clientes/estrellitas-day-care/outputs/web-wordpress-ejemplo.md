@@ -25,11 +25,11 @@ ese es una vista previa visual; esto de acá es el **bloque de contenido
 WordPress real del cliente, en cuanto exista dominio + Application Password
 (`WP_ADMIN_USER` / `WP_ADMIN_APP_PASSWORD`) configurados.
 
-Todavía no lo mandé al endpoint porque sigue faltando el teléfono/WhatsApp
-real (bloqueo real para el botón de CTA) y todavía no sabemos si el
-dominio/hosting del cliente ya están listos (ver "Lo que falta" abajo). El
-endpoint además crea la página como **borrador (`draft`)** por defecto,
-nunca publicada automáticamente.
+El teléfono/WhatsApp real ya está confirmado ((347) 686-4780, wa.me/13476864780)
+y conectado en el botón de CTA de abajo. Todavía no lo mandé al endpoint
+porque no sabemos si el dominio/hosting del cliente ya están listos (ver
+"Lo que falta" abajo). El endpoint además crea la página como **borrador
+(`draft`)** por defecto, nunca publicada automáticamente.
 
 ## Por qué son bloques nativos de Gutenberg y no un solo bloque de HTML
 
@@ -123,17 +123,17 @@ paleta es la identidad oficial más allá del logo.
    salón + horario real de la pizarra).
 7. **Bienvenida "Back to School"**: sin cambios respecto a v1.
 8. **Contacto e inscripciones** (actualizado): dirección, horario de
-   atención al público y edades **ya completos con los datos reales** (ya
-   no son `[Completar: ...]`). Solo quedan pendientes teléfono/WhatsApp y
-   tarifas/proceso de inscripción — genuinamente no confirmados todavía. El
-   botón de WhatsApp usa el texto sugerido por marketing y un `href="#"`
-   con nota visible de que falta el número real.
+   atención al público, edades y teléfono/WhatsApp **ya completos con los
+   datos reales** (ya no son `[Completar: ...]`). Solo queda pendiente
+   tarifas/proceso de inscripción — genuinamente no confirmado todavía. El
+   botón de WhatsApp usa el texto sugerido por marketing y ya apunta al
+   número real (`https://wa.me/13476864780`).
 
 ## Contenido listo para `contenidoHtml`
 
 ```html
 <!-- wp:paragraph {"style":{"color":{"background":"#FDEBD0","text":"#7A4B00"},"spacing":{"padding":{"top":"12px","right":"16px","bottom":"12px","left":"16px"}},"border":{"radius":"12px"}},"fontSize":"small"} -->
-<p class="has-background has-text-color has-small-font-size" style="border-radius:12px;background-color:#FDEBD0;color:#7A4B00;padding-top:12px;padding-right:16px;padding-bottom:12px;padding-left:16px">Ejemplo de estructura de página (v2) para Estrellitas Day Care — armado con bloques nativos de WordPress, editable haciendo clic directo en el editor. Solo quedan pendientes <strong>teléfono/WhatsApp</strong> y <strong>tarifas/proceso de inscripción</strong> — marcados como <strong>[Completar: ...]</strong> más abajo, sin inventar.</p>
+<p class="has-background has-text-color has-small-font-size" style="border-radius:12px;background-color:#FDEBD0;color:#7A4B00;padding-top:12px;padding-right:16px;padding-bottom:12px;padding-left:16px">Ejemplo de estructura de página (v2) para Estrellitas Day Care — armado con bloques nativos de WordPress, editable haciendo clic directo en el editor. Solo queda pendiente <strong>tarifas/proceso de inscripción</strong> — marcado como <strong>[Completar: ...]</strong> más abajo, sin inventar.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"align":"full","style":{"color":{"background":"#F0CC3C"},"spacing":{"padding":{"top":"56px","right":"24px","bottom":"56px","left":"24px"}}},"layout":{"type":"constrained"}} -->
@@ -166,7 +166,7 @@ paleta es la identidad oficial más allá del logo.
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
 <!-- wp:button {"style":{"color":{"background":"#25D366","text":"#FFFFFF"},"border":{"radius":"999px"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button has-text-color has-background" href="#contacto" style="border-radius:999px;color:#FFFFFF;background-color:#25D366">📲 Escríbenos por WhatsApp</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button has-text-color has-background" href="https://wa.me/13476864780" target="_blank" rel="noopener" style="border-radius:999px;color:#FFFFFF;background-color:#25D366">📲 Escríbenos por WhatsApp</a></div>
 <!-- /wp:button -->
 <!-- wp:button {"className":"is-style-outline","style":{"border":{"radius":"999px"}}} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#patio" style="border-radius:999px">Ver el patio de juegos</a></div>
@@ -446,7 +446,7 @@ paleta es la identidad oficial más allá del logo.
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","style":{"color":{"text":"#FFFFFF"}}} -->
-<p class="has-text-align-center has-text-color" style="color:#FFFFFF">Visítanos o escríbenos. Solo faltan confirmar el teléfono/WhatsApp y las tarifas — el resto ya son datos reales.</p>
+<p class="has-text-align-center has-text-color" style="color:#FFFFFF">Visítanos o escríbenos. Solo falta confirmar las tarifas — el resto ya son datos reales.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"color":{"background":"#FFFFFF"},"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}},"border":{"radius":"16px"}},"layout":{"type":"constrained"}} -->
@@ -458,7 +458,7 @@ paleta es la identidad oficial más allá del logo.
 <li><strong>Dirección:</strong> 132-31 114th Street, South Ozone Park, NY, 11420.</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li><strong>Teléfono / WhatsApp:</strong> [Completar: número real de contacto]</li>
+<li><strong>Teléfono / WhatsApp:</strong> (347) 686-4780</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li><strong>Horario de atención al público:</strong> 7:00 am a 6:00 pm.</li>
@@ -478,14 +478,10 @@ paleta es la identidad oficial más allá del logo.
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
 <!-- wp:button {"style":{"color":{"background":"#25D366","text":"#FFFFFF"},"border":{"radius":"999px"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button has-text-color has-background" href="#" style="border-radius:999px;color:#FFFFFF;background-color:#25D366">📲 Escríbenos por WhatsApp</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button has-text-color has-background" href="https://wa.me/13476864780" target="_blank" rel="noopener" style="border-radius:999px;color:#FFFFFF;background-color:#25D366">📲 Escríbenos por WhatsApp</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
-
-<!-- wp:paragraph {"align":"center","style":{"color":{"text":"#FFFFFF"},"typography":{"fontStyle":"italic"}},"fontSize":"small"} -->
-<p class="has-text-align-center has-text-color has-small-font-size" style="color:#FFFFFF;font-style:italic">[Completar: link real de WhatsApp — formato wa.me/NUMERO — reemplazar el href="#" del botón de arriba en cuanto el cliente confirme el número]</p>
-<!-- /wp:paragraph -->
 
 </div>
 <!-- /wp:group -->
@@ -501,13 +497,10 @@ paleta es la identidad oficial más allá del logo.
 2. Los `src="https://TU-DOMINIO.com/wp-content/uploads/..."` de arriba son
    **placeholders con el nombre de archivo real** — no URLs inventadas.
    Reemplazar en el editor con "Reemplazar" → elegir el archivo ya subido.
-3. **Reemplazar el `href="#"` del botón de WhatsApp** (aparece dos veces: en
-   el Hero y en Contacto) por el link real `https://wa.me/NUMERO` en cuanto
-   el cliente confirme el teléfono. Hasta entonces, el botón queda visible
-   pero sin destino funcional — se avisa con la nota en itálica debajo del
-   botón de Contacto.
-4. Completar los 2 `[Completar: ...]` que quedan (teléfono/WhatsApp,
-   tarifas) cuando el cliente los confirme.
+3. El botón de WhatsApp (Hero y Contacto) ya apunta al link real
+   `https://wa.me/13476864780` — no requiere ningún cambio manual.
+4. Completar el `[Completar: ...]` que queda (tarifas y proceso de
+   inscripción) cuando el cliente lo confirme.
 5. Definir e instalar la opción de slider elegida (Jetpack, Smart Slider 3
    o MetaSlider) una vez que se confirme el dominio/hosting y qué plugins
    admite ese plan — ver la sección de arriba sobre el pedido de carrusel.
@@ -524,7 +517,6 @@ HTML/bloques nativos (Capacidad 1), como en este documento.
 
 ## Falta completar (heredado del README, sin resolver acá)
 
-- Teléfono / WhatsApp de contacto — bloquea el link funcional del botón CTA.
 - Tarifas y proceso de inscripción.
 - Confirmar dominio y hosting reales para conectar a `/api/hostinger/deploy`
   y para saber qué plugin de slider está disponible en ese hosting.
@@ -539,8 +531,8 @@ HTML/bloques nativos (Capacidad 1), como en este documento.
   horario/metodología.
 - **Botón CTA de WhatsApp** agregado en el Hero y reforzado en Contacto,
   con el texto sugerido por marketing ("Escríbenos por WhatsApp"), color
-  distintivo (verde WhatsApp) y `href="#"` con nota visible de que el link
-  real (`wa.me/NUMERO`) sigue pendiente — nunca se inventó un número.
+  distintivo (verde WhatsApp) y ya conectado al número real que confirmó
+  el cliente (`https://wa.me/13476864780`) — nunca se inventó un número.
 - **Nueva sección "¿Por qué elegirnos?"** con los 4 bullets de hechos
   confirmados del brief de marketing (trayectoria, edades, horario,
   metodología), ningún bullet nuevo agregado por este agente.
@@ -548,8 +540,8 @@ HTML/bloques nativos (Capacidad 1), como en este documento.
   patio, pizarra del salón, actividad grupal) y las 3 micro-frases
   sugeridas por marketing, cada una conectada a una foto real coherente.
 - **Sección de Contacto actualizada**: dirección, horario de atención al
-  público y edades ahora son datos reales (ya no `[Completar: ...]`). Solo
-  quedan pendientes teléfono/WhatsApp y tarifas/proceso de inscripción.
+  público, edades y teléfono/WhatsApp ahora son datos reales (ya no
+  `[Completar: ...]`). Solo queda pendiente tarifas/proceso de inscripción.
 - **Nueva sección honesta sobre el pedido de carrusel/slider**: se explica
   que Gutenberg core no trae un bloque de slider nativo, y se documentan
   las 3 opciones reales (plugin de slider — recomendada —, bloque de

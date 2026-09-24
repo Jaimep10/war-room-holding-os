@@ -80,6 +80,16 @@ contenido pero en bloques nativos de Gutenberg, listo para importarse a un
 WordPress real vía `crearPaginaWordpress()` (siempre como borrador, nunca
 publicado automáticamente).
 
+Pase de diseño más vivo (24-sep-2026): a pedido del usuario, se le sumó
+a `web-preview.html` una identidad más ilustrada/animada tipo "dibujos
+animados" para dar más vida a la página: paleta más saturada, nubes y
+estrellitas flotando en el hero, un pequeño arcoíris decorativo (coherente
+con el arcoíris real del logo), un sutil garabato bajo "aprenden jugando",
+rebote en los íconos al pasar el mouse, y un anillo de pulso en el botón de
+WhatsApp para invitar a la acción. Todas las animaciones respetan
+`prefers-reduced-motion` (se desactivan si el visitante lo pidió en su
+sistema).
+
 ## Datos reales de contacto/operación confirmados (24-sep-2026)
 
 El usuario confirmó estos datos reales por chat — ya se pueden usar en
@@ -90,12 +100,11 @@ cualquier pieza de este cliente, dejaron de ser "falta completar":
 - **Edades que se atienden:** desde los 2 meses hasta los 10 años.
 - **Trayectoria:** más de 20 años en el rubro.
 - **Metodología:** lúdica — "los niños aprenden jugando".
+- **Teléfono / WhatsApp:** 347-686-4780 (confirmado por el usuario el 24-sep-2026).
+  Link real de WhatsApp: `https://wa.me/13476864780`.
 
 ## Falta completar (pedir al usuario, no inventar)
 
-- **Teléfono / WhatsApp de contacto** — todavía no confirmado. Es un bloqueo
-  real para el botón de CTA de WhatsApp que pidió el usuario: sin el número
-  real, ese botón no puede armarse (no se inventa un número de ejemplo).
 - Tarifas y proceso de inscripción.
 - ¿Dominio y hosting ya existen, para conectar esto a `/api/hostinger/deploy`?
 - Confirmar si la paleta de colores del logo (amarillo, celeste, coral,
