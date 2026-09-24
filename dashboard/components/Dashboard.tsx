@@ -10,6 +10,7 @@ import NegocioExistenteMode from "@/components/NegocioExistenteMode";
 import ClientesProductosPanel from "@/components/ClientesProductosPanel";
 import ClientesSidebar from "@/components/ClientesSidebar";
 import AccionRapida from "@/components/AccionRapida";
+import HostingerConnect from "@/components/HostingerConnect";
 import OpenTeamModal from "@/components/OpenTeamModal";
 
 export default function Dashboard({
@@ -146,6 +147,8 @@ export default function Dashboard({
               <ClientesProductosPanel />
             </div>
           )}
+
+          <HostingerConnect />
 
           <WarRoomPanel
             agents={agents}
