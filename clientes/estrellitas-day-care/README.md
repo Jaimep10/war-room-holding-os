@@ -47,12 +47,50 @@ ni fotos genéricas de guardería:
 - `evento-01-back-to-school-bebe.png`, `evento-02-back-to-school-nino.png` —
   decoración/evento de bienvenida "Back to School".
 
+## Logo digitalizado (24-sep-2026)
+
+El usuario mandó una foto del logo real impreso en una camiseta negra (fondo
+oscuro, tela con textura). Se digitalizó quitando el fondo (segmentación por
+saturación de color + flood-fill para no perder texto/detalles) y se guardó
+en `clientes/estrellitas-day-care/assets/branding/estrellitas-logo.png` —
+PNG con transparencia real, listo para web/impresos. Cualquier agente que
+necesite el logo de este cliente usa ESE archivo, nunca lo redibuja ni
+inventa una versión propia.
+
+Nota honesta sobre una limitación técnica: en la foto original, la estrella
+tiene una sombra/silueta oscura detrás que en la tela negra se funde casi
+por completo con el fondo (muy poco contraste), así que no se pudo
+reconstruir con confianza algorítmica y se omitió en la versión digital
+(la estrella quedó "plana", sin esa sombra). Si el usuario confirma que esa
+sombra es parte intencional del diseño, se puede volver a agregar a mano
+como mejora de diseño — por ahora no se inventó, se dejó fuera.
+
+## Primera versión de la web (24-sep-2026)
+
+Se publicó un primer borrador del sitio (una sola página) usando SOLO
+material real de este cliente: el logo digitalizado de arriba, las fotos
+reales del local (patio, salón, evento "Back to School") y el horario real
+tomado de la pizarra "Today's Schedule" del salón. Vive en
+`clientes/estrellitas-day-care/outputs/web-preview.html` y está publicado
+como Artifact privado del usuario.
+
+Esta versión deja explícito y a la vista (sección "Contacto e inscripciones")
+qué datos reales todavía faltan para poder lanzarlo de verdad — nunca se
+inventaron:
+
+- Dirección del local.
+- Teléfono / WhatsApp de contacto.
+- Horario de atención al público (distinto del horario diario de
+  actividades, que ese sí ya es real y sí está en la web).
+- Tarifas y proceso de inscripción.
+- Edades que se atienden.
+- ¿Dominio y hosting ya existen, para conectar esto a `/api/hostinger/deploy`?
+
 ## Falta completar (pedir al usuario, no inventar)
 
-- **Logo / identidad visual** — todavía no llegó. Lo que se recibió son fotos
-  del local y de un evento, no un logo (marca/isotipo). Sigue siendo
-  NEEDS_CONTEXT para cualquier pieza que necesite el logo (web, redes, etc.).
-- Colores corporativos y tipografía (más allá de lo que ya se ve en las fotos
-  del salón — confirmar con el usuario si eso es la paleta oficial o solo
-  decoración).
-- ¿Dominio y hosting ya existen, si se llega a necesitar una web?
+- Los 6 puntos de la sección de arriba (dirección, teléfono, horario de
+  atención, tarifas, edades, dominio/hosting).
+- Confirmar si la paleta de colores del logo (amarillo, celeste, coral,
+  naranja) es la identidad oficial de la marca más allá del logo mismo.
+- Confirmar si la sombra detrás de la estrella (ver nota arriba) debe
+  reincorporarse al logo digital.
