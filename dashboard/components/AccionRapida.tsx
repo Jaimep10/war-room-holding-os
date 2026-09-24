@@ -12,6 +12,12 @@ import { Zap, Loader2, ChevronDown, ChevronUp } from "lucide-react";
 // Acciones ABIERTAS -- son plantillas de instrucción (editable antes de enviar), no
 // obligan a ningún agente en particular ni a un rubro de negocio fijo. El checkbox de
 // agentes de abajo es independiente de la acción elegida.
+//
+// FIX cuello de botella (22-sep-2026): este componente ya NO depende de que haya una
+// memoria/ideas/IDEA-ACTUAL.md activa -- manda contextoIndependiente:true a /api/chat, así
+// que corre con SOLO la memoria del cliente elegido (ver ejecutar() más abajo), sin arrastrar
+// de contrabando el contenido de otra idea/cliente que esté activa en ese momento en el
+// puntero global. Ver app/api/chat/route.ts para el detalle completo.
 const ACCIONES = [
   {
     key: "/web",
@@ -48,13 +54,11 @@ export default function AccionRapida({
   agents,
   clienteActivoSlug,
   onClienteChange,
-  hasActiveIdea,
 }: {
   agents: AgentSummary[];
   /** Cliente ya elegido en el sidebar (si hay uno) -- Acción Rápida arranca sincronizada con eso. */
   clienteActivoSlug?: string | null;
   onClienteChange?: (slug: string) => void;
-  hasActiveIdea: boolean;
 }) {
   const [expandido, setExpandido] = useState(true);
   const [clientes, setClientes] = useState<ClienteSummary[]>([]);
@@ -115,12 +119,6 @@ export default function AccionRapida({
       setError("Elegí al menos 1 agente (máximo 2).");
       return;
     }
-    if (!hasActiveIdea) {
-      setError(
-        'Acción Rápida manda el mensaje por el mismo /api/chat que usa el resto del equipo, y ese endpoint exige un proyecto activo (Header → "PROYECTO ACTIVO"). Elegí o creá uno arriba y volvé a intentar.'
-      );
-      return;
-    }
 
     setLoading(true);
     try {
@@ -148,7 +146,11 @@ export default function AccionRapida({
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ agentSlugs: selectedAgents, message }),
+        // contextoIndependiente: true -- ver comentario en app/api/chat/route.ts. Acción Rápida
+        // ya arma su propio contexto completo (el README del cliente elegido, arriba); no
+        // depende de memoria/ideas/IDEA-ACTUAL.md ni se le mezcla el contenido de otra
+        // idea/cliente que casualmente esté activa en ese momento.
+        body: JSON.stringify({ agentSlugs: selectedAgents, message, contextoIndependiente: true }),
       });
       const data = await res.json();
       if (data.error) {

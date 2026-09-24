@@ -116,7 +116,6 @@ export default function Dashboard({
             agents={agents}
             clienteActivoSlug={clienteActivoSlug}
             onClienteChange={setClienteActivoSlug}
-            hasActiveIdea={!!pointer.archivo}
           />
 
           {modo === "idea-empresa" && (
