@@ -17,6 +17,10 @@ import { crearPaginaWordpress, bloqueEstrellasDemo, WordpressConfigError, Wordpr
  *   pageTitle: string,            // obligatorio -- título de la página a crear
  *   pageContent: string,          // obligatorio -- HTML/bloques Gutenberg del cuerpo
  *   agregarBloqueEstrellasDemo?: boolean,  // opcional -- ver lib/wordpress-site-client.ts
+ *   estado?: "draft" | "publish",  // opcional -- SEGURIDAD: si no se manda, queda "draft".
+ *                                  // Hay que pasar "publish" a propósito para que la página
+ *                                  // quede visible al público -- nunca es el comportamiento
+ *                                  // por defecto de este endpoint.
  *   // Solo hacen falta estos 3 si el dominio TODAVÍA no tiene WordPress instalado:
  *   adminUsuario?: string,
  *   adminPassword?: string,
@@ -35,7 +39,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Body inválido -- se esperaba JSON." }, { status: 400 });
   }
 
-  const { dominio, username, pageTitle, pageContent, agregarBloqueEstrellasDemo } = body || {};
+  const { dominio, username, pageTitle, pageContent, agregarBloqueEstrellasDemo, estado } = body || {};
 
   if (!dominio || typeof dominio !== "string") {
     return NextResponse.json({ error: "Falta 'dominio'." }, { status: 400 });
@@ -122,8 +126,18 @@ export async function POST(req: NextRequest) {
       dominio,
       titulo: pageTitle,
       contenidoHtml: contenidoFinal,
+      // Sin "estado" en el body, crearPaginaWordpress ya defaultea a "draft" -- lo dejamos
+      // explícito acá también para que quede clarísimo en este endpoint.
+      estado: estado === "publish" ? "publish" : "draft",
     });
-    pasos.crearPagina = { ok: true, pagina };
+    pasos.crearPagina = {
+      ok: true,
+      pagina,
+      nota:
+        pagina?.status === "publish"
+          ? "La página quedó PUBLICADA (se pidió estado:'publish' explícitamente)."
+          : "La página quedó como BORRADOR (draft) -- no es visible al público todavía. Para publicarla, hay que volver a llamar a este endpoint con estado:'publish', o publicarla a mano desde wp-admin.",
+    };
   } catch (err: any) {
     const mensaje = String(err?.message || err);
     const status = err instanceof WordpressSiteError ? err.status : err instanceof WordpressConfigError ? 424 : 502;

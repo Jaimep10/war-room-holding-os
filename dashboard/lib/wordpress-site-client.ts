@@ -44,6 +44,10 @@ export interface CrearPaginaParams {
 
 export async function crearPaginaWordpress(params: CrearPaginaParams) {
   const url = `https://${params.dominio}/wp-json/wp/v2/pages`;
+  // SEGURIDAD: por defecto la página se crea como "draft" (borrador), NUNCA publicada
+  // automáticamente. Publicar un sitio real es una acción irreversible de cara al público,
+  // así que hace falta pasar estado:"publish" EXPLÍCITAMENTE (a propósito, no por defecto)
+  // para que este endpoint deje algo visible al público sin que alguien lo haya pedido así.
   const res = await fetch(url, {
     method: "POST",
     headers: {
@@ -53,7 +57,7 @@ export async function crearPaginaWordpress(params: CrearPaginaParams) {
     body: JSON.stringify({
       title: params.titulo,
       content: params.contenidoHtml,
-      status: params.estado || "publish",
+      status: params.estado || "draft",
     }),
   });
   const text = await res.text();
