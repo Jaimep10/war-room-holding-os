@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layout cocina en U — cocina-demo-prueba</title>
+<style>
+  :root {
+    --bg: #f6f4f0; --panel: #ffffff; --ink: #22201c; --muted: #6f6a62; --line: #e2ddd4;
+    --wall: #3a3631; --bajo: #d9b98c; --bajo-s: #8a6a3f; --torre: #9c7b52; --torre-s: #5a4326;
+    --alto: rgba(70,120,190,.16); --alto-s: #3f6fb5; --volado: #ece8e1; --volado-s: #a9a298;
+    --pend: #f3c77a; --pend-s: #b7791f; --err: #c8372d; --warn: #b7791f; --ok: #2f7d4f; --tri: #7a3fb5;
+    --accent: #2b5fa8;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
+  header { padding: 14px 20px 10px; border-bottom: 1px solid var(--line); background: var(--panel); display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; }
+  header h1 { font-size: 17px; margin: 0; font-weight: 650; }
+  header .meta { color: var(--muted); font-size: 12.5px; }
+  .app { display: grid; grid-template-columns: 1fr 360px; height: calc(100vh - 52px); min-height: 560px; }
+  .stage { position: relative; overflow: hidden; }
+  canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+  canvas.dragging { cursor: grabbing; }
+  .toolbar { position: absolute; top: 10px; left: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .toolbar button, .toolbar label { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 5px 9px; font: inherit; font-size: 12.5px; cursor: pointer; display: inline-flex; gap: 5px; align-items: center; }
+  .legend { position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,.92); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; font-size: 12px; display: flex; gap: 12px; flex-wrap: wrap; max-width: calc(100% - 20px); }
+  .sw { display: inline-block; width: 14px; height: 10px; border: 1px solid; vertical-align: -1px; margin-right: 4px; }
+  aside { background: var(--panel); border-left: 1px solid var(--line); overflow-y: auto; padding: 4px 16px 24px; }
+  aside section { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  aside h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 8px; font-weight: 600; }
+  .row { display: flex; gap: 8px; align-items: center; margin: 5px 0; flex-wrap: wrap; }
+  .row label { flex: 1; font-size: 13px; }
+  input[type=number], select { font: inherit; font-size: 13px; padding: 4px 6px; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
+  input[type=number] { width: 80px; }
+  input[type=number]:placeholder-shown { border-color: var(--pend-s); background: #fff8ea; }
+  select { max-width: 100%; }
+  button.btn { font: inherit; font-size: 12.5px; padding: 5px 10px; border-radius: 5px; border: 1px solid var(--line); background: #fff; cursor: pointer; }
+  button.btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  button.btn.danger { color: var(--err); border-color: #eab8b3; }
+  .issues { list-style: none; margin: 0; padding: 0; }
+  .issues li { padding: 7px 8px 7px 10px; border-left: 3px solid; margin-bottom: 6px; font-size: 12.8px; background: #faf9f7; border-radius: 0 5px 5px 0; cursor: pointer; }
+  .issues li.error { border-color: var(--err); }
+  .issues li.aviso { border-color: var(--warn); }
+  .issues li.ok { border-color: var(--ok); cursor: default; }
+  .issues li b { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 2px; }
+  .issues li.error b { color: var(--err); } .issues li.aviso b { color: var(--warn); } .issues li.ok b { color: var(--ok); }
+  .sel-empty { color: var(--muted); font-size: 13px; }
+  .kv { font-size: 13px; margin: 3px 0; } .kv span { color: var(--muted); }
+  .note { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .tri td { padding: 2px 8px 2px 0; font-size: 13px; }
+  .toast { position: absolute; top: 10px; right: 10px; background: var(--ink); color: #fff; padding: 6px 12px; border-radius: 6px; font-size: 12.5px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .toast.show { opacity: .92; }
+  @media (max-width: 860px) {
+    .app { grid-template-columns: 1fr; height: auto; }
+    .stage { height: 70vh; }
+    aside { border-left: 0; border-top: 1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Layout cocina en U</h1>
+  <span class="meta">Cliente: <b>cocina-demo-prueba</b> · Vista en planta a escala (cm) · Módulos KSmart (catálogo local <code>~/Downloads/</code>)</span>
+</header>
+
+<div class="app">
+  <div class="stage" id="stage">
+    <canvas id="cv"></canvas>
+    <div class="toolbar">
+      <button id="zin" title="Acercar">＋</button>
+      <button id="zout" title="Alejar">－</button>
+      <button id="zfit" title="Encuadrar">Encuadrar</button>
+      <label><input type="checkbox" id="lyFloor" checked> Bajos/torres</label>
+      <label><input type="checkbox" id="lyAlto" checked> Altos</label>
+      <label><input type="checkbox" id="lyDims" checked> Cotas</label>
+      <label><input type="checkbox" id="lyTri" checked> Triángulo</label>
+    </div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--bajo);border-color:var(--bajo-s)"></i>Bajo</span>
+      <span><i class="sw" style="background:var(--torre);border-color:var(--torre-s)"></i>Torre</span>
+      <span><i class="sw" style="background:var(--alto);border-color:var(--alto-s);border-style:dashed"></i>Alto (proyección)</span>
+      <span><i class="sw" style="background:var(--volado);border-color:var(--volado-s)"></i>Volado</span>
+      <span><i class="sw" style="background:#fff;border-color:var(--volado-s);border-style:dashed"></i>Espacio libre</span>
+      <span><i class="sw" style="background:var(--pend);border-color:var(--pend-s)"></i>Código pendiente</span>
+      <span><i class="sw" style="background:rgba(200,55,45,.35);border-color:var(--err)"></i>Choque</span>
+    </div>
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <aside>
+    <section>
+      <h2>Validación</h2>
+      <ul class="issues" id="issues"></ul>
+    </section>
+
+    <section>
+      <h2>Módulo seleccionado</h2>
+      <div id="sel"><p class="sel-empty">Haz clic en un módulo. Arrastra los bajos y torres para cambiar el orden en su pared, y los altos para moverlos a lo largo de la pared.</p></div>
+    </section>
+
+    <section>
+      <h2>Paredes (cm)</h2>
+      <div class="row"><label for="wA">Pared A — izquierda, muro</label><input type="number" id="wA" min="50" step="1"></div>
+      <div class="row"><label for="wB">Pared B — fondo, muro</label><input type="number" id="wB" min="50" step="1"></div>
+      <div class="row"><label for="wC">C — península (no es muro)</label><input type="number" id="wC" min="50" step="1"></div>
+      <div class="row"><label for="iB">B arranca a (cm de la esquina A)</label><input type="number" id="iB" min="0" step="1"></div>
+      <div class="row"><label for="iC">C arranca a (cm del fondo)</label><input type="number" id="iC" min="0" step="1"></div>
+      <p class="note">B arranca después de la pata en L (80 cm) del esquinero de A. C arranca después del fondo de B, así la esquina B/C queda libre.</p>
+    </section>
+
+    <section>
+      <h2>Profundidades (cm)</h2>
+      <div class="row"><label for="dBajo">Bajos / mesón</label><input type="number" id="dBajo" min="10" step="1" placeholder="—"></div>
+      <div class="row"><label for="dAlto">Altos</label><input type="number" id="dAlto" min="10" step="1" placeholder="—"></div>
+      <div class="row"><label for="dTorre">Torres</label><input type="number" id="dTorre" min="10" step="1" placeholder="—"></div>
+      <p class="note">Profundidades confirmadas por el usuario el 25-sep-2026: bajos y torres 60 cm, altos 35 cm.</p>
+    </section>
+
+    <section>
+      <h2>Triángulo de trabajo</h2>
+      <div id="tri"></div>
+    </section>
+
+    <section>
+      <h2>Agregar módulo</h2>
+      <div class="row"><label for="addWall">Pared</label>
+        <select id="addWall"><option value="A">A</option><option value="B">B</option><option value="C">C</option></select></div>
+      <div class="row"><label for="addType">Tipo</label>
+        <select id="addType"><option value="bajo">Bajo</option><option value="torre">Torre</option><option value="alto">Alto</option></select></div>
+      <div class="row"><select id="addCode" style="width:100%"></select></div>
+      <div class="row"><button class="btn primary" id="addBtn">Agregar</button></div>
+      <p class="note">Solo aparecen los códigos que existen en los zips de KSmart (bajos, altos y torres).</p>
+    </section>
+
+    <section>
+      <h2>Datos</h2>
+      <div class="row">
+        <button class="btn" id="copyJson">Copiar JSON del layout</button>
+        <button class="btn danger" id="reset">Volver a los datos originales</button>
+      </div>
+      <p class="note">Los cambios se guardan en este navegador. El JSON sirve como <code>plan-espacial.json</code> para <code>agente-ksmart-ejecutor</code>.</p>
+    </section>
+  </aside>
+</div>
+
+<script>
+// ---------------------------------------------------------------------------
+// Catálogo real: nombres de .skp dentro de los zips de KSmart
+// (1.MODULOS BAJOS, 2.MODULOS ALTOS, 3.MODULOS TORRES). Ancho = número del código.
+// ---------------------------------------------------------------------------
+const CATALOGO = [["CAA.60","alto","1.Rectos",60],["CAEC.120.PPAV","alto","2.Esquineros",120],["CAEC.FP.120.2PBM","alto","2.Esquineros",120],["CAEC.SP.120.2PBAV","alto","2.Esquineros",120],["CAEC.SP.120.2PBMV","alto","2.Esquineros",120],["CAEC.SP.120.PPM","alto","2.Esquineros",120],["CAEC.SP.120.PPMV","alto","2.Esquineros",120],["CAEL.FP.60.PBIM","alto","2.Esquineros",60],["CAEL.FP.60.PBIMV","alto","2.Esquineros",60],["CAEL.TI.90.2PBM","alto","2.Esquineros",90],["CAEL.TI.90.PPLIM","alto","2.Esquineros",90],["CAEX.SP.60.PPM","alto","1.Rectos",60],["CAEX1.SP.60.2PBM","alto","1.Rectos",60],["CAEX1.SP.60.PPM","alto","1.Rectos",60],["CAEX2.FP.60.2PBM","alto","1.Rectos",60],["CAEX2.FP.63.PPM","alto","1.Rectos",63],["CAEX3.SP.60.2PBM","alto","1.Rectos",60],["CAMO.80","alto","1.Rectos",80],["CAR.FP.60.2PBAV","alto","1.Rectos",60],["CAR.FP.60.2PBM","alto","1.Rectos",60],["CAR.FP.60.2PBMV","alto","1.Rectos",60],["CAR.FP.60.4PBMV","alto","1.Rectos",60],["CARMO.FP.60.2PBM","alto","1.Rectos",60],["CARMO.FP.60.PPM","alto","1.Rectos",60],["CARMO2.FP.90.2PBM","alto","1.Rectos",90],["CARMO2.FP.90.PPM","alto","1.Rectos",90],["CASHR.80.PPAV","alto","1.Rectos",80],["CASHR.80.PPLAV","alto","1.Rectos",80],["CASHR.FP.80.2PBM","alto","1.Rectos",80],["CASHR.FP.80.PPM","alto","1.Rectos",80],["CASHR.FP.80.PPMV","alto","1.Rectos",80],["CASHR.SP.80.PPLM","alto","1.Rectos",80],["CASHR.SP.80.PPLMV","alto","1.Rectos",80],["CB.1G.TI.40.1K","bajo","5.Especiales",40],["CB.2G.TI.60.2K","bajo","2.Cajoneras",60],["CB.3G.TI.60.K.2C","bajo","2.Cajoneras",60],["CB.4G.TI.60.4C","bajo","2.Cajoneras",60],["CBA.60","bajo","Raíz",60],["CBECH2D.TI.90.PBDM","bajo","4.Esquineros",90],["CBECH2I.TI.90.PBDM","bajo","4.Esquineros",90],["CBECRD.TI.80.PBIM","bajo","4.Esquineros",80],["CBECRI.TI.80.PBDM","bajo","4.Esquineros",80],["CBED.TI.90.PBDM","bajo","4.Esquineros",90],["CBEL.TI.90.PBDM","bajo","4.Esquineros",90],["CBEL.TI.90.PLDM","bajo","4.Esquineros",90],["CBESP.TI.20","bajo","5.Especiales",20],["CBESPH.TI.20","bajo","5.Especiales",20],["CBF.1G.TI.60","bajo","2.Cajoneras",60],["CBF.2G.TI.60.2K","bajo","2.Cajoneras",60],["CBF.2GC.TI.60.2K","bajo","2.Cajoneras",60],["CBF1G1P.TI.80","bajo","3.Mixtos",80],["CBFR.TI.90.2PBM","bajo","1.Puertas",90],["CBH1.60","bajo","6.Microondas",60],["CBH2.70","bajo","6.Microondas",70],["CBHE.TI.15","bajo","5.Especiales",15],["CBHE.TI.20","bajo","5.Especiales",20],["CBHE.TI.30","bajo","5.Especiales",30],["CBMO.1G.TI 60","bajo","6.Microondas",60],["CBMOE.1G.TI 60","bajo","6.Microondas",60],["CBMQ.88","torre","5.Muebles Refri",88],["CBP2GI.TI.90.2C.2PBM","bajo","3.Mixtos",90],["CBP2GS.TI.90.2C.2PBM","bajo","3.Mixtos",90],["CBPGI.TI.90.1C.2PBM","bajo","3.Mixtos",90],["CBPGS.TI.90.1C.2PBM","bajo","3.Mixtos",90],["CBR.TI.80.2PBM","bajo","1.Puertas",80],["CBRSBAS.TI.40","bajo","5.Especiales",40],["CBRSBOT.15","bajo","Raíz",15],["CLAR2.4G.ES.60","torre","4.Puertas y Cajones",60],["CLMH.TI.60.2PBIM","torre","3.Torres de Hornos",60],["CLMH.TI.TI.60.1K.PBIM","torre","3.Torres de Hornos",60],["CLR2.4G.SP.60.2PBAV","torre","4.Puertas y Cajones",60],["CLR2.4G.TI.60.2PBM","torre","4.Puertas y Cajones",60],["CLR2.4G.TI.60.2PBMV","torre","4.Puertas y Cajones",60],["CLR2.SP.60.2PBAV","torre","1.Puertas largas",60],["CLR2.SP.60.4PBAV","torre","2.Puertas Divididas",60],["CLR2.TI.60.2PBM","torre","1.Puertas largas",60],["CLR2.TI.60.2PBMV","torre","1.Puertas largas",60],["CLR2.TI.60.4PBM","torre","2.Puertas Divididas",60],["CLR2.TI.60.4PBMV","torre","2.Puertas Divididas",60],["CLR2.TI.60.4PBMX","torre","2.Puertas Divididas",60],["CLRF.80.PPAV","torre","5.Muebles Refri",80],["CLRF.FP.80.2PBAV","torre","5.Muebles Refri",80],["CLRF.FP.80.2PBM","torre","5.Muebles Refri",80],["CLRF.FP.80.2PBMV","torre","5.Muebles Refri",80],["CLRF.FP.80.PPMV","torre","5.Muebles Refri",80],["CLRF.SP.80.PPM","torre","5.Muebles Refri",80],["CLS.2AEX.TI.40.2K","bajo","5.Especiales",40],["CLS.AEX.TI.40","bajo","5.Especiales",40],["CSLMH.60","torre","3.Torres de Hornos",60],["CSLMH.TI 60.1K","torre","3.Torres de Hornos",60],["CSLMH.TI.60.1PBIM","torre","3.Torres de Hornos",60],["CSLMH.TI.60.2PBM","torre","3.Torres de Hornos",60]]
+  .map(([nombre, tipo, carpeta, w]) => ({ nombre, tipo, carpeta, w }));
+
+function variantesDe(code) {
+  if (!code) return [];
+  return CATALOGO.filter(c => c.nombre === code || c.nombre.startsWith(code + "."));
+}
+
+// ---------------------------------------------------------------------------
+// Datos del cliente, tal como los dio el usuario (25-sep-2026, 3ª ronda — final).
+// Orden de cada pared: de izquierda a derecha mirando la pared desde adentro.
+//   A: izquierda = frente abierto, derecha = esquina con B (A se apoya en esa esquina)
+//   B: izquierda = esquina con A, derecha = esquina con C
+//   C: izquierda = fondo (esquina con B), derecha = frente abierto
+// "inicio": cm desde la esquina en que arranca la corrida de módulos.
+//   B arranca después de la pata en L (80 cm) del esquinero CBECRD.TI.80 de A.
+//   C arranca después del fondo de B: la esquina B/C queda libre.
+// ---------------------------------------------------------------------------
+const ORIGINAL = {
+  cliente: "cocina-demo-prueba",
+  walls: {
+    A: { len: 270, inicio: 0 },
+    B: { len: 230, inicio: 80, holguraAceptada: true }, // holgura de 10 cm contra la esquina C (confirmado)
+    C: { len: 230, inicio: 60, sobresaleAceptado: true },
+  },
+  depth: { bajo: 60, alto: 35, torre: 60 },
+  floor: {
+    A: [
+      { code: null, label: "ESPACIO 50", type: "espacio", w: 50, note: "Espacio libre para lavavajillas futuro (CBA.50 no existe en KSmart)." },
+      { code: "CBA.60", type: "bajo", role: "fregadero", note: "Fregadero" },
+      { code: "CBR.TI.80", type: "bajo" },
+      { code: "CBECRD.TI.80", type: "bajo", cornerL: 80, note: "Esquinero en L 80×80: 80 cm sobre A y 80 cm sobre B (confirmado por el usuario)." },
+    ],
+    B: [
+      { code: "CLMH.TI.60", type: "torre", role: "coccion", note: "Torre de hornos. Sin altos encima." },
+      { code: "CBF1G1P.TI.80", type: "bajo", note: "Mixto 1 gaveta + 1 puerta" },
+    ],
+    C: [
+      { code: "CBA.60", type: "bajo", note: "Lado cocina" },
+      { code: null, label: "VOLADO", type: "volado", w: 90, note: "Volado de desayunador de 90 cm, en medio (confirmado por el usuario): cierra los 230 cm de la península." },
+      { code: "CLRF.FP.80", variant: "CLRF.FP.80.2PBAV", type: "torre", role: "refri", note: "Refri al final de la península" },
+    ],
+  },
+  altos: {
+    A: [
+      { code: "CAR.FP.60", variant: "CAR.FP.60.2PBAV", type: "alto", alignTo: "fregadero", note: "Encima del fregadero" },
+      { code: "CAEC.SP.120", variant: "CAEC.SP.120.2PBAV", type: "alto", alignTo: "esquina", note: "Esquinero alto, sobre el CBECRD.TI.80 (movido desde la Pared B). Recto de 120 cm contra la esquina (confirmado por el usuario)." },
+    ],
+    B: [],
+    C: [],
+  },
+};
+
+const REF_DEPTH = { bajo: 60, alto: 35, torre: 60 };
+const STORE_KEY = "layout-cocina-u:cocina-demo-prueba:v4";
+let uid = 0;
+
+function hydrate(src) {
+  const s = JSON.parse(JSON.stringify(src));
+  for (const W of ["A", "B", "C"]) {
+    for (const list of [s.floor[W], s.altos[W]]) {
+      for (const m of list) {
+        m.id = m.id || "m" + (++uid);
+        const vs = variantesDe(m.code);
+        if (m.variant === undefined) m.variant = vs.length === 1 ? vs[0].nombre : null;
+        if (m.w == null) m.w = vs.length ? vs[0].w : null;
+      }
+    }
+  }
+  // Alto "encima del fregadero": se alinea al inicio del módulo con ese rol.
+  for (const W of ["A", "B", "C"]) {
+    for (const a of s.altos[W]) {
+      if (a.start == null && a.alignTo === "esquina") a.start = s.walls[W].len - a.w;
+      if (a.start == null && a.alignTo) {
+        const hit = layoutFloor(s, W).find(p => p.m.role === a.alignTo);
+        a.start = hit ? hit.s0 + (hit.m.w - a.w) / 2 : 0;
+      }
+      if (a.start == null) a.start = 0;
+    }
+  }
+  return s;
+}
+
+let S;
+try {
+  const saved = localStorage.getItem(STORE_KEY);
+  S = saved ? JSON.parse(saved) : null;
+  if (S) { for (const W of ["A","B","C"]) for (const m of [...S.floor[W], ...S.altos[W]]) uid = Math.max(uid, +String(m.id).slice(1) || 0); }
+} catch (e) { S = null; }
+if (!S) S = hydrate(ORIGINAL);
+
+function save() { try { localStorage.setItem(STORE_KEY, JSON.stringify(S)); } catch (e) {} }
+
+// ---------------------------------------------------------------------------
+// Geometría. Cada pared tiene coordenada s (a lo largo, cm) y n (hacia adentro, cm).
+// Origen: esquina interior A/B. x → hacia C, y → hacia el frente abierto.
+// ---------------------------------------------------------------------------
+function P(W, s, n) {
+  if (W === "A") return [n, S.walls.A.len - s];
+  if (W === "B") return [s, n];
+  return [S.walls.B.len - n, s];
+}
+function sFromWorld(W, x, y) {
+  if (W === "A") return S.walls.A.len - y;
+  if (W === "B") return x;
+  return y;
+}
+function depthOf(type) {
+  if (type === "alto") return S.depth.alto ?? REF_DEPTH.alto;
+  if (type === "torre") return S.depth.torre ?? S.depth.bajo ?? REF_DEPTH.torre;
+  return S.depth.bajo ?? REF_DEPTH.bajo;
+}
+function depthConfirmed(type) {
+  if (type === "alto") return S.depth.alto != null;
+  if (type === "torre") return S.depth.torre != null;
+  return S.depth.bajo != null;
+}
+function rectOf(W, s0, s1, d) {
+  const [x0, y0] = P(W, s0, 0), [x1, y1] = P(W, s1, d);
+  return { x0: Math.min(x0, x1), y0: Math.min(y0, y1), x1: Math.max(x0, x1), y1: Math.max(y0, y1) };
+}
+function layoutFloor(state, W) {
+  const list = state.floor[W], len = state.walls[W].len;
+  const total = list.reduce((a, m) => a + (m.w || 0), 0);
+  const ini = state.walls[W].inicio || 0;
+  let s = W === "A" ? len - total : ini;
+  return list.map(m => { const p = { m, s0: s, s1: s + (m.w || 0) }; s += m.w || 0; return p; });
+}
+function allPlaced() {
+  const out = [];
+  for (const W of ["A", "B", "C"]) {
+    for (const p of layoutFloor(S, W)) {
+      out.push({ ...p, W, layer: "floor", rect: rectOf(W, p.s0, p.s1, depthOf(p.m.type)) });
+      // Esquinero en L: su otra pata ocupa los primeros cm de la pared siguiente (A → B)
+      if (p.m.cornerL && W === "A" && p.s1 >= S.walls.A.len - 0.5)
+        out.push({ m: p.m, s0: 0, s1: p.m.cornerL, W: "B", layer: "floor", leg: true, rect: rectOf("B", 0, p.m.cornerL, depthOf(p.m.type)) });
+    }
+    for (const a of S.altos[W]) out.push({ m: a, s0: a.start, s1: a.start + a.w, W, layer: "alto", rect: rectOf(W, a.start, a.start + a.w, depthOf("alto")) });
+  }
+  return out;
+}
+function inter(a, b) {
+  const x0 = Math.max(a.x0, b.x0), y0 = Math.max(a.y0, b.y0), x1 = Math.min(a.x1, b.x1), y1 = Math.min(a.y1, b.y1);
+  return (x1 - x0 > 0.5 && y1 - y0 > 0.5) ? { x0, y0, x1, y1 } : null;
+}
+function nameOf(m) { return m.variant || m.code || m.label || "?"; }
+
+// ---------------------------------------------------------------------------
+// Validación
+// ---------------------------------------------------------------------------
+let clashes = [];
+function validate() {
+  const issues = [];
+  const placed = allPlaced();
+  clashes = [];
+
+  for (const W of ["A", "B", "C"]) {
+    const lay = layoutFloor(S, W);
+    const total = lay.reduce((a, p) => a + (p.m.w || 0), 0), ini = S.walls[W].inicio || 0;
+    const len = W === "C" ? S.walls.C.len : S.walls[W].len - ini;
+    const wallName = W === "C" ? "Península C" : "Pared " + W;
+    if (total < len && S.walls[W].holguraAceptada) issues.push({ sev: "info", title: `${wallName}: holgura libre de ${len - total} cm`, text: `Los módulos suman ${total} cm y quedan ${len} cm útiles después del esquinero. Holgura de ajuste aceptada por el usuario.`, ids: lay.map(p => p.m.id) });
+    else if (total < len) issues.push({ sev: "error", title: `${wallName}: faltan ${len - total} cm`, text: `Los módulos suman ${total} cm y la pared mide ${len} cm. Hay un hueco de ${len - total} cm sin módulo asignado${W === "A" ? " en el extremo del frente" : ""}.${ini && W !== "C" ? ` (La corrida arranca a ${ini} cm de la esquina.)` : ""}`, ids: lay.map(p => p.m.id) });
+    if (total > len) issues.push({ sev: "error", title: `${wallName}: se pasa ${total - len} cm`, text: ini && W !== "C"
+      ? `Los módulos suman ${total} cm, pero la pared mide ${S.walls[W].len} cm y la corrida arranca a ${ini} cm de la esquina (fondo del esquinero de A). Solo quedan ${len} cm libres.`
+      : `Los módulos suman ${total} cm y la pared mide ${len} cm.`, ids: lay.map(p => p.m.id) });
+    for (const a of S.altos[W]) {
+      if (a.start < 0 || a.start + a.w > S.walls[W].len) issues.push({ sev: "error", title: `Alto fuera de la pared ${W}`, text: `${nameOf(a)} se sale de los ${S.walls[W].len} cm de la pared.`, ids: [a.id] });
+      if (W === "C") issues.push({ sev: "aviso", title: "Alto sobre la península", text: `C no es muro, así que ${nameOf(a)} no tiene dónde colgarse.`, ids: [a.id] });
+    }
+  }
+
+  const finC = (S.walls.C.inicio || 0) + S.walls.C.len;
+  if (finC > S.walls.A.len && S.walls.C.sobresaleAceptado) issues.push({ sev: "info", title: `La península sobresale ${finC - S.walls.A.len} cm`, text: `Termina a ${finC} cm y la Pared A mide ${S.walls.A.len} cm. Aceptado por el usuario como volado extra del desayunador.`, ids: [] });
+  else if (finC > S.walls.A.len) issues.push({ sev: "aviso", title: `La península sobresale ${finC - S.walls.A.len} cm`, text: `C arranca a ${S.walls.C.inicio} cm del fondo y mide ${S.walls.C.len} cm, así que termina a ${finC} cm. La Pared A mide ${S.walls.A.len} cm. Confirmar si es intencional.`, ids: S.floor.C.map(m => m.id) });
+
+  // Choques: bajos/torres entre paredes distintas; altos contra altos y contra torres.
+  const floorItems = placed.filter(p => p.layer === "floor" && p.m.type !== "volado" && p.m.type !== "espacio");
+  const upperItems = placed.filter(p => p.layer === "alto" || p.m.type === "torre");
+  const seen = new Set();
+  const check = (a, b, tag) => {
+    if (a.m.id === b.m.id) return;
+    const k = [a.m.id, b.m.id].sort().join("|") + tag; if (seen.has(k)) return; seen.add(k);
+    const r = inter(a.rect, b.rect);
+    if (!r) return;
+    clashes.push(r);
+    const where = a.W !== b.W ? `esquina ${[a.W, b.W].sort().join("/")}` : `pared ${a.W}`;
+    let text = `${nameOf(a.m)} y ${nameOf(b.m)} ocupan el mismo espacio en la ${where}`;
+    if (a.W === b.W) text += ` (se cruzan ${Math.round(Math.min(a.s1, b.s1) - Math.max(a.s0, b.s0))} cm a lo largo de la pared)`;
+    if (tag === "alto" && (a.m.type === "torre" || b.m.type === "torre")) text += ". La torre sube hasta arriba y el alto choca con ella";
+    issues.push({ sev: "error", title: `Choque en ${where}`, text: text + ".", ids: [a.m.id, b.m.id] });
+  };
+  for (let i = 0; i < floorItems.length; i++) for (let j = i + 1; j < floorItems.length; j++)
+    if (floorItems[i].W !== floorItems[j].W) check(floorItems[i], floorItems[j], "floor");
+  for (let i = 0; i < upperItems.length; i++) for (let j = i + 1; j < upperItems.length; j++)
+    if (!(upperItems[i].layer === "floor" && upperItems[j].layer === "floor")) check(upperItems[i], upperItems[j], "alto");
+
+  // Códigos: variante sin elegir o código faltante
+  for (const p of placed) {
+    const m = p.m;
+    if (m.type === "volado" || m.type === "espacio") continue;
+    if (!m.code) {
+      const extra = m.w === 60 ? " Bajos rectos de 60 que existen: " + CATALOGO.filter(c => c.tipo === "bajo" && c.w === 60).map(c => c.nombre).join(", ") + "." : "";
+      issues.push({ sev: "error", title: `Código pendiente: ${m.label} (Pared ${p.W})`, text: `Este módulo no tiene código KSmart.${extra}`, ids: [m.id] });
+    } else if (!m.variant) {
+      const vs = variantesDe(m.code);
+      issues.push({ sev: "aviso", title: `Elegir variante de ${m.code}`, text: `Hay ${vs.length} archivos en KSmart que empiezan con este código: ${vs.map(v => v.nombre).join(", ")}.`, ids: [m.id] });
+    }
+  }
+
+  {
+    const t = {}; for (const p of placed) if (p.layer === "floor" && !p.leg && p.m.role) { const [x, y] = P(p.W, (p.s0 + p.s1) / 2, depthOf(p.m.type)); t[p.m.role] = { x, y, id: p.m.id }; }
+    const legs = [["fregadero", "coccion", "Fregadero → hornos"], ["coccion", "refri", "Hornos → refri"], ["refri", "fregadero", "Refri → fregadero"]];
+    for (const [a, b, lab] of legs) {
+      if (!t[a] || !t[b]) continue;
+      const d = Math.hypot(t[a].x - t[b].x, t[a].y - t[b].y) / 100;
+      if (d < 1.2 || d > 2.7) issues.push({ sev: "aviso", title: `Triángulo: ${lab} = ${d.toFixed(2)} m`, text: `Fuera del rango de referencia NKBA (1.20–2.70 m por lado).`, ids: [t[a].id, t[b].id] });
+    }
+  }
+  const sinProf = ["bajo", "alto", "torre"].filter(t => !depthConfirmed(t));
+  if (sinProf.length) issues.push({ sev: "aviso", title: "Profundidades sin confirmar", text: `Falta la profundidad real de: ${sinProf.join(", ")}. El dibujo usa un grosor de referencia.`, ids: [] });
+
+  if (!issues.some(i => i.sev === "error" || i.sev === "aviso")) issues.push({ sev: "ok", title: "Sin choques ni huecos pendientes", text: "No hay módulos que se crucen ni huecos sin resolver.", ids: [] });
+  return issues;
+}
+
+// ---------------------------------------------------------------------------
+// Canvas
+// ---------------------------------------------------------------------------
+const cv = document.getElementById("cv"), ctx = cv.getContext("2d"), stage = document.getElementById("stage");
+let view = { k: 2, ox: 0, oy: 0 }, dpr = 1;
+let selected = null, highlight = new Set();
+const layers = { floor: true, alto: true, dims: true, tri: true };
+
+function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+const C = {};
+["--wall","--bajo","--bajo-s","--torre","--torre-s","--alto","--alto-s","--volado","--volado-s","--pend","--pend-s","--err","--tri","--ink","--muted","--accent"].forEach(v => C[v.slice(2)] = css(v));
+
+function resize() {
+  dpr = window.devicePixelRatio || 1;
+  const r = stage.getBoundingClientRect();
+  cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr);
+  draw();
+}
+function fit() {
+  const r = stage.getBoundingClientRect();
+  const maxY = Math.max(S.walls.A.len, (S.walls.C.inicio || 0) + S.walls.C.len);
+  const minX = -95, maxX = S.walls.B.len + 95, minY = -150, maxY2 = maxY + 50;
+  const k = Math.min(r.width / (maxX - minX), (r.height - 40) / (maxY2 - minY));
+  view.k = k; view.ox = (r.width - (maxX - minX) * k) / 2 - minX * k; view.oy = 44 + (r.height - 40 - (maxY2 - minY) * k) / 2 - minY * k;
+  draw();
+}
+const X = x => view.ox + x * view.k, Y = y => view.oy + y * view.k;
+const toWorld = (sx, sy) => [(sx - view.ox) / view.k, (sy - view.oy) / view.k];
+
+function hatch(r, color, gap = 6) {
+  ctx.save(); ctx.beginPath(); ctx.rect(X(r.x0), Y(r.y0), (r.x1 - r.x0) * view.k, (r.y1 - r.y0) * view.k); ctx.clip();
+  ctx.strokeStyle = color; ctx.lineWidth = 1;
+  const w = (r.x1 - r.x0) * view.k, h = (r.y1 - r.y0) * view.k;
+  for (let t = -h; t < w; t += gap) { ctx.beginPath(); ctx.moveTo(X(r.x0) + t, Y(r.y0) + h); ctx.lineTo(X(r.x0) + t + h, Y(r.y0)); ctx.stroke(); }
+  ctx.restore();
+}
+function textAlong(W, s, n, str, size, color, weight = 500) {
+  const [x, y] = P(W, s, n);
+  ctx.save(); ctx.translate(X(x), Y(y));
+  if (W === "A") ctx.rotate(-Math.PI / 2); else if (W === "C") ctx.rotate(Math.PI / 2);
+  ctx.font = `${weight} ${size}px system-ui, sans-serif`; ctx.fillStyle = color; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillText(str, 0, 0); ctx.restore();
+}
+
+let placedCache = [];
+function draw() {
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const r = stage.getBoundingClientRect();
+  ctx.clearRect(0, 0, r.width, r.height);
+
+  // Grilla 10 / 50 cm
+  const [wx0, wy0] = toWorld(0, 0), [wx1, wy1] = toWorld(r.width, r.height);
+  for (const [step, col] of [[10, "rgba(0,0,0,.035)"], [50, "rgba(0,0,0,.07)"]]) {
+    if (step * view.k < 5) continue;
+    ctx.strokeStyle = col; ctx.lineWidth = 1; ctx.beginPath();
+    for (let x = Math.floor(wx0 / step) * step; x < wx1; x += step) { ctx.moveTo(X(x) + .5, 0); ctx.lineTo(X(x) + .5, r.height); }
+    for (let y = Math.floor(wy0 / step) * step; y < wy1; y += step) { ctx.moveTo(0, Y(y) + .5); ctx.lineTo(r.width, Y(y) + .5); }
+    ctx.stroke();
+  }
+
+  const A = S.walls.A.len, B = S.walls.B.len, Cl = (S.walls.C.inicio || 0) + S.walls.C.len, T = 12;
+  // Muros A y B (C es península: línea discontinua)
+  ctx.fillStyle = C.wall;
+  ctx.fillRect(X(-T), Y(-T), T * view.k, (A + T) * view.k);
+  ctx.fillRect(X(-T), Y(-T), (B + T) * view.k, T * view.k);
+  ctx.save(); ctx.setLineDash([6, 5]); ctx.strokeStyle = C.muted; ctx.lineWidth = 1.2;
+  ctx.beginPath(); ctx.moveTo(X(B), Y(0)); ctx.lineTo(X(B), Y(Cl)); ctx.stroke(); ctx.restore();
+
+  placedCache = allPlaced();
+  const issues = validate();
+  renderIssues(issues);
+
+  // Bajos, torres, volado
+  if (layers.floor) for (const p of placedCache.filter(p => p.layer === "floor")) drawModule(p);
+  // Altos (proyección)
+  if (layers.alto) for (const p of placedCache.filter(p => p.layer === "alto")) drawModule(p);
+
+  // Choques
+  for (const c of clashes) {
+    ctx.fillStyle = "rgba(200,55,45,.28)"; ctx.fillRect(X(c.x0), Y(c.y0), (c.x1 - c.x0) * view.k, (c.y1 - c.y0) * view.k);
+    hatch(c, "rgba(200,55,45,.8)", 5);
+    ctx.strokeStyle = C.err; ctx.lineWidth = 2; ctx.strokeRect(X(c.x0), Y(c.y0), (c.x1 - c.x0) * view.k, (c.y1 - c.y0) * view.k);
+  }
+
+  if (layers.dims) drawDims();
+  if (layers.tri) drawTriangle();
+
+  // Rótulos de pared
+  ctx.font = "600 13px system-ui, sans-serif"; ctx.fillStyle = C.ink; ctx.textAlign = "center";
+  textAlong("A", A / 2, -86, `PARED A · ${A} cm · muro`, 12.5, C.ink, 650);
+  const [bx, by] = P("B", B / 2, -92); ctx.fillText(`PARED B · ${B} cm · muro`, X(bx), Y(by));
+  textAlong("C", Cl / 2, -86, `C · PENÍNSULA DESAYUNADOR · ${S.walls.C.len} cm · sin muro`, 12.5, C.ink, 650);
+  ctx.font = "500 12px system-ui, sans-serif"; ctx.fillStyle = C.muted;
+  ctx.fillText("↓ frente abierto ↓", X(B / 2), Y(Math.max(A, Cl) + 32));
+
+  if (["bajo", "alto", "torre"].some(t => !depthConfirmed(t))) {
+    ctx.font = "600 12px system-ui, sans-serif"; ctx.textAlign = "left";
+    const msg = "Profundidades de referencia (no confirmadas): el ancho de cada módulo es real; el grosor dibujado, no.";
+    const w = ctx.measureText(msg).width + 16;
+    ctx.fillStyle = "#fff8ea"; ctx.strokeStyle = C["pend-s"]; ctx.lineWidth = 1;
+    ctx.fillRect(10, 44, w, 24); ctx.strokeRect(10.5, 44.5, w, 24);
+    ctx.fillStyle = C["pend-s"]; ctx.fillText(msg, 18, 56);
+  }
+}
+
+function drawModule(p) {
+  const m = p.m, r = p.rect, W = p.W;
+  const sx = X(r.x0), sy = Y(r.y0), sw = (r.x1 - r.x0) * view.k, sh = (r.y1 - r.y0) * view.k;
+  const isSel = selected === m.id, isHi = highlight.has(m.id);
+  ctx.save();
+  if (m.type === "alto") {
+    ctx.fillStyle = C.alto; ctx.fillRect(sx, sy, sw, sh);
+    ctx.setLineDash([7, 4]); ctx.strokeStyle = C["alto-s"]; ctx.lineWidth = 1.6; ctx.strokeRect(sx + .5, sy + .5, sw - 1, sh - 1);
+  } else {
+    const fill = { bajo: C.bajo, torre: C.torre, volado: C.volado, pendiente: C.pend, espacio: "#ffffff" }[m.type];
+    const stroke = { bajo: C["bajo-s"], torre: C["torre-s"], volado: C["volado-s"], pendiente: C["pend-s"], espacio: C["volado-s"] }[m.type];
+    ctx.fillStyle = fill; ctx.fillRect(sx, sy, sw, sh);
+    if (m.type === "pendiente") hatch(r, "rgba(183,121,31,.45)", 7);
+    if (m.type === "torre") { ctx.strokeStyle = stroke; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(sx + sw, sy + sh); ctx.moveTo(sx + sw, sy); ctx.lineTo(sx, sy + sh); ctx.stroke(); }
+    if (m.type === "volado" || m.type === "espacio") ctx.setLineDash([4, 3]);
+    ctx.strokeStyle = stroke; ctx.lineWidth = 1.4; ctx.strokeRect(sx + .5, sy + .5, sw - 1, sh - 1);
+    ctx.setLineDash([]);
+    // Frente del módulo: línea fina si la profundidad no está confirmada
+    if (!depthConfirmed(m.type) && m.type !== "volado" && m.type !== "espacio") {
+      const [fx0, fy0] = P(W, p.s0, depthOf(m.type)), [fx1, fy1] = P(W, p.s1, depthOf(m.type));
+      ctx.setLineDash([2, 3]); ctx.strokeStyle = C["pend-s"]; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(X(fx0), Y(fy0)); ctx.lineTo(X(fx1), Y(fy1)); ctx.stroke(); ctx.setLineDash([]);
+    }
+    if (m.role === "fregadero") {
+      const [cx, cy] = P(W, (p.s0 + p.s1) / 2, depthOf("bajo") / 2);
+      const bw = Math.min(m.w - 16, 44) * view.k, bh = Math.min(depthOf("bajo") - 18, 38) * view.k;
+      const horiz = W === "B";
+      ctx.strokeStyle = C["bajo-s"]; ctx.lineWidth = 1.3; ctx.beginPath();
+      if (ctx.roundRect) ctx.roundRect(X(cx) - (horiz ? bw : bh) / 2, Y(cy) - (horiz ? bh : bw) / 2, horiz ? bw : bh, horiz ? bh : bw, 6);
+      else ctx.rect(X(cx) - (horiz ? bw : bh) / 2, Y(cy) - (horiz ? bh : bw) / 2, horiz ? bw : bh, horiz ? bh : bw);
+      ctx.stroke(); ctx.beginPath(); ctx.arc(X(cx), Y(cy), 3, 0, 7); ctx.stroke();
+    }
+  }
+  if (isSel || isHi) { ctx.setLineDash([]); ctx.strokeStyle = isSel ? C.accent : C.err; ctx.lineWidth = 3; ctx.strokeRect(sx - 1.5, sy - 1.5, sw + 3, sh + 3); }
+  ctx.restore();
+
+  // Rótulo
+  if (p.leg) { textAlong(W, (p.s0 + p.s1) / 2, depthOf(m.type) / 2, "pata L", 10.5, C.muted, 500); return; }
+  const len = (p.s1 - p.s0) * view.k;
+  const label = m.variant || m.code || m.label;
+  const mid = (p.s0 + p.s1) / 2, nMid = (m.type === "alto" ? depthOf("alto") : depthOf(m.type)) / 2;
+  const color = m.type === "torre" ? "#fff" : C.ink;
+  if (len > 38) {
+    ctx.font = "600 11px system-ui, sans-serif";
+    let txt = label; if (ctx.measureText(txt).width > len - 6) txt = m.code || m.label;
+    const mark = (m.code && !m.variant) ? " ?" : "";
+    const off = m.type === "alto" ? 8 : 0;
+    textAlong(W, mid, nMid - 7 - off, txt + mark, 11, color, 650);
+    const role = { fregadero: "fregadero", coccion: "hornos", refri: "refri" }[m.role] || (m.type === "espacio" ? "lavavajillas futuro" : null);
+    textAlong(W, mid, nMid + 7 - off, `${m.w} cm${role ? " · " + role : ""}`, 10.5, m.type === "torre" ? "#f3e8d8" : C.muted, 500);
+  }
+}
+
+function dimLine(W, s0, s1, n, label, color) {
+  const [ax, ay] = P(W, s0, n), [bx, by] = P(W, s1, n);
+  ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(X(ax), Y(ay)); ctx.lineTo(X(bx), Y(by)); ctx.stroke();
+  for (const [x, y] of [[ax, ay], [bx, by]]) {
+    ctx.beginPath(); ctx.moveTo(X(x) - 4, Y(y) + 4); ctx.lineTo(X(x) + 4, Y(y) - 4); ctx.stroke();
+    const [ex, ey] = P(W, sFromWorld(W, x, y), n + 5), [fx, fy] = P(W, sFromWorld(W, x, y), n - 5);
+    ctx.beginPath(); ctx.moveTo(X(ex), Y(ey)); ctx.lineTo(X(fx), Y(fy)); ctx.stroke();
+  }
+  if ((s1 - s0) * view.k > 18) textAlong(W, (s0 + s1) / 2, n - 7, label, 10.5, color, 600);
+}
+function drawDims() {
+  for (const W of ["A", "B", "C"]) {
+    const lay = layoutFloor(S, W), ini = S.walls[W].inicio || 0, len = W === "C" ? ini + S.walls.C.len : S.walls[W].len;
+    const base = W === "C" ? -18 : -24;
+    if (ini > 0) dimLine(W, 0, ini, base, W === "B" ? `esq. A ${ini}` : `libre ${ini}`, C.muted);
+    for (const p of lay) dimLine(W, p.s0, p.s1, base, String(p.m.w), C.ink);
+    const total = lay.reduce((a, p) => a + (p.m.w || 0), 0);
+    if (lay.length) {
+      const first = lay[0].s0, last = lay[lay.length - 1].s1;
+      if (first > ini + 0.5) dimLine(W, ini, first, base, `hueco ${Math.round(first - ini)}`, C.err);
+      if (last > len + 0.5) dimLine(W, len, last, base + 12, `se pasa ${Math.round(last - len)}`, C.err);
+      if (last < len - 0.5) dimLine(W, last, len, base, `${S.walls[W].holguraAceptada ? "holgura" : "hueco"} ${Math.round(len - last)}`, S.walls[W].holguraAceptada ? C.muted : C.err);
+    }
+    if (S.altos[W].length) for (const a of S.altos[W]) dimLine(W, a.start, a.start + a.w, base - 20, `${a.w} alto`, C["alto-s"]);
+    const libre = W === "C" ? S.walls.C.len : len - ini;
+    dimLine(W, W === "C" ? ini : 0, len, base - (S.altos[W].length ? 40 : 22), `${W === "C" ? S.walls.C.len : len}${total !== libre ? `  (módulos: ${total})` : ""}`, total === libre || (total < libre && S.walls[W].holguraAceptada) ? C.ink : C.err);
+  }
+}
+
+function triPoints() {
+  const find = role => placedCache.find(p => p.layer === "floor" && p.m.role === role);
+  const pts = {};
+  for (const role of ["fregadero", "coccion", "refri"]) {
+    const p = find(role); if (!p) continue;
+    const [x, y] = P(p.W, (p.s0 + p.s1) / 2, depthOf(p.m.type));
+    pts[role] = { x, y, p };
+  }
+  return pts;
+}
+function drawTriangle() {
+  const pts = triPoints(), keys = ["fregadero", "coccion", "refri"].filter(k => pts[k]);
+  if (keys.length < 2) return;
+  ctx.save(); ctx.strokeStyle = C.tri; ctx.lineWidth = 2; ctx.setLineDash([8, 5]);
+  ctx.beginPath(); keys.forEach((k, i) => i ? ctx.lineTo(X(pts[k].x), Y(pts[k].y)) : ctx.moveTo(X(pts[k].x), Y(pts[k].y)));
+  if (keys.length === 3) ctx.closePath(); ctx.stroke(); ctx.setLineDash([]);
+  for (let i = 0; i < keys.length; i++) {
+    const a = pts[keys[i]], b = pts[keys[(i + 1) % keys.length]];
+    if (keys.length === 2 && i === 1) break;
+    const d = Math.hypot(a.x - b.x, a.y - b.y);
+    const mx = (X(a.x) + X(b.x)) / 2, my = (Y(a.y) + Y(b.y)) / 2;
+    ctx.font = "600 11px system-ui, sans-serif"; const t = (d / 100).toFixed(2) + " m", tw = ctx.measureText(t).width + 8;
+    ctx.fillStyle = "#fff"; ctx.fillRect(mx - tw / 2, my - 9, tw, 18); ctx.strokeStyle = C.tri; ctx.lineWidth = 1; ctx.strokeRect(mx - tw / 2, my - 9, tw, 18);
+    ctx.fillStyle = C.tri; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(t, mx, my);
+  }
+  for (const k of keys) { ctx.fillStyle = C.tri; ctx.beginPath(); ctx.arc(X(pts[k].x), Y(pts[k].y), 5, 0, 7); ctx.fill(); }
+  ctx.restore();
+}
+
+// ---------------------------------------------------------------------------
+// Panel
+// ---------------------------------------------------------------------------
+const $ = id => document.getElementById(id);
+function renderIssues(issues) {
+  const ul = $("issues"); ul.innerHTML = "";
+  for (const it of issues) {
+    const li = document.createElement("li"); li.className = it.sev;
+    li.className = it.sev === "info" ? "ok" : it.sev;
+    li.innerHTML = `<b>${it.sev === "error" ? "Conflicto" : it.sev === "aviso" ? "Revisar" : it.sev === "info" ? "Aceptado" : "OK"}</b><strong>${esc(it.title)}</strong><br>${esc(it.text)}`;
+    if (it.ids.length) {
+      li.onmouseenter = () => { highlight = new Set(it.ids); requestDraw(); };
+      li.onmouseleave = () => { highlight = new Set(); requestDraw(); };
+      li.onclick = () => { selected = it.ids[0]; renderSel(); requestDraw(); };
+    }
+    ul.appendChild(li);
+  }
+  renderTri();
+}
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+
+function renderTri() {
+  const pts = triPoints(), el = $("tri");
+  const legs = [["fregadero", "coccion", "Fregadero (A) → Hornos (B)"], ["coccion", "refri", "Hornos (B) → Refri (C)"], ["refri", "fregadero", "Refri (C) → Fregadero (A)"]];
+  let sum = 0, rows = "", all = true;
+  for (const [a, b, lab] of legs) {
+    if (!pts[a] || !pts[b]) { all = false; rows += `<tr><td>${lab}</td><td>—</td></tr>`; continue; }
+    const d = Math.hypot(pts[a].x - pts[b].x, pts[a].y - pts[b].y) / 100; sum += d;
+    const ok = d >= 1.2 && d <= 2.7;
+    rows += `<tr><td>${lab}</td><td style="color:${ok ? "var(--ok)" : "var(--warn)"};font-weight:600">${d.toFixed(2)} m</td></tr>`;
+  }
+  const ref = ["bajo", "torre"].some(t => !depthConfirmed(t)) ? " Medido desde el frente de cada módulo, con profundidad de referencia." : " Medido desde el frente de cada módulo.";
+  el.innerHTML = `<table class="tri">${rows}${all ? `<tr><td><b>Total</b></td><td style="font-weight:700;color:${sum >= 4 && sum <= 7.9 ? "var(--ok)" : "var(--warn)"}">${sum.toFixed(2)} m</td></tr>` : ""}</table>
+  <p class="note">Rango de referencia NKBA: cada lado de 1.20 a 2.70 m y total de 4.00 a 7.90 m.${ref} La torre CLMH cuenta como punto de cocción.</p>`;
+}
+
+function findModule(id) {
+  for (const W of ["A", "B", "C"]) {
+    let i = S.floor[W].findIndex(m => m.id === id); if (i >= 0) return { W, list: S.floor[W], i, layer: "floor" };
+    i = S.altos[W].findIndex(m => m.id === id); if (i >= 0) return { W, list: S.altos[W], i, layer: "alto" };
+  }
+  return null;
+}
+function renderSel() {
+  const box = $("sel");
+  const f = selected && findModule(selected);
+  if (!f) { box.innerHTML = `<p class="sel-empty">Haz clic en un módulo. Arrastra los bajos y torres para cambiar el orden en su pared, y los altos para moverlos a lo largo de la pared.</p>`; return; }
+  const m = f.list[f.i], p = placedCache.find(p => p.m.id === m.id);
+  const vs = variantesDe(m.code);
+  const tipo = { bajo: "Bajo", torre: "Torre", alto: "Alto", volado: "Volado (mesón en voladizo)", pendiente: "Bajo con código pendiente", espacio: "Espacio libre (sin módulo)" }[m.type];
+  let html = `<div class="kv"><span>Código dado:</span> <b>${esc(m.code || m.label)}</b></div>
+    <div class="kv"><span>Tipo:</span> ${tipo} · <span>Pared:</span> ${f.W}</div>
+    <div class="kv"><span>Ancho:</span> ${m.w} cm · <span>Posición:</span> ${p ? Math.round(p.s0) + "–" + Math.round(p.s1) : "?"} cm</div>`;
+  if (m.note) html += `<div class="kv"><span>Nota:</span> ${esc(m.note)}</div>`;
+  if (vs.length > 1) {
+    html += `<div class="row"><label for="selVar">Variante KSmart</label><select id="selVar"><option value="">— elegir —</option>${vs.map(v => `<option ${v.nombre === m.variant ? "selected" : ""}>${esc(v.nombre)}</option>`).join("")}</select></div>`;
+  } else if (vs.length === 1) {
+    html += `<div class="kv"><span>Archivo KSmart:</span> ${esc(vs[0].nombre)}.skp (${esc(vs[0].carpeta)})</div>`;
+  }
+  if (m.type === "pendiente" || m.type === "volado" || m.type === "espacio") html += `<div class="row"><label for="selW">Ancho (cm)</label><input type="number" id="selW" min="5" step="1" value="${m.w}"></div>`;
+  if (m.type === "pendiente" || m.type === "espacio") {
+    const opts = CATALOGO.filter(c => c.tipo === "bajo");
+    html += `<div class="row"><label for="selCode">Asignar código</label><select id="selCode"><option value="">— elegir —</option>${opts.map(c => `<option value="${esc(c.nombre)}">${esc(c.nombre)} · ${c.w}</option>`).join("")}</select></div>`;
+  }
+  if (f.layer === "alto") html += `<div class="row"><label for="selStart">Inicio en pared (cm)</label><input type="number" id="selStart" step="1" value="${Math.round(m.start)}"></div>`;
+  html += `<div class="row">${f.layer === "floor" ? `<button class="btn" id="mvL">◀ Mover</button><button class="btn" id="mvR">Mover ▶</button>` : ""}<button class="btn danger" id="del">Eliminar</button></div>`;
+  box.innerHTML = html;
+
+  const commit = () => { save(); renderSel(); requestDraw(); };
+  $("selVar") && ($("selVar").onchange = e => { m.variant = e.target.value || null; commit(); });
+  $("selW") && ($("selW").onchange = e => { const v = +e.target.value; if (v > 0) { m.w = v; m.derived = false; } commit(); });
+  $("selCode") && ($("selCode").onchange = e => { const c = CATALOGO.find(c => c.nombre === e.target.value); if (c) { m.code = c.nombre; m.variant = c.nombre; m.w = c.w; m.type = c.tipo; delete m.label; } commit(); });
+  $("selStart") && ($("selStart").onchange = e => { m.start = +e.target.value || 0; commit(); });
+  $("mvL") && ($("mvL").onclick = () => { if (f.i > 0) { [f.list[f.i - 1], f.list[f.i]] = [f.list[f.i], f.list[f.i - 1]]; commit(); } });
+  $("mvR") && ($("mvR").onclick = () => { if (f.i < f.list.length - 1) { [f.list[f.i + 1], f.list[f.i]] = [f.list[f.i], f.list[f.i + 1]]; commit(); } });
+  $("del").onclick = () => { f.list.splice(f.i, 1); selected = null; commit(); };
+}
+
+function syncInputs() {
+  $("iB").value = S.walls.B.inicio || 0; $("iC").value = S.walls.C.inicio || 0;
+  $("wA").value = S.walls.A.len; $("wB").value = S.walls.B.len; $("wC").value = S.walls.C.len;
+  $("dBajo").value = S.depth.bajo ?? ""; $("dAlto").value = S.depth.alto ?? ""; $("dTorre").value = S.depth.torre ?? "";
+}
+for (const W of ["B", "C"]) $("i" + W).onchange = e => { S.walls[W].inicio = Math.max(0, +e.target.value || 0); save(); fit(); };
+for (const W of ["A", "B", "C"]) $("w" + W).onchange = e => { const v = +e.target.value; if (v >= 50) S.walls[W].len = v; save(); fit(); };
+for (const [id, k] of [["dBajo", "bajo"], ["dAlto", "alto"], ["dTorre", "torre"]]) $(id).onchange = e => { const v = e.target.value === "" ? null : +e.target.value; S.depth[k] = v > 0 ? v : null; save(); requestDraw(); };
+
+function fillAddCodes() {
+  const t = $("addType").value;
+  $("addCode").innerHTML = CATALOGO.filter(c => c.tipo === t).map(c => `<option value="${esc(c.nombre)}">${esc(c.nombre)} · ${c.w} cm · ${esc(c.carpeta)}</option>`).join("");
+}
+$("addType").onchange = fillAddCodes; fillAddCodes();
+$("addBtn").onclick = () => {
+  const W = $("addWall").value, c = CATALOGO.find(c => c.nombre === $("addCode").value); if (!c) return;
+  const m = { id: "m" + (++uid), code: c.nombre, variant: c.nombre, type: c.tipo, w: c.w };
+  if (c.tipo === "alto") { m.start = 0; S.altos[W].push(m); }
+  else if (W === "A") S.floor.A.unshift(m); // A se apoya en la esquina: lo nuevo entra por el frente
+  else S.floor[W].push(m);
+  selected = m.id; save(); renderSel(); requestDraw();
+};
+function buildJson() {
+  return { cliente: S.cliente, generado: new Date().toISOString(), unidades: "cm", walls: S.walls, profundidades: S.depth,
+    paredes: Object.fromEntries(["A", "B", "C"].map(W => [W, {
+      bajos_torres: layoutFloor(S, W).map(p => ({ codigo_dado: p.m.code || p.m.label, archivo_ksmart: p.m.variant ? p.m.variant + ".skp" : null, tipo: p.m.type, ancho: p.m.w, desde: p.s0, hasta: p.s1, rol: p.m.role || null })),
+      altos: S.altos[W].map(a => ({ codigo_dado: a.code, archivo_ksmart: a.variant ? a.variant + ".skp" : null, ancho: a.w, desde: a.start, hasta: a.start + a.w })),
+    }])),
+    triangulo: (() => { const t = triPoints(), d = (a, b) => t[a] && t[b] ? +(Math.hypot(t[a].x - t[b].x, t[a].y - t[b].y) / 100).toFixed(2) : null;
+      return { fregadero_coccion_m: d("fregadero", "coccion"), coccion_refri_m: d("coccion", "refri"), refri_fregadero_m: d("refri", "fregadero") }; })(),
+    pendientes: validate().filter(i => i.sev === "error" || i.sev === "aviso").map(i => ({ tipo: i.sev === "error" ? "conflicto" : "revisar", titulo: i.title, detalle: i.text })),
+    aceptados: validate().filter(i => i.sev === "info").map(i => ({ titulo: i.title, detalle: i.text })) };
+}
+$("copyJson").onclick = () => {
+  const txt = JSON.stringify(buildJson(), null, 2);
+  (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(() => toast("JSON copiado"), () => { console.log(txt); toast("No se pudo copiar: quedó en la consola"); });
+};
+$("reset").onclick = function () {
+  if (this.dataset.armed) { try { localStorage.removeItem(STORE_KEY); } catch (e) {} S = hydrate(ORIGINAL); selected = null; syncInputs(); renderSel(); fit(); this.textContent = "Volver a los datos originales"; delete this.dataset.armed; toast("Datos originales restaurados"); return; }
+  this.dataset.armed = "1"; this.textContent = "¿Seguro? Clic otra vez";
+  setTimeout(() => { if (this.dataset.armed) { delete this.dataset.armed; this.textContent = "Volver a los datos originales"; } }, 3000);
+};
+function toast(t) { const el = $("toast"); el.textContent = t; el.classList.add("show"); setTimeout(() => el.classList.remove("show"), 1800); }
+
+for (const [id, k] of [["lyFloor", "floor"], ["lyAlto", "alto"], ["lyDims", "dims"], ["lyTri", "tri"]]) $(id).onchange = e => { layers[k] = e.target.checked; requestDraw(); };
+$("zin").onclick = () => zoomAt(1.25); $("zout").onclick = () => zoomAt(0.8); $("zfit").onclick = fit;
+function zoomAt(f, sx, sy) {
+  const r = stage.getBoundingClientRect(); sx ??= r.width / 2; sy ??= r.height / 2;
+  const [wx, wy] = toWorld(sx, sy); view.k = Math.max(0.4, Math.min(20, view.k * f));
+  view.ox = sx - wx * view.k; view.oy = sy - wy * view.k; requestDraw();
+}
+
+// ---------------------------------------------------------------------------
+// Interacción: seleccionar, arrastrar (reordenar bajos/torres, deslizar altos), paneo, zoom
+// ---------------------------------------------------------------------------
+let drag = null, raf = 0;
+function requestDraw() { if (!raf) raf = requestAnimationFrame(() => { raf = 0; draw(); }); }
+function hit(sx, sy) {
+  const [x, y] = toWorld(sx, sy);
+  const order = [...(layers.alto ? placedCache.filter(p => p.layer === "alto") : []), ...(layers.floor ? placedCache.filter(p => p.layer === "floor") : [])];
+  return order.find(p => x >= p.rect.x0 && x <= p.rect.x1 && y >= p.rect.y0 && y <= p.rect.y1);
+}
+function local(e) { const r = cv.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; }
+cv.addEventListener("pointerdown", e => {
+  const [sx, sy] = local(e); cv.setPointerCapture(e.pointerId);
+  const h = hit(sx, sy);
+  if (h) {
+    selected = h.m.id; renderSel();
+    const [x, y] = toWorld(sx, sy);
+    drag = { kind: h.layer, id: h.m.id, W: h.W, grab: sFromWorld(h.W, x, y) - h.s0, moved: false };
+  } else {
+    selected = null; renderSel();
+    drag = { kind: "pan", sx, sy, ox: view.ox, oy: view.oy };
+  }
+  cv.classList.add("dragging"); requestDraw();
+});
+cv.addEventListener("pointermove", e => {
+  const [sx, sy] = local(e);
+  if (!drag) { cv.title = (hit(sx, sy) || {}).m ? nameOf(hit(sx, sy).m) : ""; return; }
+  if (drag.kind === "pan") { view.ox = drag.ox + sx - drag.sx; view.oy = drag.oy + sy - drag.sy; requestDraw(); return; }
+  const [x, y] = toWorld(sx, sy), s = sFromWorld(drag.W, x, y);
+  drag.moved = true;
+  if (drag.kind === "alto") {
+    const a = S.altos[drag.W].find(m => m.id === drag.id);
+    a.start = Math.round((s - drag.grab) / 5) * 5;
+  } else {
+    const list = S.floor[drag.W], lay = layoutFloor(S, drag.W), i = list.findIndex(m => m.id === drag.id);
+    if (i < list.length - 1 && s > (lay[i + 1].s0 + lay[i + 1].s1) / 2) [list[i], list[i + 1]] = [list[i + 1], list[i]];
+    else if (i > 0 && s < (lay[i - 1].s0 + lay[i - 1].s1) / 2) [list[i], list[i - 1]] = [list[i - 1], list[i]];
+  }
+  requestDraw();
+});
+cv.addEventListener("pointerup", () => { if (drag && drag.moved && drag.kind !== "pan") { save(); renderSel(); } drag = null; cv.classList.remove("dragging"); });
+cv.addEventListener("wheel", e => { e.preventDefault(); const [sx, sy] = local(e); zoomAt(e.deltaY < 0 ? 1.1 : 0.9, sx, sy); }, { passive: false });
+window.addEventListener("keydown", e => {
+  if (!selected || ["INPUT", "SELECT"].includes(document.activeElement.tagName)) return;
+  if (e.key === "Delete" || e.key === "Backspace") { const f = findModule(selected); if (f) { f.list.splice(f.i, 1); selected = null; save(); renderSel(); requestDraw(); } }
+});
+
+new ResizeObserver(() => { resize(); }).observe(stage);
+syncInputs(); resize(); fit(); renderSel();
+// #json → muestra el JSON del layout con los datos originales (para exportarlo sin navegador interactivo)
+if (location.hash === "#json") { S = hydrate(ORIGINAL); placedCache = allPlaced(); const pre = document.createElement("pre"); pre.id = "json-out"; pre.textContent = JSON.stringify(buildJson(), null, 2); document.body.prepend(pre); }
+</script>
+</body>
+</html>

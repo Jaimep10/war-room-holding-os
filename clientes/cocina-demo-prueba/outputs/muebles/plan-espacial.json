@@ -1,0 +1,155 @@
+{
+  "cliente": "cocina-demo-prueba",
+  "generado": "2026-09-25T14:24:18.129Z",
+  "unidades": "cm",
+  "walls": {
+    "A": {
+      "len": 270,
+      "inicio": 0
+    },
+    "B": {
+      "len": 230,
+      "inicio": 80,
+      "holguraAceptada": true
+    },
+    "C": {
+      "len": 230,
+      "inicio": 60,
+      "sobresaleAceptado": true
+    }
+  },
+  "profundidades": {
+    "bajo": 60,
+    "alto": 35,
+    "torre": 60
+  },
+  "paredes": {
+    "A": {
+      "bajos_torres": [
+        {
+          "codigo_dado": "ESPACIO 50",
+          "archivo_ksmart": null,
+          "tipo": "espacio",
+          "ancho": 50,
+          "desde": 0,
+          "hasta": 50,
+          "rol": null
+        },
+        {
+          "codigo_dado": "CBA.60",
+          "archivo_ksmart": "CBA.60.skp",
+          "tipo": "bajo",
+          "ancho": 60,
+          "desde": 50,
+          "hasta": 110,
+          "rol": "fregadero"
+        },
+        {
+          "codigo_dado": "CBR.TI.80",
+          "archivo_ksmart": "CBR.TI.80.2PBM.skp",
+          "tipo": "bajo",
+          "ancho": 80,
+          "desde": 110,
+          "hasta": 190,
+          "rol": null
+        },
+        {
+          "codigo_dado": "CBECRD.TI.80",
+          "archivo_ksmart": "CBECRD.TI.80.PBIM.skp",
+          "tipo": "bajo",
+          "ancho": 80,
+          "desde": 190,
+          "hasta": 270,
+          "rol": null
+        }
+      ],
+      "altos": [
+        {
+          "codigo_dado": "CAR.FP.60",
+          "archivo_ksmart": "CAR.FP.60.2PBAV.skp",
+          "ancho": 60,
+          "desde": 50,
+          "hasta": 110
+        },
+        {
+          "codigo_dado": "CAEC.SP.120",
+          "archivo_ksmart": "CAEC.SP.120.2PBAV.skp",
+          "ancho": 120,
+          "desde": 150,
+          "hasta": 270
+        }
+      ]
+    },
+    "B": {
+      "bajos_torres": [
+        {
+          "codigo_dado": "CLMH.TI.60",
+          "archivo_ksmart": "CLMH.TI.60.2PBIM.skp",
+          "tipo": "torre",
+          "ancho": 60,
+          "desde": 80,
+          "hasta": 140,
+          "rol": "coccion"
+        },
+        {
+          "codigo_dado": "CBF1G1P.TI.80",
+          "archivo_ksmart": "CBF1G1P.TI.80.skp",
+          "tipo": "bajo",
+          "ancho": 80,
+          "desde": 140,
+          "hasta": 220,
+          "rol": null
+        }
+      ],
+      "altos": []
+    },
+    "C": {
+      "bajos_torres": [
+        {
+          "codigo_dado": "CBA.60",
+          "archivo_ksmart": "CBA.60.skp",
+          "tipo": "bajo",
+          "ancho": 60,
+          "desde": 60,
+          "hasta": 120,
+          "rol": null
+        },
+        {
+          "codigo_dado": "VOLADO",
+          "archivo_ksmart": null,
+          "tipo": "volado",
+          "ancho": 90,
+          "desde": 120,
+          "hasta": 210,
+          "rol": null
+        },
+        {
+          "codigo_dado": "CLRF.FP.80",
+          "archivo_ksmart": "CLRF.FP.80.2PBAV.skp",
+          "tipo": "torre",
+          "ancho": 80,
+          "desde": 210,
+          "hasta": 290,
+          "rol": "refri"
+        }
+      ],
+      "altos": []
+    }
+  },
+  "triangulo": {
+    "fregadero_coccion_m": 1.39,
+    "coccion_refri_m": 1.99,
+    "refri_fregadero_m": 1.25
+  },
+  "pendientes": [],
+  "aceptados": [
+    {
+      "titulo": "Pared B: holgura libre de 10 cm",
+      "detalle": "Los módulos suman 140 cm y quedan 150 cm útiles después del esquinero. Holgura de ajuste aceptada por el usuario."
+    },
+    {
+      "titulo": "La península sobresale 20 cm",
+      "detalle": "Termina a 290 cm y la Pared A mide 270 cm. Aceptado por el usuario como volado extra del desayunador."
+    }
+  ]
+}
