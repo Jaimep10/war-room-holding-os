@@ -1,0 +1,41 @@
+{
+  "modoSolicitado": "borrador",
+  "partesSolicitadas": {
+    "cortes": false,
+    "presupuesto": false,
+    "renders": false,
+    "planos": false
+  },
+  "estado": "borrador_listo_pendiente_aprobacion",
+  "aprobado": false,
+  "historial": [
+    {
+      "evento": "Usuario solicitó Ejecutar Borrador desde el chat (solo .skp — sin cortes, presupuesto, renders ni planos)",
+      "timestamp": "2026-09-25T14:59:22.421101Z"
+    },
+    {
+      "evento": "agente-ksmart-ejecutor: módulos extraídos; esperando inspección en SketchUp (inspeccionar.rb)",
+      "timestamp": "2026-09-25T14:59:22.421101Z"
+    },
+    {
+      "evento": "Usuario dio altura_altos_cm = 145 (borde inferior de los altos desde el piso); guardada en brief.md",
+      "timestamp": "2026-09-25T16:51:43.147722Z"
+    },
+    {
+      "evento": "agente-ksmart-ejecutor: inspección leída; 7 de 8 orientaciones registradas en el catálogo (frente -y). Detenido: CBA.60 sin frentes detectables y CBECRD.TI.80 medido como esquinero ciego 80x58, no L 80x80 (afecta el inicio de la Pared B)",
+      "timestamp": "2026-09-25T17:09:12.837077Z"
+    },
+    {
+      "evento": "Usuario: torre en B=80, hueco ~16 cm junto al esquinero, 10 cm contra la esquina C. Sigue pendiente la orientación de CBA.60",
+      "timestamp": "2026-09-25T17:14:18.362349Z"
+    },
+    {
+      "evento": "CBA.60 frente -y (usuario). 8/8 orientaciones listas. armar_borrador.rb escrito; esperando que el usuario lo corra en SketchUp",
+      "timestamp": "2026-09-25T17:16:26.330672Z"
+    },
+    {
+      "evento": "agente-ksmart-ejecutor: borrador-log.json = borrador_listo (9 módulos colocados en su pared y rango). Revisión de cajas: B-02 CBF1G1P.TI.80 se cruza 2.5 cm con C-01 CBA.60 (x 172–220, y −62.5…−60: el frente del CBF1G1P mide 62.5 cm y la península arranca a 60). Pendiente de decisión del usuario antes de aprobar.",
+      "timestamp": "2026-10-10T02:00:25.854573Z"
+    }
+  ]
+}
