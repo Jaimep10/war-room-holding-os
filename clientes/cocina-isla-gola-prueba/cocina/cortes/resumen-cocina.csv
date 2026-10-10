@@ -1,0 +1,15 @@
+concepto;material;espesor;piezas;area_m2_o_ml
+tablero;BLANCO;15 mm;196;28.4
+tablero;FONDO;6 mm;35;10.83
+tablero;MADERADO;15 mm;28;3.51
+tablero;MADERADO;18 mm;20;3.33
+tablero;MADERADO;19 mm;2;0.54
+tablero;VID1;6 mm;2;0.6
+canto;SIN CANTO (2 mm x 19 mm);;;473.1
+accesorio;GOM001;;2;
+accesorio;MMA01;;258;
+accesorio;PATAS PLASTICAS;;40;
+indefinido;CLC2-MICRO H40 TRADI;;1;
+indefinido;INOX1;;4;
+indefinido;Negro;;2;
+indefinido;Standardmaterial;;1;

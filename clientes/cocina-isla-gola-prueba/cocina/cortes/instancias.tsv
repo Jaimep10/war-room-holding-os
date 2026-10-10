@@ -1,0 +1,621 @@
+No.	Camino	Instancia	Designación	Longitud - cruda	Ancho - crudo	Espesor - crudo	Longitud	Anchura	Grosor	Area - final	Tipo de material	Nombre del material	Descripción del material	URL del material	Descripción	URL	Etiquetas	Longitud del borde 1	Longitud del borde 2	Ancho del borde 1	Ancho de borde 2	Frente	Dorso	Etiqueta
+A	TORRES-02 CLMH.PGL.60.1K.PBIM	""	LATERAL DER#40	2115 mm	600 mm	15 mm	2115 mm	600 mm	15 mm	1.27 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	TORRES-02 CLMH.PGL.60.1K.PBIM	""	LATERAL IZQ#13	2115 mm	600 mm	15 mm	2115 mm	600 mm	15 mm	1.27 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+C	FREGADERO-04 CBR.PGL.80.2PBM	""	BASE#209	770 mm	580 mm	15 mm	770 mm	580 mm	15 mm	0.45 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	FREGADERO-04 CBR.PGL.80.2PBM	""	LATERAL DER#73	770 mm	359 mm	15 mm	770 mm	359 mm	15 mm	0.28 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	FREGADERO-04 CBR.PGL.80.2PBM	""	TECHO AMARRE#674	770 mm	90 mm	15 mm	770 mm	90 mm	15 mm	0.07 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	FREGADERO-04 CBR.PGL.80.2PBM	""	TECHO AMARRE#783	770 mm	90 mm	15 mm	770 mm	90 mm	15 mm	0.07 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+G	FREGADERO-04 CBR.PGL.80.2PBM	""	TECHO AMARRE#784	770 mm	90 mm	15 mm	770 mm	90 mm	15 mm	0.07 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+H	FREGADERO-04 CBR.PGL.80.2PBM	""	BASE AUX#6	769 mm	539 mm	15 mm	769 mm	539 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+I	FREGADERO-06 CAR.FP.60.2PBM	""	LATERAL DER#90	750 mm	300 mm	15 mm	750 mm	300 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+I	FREGADERO-07 CAR.FP.60.2PBM	""	LATERAL DER#90	750 mm	300 mm	15 mm	750 mm	300 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+I	FREGADERO-08 CAR.FP.60.2PBM	""	LATERAL DER#90	750 mm	300 mm	15 mm	750 mm	300 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+I	FREGADERO-09 CAR.FP.60.2PBM	""	LATERAL DER#90	750 mm	300 mm	15 mm	750 mm	300 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+I	FREGADERO-10 CAR.FP.60.2PBM	""	LATERAL DER#90	750 mm	300 mm	15 mm	750 mm	300 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+J	FREGADERO-06 CAR.FP.60.2PBM	""	LATERAL IZQ#42	750 mm	300 mm	15 mm	750 mm	300 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+J	FREGADERO-07 CAR.FP.60.2PBM	""	LATERAL IZQ#42	750 mm	300 mm	15 mm	750 mm	300 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+J	FREGADERO-08 CAR.FP.60.2PBM	""	LATERAL IZQ#42	750 mm	300 mm	15 mm	750 mm	300 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+J	FREGADERO-09 CAR.FP.60.2PBM	""	LATERAL IZQ#42	750 mm	300 mm	15 mm	750 mm	300 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+J	FREGADERO-10 CAR.FP.60.2PBM	""	LATERAL IZQ#42	750 mm	300 mm	15 mm	750 mm	300 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+K	FREGADERO-06 CAR.FP.60.2PBM	""	LATERAL DER#89	750 mm	279 mm	15 mm	750 mm	279 mm	15 mm	0.21 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+K	FREGADERO-07 CAR.FP.60.2PBM	""	LATERAL DER#89	750 mm	279 mm	15 mm	750 mm	279 mm	15 mm	0.21 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+K	FREGADERO-08 CAR.FP.60.2PBM	""	LATERAL DER#89	750 mm	279 mm	15 mm	750 mm	279 mm	15 mm	0.21 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+K	FREGADERO-09 CAR.FP.60.2PBM	""	LATERAL DER#89	750 mm	279 mm	15 mm	750 mm	279 mm	15 mm	0.21 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+K	FREGADERO-10 CAR.FP.60.2PBM	""	LATERAL DER#89	750 mm	279 mm	15 mm	750 mm	279 mm	15 mm	0.21 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+L	FREGADERO-01 CB.3G.GLM.60.K.2C	""	LATERAL DER#27	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+L	FREGADERO-02 CB.3G.GLM.60.K.2C	""	LATERAL DER#27	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+L	FREGADERO-05 CB.3G.GLM.60.K.2C	""	LATERAL DER#27	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+L	ISLA-01 CB.3G.GLM.60.K.2C	""	LATERAL DER#27	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+L	ISLA-02 CB.3G.GLM.60.K.2C	""	LATERAL DER#27	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+M	FREGADERO-01 CB.3G.GLM.60.K.2C	""	LATERAL IZQ#41	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+M	FREGADERO-02 CB.3G.GLM.60.K.2C	""	LATERAL IZQ#41	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+M	FREGADERO-05 CB.3G.GLM.60.K.2C	""	LATERAL IZQ#41	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+M	ISLA-01 CB.3G.GLM.60.K.2C	""	LATERAL IZQ#41	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+M	ISLA-02 CB.3G.GLM.60.K.2C	""	LATERAL IZQ#41	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+N	FREGADERO-04 CBR.PGL.80.2PBM	""	LATERAL DER#91	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+O	FREGADERO-04 CBR.PGL.80.2PBM	""	LATERAL IZQ#55	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+P	FREGADERO-03 CB.PGL.40.1K	""	LATERAL DER#33	695 mm	580 mm	15 mm	695 mm	580 mm	15 mm	0.40 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+P	TORRES-03 CB.PGL.40.1K	""	LATERAL DER#33	695 mm	580 mm	15 mm	695 mm	580 mm	15 mm	0.40 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+P	ISLA-03 CB.PGL.40.1K	""	LATERAL DER#33	695 mm	580 mm	15 mm	695 mm	580 mm	15 mm	0.40 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+Q	FREGADERO-03 CB.PGL.40.1K	""	LATERAL IZQ#23	695 mm	580 mm	15 mm	695 mm	580 mm	15 mm	0.40 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+Q	TORRES-03 CB.PGL.40.1K	""	LATERAL IZQ#23	695 mm	580 mm	15 mm	695 mm	580 mm	15 mm	0.40 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+Q	ISLA-03 CB.PGL.40.1K	""	LATERAL IZQ#23	695 mm	580 mm	15 mm	695 mm	580 mm	15 mm	0.40 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+R	TORRES-02 CLMH.PGL.60.1K.PBIM	""	BASE#22	600 mm	600 mm	15 mm	600 mm	600 mm	15 mm	0.36 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+S	FREGADERO-06 CAR.FP.60.2PBM	""	BASE#160	600 mm	300 mm	15 mm	600 mm	300 mm	15 mm	0.18 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+S	FREGADERO-07 CAR.FP.60.2PBM	""	BASE#160	600 mm	300 mm	15 mm	600 mm	300 mm	15 mm	0.18 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+S	FREGADERO-08 CAR.FP.60.2PBM	""	BASE#160	600 mm	300 mm	15 mm	600 mm	300 mm	15 mm	0.18 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+S	FREGADERO-09 CAR.FP.60.2PBM	""	BASE#160	600 mm	300 mm	15 mm	600 mm	300 mm	15 mm	0.18 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+S	FREGADERO-10 CAR.FP.60.2PBM	""	BASE#160	600 mm	300 mm	15 mm	600 mm	300 mm	15 mm	0.18 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+T	FREGADERO-06 CAR.FP.60.2PBM	""	TECHO AMARRE#561	600 mm	300 mm	15 mm	600 mm	300 mm	15 mm	0.18 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+T	FREGADERO-07 CAR.FP.60.2PBM	""	TECHO AMARRE#561	600 mm	300 mm	15 mm	600 mm	300 mm	15 mm	0.18 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+T	FREGADERO-08 CAR.FP.60.2PBM	""	TECHO AMARRE#561	600 mm	300 mm	15 mm	600 mm	300 mm	15 mm	0.18 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+T	FREGADERO-09 CAR.FP.60.2PBM	""	TECHO AMARRE#561	600 mm	300 mm	15 mm	600 mm	300 mm	15 mm	0.18 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+T	FREGADERO-10 CAR.FP.60.2PBM	""	TECHO AMARRE#561	600 mm	300 mm	15 mm	600 mm	300 mm	15 mm	0.18 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+U	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#198	580 mm	570 mm	15 mm	580 mm	570 mm	15 mm	0.33 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+U	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#198	580 mm	570 mm	15 mm	580 mm	570 mm	15 mm	0.33 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+U	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#198	580 mm	570 mm	15 mm	580 mm	570 mm	15 mm	0.33 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+U	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#198	580 mm	570 mm	15 mm	580 mm	570 mm	15 mm	0.33 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+U	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#198	580 mm	570 mm	15 mm	580 mm	570 mm	15 mm	0.33 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+V	FREGADERO-03 CB.PGL.40.1K	""	BASE#179	580 mm	400 mm	15 mm	580 mm	400 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+V	TORRES-03 CB.PGL.40.1K	""	BASE#179	580 mm	400 mm	15 mm	580 mm	400 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+V	ISLA-03 CB.PGL.40.1K	""	BASE#179	580 mm	400 mm	15 mm	580 mm	400 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+W	TORRES-02 CLMH.PGL.60.1K.PBIM	""	DIVISION  C#21	579 mm	570 mm	15 mm	579 mm	570 mm	15 mm	0.33 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+X	TORRES-02 CLMH.PGL.60.1K.PBIM	""	DIVISION  B#19	570 mm	570 mm	15 mm	570 mm	570 mm	15 mm	0.32 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+Y	TORRES-02 CLMH.PGL.60.1K.PBIM	""	DIVISION  C#16	570 mm	570 mm	15 mm	570 mm	570 mm	15 mm	0.32 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+Z	TORRES-02 CLMH.PGL.60.1K.PBIM	""	TECHO AMARRE#130	570 mm	549 mm	15 mm	570 mm	549 mm	15 mm	0.31 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AA	FREGADERO-01 CB.3G.GLM.60.K.2C/AM_POS copy 001	""	TECHO AMARRE#17	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AA	FREGADERO-02 CB.3G.GLM.60.K.2C/AM_POS copy 001	""	TECHO AMARRE#17	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AA	FREGADERO-05 CB.3G.GLM.60.K.2C/AM_POS copy 001	""	TECHO AMARRE#17	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AA	ISLA-01 CB.3G.GLM.60.K.2C/AM_POS copy 001	""	TECHO AMARRE#17	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AA	ISLA-02 CB.3G.GLM.60.K.2C/AM_POS copy 001	""	TECHO AMARRE#17	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AB	FREGADERO-01 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#206	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AB	FREGADERO-02 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#206	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AB	FREGADERO-05 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#206	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AB	ISLA-01 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#206	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AB	ISLA-02 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#206	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AC	FREGADERO-01 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#208	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AC	FREGADERO-02 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#208	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AC	FREGADERO-05 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#208	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AC	ISLA-01 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#208	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AC	ISLA-02 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#208	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AD	FREGADERO-01 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#32	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AD	FREGADERO-02 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#32	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AD	FREGADERO-05 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#32	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AD	ISLA-01 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#32	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AD	ISLA-02 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#32	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AE	FREGADERO-06 CAR.FP.60.2PBM/AM_POS copy 001	""	TECHO AMARRE#351	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AE	FREGADERO-07 CAR.FP.60.2PBM/AM_POS copy 001	""	TECHO AMARRE#351	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AE	FREGADERO-08 CAR.FP.60.2PBM/AM_POS copy 001	""	TECHO AMARRE#351	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AE	FREGADERO-09 CAR.FP.60.2PBM/AM_POS copy 001	""	TECHO AMARRE#351	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AE	FREGADERO-10 CAR.FP.60.2PBM/AM_POS copy 001	""	TECHO AMARRE#351	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AF	FREGADERO-06 CAR.FP.60.2PBM	""	TECHO AMARRE#358	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AF	FREGADERO-07 CAR.FP.60.2PBM	""	TECHO AMARRE#358	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AF	FREGADERO-08 CAR.FP.60.2PBM	""	TECHO AMARRE#358	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AF	FREGADERO-09 CAR.FP.60.2PBM	""	TECHO AMARRE#358	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AF	FREGADERO-10 CAR.FP.60.2PBM	""	TECHO AMARRE#358	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AG	TORRES-02 CLMH.PGL.60.1K.PBIM/AM_POS copy 001	""	TECHO AMARRE#123	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AH	TORRES-02 CLMH.PGL.60.1K.PBIM/AM_POS copy 001	""	TECHO AMARRE#2	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AI	TORRES-02 CLMH.PGL.60.1K.PBIM	""	TECHO AMARRE#88	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AJ	TORRES-02 CLMH.PGL.60.1K.PBIM	""	TECHO AMARRE#90	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AK	TORRES-02 CLMH.PGL.60.1K.PBIM	""	BASE#3	560 mm	200 mm	15 mm	560 mm	200 mm	15 mm	0.11 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AL	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#67	544 mm	200 mm	15 mm	544 mm	200 mm	15 mm	0.11 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AL	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#67	544 mm	200 mm	15 mm	544 mm	200 mm	15 mm	0.11 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AL	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#67	544 mm	200 mm	15 mm	544 mm	200 mm	15 mm	0.11 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AL	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#67	544 mm	200 mm	15 mm	544 mm	200 mm	15 mm	0.11 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AL	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#67	544 mm	200 mm	15 mm	544 mm	200 mm	15 mm	0.11 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AM	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#55	544 mm	100 mm	15 mm	544 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AM	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#55	544 mm	100 mm	15 mm	544 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AM	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#55	544 mm	100 mm	15 mm	544 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AM	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#55	544 mm	100 mm	15 mm	544 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AM	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#55	544 mm	100 mm	15 mm	544 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AN	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#6	544 mm	100 mm	15 mm	544 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AN	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#6	544 mm	100 mm	15 mm	544 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AN	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#6	544 mm	100 mm	15 mm	544 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AN	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#6	544 mm	100 mm	15 mm	544 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AN	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#6	544 mm	100 mm	15 mm	544 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AO	TORRES-02 CLMH.PGL.60.1K.PBIM	""	BASE#26	530 mm	179 mm	15 mm	530 mm	179 mm	15 mm	0.09 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AP	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#64	514 mm	179 mm	15 mm	514 mm	179 mm	15 mm	0.09 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AP	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#64	514 mm	179 mm	15 mm	514 mm	179 mm	15 mm	0.09 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AP	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#64	514 mm	179 mm	15 mm	514 mm	179 mm	15 mm	0.09 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AP	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#64	514 mm	179 mm	15 mm	514 mm	179 mm	15 mm	0.09 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AP	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#64	514 mm	179 mm	15 mm	514 mm	179 mm	15 mm	0.09 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AQ	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#57	514 mm	79 mm	15 mm	514 mm	79 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AQ	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#57	514 mm	79 mm	15 mm	514 mm	79 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AQ	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#57	514 mm	79 mm	15 mm	514 mm	79 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AQ	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#57	514 mm	79 mm	15 mm	514 mm	79 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AQ	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#57	514 mm	79 mm	15 mm	514 mm	79 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AR	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#9	514 mm	79 mm	15 mm	514 mm	79 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AR	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#9	514 mm	79 mm	15 mm	514 mm	79 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AR	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#9	514 mm	79 mm	15 mm	514 mm	79 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AR	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#9	514 mm	79 mm	15 mm	514 mm	79 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AR	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#9	514 mm	79 mm	15 mm	514 mm	79 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AS	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#58	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AS	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#58	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AS	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#58	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AS	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#58	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AS	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#58	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AT	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#63	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AT	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#63	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AT	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#63	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AT	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#63	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AT	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#63	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AU	FREGADERO-03 CB.PGL.40.1K	""	BASE#133	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AU	TORRES-03 CB.PGL.40.1K	""	BASE#133	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AU	ISLA-03 CB.PGL.40.1K	""	BASE#133	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AV	FREGADERO-03 CB.PGL.40.1K	""	BASE#135	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AV	TORRES-03 CB.PGL.40.1K	""	BASE#135	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AV	ISLA-03 CB.PGL.40.1K	""	BASE#135	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AW	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#38	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AW	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#38	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AW	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#38	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AW	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#38	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AW	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#38	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AX	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#39	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AX	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#39	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AX	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#39	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AX	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#39	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AX	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#39	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AY	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#53	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AY	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#53	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AY	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#53	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AY	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#53	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AY	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#53	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AZ	FREGADERO-01 CB.3G.GLM.60.K.2C	""	BASE#54	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AZ	FREGADERO-02 CB.3G.GLM.60.K.2C	""	BASE#54	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AZ	FREGADERO-05 CB.3G.GLM.60.K.2C	""	BASE#54	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AZ	ISLA-01 CB.3G.GLM.60.K.2C	""	BASE#54	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AZ	ISLA-02 CB.3G.GLM.60.K.2C	""	BASE#54	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BA	TORRES-02 CLMH.PGL.60.1K.PBIM	""	BASE#27	435 mm	100 mm	15 mm	435 mm	100 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BB	TORRES-02 CLMH.PGL.60.1K.PBIM	""	BASE#28	435 mm	100 mm	15 mm	435 mm	100 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BC	FREGADERO-03 CB.PGL.40.1K	""	TECHO AMARRE#261	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BC	TORRES-03 CB.PGL.40.1K	""	TECHO AMARRE#261	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BC	ISLA-03 CB.PGL.40.1K	""	TECHO AMARRE#261	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BD	FREGADERO-03 CB.PGL.40.1K/AM_POS copy 001	""	TECHO AMARRE#274	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BD	TORRES-03 CB.PGL.40.1K/AM_POS copy 001	""	TECHO AMARRE#274	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BD	ISLA-03 CB.PGL.40.1K/AM_POS copy 001	""	TECHO AMARRE#274	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BE	FREGADERO-03 CB.PGL.40.1K	""	TECHO AMARRE#611	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BE	TORRES-03 CB.PGL.40.1K	""	TECHO AMARRE#611	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BE	ISLA-03 CB.PGL.40.1K	""	TECHO AMARRE#611	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BF	FREGADERO-03 CB.PGL.40.1K	""	TECHO AMARRE#612	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BF	TORRES-03 CB.PGL.40.1K	""	TECHO AMARRE#612	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BF	ISLA-03 CB.PGL.40.1K	""	TECHO AMARRE#612	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BG	FREGADERO-03 CB.PGL.40.1K	""	BASE#120	344 mm	200 mm	15 mm	344 mm	200 mm	15 mm	0.07 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BG	TORRES-03 CB.PGL.40.1K	""	BASE#120	344 mm	200 mm	15 mm	344 mm	200 mm	15 mm	0.07 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BG	ISLA-03 CB.PGL.40.1K	""	BASE#120	344 mm	200 mm	15 mm	344 mm	200 mm	15 mm	0.07 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BH	FREGADERO-03 CB.PGL.40.1K	""	BASE#137	314 mm	179 mm	15 mm	314 mm	179 mm	15 mm	0.06 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BH	TORRES-03 CB.PGL.40.1K	""	BASE#137	314 mm	179 mm	15 mm	314 mm	179 mm	15 mm	0.06 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BH	ISLA-03 CB.PGL.40.1K	""	BASE#137	314 mm	179 mm	15 mm	314 mm	179 mm	15 mm	0.06 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BI	FREGADERO-06 CAR.FP.60.2PBM	""	BASE AUX#15	279 mm	277 mm	15 mm	279 mm	277 mm	15 mm	0.08 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BI	FREGADERO-07 CAR.FP.60.2PBM	""	BASE AUX#15	279 mm	277 mm	15 mm	279 mm	277 mm	15 mm	0.08 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BI	FREGADERO-08 CAR.FP.60.2PBM	""	BASE AUX#15	279 mm	277 mm	15 mm	279 mm	277 mm	15 mm	0.08 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BI	FREGADERO-09 CAR.FP.60.2PBM	""	BASE AUX#15	279 mm	277 mm	15 mm	279 mm	277 mm	15 mm	0.08 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BI	FREGADERO-10 CAR.FP.60.2PBM	""	BASE AUX#15	279 mm	277 mm	15 mm	279 mm	277 mm	15 mm	0.08 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BJ	FREGADERO-06 CAR.FP.60.2PBM	""	BASE AUX#83	279 mm	277 mm	15 mm	279 mm	277 mm	15 mm	0.08 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BJ	FREGADERO-07 CAR.FP.60.2PBM	""	BASE AUX#83	279 mm	277 mm	15 mm	279 mm	277 mm	15 mm	0.08 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BJ	FREGADERO-08 CAR.FP.60.2PBM	""	BASE AUX#83	279 mm	277 mm	15 mm	279 mm	277 mm	15 mm	0.08 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BJ	FREGADERO-09 CAR.FP.60.2PBM	""	BASE AUX#83	279 mm	277 mm	15 mm	279 mm	277 mm	15 mm	0.08 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BJ	FREGADERO-10 CAR.FP.60.2PBM	""	BASE AUX#83	279 mm	277 mm	15 mm	279 mm	277 mm	15 mm	0.08 m²	Tablero	BLANCO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+A	FREGADERO-04 CBR.PGL.80.2PBM	""	TECHO#155	782 mm	692 mm	6 mm	782 mm	692 mm	6 mm	0.54 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	FREGADERO-06 CAR.FP.60.2PBM	""	TECHO#1	762 mm	582 mm	6 mm	762 mm	582 mm	6 mm	0.44 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	FREGADERO-07 CAR.FP.60.2PBM	""	TECHO#1	762 mm	582 mm	6 mm	762 mm	582 mm	6 mm	0.44 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	FREGADERO-08 CAR.FP.60.2PBM	""	TECHO#1	762 mm	582 mm	6 mm	762 mm	582 mm	6 mm	0.44 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	FREGADERO-09 CAR.FP.60.2PBM	""	TECHO#1	762 mm	582 mm	6 mm	762 mm	582 mm	6 mm	0.44 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	FREGADERO-10 CAR.FP.60.2PBM	""	TECHO#1	762 mm	582 mm	6 mm	762 mm	582 mm	6 mm	0.44 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+C	TORRES-02 CLMH.PGL.60.1K.PBIM	""	TECHO#69	721 mm	582 mm	6 mm	721 mm	582 mm	6 mm	0.42 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	FREGADERO-01 CB.3G.GLM.60.K.2C	""	TECHO#227	692 mm	582 mm	6 mm	692 mm	582 mm	6 mm	0.40 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	FREGADERO-02 CB.3G.GLM.60.K.2C	""	TECHO#227	692 mm	582 mm	6 mm	692 mm	582 mm	6 mm	0.40 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	FREGADERO-05 CB.3G.GLM.60.K.2C	""	TECHO#227	692 mm	582 mm	6 mm	692 mm	582 mm	6 mm	0.40 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	ISLA-01 CB.3G.GLM.60.K.2C	""	TECHO#227	692 mm	582 mm	6 mm	692 mm	582 mm	6 mm	0.40 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	ISLA-02 CB.3G.GLM.60.K.2C	""	TECHO#227	692 mm	582 mm	6 mm	692 mm	582 mm	6 mm	0.40 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	FREGADERO-03 CB.PGL.40.1K	""	TECHO#118	692 mm	382 mm	6 mm	692 mm	382 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	TORRES-03 CB.PGL.40.1K	""	TECHO#118	692 mm	382 mm	6 mm	692 mm	382 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	ISLA-03 CB.PGL.40.1K	""	TECHO#118	692 mm	382 mm	6 mm	692 mm	382 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	TORRES-02 CLMH.PGL.60.1K.PBIM	""	TECHO#70	582 mm	361 mm	6 mm	582 mm	361 mm	6 mm	0.21 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+G	TORRES-02 CLMH.PGL.60.1K.PBIM	""	TECHO#91	546 mm	441 mm	6 mm	546 mm	441 mm	6 mm	0.24 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+H	FREGADERO-01 CB.3G.GLM.60.K.2C	""	TECHO#108	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+H	FREGADERO-02 CB.3G.GLM.60.K.2C	""	TECHO#108	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+H	FREGADERO-05 CB.3G.GLM.60.K.2C	""	TECHO#108	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+H	ISLA-01 CB.3G.GLM.60.K.2C	""	TECHO#108	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+H	ISLA-02 CB.3G.GLM.60.K.2C	""	TECHO#108	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+I	FREGADERO-01 CB.3G.GLM.60.K.2C	""	TECHO#109	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+I	FREGADERO-02 CB.3G.GLM.60.K.2C	""	TECHO#109	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+I	FREGADERO-05 CB.3G.GLM.60.K.2C	""	TECHO#109	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+I	ISLA-01 CB.3G.GLM.60.K.2C	""	TECHO#109	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+I	ISLA-02 CB.3G.GLM.60.K.2C	""	TECHO#109	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+J	FREGADERO-01 CB.3G.GLM.60.K.2C	""	TECHO#176	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+J	FREGADERO-02 CB.3G.GLM.60.K.2C	""	TECHO#176	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+J	FREGADERO-05 CB.3G.GLM.60.K.2C	""	TECHO#176	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+J	ISLA-01 CB.3G.GLM.60.K.2C	""	TECHO#176	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+J	ISLA-02 CB.3G.GLM.60.K.2C	""	TECHO#176	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+K	FREGADERO-03 CB.PGL.40.1K	""	TECHO#116	491 mm	330 mm	6 mm	491 mm	330 mm	6 mm	0.16 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+K	TORRES-03 CB.PGL.40.1K	""	TECHO#116	491 mm	330 mm	6 mm	491 mm	330 mm	6 mm	0.16 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+K	ISLA-03 CB.PGL.40.1K	""	TECHO#116	491 mm	330 mm	6 mm	491 mm	330 mm	6 mm	0.16 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+A	FREGADERO-04 CBR.PGL.80.2PBM	""	LATERAL DER#61	680 mm	397 mm	19 mm	680 mm	397 mm	19 mm	0.27 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	FREGADERO-04 CBR.PGL.80.2PBM	""	LATERAL DER#79	680 mm	397 mm	19 mm	680 mm	397 mm	19 mm	0.27 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+A	TORRES-02 CLMH.PGL.60.1K.PBIM	""	LATERAL DER#11	719 mm	597 mm	18 mm	719 mm	597 mm	18 mm	0.43 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	FREGADERO-03 CB.PGL.40.1K	""	TECHO#38	675 mm	397 mm	18 mm	675 mm	397 mm	18 mm	0.27 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	TORRES-03 CB.PGL.40.1K	""	TECHO#38	675 mm	397 mm	18 mm	675 mm	397 mm	18 mm	0.27 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	ISLA-03 CB.PGL.40.1K	""	TECHO#38	675 mm	397 mm	18 mm	675 mm	397 mm	18 mm	0.27 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+C	TORRES-02 CLMH.PGL.60.1K.PBIM	""	TECHO#53	597 mm	320 mm	18 mm	597 mm	320 mm	18 mm	0.19 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	FREGADERO-01 CB.3G.GLM.60.K.2C	""	TECHO#89	597 mm	320 mm	18 mm	597 mm	320 mm	18 mm	0.19 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	FREGADERO-02 CB.3G.GLM.60.K.2C	""	TECHO#89	597 mm	320 mm	18 mm	597 mm	320 mm	18 mm	0.19 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	FREGADERO-05 CB.3G.GLM.60.K.2C	""	TECHO#89	597 mm	320 mm	18 mm	597 mm	320 mm	18 mm	0.19 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	ISLA-01 CB.3G.GLM.60.K.2C	""	TECHO#89	597 mm	320 mm	18 mm	597 mm	320 mm	18 mm	0.19 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	ISLA-02 CB.3G.GLM.60.K.2C	""	TECHO#89	597 mm	320 mm	18 mm	597 mm	320 mm	18 mm	0.19 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	FREGADERO-01 CB.3G.GLM.60.K.2C	""	TECHO#84	597 mm	159 mm	18 mm	597 mm	159 mm	18 mm	0.09 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	FREGADERO-02 CB.3G.GLM.60.K.2C	""	TECHO#84	597 mm	159 mm	18 mm	597 mm	159 mm	18 mm	0.09 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	FREGADERO-05 CB.3G.GLM.60.K.2C	""	TECHO#84	597 mm	159 mm	18 mm	597 mm	159 mm	18 mm	0.09 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	ISLA-01 CB.3G.GLM.60.K.2C	""	TECHO#84	597 mm	159 mm	18 mm	597 mm	159 mm	18 mm	0.09 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	ISLA-02 CB.3G.GLM.60.K.2C	""	TECHO#84	597 mm	159 mm	18 mm	597 mm	159 mm	18 mm	0.09 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	FREGADERO-01 CB.3G.GLM.60.K.2C	""	TECHO#96	597 mm	159 mm	18 mm	597 mm	159 mm	18 mm	0.09 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	FREGADERO-02 CB.3G.GLM.60.K.2C	""	TECHO#96	597 mm	159 mm	18 mm	597 mm	159 mm	18 mm	0.09 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	FREGADERO-05 CB.3G.GLM.60.K.2C	""	TECHO#96	597 mm	159 mm	18 mm	597 mm	159 mm	18 mm	0.09 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	ISLA-01 CB.3G.GLM.60.K.2C	""	TECHO#96	597 mm	159 mm	18 mm	597 mm	159 mm	18 mm	0.09 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	ISLA-02 CB.3G.GLM.60.K.2C	""	TECHO#96	597 mm	159 mm	18 mm	597 mm	159 mm	18 mm	0.09 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+A	FREGADERO-04 CBR.PGL.80.2PBM	""	TECHO AMARRE#436	800 mm	170 mm	15 mm	800 mm	170 mm	15 mm	0.14 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	FREGADERO-06 CAR.FP.60.2PBM	""	LATERAL DER#60	797 mm	297 mm	15 mm	797 mm	297 mm	15 mm	0.24 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	FREGADERO-07 CAR.FP.60.2PBM	""	LATERAL DER#60	797 mm	297 mm	15 mm	797 mm	297 mm	15 mm	0.24 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	FREGADERO-08 CAR.FP.60.2PBM	""	LATERAL DER#60	797 mm	297 mm	15 mm	797 mm	297 mm	15 mm	0.24 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	FREGADERO-09 CAR.FP.60.2PBM	""	LATERAL DER#60	797 mm	297 mm	15 mm	797 mm	297 mm	15 mm	0.24 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	FREGADERO-10 CAR.FP.60.2PBM	""	LATERAL DER#60	797 mm	297 mm	15 mm	797 mm	297 mm	15 mm	0.24 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+C	FREGADERO-06 CAR.FP.60.2PBM	""	LATERAL DER#68	797 mm	297 mm	15 mm	797 mm	297 mm	15 mm	0.24 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+C	FREGADERO-07 CAR.FP.60.2PBM	""	LATERAL DER#68	797 mm	297 mm	15 mm	797 mm	297 mm	15 mm	0.24 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+C	FREGADERO-08 CAR.FP.60.2PBM	""	LATERAL DER#68	797 mm	297 mm	15 mm	797 mm	297 mm	15 mm	0.24 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+C	FREGADERO-09 CAR.FP.60.2PBM	""	LATERAL DER#68	797 mm	297 mm	15 mm	797 mm	297 mm	15 mm	0.24 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+C	FREGADERO-10 CAR.FP.60.2PBM	""	LATERAL DER#68	797 mm	297 mm	15 mm	797 mm	297 mm	15 mm	0.24 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	FREGADERO-01 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#183	600 mm	170 mm	15 mm	600 mm	170 mm	15 mm	0.10 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	FREGADERO-02 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#183	600 mm	170 mm	15 mm	600 mm	170 mm	15 mm	0.10 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	FREGADERO-05 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#183	600 mm	170 mm	15 mm	600 mm	170 mm	15 mm	0.10 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	ISLA-01 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#183	600 mm	170 mm	15 mm	600 mm	170 mm	15 mm	0.10 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	ISLA-02 CB.3G.GLM.60.K.2C	""	TECHO AMARRE#183	600 mm	170 mm	15 mm	600 mm	170 mm	15 mm	0.10 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	TORRES-02 CLMH.PGL.60.1K.PBIM	""	TECHO AMARRE#96	600 mm	100 mm	15 mm	600 mm	100 mm	15 mm	0.06 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	FREGADERO-01 CB.3G.GLM.60.K.2C	""	TECHO#361	570 mm	60 mm	15 mm	570 mm	60 mm	15 mm	0.03 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	FREGADERO-02 CB.3G.GLM.60.K.2C	""	TECHO#361	570 mm	60 mm	15 mm	570 mm	60 mm	15 mm	0.03 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	FREGADERO-05 CB.3G.GLM.60.K.2C	""	TECHO#361	570 mm	60 mm	15 mm	570 mm	60 mm	15 mm	0.03 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	ISLA-01 CB.3G.GLM.60.K.2C	""	TECHO#361	570 mm	60 mm	15 mm	570 mm	60 mm	15 mm	0.03 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	ISLA-02 CB.3G.GLM.60.K.2C	""	TECHO#361	570 mm	60 mm	15 mm	570 mm	60 mm	15 mm	0.03 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+G	FREGADERO-03 CB.PGL.40.1K	""	TECHO AMARRE#393	400 mm	170 mm	15 mm	400 mm	170 mm	15 mm	0.07 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+G	TORRES-03 CB.PGL.40.1K	""	TECHO AMARRE#393	400 mm	170 mm	15 mm	400 mm	170 mm	15 mm	0.07 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+G	ISLA-03 CB.PGL.40.1K	""	TECHO AMARRE#393	400 mm	170 mm	15 mm	400 mm	170 mm	15 mm	0.07 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+H	FREGADERO-03 CB.PGL.40.1K	""	TECHO#143	370 mm	60 mm	15 mm	370 mm	60 mm	15 mm	0.02 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+H	TORRES-03 CB.PGL.40.1K	""	TECHO#143	370 mm	60 mm	15 mm	370 mm	60 mm	15 mm	0.02 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+H	ISLA-03 CB.PGL.40.1K	""	TECHO#143	370 mm	60 mm	15 mm	370 mm	60 mm	15 mm	0.02 m²	Tablero	MADERADO	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+A	TORRES-02 CLMH.PGL.60.1K.PBIM	""	BASE AUX#18	569 mm	529 mm	6 mm	569 mm	529 mm	6 mm	0.30 m²	Tablero	VID1	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	TORRES-02 CLMH.PGL.60.1K.PBIM/REP copy 001	""	BASE AUX#20	569 mm	529 mm	6 mm	569 mm	529 mm	6 mm	0.30 m²	Tablero	VID1	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-01 CB.3G.GLM.60.K.2C	""	PERFIL GOLA C#10	600 mm	73 mm	28 mm	600 mm	73 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-02 CB.3G.GLM.60.K.2C	""	PERFIL GOLA C#10	600 mm	73 mm	28 mm	600 mm	73 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-05 CB.3G.GLM.60.K.2C	""	PERFIL GOLA C#10	600 mm	73 mm	28 mm	600 mm	73 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	ISLA-01 CB.3G.GLM.60.K.2C	""	PERFIL GOLA C#10	600 mm	73 mm	28 mm	600 mm	73 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	ISLA-02 CB.3G.GLM.60.K.2C	""	PERFIL GOLA C#10	600 mm	73 mm	28 mm	600 mm	73 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-04 CBR.PGL.80.2PBM	""	PERFIL GOLA L#41	800 mm	57 mm	28 mm	800 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	FREGADERO-01 CB.3G.GLM.60.K.2C	""	PERFIL GOLA L#1	600 mm	57 mm	28 mm	600 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	FREGADERO-02 CB.3G.GLM.60.K.2C	""	PERFIL GOLA L#1	600 mm	57 mm	28 mm	600 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	FREGADERO-05 CB.3G.GLM.60.K.2C	""	PERFIL GOLA L#1	600 mm	57 mm	28 mm	600 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	ISLA-01 CB.3G.GLM.60.K.2C	""	PERFIL GOLA L#1	600 mm	57 mm	28 mm	600 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	ISLA-02 CB.3G.GLM.60.K.2C	""	PERFIL GOLA L#1	600 mm	57 mm	28 mm	600 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+C	TORRES-02 CLMH.PGL.60.1K.PBIM	""	PERFIL GOLA L#6	600 mm	57 mm	28 mm	600 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+D	FREGADERO-03 CB.PGL.40.1K	""	PERFIL GOLA L#14	400 mm	57 mm	28 mm	400 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+D	TORRES-03 CB.PGL.40.1K	""	PERFIL GOLA L#14	400 mm	57 mm	28 mm	400 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+D	ISLA-03 CB.PGL.40.1K	""	PERFIL GOLA L#14	400 mm	57 mm	28 mm	400 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	TORRES-02 CLMH.PGL.60.1K.PBIM	""	TUBO DE ALUMINIO#32	435 mm	13 mm	13 mm	435 mm	13 mm	13 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	TORRES-02 CLMH.PGL.60.1K.PBIM	""	TUBO DE ALUMINIO#32	435 mm	13 mm	13 mm	435 mm	13 mm	13 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	TORRES-02 CLMH.PGL.60.1K.PBIM	""	CLIP#1	100 mm	50 mm	15 mm	100 mm	50 mm	15 mm	""	Accesorio	GOM001	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+B	TORRES-02 CLMH.PGL.60.1K.PBIM	""	CLIP#1	100 mm	48 mm	15 mm	100 mm	48 mm	15 mm	""	Accesorio	GOM001	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+A	TORRES-02 CLMH.PGL.60.1K.PBIM	""	MONTANTE A#2	211 mm	44 mm	35 mm	211 mm	44 mm	35 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+B	TORRES-02 CLMH.PGL.60.1K.PBIM	""	MONTANTE B	211 mm	44 mm	35 mm	211 mm	44 mm	35 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+C	TORRES-02 CLMH.PGL.60.1K.PBIM	""	MONTANTE A#2	211 mm	44 mm	34 mm	211 mm	44 mm	34 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+D	TORRES-02 CLMH.PGL.60.1K.PBIM	""	MONTANTE B	211 mm	44 mm	34 mm	211 mm	44 mm	34 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+E	FREGADERO-06 CAR.FP.60.2PBM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#11	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+E	FREGADERO-07 CAR.FP.60.2PBM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#11	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+E	FREGADERO-08 CAR.FP.60.2PBM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#11	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+E	FREGADERO-09 CAR.FP.60.2PBM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#11	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+E	FREGADERO-10 CAR.FP.60.2PBM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#11	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+F	FREGADERO-06 CAR.FP.60.2PBM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#17	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+F	FREGADERO-07 CAR.FP.60.2PBM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#17	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+F	FREGADERO-08 CAR.FP.60.2PBM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#17	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+F	FREGADERO-09 CAR.FP.60.2PBM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#17	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+F	FREGADERO-10 CAR.FP.60.2PBM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#17	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+G	FREGADERO-06 CAR.FP.60.2PBM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#42	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+G	FREGADERO-07 CAR.FP.60.2PBM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#42	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+G	FREGADERO-08 CAR.FP.60.2PBM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#42	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+G	FREGADERO-09 CAR.FP.60.2PBM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#42	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+G	FREGADERO-10 CAR.FP.60.2PBM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#42	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+H	FREGADERO-06 CAR.FP.60.2PBM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#43	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+H	FREGADERO-07 CAR.FP.60.2PBM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#43	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+H	FREGADERO-08 CAR.FP.60.2PBM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#43	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+H	FREGADERO-09 CAR.FP.60.2PBM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#43	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+H	FREGADERO-10 CAR.FP.60.2PBM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#43	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+I	TORRES-02 CLMH.PGL.60.1K.PBIM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#1	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+J	TORRES-02 CLMH.PGL.60.1K.PBIM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#15	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+K	FREGADERO-04 CBR.PGL.80.2PBM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#38	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+L	FREGADERO-04 CBR.PGL.80.2PBM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#39	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+M	FREGADERO-04 CBR.PGL.80.2PBM	""	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#40	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+N	FREGADERO-04 CBR.PGL.80.2PBM	BISAGRA DE CAZOLETA copy 001	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#41	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+O	FREGADERO-06 CAR.FP.60.2PBM	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+O	FREGADERO-06 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+O	FREGADERO-07 CAR.FP.60.2PBM	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+O	FREGADERO-07 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+O	FREGADERO-08 CAR.FP.60.2PBM	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+O	FREGADERO-08 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+O	FREGADERO-09 CAR.FP.60.2PBM	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+O	FREGADERO-09 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+O	FREGADERO-10 CAR.FP.60.2PBM	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+O	FREGADERO-10 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+P	FREGADERO-06 CAR.FP.60.2PBM	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+P	FREGADERO-06 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+P	FREGADERO-07 CAR.FP.60.2PBM	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+P	FREGADERO-07 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+P	FREGADERO-08 CAR.FP.60.2PBM	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+P	FREGADERO-08 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+P	FREGADERO-09 CAR.FP.60.2PBM	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+P	FREGADERO-09 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+P	FREGADERO-10 CAR.FP.60.2PBM	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+P	FREGADERO-10 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+Q	FREGADERO-04 CBR.PGL.80.2PBM	""	BISAGRA#3	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+Q	FREGADERO-04 CBR.PGL.80.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#3	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+R	FREGADERO-04 CBR.PGL.80.2PBM	""	BISAGRA#3	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+R	FREGADERO-04 CBR.PGL.80.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#3	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+S	TORRES-02 CLMH.PGL.60.1K.PBIM	""	BISAGRA#6	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+S	TORRES-02 CLMH.PGL.60.1K.PBIM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA#6	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+T	TORRES-02 CLMH.PGL.60.1K.PBIM	""	RIEL	393 mm	20 mm	15 mm	393 mm	20 mm	15 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+U	TORRES-02 CLMH.PGL.60.1K.PBIM	""	RIEL	393 mm	20 mm	15 mm	393 mm	20 mm	15 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+V	FREGADERO-06 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#41	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+V	FREGADERO-07 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#41	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+V	FREGADERO-08 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#41	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+V	FREGADERO-09 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#41	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+V	FREGADERO-10 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#41	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+W	FREGADERO-06 CAR.FP.60.2PBM	""	CAZOLETA MOVIL#69	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+W	FREGADERO-07 CAR.FP.60.2PBM	""	CAZOLETA MOVIL#69	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+W	FREGADERO-08 CAR.FP.60.2PBM	""	CAZOLETA MOVIL#69	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+W	FREGADERO-09 CAR.FP.60.2PBM	""	CAZOLETA MOVIL#69	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+W	FREGADERO-10 CAR.FP.60.2PBM	""	CAZOLETA MOVIL#69	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+X	FREGADERO-06 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#70	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+X	FREGADERO-07 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#70	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+X	FREGADERO-08 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#70	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+X	FREGADERO-09 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#70	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+X	FREGADERO-10 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#70	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+Y	FREGADERO-06 CAR.FP.60.2PBM	""	CAZOLETA MOVIL#71	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+Y	FREGADERO-07 CAR.FP.60.2PBM	""	CAZOLETA MOVIL#71	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+Y	FREGADERO-08 CAR.FP.60.2PBM	""	CAZOLETA MOVIL#71	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+Y	FREGADERO-09 CAR.FP.60.2PBM	""	CAZOLETA MOVIL#71	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+Y	FREGADERO-10 CAR.FP.60.2PBM	""	CAZOLETA MOVIL#71	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+Z	TORRES-02 CLMH.PGL.60.1K.PBIM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#17	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AA	TORRES-02 CLMH.PGL.60.1K.PBIM	""	CAZOLETA MOVIL#18	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AB	FREGADERO-04 CBR.PGL.80.2PBM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#49	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AC	FREGADERO-04 CBR.PGL.80.2PBM	""	CAZOLETA MOVIL#50	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AD	FREGADERO-04 CBR.PGL.80.2PBM/BISAGRA DE CAZOLETA copy 001	""	CAZOLETA MOVIL#51	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AE	FREGADERO-04 CBR.PGL.80.2PBM	""	CAZOLETA MOVIL#52	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AF	FREGADERO-01 CB.3G.GLM.60.K.2C	""	MONTANTE#49	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AF	FREGADERO-02 CB.3G.GLM.60.K.2C	""	MONTANTE#49	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AF	FREGADERO-05 CB.3G.GLM.60.K.2C	""	MONTANTE#49	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AF	ISLA-01 CB.3G.GLM.60.K.2C	""	MONTANTE#49	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AF	ISLA-02 CB.3G.GLM.60.K.2C	""	MONTANTE#49	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AG	FREGADERO-01 CB.3G.GLM.60.K.2C	""	MONTANTE#50	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AG	FREGADERO-02 CB.3G.GLM.60.K.2C	""	MONTANTE#50	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AG	FREGADERO-05 CB.3G.GLM.60.K.2C	""	MONTANTE#50	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AG	ISLA-01 CB.3G.GLM.60.K.2C	""	MONTANTE#50	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AG	ISLA-02 CB.3G.GLM.60.K.2C	""	MONTANTE#50	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AH	FREGADERO-01 CB.3G.GLM.60.K.2C	""	MONTANTE#51	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AH	FREGADERO-02 CB.3G.GLM.60.K.2C	""	MONTANTE#51	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AH	FREGADERO-05 CB.3G.GLM.60.K.2C	""	MONTANTE#51	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AH	ISLA-01 CB.3G.GLM.60.K.2C	""	MONTANTE#51	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AH	ISLA-02 CB.3G.GLM.60.K.2C	""	MONTANTE#51	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AI	FREGADERO-01 CB.3G.GLM.60.K.2C	""	MONTANTE#52	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AI	FREGADERO-02 CB.3G.GLM.60.K.2C	""	MONTANTE#52	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AI	FREGADERO-05 CB.3G.GLM.60.K.2C	""	MONTANTE#52	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AI	ISLA-01 CB.3G.GLM.60.K.2C	""	MONTANTE#52	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AI	ISLA-02 CB.3G.GLM.60.K.2C	""	MONTANTE#52	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AJ	FREGADERO-01 CB.3G.GLM.60.K.2C	""	MONTANTE#53	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AJ	FREGADERO-02 CB.3G.GLM.60.K.2C	""	MONTANTE#53	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AJ	FREGADERO-05 CB.3G.GLM.60.K.2C	""	MONTANTE#53	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AJ	ISLA-01 CB.3G.GLM.60.K.2C	""	MONTANTE#53	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AJ	ISLA-02 CB.3G.GLM.60.K.2C	""	MONTANTE#53	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AK	FREGADERO-01 CB.3G.GLM.60.K.2C	""	MONTANTE#54	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AK	FREGADERO-02 CB.3G.GLM.60.K.2C	""	MONTANTE#54	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AK	FREGADERO-05 CB.3G.GLM.60.K.2C	""	MONTANTE#54	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AK	ISLA-01 CB.3G.GLM.60.K.2C	""	MONTANTE#54	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AK	ISLA-02 CB.3G.GLM.60.K.2C	""	MONTANTE#54	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AL	FREGADERO-03 CB.PGL.40.1K	""	MONTANTE#40	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AL	TORRES-03 CB.PGL.40.1K	""	MONTANTE#40	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AL	ISLA-03 CB.PGL.40.1K	""	MONTANTE#40	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AM	FREGADERO-03 CB.PGL.40.1K	""	MONTANTE#57	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AM	TORRES-03 CB.PGL.40.1K	""	MONTANTE#57	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AM	ISLA-03 CB.PGL.40.1K	""	MONTANTE#57	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AN	FREGADERO-01 CB.3G.GLM.60.K.2C	""	RIEL#14	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AN	FREGADERO-02 CB.3G.GLM.60.K.2C	""	RIEL#14	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AN	FREGADERO-05 CB.3G.GLM.60.K.2C	""	RIEL#14	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AN	ISLA-01 CB.3G.GLM.60.K.2C	""	RIEL#14	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AN	ISLA-02 CB.3G.GLM.60.K.2C	""	RIEL#14	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AO	FREGADERO-01 CB.3G.GLM.60.K.2C	""	RIEL#15	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AO	FREGADERO-02 CB.3G.GLM.60.K.2C	""	RIEL#15	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AO	FREGADERO-05 CB.3G.GLM.60.K.2C	""	RIEL#15	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AO	ISLA-01 CB.3G.GLM.60.K.2C	""	RIEL#15	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AO	ISLA-02 CB.3G.GLM.60.K.2C	""	RIEL#15	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AP	FREGADERO-01 CB.3G.GLM.60.K.2C	""	RIEL#41	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AP	FREGADERO-02 CB.3G.GLM.60.K.2C	""	RIEL#41	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AP	FREGADERO-05 CB.3G.GLM.60.K.2C	""	RIEL#41	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AP	ISLA-01 CB.3G.GLM.60.K.2C	""	RIEL#41	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AP	ISLA-02 CB.3G.GLM.60.K.2C	""	RIEL#41	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AQ	FREGADERO-01 CB.3G.GLM.60.K.2C	""	RIEL#43	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AQ	FREGADERO-02 CB.3G.GLM.60.K.2C	""	RIEL#43	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AQ	FREGADERO-05 CB.3G.GLM.60.K.2C	""	RIEL#43	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AQ	ISLA-01 CB.3G.GLM.60.K.2C	""	RIEL#43	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AQ	ISLA-02 CB.3G.GLM.60.K.2C	""	RIEL#43	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AR	FREGADERO-01 CB.3G.GLM.60.K.2C	""	RIEL#44	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AR	FREGADERO-02 CB.3G.GLM.60.K.2C	""	RIEL#44	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AR	FREGADERO-05 CB.3G.GLM.60.K.2C	""	RIEL#44	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AR	ISLA-01 CB.3G.GLM.60.K.2C	""	RIEL#44	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AR	ISLA-02 CB.3G.GLM.60.K.2C	""	RIEL#44	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AS	FREGADERO-01 CB.3G.GLM.60.K.2C	""	RIEL#46	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AS	FREGADERO-02 CB.3G.GLM.60.K.2C	""	RIEL#46	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AS	FREGADERO-05 CB.3G.GLM.60.K.2C	""	RIEL#46	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AS	ISLA-01 CB.3G.GLM.60.K.2C	""	RIEL#46	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AS	ISLA-02 CB.3G.GLM.60.K.2C	""	RIEL#46	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AT	FREGADERO-03 CB.PGL.40.1K	""	RIEL#56	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AT	TORRES-03 CB.PGL.40.1K	""	RIEL#56	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AT	ISLA-03 CB.PGL.40.1K	""	RIEL#56	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AU	FREGADERO-03 CB.PGL.40.1K	""	RIEL#57	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AU	TORRES-03 CB.PGL.40.1K	""	RIEL#57	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AU	ISLA-03 CB.PGL.40.1K	""	RIEL#57	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AV	TORRES-02 CLMH.PGL.60.1K.PBIM	""	RIEL INT	275 mm	10 mm	9 mm	275 mm	10 mm	9 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AW	TORRES-02 CLMH.PGL.60.1K.PBIM	""	RIEL INT	275 mm	10 mm	9 mm	275 mm	10 mm	9 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AX	FREGADERO-01 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#49	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AX	FREGADERO-02 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#49	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AX	FREGADERO-05 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#49	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AX	ISLA-01 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#49	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AX	ISLA-02 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#49	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AY	FREGADERO-01 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#50	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AY	FREGADERO-02 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#50	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AY	FREGADERO-05 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#50	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AY	ISLA-01 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#50	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AY	ISLA-02 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#50	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AZ	FREGADERO-01 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#51	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AZ	FREGADERO-02 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#51	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AZ	FREGADERO-05 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#51	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AZ	ISLA-01 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#51	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AZ	ISLA-02 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#51	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BA	FREGADERO-01 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#52	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BA	FREGADERO-02 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#52	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BA	FREGADERO-05 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#52	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BA	ISLA-01 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#52	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BA	ISLA-02 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#52	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BB	FREGADERO-01 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#53	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BB	FREGADERO-02 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#53	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BB	FREGADERO-05 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#53	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BB	ISLA-01 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#53	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BB	ISLA-02 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#53	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BC	FREGADERO-01 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#54	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BC	FREGADERO-02 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#54	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BC	FREGADERO-05 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#54	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BC	ISLA-01 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#54	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BC	ISLA-02 CB.3G.GLM.60.K.2C	""	Corredera Telescópica#54	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BD	FREGADERO-03 CB.PGL.40.1K	""	Corredera Telescópica#37	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BD	TORRES-03 CB.PGL.40.1K	""	Corredera Telescópica#37	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BD	ISLA-03 CB.PGL.40.1K	""	Corredera Telescópica#37	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BE	FREGADERO-03 CB.PGL.40.1K	""	Corredera Telescópica#39	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BE	TORRES-03 CB.PGL.40.1K	""	Corredera Telescópica#39	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BE	ISLA-03 CB.PGL.40.1K	""	Corredera Telescópica#39	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BF	FREGADERO-01 CB.3G.GLM.60.K.2C	""	CORREDERA#49	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BF	FREGADERO-02 CB.3G.GLM.60.K.2C	""	CORREDERA#49	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BF	FREGADERO-05 CB.3G.GLM.60.K.2C	""	CORREDERA#49	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BF	ISLA-01 CB.3G.GLM.60.K.2C	""	CORREDERA#49	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BF	ISLA-02 CB.3G.GLM.60.K.2C	""	CORREDERA#49	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BG	FREGADERO-01 CB.3G.GLM.60.K.2C	""	CORREDERA#50	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BG	FREGADERO-02 CB.3G.GLM.60.K.2C	""	CORREDERA#50	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BG	FREGADERO-05 CB.3G.GLM.60.K.2C	""	CORREDERA#50	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BG	ISLA-01 CB.3G.GLM.60.K.2C	""	CORREDERA#50	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BG	ISLA-02 CB.3G.GLM.60.K.2C	""	CORREDERA#50	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BH	FREGADERO-01 CB.3G.GLM.60.K.2C	""	CORREDERA#51	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BH	FREGADERO-02 CB.3G.GLM.60.K.2C	""	CORREDERA#51	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BH	FREGADERO-05 CB.3G.GLM.60.K.2C	""	CORREDERA#51	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BH	ISLA-01 CB.3G.GLM.60.K.2C	""	CORREDERA#51	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BH	ISLA-02 CB.3G.GLM.60.K.2C	""	CORREDERA#51	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BI	FREGADERO-01 CB.3G.GLM.60.K.2C	""	CORREDERA#52	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BI	FREGADERO-02 CB.3G.GLM.60.K.2C	""	CORREDERA#52	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BI	FREGADERO-05 CB.3G.GLM.60.K.2C	""	CORREDERA#52	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BI	ISLA-01 CB.3G.GLM.60.K.2C	""	CORREDERA#52	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BI	ISLA-02 CB.3G.GLM.60.K.2C	""	CORREDERA#52	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BJ	FREGADERO-01 CB.3G.GLM.60.K.2C	""	CORREDERA#53	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BJ	FREGADERO-02 CB.3G.GLM.60.K.2C	""	CORREDERA#53	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BJ	FREGADERO-05 CB.3G.GLM.60.K.2C	""	CORREDERA#53	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BJ	ISLA-01 CB.3G.GLM.60.K.2C	""	CORREDERA#53	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BJ	ISLA-02 CB.3G.GLM.60.K.2C	""	CORREDERA#53	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BK	FREGADERO-01 CB.3G.GLM.60.K.2C	""	CORREDERA#54	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BK	FREGADERO-02 CB.3G.GLM.60.K.2C	""	CORREDERA#54	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BK	FREGADERO-05 CB.3G.GLM.60.K.2C	""	CORREDERA#54	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BK	ISLA-01 CB.3G.GLM.60.K.2C	""	CORREDERA#54	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BK	ISLA-02 CB.3G.GLM.60.K.2C	""	CORREDERA#54	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BL	FREGADERO-03 CB.PGL.40.1K	""	CORREDERA#42	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BL	TORRES-03 CB.PGL.40.1K	""	CORREDERA#42	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BL	ISLA-03 CB.PGL.40.1K	""	CORREDERA#42	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BM	FREGADERO-03 CB.PGL.40.1K	""	CORREDERA#57	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BM	TORRES-03 CB.PGL.40.1K	""	CORREDERA#57	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BM	ISLA-03 CB.PGL.40.1K	""	CORREDERA#57	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BN	TORRES-02 CLMH.PGL.60.1K.PBIM	""	TOPE	11 mm	9 mm	5 mm	11 mm	9 mm	5 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BO	TORRES-02 CLMH.PGL.60.1K.PBIM	""	TOPE	11 mm	9 mm	5 mm	11 mm	9 mm	5 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BP	FREGADERO-06 CAR.FP.60.2PBM	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BP	FREGADERO-06 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BP	FREGADERO-07 CAR.FP.60.2PBM	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BP	FREGADERO-07 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BP	FREGADERO-08 CAR.FP.60.2PBM	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BP	FREGADERO-08 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BP	FREGADERO-09 CAR.FP.60.2PBM	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BP	FREGADERO-09 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BP	FREGADERO-10 CAR.FP.60.2PBM	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BP	FREGADERO-10 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BQ	FREGADERO-06 CAR.FP.60.2PBM	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BQ	FREGADERO-06 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BQ	FREGADERO-07 CAR.FP.60.2PBM	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BQ	FREGADERO-07 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BQ	FREGADERO-08 CAR.FP.60.2PBM	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BQ	FREGADERO-08 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BQ	FREGADERO-09 CAR.FP.60.2PBM	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BQ	FREGADERO-09 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BQ	FREGADERO-10 CAR.FP.60.2PBM	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BQ	FREGADERO-10 CAR.FP.60.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#1	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BR	FREGADERO-04 CBR.PGL.80.2PBM	""	BISAGRA CAZOLETA#6	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BR	FREGADERO-04 CBR.PGL.80.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#6	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BS	FREGADERO-04 CBR.PGL.80.2PBM	""	BISAGRA CAZOLETA#6	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BS	FREGADERO-04 CBR.PGL.80.2PBM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#6	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BT	TORRES-02 CLMH.PGL.60.1K.PBIM	""	BISAGRA CAZOLETA#9	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BT	TORRES-02 CLMH.PGL.60.1K.PBIM/BISAGRA DE CAZOLETA copy 001	""	BISAGRA CAZOLETA#9	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-01 CB.3G.GLM.60.K.2C	""	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-01 CB.3G.GLM.60.K.2C	""	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-01 CB.3G.GLM.60.K.2C	PATA TR copy 001	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-01 CB.3G.GLM.60.K.2C	PATA FR copy 001	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-02 CB.3G.GLM.60.K.2C	""	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-02 CB.3G.GLM.60.K.2C	""	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-02 CB.3G.GLM.60.K.2C	PATA TR copy 001	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-02 CB.3G.GLM.60.K.2C	PATA FR copy 001	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-04 CBR.PGL.80.2PBM	""	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-04 CBR.PGL.80.2PBM	""	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-04 CBR.PGL.80.2PBM	PATA TR copy 001	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-04 CBR.PGL.80.2PBM	PATA FR copy 001	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-05 CB.3G.GLM.60.K.2C	""	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-05 CB.3G.GLM.60.K.2C	""	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-05 CB.3G.GLM.60.K.2C	PATA TR copy 001	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	FREGADERO-05 CB.3G.GLM.60.K.2C	PATA FR copy 001	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	ISLA-01 CB.3G.GLM.60.K.2C	""	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	ISLA-01 CB.3G.GLM.60.K.2C	""	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	ISLA-01 CB.3G.GLM.60.K.2C	PATA TR copy 001	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	ISLA-01 CB.3G.GLM.60.K.2C	PATA FR copy 001	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	ISLA-02 CB.3G.GLM.60.K.2C	""	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	ISLA-02 CB.3G.GLM.60.K.2C	""	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	ISLA-02 CB.3G.GLM.60.K.2C	PATA TR copy 001	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	ISLA-02 CB.3G.GLM.60.K.2C	PATA FR copy 001	PATA POS N1#1	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	FREGADERO-03 CB.PGL.40.1K	""	PATA POS N1#58	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	FREGADERO-03 CB.PGL.40.1K	""	PATA POS N1#58	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	FREGADERO-03 CB.PGL.40.1K	PATA TR copy 001	PATA POS N1#58	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	FREGADERO-03 CB.PGL.40.1K	PATA FR copy 001	PATA POS N1#58	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	TORRES-03 CB.PGL.40.1K	""	PATA POS N1#58	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	TORRES-03 CB.PGL.40.1K	""	PATA POS N1#58	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	TORRES-03 CB.PGL.40.1K	PATA TR copy 001	PATA POS N1#58	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	TORRES-03 CB.PGL.40.1K	PATA FR copy 001	PATA POS N1#58	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	ISLA-03 CB.PGL.40.1K	""	PATA POS N1#58	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	ISLA-03 CB.PGL.40.1K	""	PATA POS N1#58	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	ISLA-03 CB.PGL.40.1K	PATA TR copy 001	PATA POS N1#58	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	ISLA-03 CB.PGL.40.1K	PATA FR copy 001	PATA POS N1#58	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+C	TORRES-02 CLMH.PGL.60.1K.PBIM	""	PATA POS N1#5	100 mm	60 mm	60 mm	100 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+C	TORRES-02 CLMH.PGL.60.1K.PBIM	""	PATA POS N1#5	100 mm	60 mm	60 mm	100 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+C	TORRES-02 CLMH.PGL.60.1K.PBIM	PATA TR copy 001	PATA POS N1#5	100 mm	60 mm	60 mm	100 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+C	TORRES-02 CLMH.PGL.60.1K.PBIM	PATA FR copy 001	PATA POS N1#5	100 mm	60 mm	60 mm	100 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	""	""	ESCALON#1	1000 mm	848 mm	588 mm	1000 mm	848 mm	588 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	""	""	ESCALON	1000 mm	423 mm	406 mm	1000 mm	423 mm	406 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	""	""	ESCALON	1000 mm	423 mm	406 mm	1000 mm	423 mm	406 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	""	""	ESCALON	1000 mm	423 mm	406 mm	1000 mm	423 mm	406 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	""	""	ESCALON	1000 mm	423 mm	406 mm	1000 mm	423 mm	406 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	""	""	ESCALON	1000 mm	423 mm	406 mm	1000 mm	423 mm	406 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	""	""	ESCALON	1000 mm	423 mm	406 mm	1000 mm	423 mm	406 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	""	""	ESCALON	1000 mm	423 mm	406 mm	1000 mm	423 mm	406 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	""	""	ESCALON	1000 mm	423 mm	406 mm	1000 mm	423 mm	406 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	""	""	ESCALON	1000 mm	423 mm	406 mm	1000 mm	423 mm	406 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	Layer0
+C	""	""	ESCALON#3	1000 mm	423 mm	406 mm	1000 mm	423 mm	406 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	Layer0
+D	""	""	ESCALON#2	1000 mm	406 mm	228 mm	1000 mm	406 mm	228 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	TORRES-02 CLMH.PGL.60.1K.PBIM	""	Componente#72	595 mm	155 mm	24 mm	595 mm	155 mm	24 mm	""	Indefinido	CLC2-MICRO H40 TRADI	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+A	TORRES-02 CLMH.PGL.60.1K.PBIM	""	MICROONDAS DE MESA#14	520 mm	420 mm	310 mm	520 mm	420 mm	310 mm	""	Indefinido	INOX1	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+B	TORRES-02 CLMH.PGL.60.1K.PBIM	""	HORNO EMPOTRABLE#16	543 mm	506 mm	306 mm	543 mm	506 mm	306 mm	""	Indefinido	INOX1	""	""	""	""	""	""	""	""	""	""	""	Layer0
+C	TORRES-02 CLMH.PGL.60.1K.PBIM	""	Componente#70	310 mm	109 mm	39 mm	310 mm	109 mm	39 mm	""	Indefinido	INOX1	""	""	""	""	""	""	""	""	""	""	""	Layer0
+D	TORRES-02 CLMH.PGL.60.1K.PBIM	""	Componente#71	595 mm	445 mm	24 mm	595 mm	445 mm	24 mm	""	Indefinido	INOX1	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	TORRES-02 CLMH.PGL.60.1K.PBIM	""	Componente#73	595 mm	440 mm	53 mm	595 mm	440 mm	53 mm	""	Indefinido	Negro	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+B	TORRES-02 CLMH.PGL.60.1K.PBIM	""	PTA#18	427 mm	310 mm	24 mm	427 mm	310 mm	24 mm	""	Indefinido	Negro	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	TORRES-02 CLMH.PGL.60.1K.PBIM	""	Componente#6	535 mm	500 mm	500 mm	535 mm	500 mm	500 mm	""	Indefinido	Standardmaterial	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES

@@ -36,6 +36,10 @@
     {
       "evento": "Usuario pidió entregables: cortes y presupuesto",
       "timestamp": "2026-10-10T12:25:52.537802Z"
+    },
+    {
+      "evento": "Cortes listos con OpenCutList 7.1.0 sobre el v2: cocina/cortes/despiece-cocina.csv (63 filas) y resumen-cocina.csv (sin los escalones de la plantilla). Presupuesto esperando datos del usuario",
+      "timestamp": "2026-10-10T12:28:54.620410Z"
     }
   ]
 }

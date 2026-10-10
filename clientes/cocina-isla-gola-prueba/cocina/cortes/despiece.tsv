@@ -1,0 +1,543 @@
+No.	Designación	Cantidad	Longitud - cruda	Ancho - crudo	Espesor - crudo	Longitud	Anchura	Grosor	Area - final	Tipo de material	Nombre del material	Descripción del material	URL del material	Nombres de instancias	Descripción	URL	Etiquetas	Longitud del borde 1	Longitud del borde 2	Ancho del borde 1	Ancho de borde 2	Frente	Dorso	Etiquetas
+A	LATERAL DER#40	1	2115 mm	600 mm	15 mm	2115 mm	600 mm	15 mm	1.27 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	LATERAL IZQ#13	1	2115 mm	600 mm	15 mm	2115 mm	600 mm	15 mm	1.27 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+C	BASE#209	1	770 mm	580 mm	15 mm	770 mm	580 mm	15 mm	0.45 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	LATERAL DER#73	1	770 mm	359 mm	15 mm	770 mm	359 mm	15 mm	0.28 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	TECHO AMARRE#674	1	770 mm	90 mm	15 mm	770 mm	90 mm	15 mm	0.07 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	TECHO AMARRE#783	1	770 mm	90 mm	15 mm	770 mm	90 mm	15 mm	0.07 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+G	TECHO AMARRE#784	1	770 mm	90 mm	15 mm	770 mm	90 mm	15 mm	0.07 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+H	BASE AUX#6	1	769 mm	539 mm	15 mm	769 mm	539 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+I	LATERAL DER#90	5	750 mm	300 mm	15 mm	750 mm	300 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+J	LATERAL IZQ#42	5	750 mm	300 mm	15 mm	750 mm	300 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+K	LATERAL DER#89	5	750 mm	279 mm	15 mm	750 mm	279 mm	15 mm	0.21 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+L	LATERAL DER#27	5	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+M	LATERAL IZQ#41	5	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+N	LATERAL DER#91	1	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+O	LATERAL IZQ#55	1	710 mm	580 mm	15 mm	710 mm	580 mm	15 mm	0.41 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+P	LATERAL DER#33	3	695 mm	580 mm	15 mm	695 mm	580 mm	15 mm	0.40 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+Q	LATERAL IZQ#23	3	695 mm	580 mm	15 mm	695 mm	580 mm	15 mm	0.40 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+R	BASE#22	1	600 mm	600 mm	15 mm	600 mm	600 mm	15 mm	0.36 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+S	BASE#160	5	600 mm	300 mm	15 mm	600 mm	300 mm	15 mm	0.18 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+T	TECHO AMARRE#561	5	600 mm	300 mm	15 mm	600 mm	300 mm	15 mm	0.18 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+U	BASE#198	5	580 mm	570 mm	15 mm	580 mm	570 mm	15 mm	0.33 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+V	BASE#179	3	580 mm	400 mm	15 mm	580 mm	400 mm	15 mm	0.23 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+W	DIVISION  C#21	1	579 mm	570 mm	15 mm	579 mm	570 mm	15 mm	0.33 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+X	DIVISION  B#19	1	570 mm	570 mm	15 mm	570 mm	570 mm	15 mm	0.32 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+Y	DIVISION  C#16	1	570 mm	570 mm	15 mm	570 mm	570 mm	15 mm	0.32 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+Z	TECHO AMARRE#130	1	570 mm	549 mm	15 mm	570 mm	549 mm	15 mm	0.31 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AA	TECHO AMARRE#17	5	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AB	TECHO AMARRE#206	5	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AC	TECHO AMARRE#208	5	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AD	TECHO AMARRE#32	5	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AE	TECHO AMARRE#351	5	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AF	TECHO AMARRE#358	5	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AG	TECHO AMARRE#123	1	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AH	TECHO AMARRE#2	1	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AI	TECHO AMARRE#88	1	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AJ	TECHO AMARRE#90	1	570 mm	90 mm	15 mm	570 mm	90 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AK	BASE#3	1	560 mm	200 mm	15 mm	560 mm	200 mm	15 mm	0.11 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AL	BASE#67	5	544 mm	200 mm	15 mm	544 mm	200 mm	15 mm	0.11 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AM	BASE#55	5	544 mm	100 mm	15 mm	544 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AN	BASE#6	5	544 mm	100 mm	15 mm	544 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AO	BASE#26	1	530 mm	179 mm	15 mm	530 mm	179 mm	15 mm	0.09 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AP	BASE#64	5	514 mm	179 mm	15 mm	514 mm	179 mm	15 mm	0.09 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AQ	BASE#57	5	514 mm	79 mm	15 mm	514 mm	79 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AR	BASE#9	5	514 mm	79 mm	15 mm	514 mm	79 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AS	BASE#58	5	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AT	BASE#63	5	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AU	BASE#133	3	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AV	BASE#135	3	485 mm	200 mm	15 mm	485 mm	200 mm	15 mm	0.10 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AW	BASE#38	5	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AX	BASE#39	5	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AY	BASE#53	5	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+AZ	BASE#54	5	485 mm	100 mm	15 mm	485 mm	100 mm	15 mm	0.05 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BA	BASE#27	1	435 mm	100 mm	15 mm	435 mm	100 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BB	BASE#28	1	435 mm	100 mm	15 mm	435 mm	100 mm	15 mm	0.04 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BC	TECHO AMARRE#261	3	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BD	TECHO AMARRE#274	3	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BE	TECHO AMARRE#611	3	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BF	TECHO AMARRE#612	3	370 mm	90 mm	15 mm	370 mm	90 mm	15 mm	0.03 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BG	BASE#120	3	344 mm	200 mm	15 mm	344 mm	200 mm	15 mm	0.07 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BH	BASE#137	3	314 mm	179 mm	15 mm	314 mm	179 mm	15 mm	0.06 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BI	BASE AUX#15	5	279 mm	277 mm	15 mm	279 mm	277 mm	15 mm	0.08 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+BJ	BASE AUX#83	5	279 mm	277 mm	15 mm	279 mm	277 mm	15 mm	0.08 m²	Tablero	BLANCO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+A	TECHO#155	1	782 mm	692 mm	6 mm	782 mm	692 mm	6 mm	0.54 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	TECHO#1	5	762 mm	582 mm	6 mm	762 mm	582 mm	6 mm	0.44 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+C	TECHO#69	1	721 mm	582 mm	6 mm	721 mm	582 mm	6 mm	0.42 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	TECHO#227	5	692 mm	582 mm	6 mm	692 mm	582 mm	6 mm	0.40 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	TECHO#118	3	692 mm	382 mm	6 mm	692 mm	382 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	TECHO#70	1	582 mm	361 mm	6 mm	582 mm	361 mm	6 mm	0.21 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+G	TECHO#91	1	546 mm	441 mm	6 mm	546 mm	441 mm	6 mm	0.24 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+H	TECHO#108	5	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+I	TECHO#109	5	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+J	TECHO#176	5	530 mm	491 mm	6 mm	530 mm	491 mm	6 mm	0.26 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+K	TECHO#116	3	491 mm	330 mm	6 mm	491 mm	330 mm	6 mm	0.16 m²	Tablero	FONDO	""	https://www.pelikano.com/catalogo/p/panela	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+A	LATERAL DER#61	1	680 mm	397 mm	19 mm	680 mm	397 mm	19 mm	0.27 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	LATERAL DER#79	1	680 mm	397 mm	19 mm	680 mm	397 mm	19 mm	0.27 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+A	LATERAL DER#11	1	719 mm	597 mm	18 mm	719 mm	597 mm	18 mm	0.43 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	TECHO#38	3	675 mm	397 mm	18 mm	675 mm	397 mm	18 mm	0.27 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+C	TECHO#53	1	597 mm	320 mm	18 mm	597 mm	320 mm	18 mm	0.19 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	TECHO#89	5	597 mm	320 mm	18 mm	597 mm	320 mm	18 mm	0.19 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	TECHO#84	5	597 mm	159 mm	18 mm	597 mm	159 mm	18 mm	0.09 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	TECHO#96	5	597 mm	159 mm	18 mm	597 mm	159 mm	18 mm	0.09 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+A	TECHO AMARRE#436	1	800 mm	170 mm	15 mm	800 mm	170 mm	15 mm	0.14 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+B	LATERAL DER#60	5	797 mm	297 mm	15 mm	797 mm	297 mm	15 mm	0.24 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+C	LATERAL DER#68	5	797 mm	297 mm	15 mm	797 mm	297 mm	15 mm	0.24 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+D	TECHO AMARRE#183	5	600 mm	170 mm	15 mm	600 mm	170 mm	15 mm	0.10 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+E	TECHO AMARRE#96	1	600 mm	100 mm	15 mm	600 mm	100 mm	15 mm	0.06 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+F	TECHO#361	5	570 mm	60 mm	15 mm	570 mm	60 mm	15 mm	0.03 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+G	TECHO AMARRE#393	3	400 mm	170 mm	15 mm	400 mm	170 mm	15 mm	0.07 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+H	TECHO#143	3	370 mm	60 mm	15 mm	370 mm	60 mm	15 mm	0.02 m²	Tablero	MADERADO	""	""	""	""	""	""	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	SIN CANTO (2 mm x 19 mm)	""	""	Layer0
+A	BASE AUX#18	1	569 mm	529 mm	6 mm	569 mm	529 mm	6 mm	0.30 m²	Tablero	VID1	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	BASE AUX#20	1	569 mm	529 mm	6 mm	569 mm	529 mm	6 mm	0.30 m²	Tablero	VID1	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	PERFIL GOLA C#10	5	600 mm	73 mm	28 mm	600 mm	73 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	PERFIL GOLA L#41	1	800 mm	57 mm	28 mm	800 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	PERFIL GOLA L#1	5	600 mm	57 mm	28 mm	600 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+C	PERFIL GOLA L#6	1	600 mm	57 mm	28 mm	600 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+D	PERFIL GOLA L#14	3	400 mm	57 mm	28 mm	400 mm	57 mm	28 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	TUBO DE ALUMINIO#32	2	435 mm	13 mm	13 mm	435 mm	13 mm	13 mm	""	Liston	MPF01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	LATERAL DER#40 - Longitud del borde 1	1	2115 mm	19 mm	2 mm	2115 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+B	LATERAL DER#40 - Longitud del borde 2	1	2115 mm	19 mm	2 mm	2115 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+C	LATERAL IZQ#13 - Longitud del borde 1	1	2115 mm	19 mm	2 mm	2115 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+D	LATERAL IZQ#13 - Longitud del borde 2	1	2115 mm	19 mm	2 mm	2115 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+E	TECHO AMARRE#436 - Longitud del borde 1	1	800 mm	19 mm	2 mm	800 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+F	TECHO AMARRE#436 - Longitud del borde 2	1	800 mm	19 mm	2 mm	800 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+G	LATERAL DER#60 - Longitud del borde 1	5	797 mm	19 mm	2 mm	797 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+H	LATERAL DER#60 - Longitud del borde 2	5	797 mm	19 mm	2 mm	797 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+I	LATERAL DER#68 - Longitud del borde 1	5	797 mm	19 mm	2 mm	797 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+J	LATERAL DER#68 - Longitud del borde 2	5	797 mm	19 mm	2 mm	797 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+K	TECHO#155 - Longitud del borde 1	1	782 mm	19 mm	2 mm	782 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+L	TECHO#155 - Longitud del borde 2	1	782 mm	19 mm	2 mm	782 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+M	BASE#209 - Longitud del borde 1	1	770 mm	19 mm	2 mm	770 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+N	BASE#209 - Longitud del borde 2	1	770 mm	19 mm	2 mm	770 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+O	LATERAL DER#73 - Longitud del borde 1	1	770 mm	19 mm	2 mm	770 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+P	LATERAL DER#73 - Longitud del borde 2	1	770 mm	19 mm	2 mm	770 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+Q	TECHO AMARRE#674 - Longitud del borde 1	1	770 mm	19 mm	2 mm	770 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+R	TECHO AMARRE#674 - Longitud del borde 2	1	770 mm	19 mm	2 mm	770 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+S	TECHO AMARRE#783 - Longitud del borde 1	1	770 mm	19 mm	2 mm	770 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+T	TECHO AMARRE#783 - Longitud del borde 2	1	770 mm	19 mm	2 mm	770 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+U	TECHO AMARRE#784 - Longitud del borde 1	1	770 mm	19 mm	2 mm	770 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+V	TECHO AMARRE#784 - Longitud del borde 2	1	770 mm	19 mm	2 mm	770 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+W	BASE AUX#6 - Longitud del borde 1	1	769 mm	19 mm	2 mm	769 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+X	BASE AUX#6 - Longitud del borde 2	1	769 mm	19 mm	2 mm	769 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+Y	TECHO#1 - Longitud del borde 1	5	762 mm	19 mm	2 mm	762 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+Z	TECHO#1 - Longitud del borde 2	5	762 mm	19 mm	2 mm	762 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AA	LATERAL DER#89 - Longitud del borde 1	5	750 mm	19 mm	2 mm	750 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AB	LATERAL DER#89 - Longitud del borde 2	5	750 mm	19 mm	2 mm	750 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AC	LATERAL DER#90 - Longitud del borde 1	5	750 mm	19 mm	2 mm	750 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AD	LATERAL DER#90 - Longitud del borde 2	5	750 mm	19 mm	2 mm	750 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AE	LATERAL IZQ#42 - Longitud del borde 1	5	750 mm	19 mm	2 mm	750 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AF	LATERAL IZQ#42 - Longitud del borde 2	5	750 mm	19 mm	2 mm	750 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AG	TECHO#69 - Longitud del borde 1	1	721 mm	19 mm	2 mm	721 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AH	TECHO#69 - Longitud del borde 2	1	721 mm	19 mm	2 mm	721 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AI	LATERAL DER#11 - Longitud del borde 1	1	719 mm	19 mm	2 mm	719 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AJ	LATERAL DER#11 - Longitud del borde 2	1	719 mm	19 mm	2 mm	719 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AK	LATERAL DER#27 - Longitud del borde 1	5	710 mm	19 mm	2 mm	710 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AL	LATERAL DER#27 - Longitud del borde 2	5	710 mm	19 mm	2 mm	710 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AM	LATERAL IZQ#41 - Longitud del borde 1	5	710 mm	19 mm	2 mm	710 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AN	LATERAL IZQ#41 - Longitud del borde 2	5	710 mm	19 mm	2 mm	710 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AO	LATERAL DER#91 - Longitud del borde 1	1	710 mm	19 mm	2 mm	710 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AP	LATERAL DER#91 - Longitud del borde 2	1	710 mm	19 mm	2 mm	710 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AQ	LATERAL IZQ#55 - Longitud del borde 1	1	710 mm	19 mm	2 mm	710 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AR	LATERAL IZQ#55 - Longitud del borde 2	1	710 mm	19 mm	2 mm	710 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AS	LATERAL DER#33 - Longitud del borde 1	3	695 mm	19 mm	2 mm	695 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AT	LATERAL DER#33 - Longitud del borde 2	3	695 mm	19 mm	2 mm	695 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AU	LATERAL IZQ#23 - Longitud del borde 1	3	695 mm	19 mm	2 mm	695 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AV	LATERAL IZQ#23 - Longitud del borde 2	3	695 mm	19 mm	2 mm	695 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AW	TECHO#227 - Longitud del borde 1	5	692 mm	19 mm	2 mm	692 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AX	TECHO#227 - Longitud del borde 2	5	692 mm	19 mm	2 mm	692 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AY	TECHO#118 - Longitud del borde 1	3	692 mm	19 mm	2 mm	692 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+AZ	TECHO#118 - Longitud del borde 2	3	692 mm	19 mm	2 mm	692 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BA	TECHO#155 - Ancho de borde 2	1	692 mm	19 mm	2 mm	692 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BB	TECHO#155 - Ancho del borde 1	1	692 mm	19 mm	2 mm	692 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BC	LATERAL DER#61 - Longitud del borde 1	1	680 mm	19 mm	2 mm	680 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BD	LATERAL DER#61 - Longitud del borde 2	1	680 mm	19 mm	2 mm	680 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BE	LATERAL DER#79 - Longitud del borde 1	1	680 mm	19 mm	2 mm	680 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BF	LATERAL DER#79 - Longitud del borde 2	1	680 mm	19 mm	2 mm	680 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BG	TECHO#38 - Longitud del borde 1	3	675 mm	19 mm	2 mm	675 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BH	TECHO#38 - Longitud del borde 2	3	675 mm	19 mm	2 mm	675 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BI	BASE#160 - Longitud del borde 1	5	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BJ	BASE#160 - Longitud del borde 2	5	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BK	TECHO AMARRE#183 - Longitud del borde 1	5	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BL	TECHO AMARRE#183 - Longitud del borde 2	5	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BM	TECHO AMARRE#561 - Longitud del borde 1	5	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BN	TECHO AMARRE#561 - Longitud del borde 2	5	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BO	BASE#22 - Ancho de borde 2	1	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BP	BASE#22 - Ancho del borde 1	1	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BQ	BASE#22 - Longitud del borde 1	1	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BR	BASE#22 - Longitud del borde 2	1	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BS	LATERAL DER#40 - Ancho de borde 2	1	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BT	LATERAL DER#40 - Ancho del borde 1	1	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BU	LATERAL IZQ#13 - Ancho de borde 2	1	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BV	LATERAL IZQ#13 - Ancho del borde 1	1	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BW	TECHO AMARRE#96 - Longitud del borde 1	1	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BX	TECHO AMARRE#96 - Longitud del borde 2	1	600 mm	19 mm	2 mm	600 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BY	TECHO#84 - Longitud del borde 1	5	597 mm	19 mm	2 mm	597 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+BZ	TECHO#84 - Longitud del borde 2	5	597 mm	19 mm	2 mm	597 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CA	TECHO#89 - Longitud del borde 1	5	597 mm	19 mm	2 mm	597 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CB	TECHO#89 - Longitud del borde 2	5	597 mm	19 mm	2 mm	597 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CC	TECHO#96 - Longitud del borde 1	5	597 mm	19 mm	2 mm	597 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CD	TECHO#96 - Longitud del borde 2	5	597 mm	19 mm	2 mm	597 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CE	LATERAL DER#11 - Ancho de borde 2	1	597 mm	19 mm	2 mm	597 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CF	LATERAL DER#11 - Ancho del borde 1	1	597 mm	19 mm	2 mm	597 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CG	TECHO#53 - Longitud del borde 1	1	597 mm	19 mm	2 mm	597 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CH	TECHO#53 - Longitud del borde 2	1	597 mm	19 mm	2 mm	597 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CI	TECHO#1 - Ancho de borde 2	5	582 mm	19 mm	2 mm	582 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CJ	TECHO#1 - Ancho del borde 1	5	582 mm	19 mm	2 mm	582 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CK	TECHO#227 - Ancho de borde 2	5	582 mm	19 mm	2 mm	582 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CL	TECHO#227 - Ancho del borde 1	5	582 mm	19 mm	2 mm	582 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CM	TECHO#69 - Ancho de borde 2	1	582 mm	19 mm	2 mm	582 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CN	TECHO#69 - Ancho del borde 1	1	582 mm	19 mm	2 mm	582 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CO	TECHO#70 - Longitud del borde 1	1	582 mm	19 mm	2 mm	582 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CP	TECHO#70 - Longitud del borde 2	1	582 mm	19 mm	2 mm	582 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CQ	BASE#198 - Longitud del borde 1	5	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CR	BASE#198 - Longitud del borde 2	5	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CS	LATERAL DER#27 - Ancho de borde 2	5	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CT	LATERAL DER#27 - Ancho del borde 1	5	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CU	LATERAL IZQ#41 - Ancho de borde 2	5	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CV	LATERAL IZQ#41 - Ancho del borde 1	5	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CW	BASE#179 - Longitud del borde 1	3	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CX	BASE#179 - Longitud del borde 2	3	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CY	LATERAL DER#33 - Ancho de borde 2	3	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+CZ	LATERAL DER#33 - Ancho del borde 1	3	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DA	LATERAL IZQ#23 - Ancho de borde 2	3	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DB	LATERAL IZQ#23 - Ancho del borde 1	3	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DC	BASE#209 - Ancho de borde 2	1	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DD	BASE#209 - Ancho del borde 1	1	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DE	LATERAL DER#91 - Ancho de borde 2	1	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DF	LATERAL DER#91 - Ancho del borde 1	1	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DG	LATERAL IZQ#55 - Ancho de borde 2	1	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DH	LATERAL IZQ#55 - Ancho del borde 1	1	580 mm	19 mm	2 mm	580 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DI	DIVISION  C#21 - Longitud del borde 1	1	579 mm	19 mm	2 mm	579 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DJ	DIVISION  C#21 - Longitud del borde 2	1	579 mm	19 mm	2 mm	579 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DK	BASE#198 - Ancho de borde 2	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DL	BASE#198 - Ancho del borde 1	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DM	TECHO AMARRE#17 - Longitud del borde 1	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DN	TECHO AMARRE#17 - Longitud del borde 2	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DO	TECHO AMARRE#206 - Longitud del borde 1	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DP	TECHO AMARRE#206 - Longitud del borde 2	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DQ	TECHO AMARRE#208 - Longitud del borde 1	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DR	TECHO AMARRE#208 - Longitud del borde 2	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DS	TECHO AMARRE#32 - Longitud del borde 1	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DT	TECHO AMARRE#32 - Longitud del borde 2	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DU	TECHO AMARRE#351 - Longitud del borde 1	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DV	TECHO AMARRE#351 - Longitud del borde 2	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DW	TECHO AMARRE#358 - Longitud del borde 1	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DX	TECHO AMARRE#358 - Longitud del borde 2	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DY	TECHO#361 - Longitud del borde 1	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+DZ	TECHO#361 - Longitud del borde 2	5	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EA	DIVISION  B#19 - Ancho de borde 2	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EB	DIVISION  B#19 - Ancho del borde 1	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EC	DIVISION  B#19 - Longitud del borde 1	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+ED	DIVISION  B#19 - Longitud del borde 2	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EE	DIVISION  C#16 - Ancho de borde 2	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EF	DIVISION  C#16 - Ancho del borde 1	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EG	DIVISION  C#16 - Longitud del borde 1	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EH	DIVISION  C#16 - Longitud del borde 2	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EI	DIVISION  C#21 - Ancho de borde 2	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EJ	DIVISION  C#21 - Ancho del borde 1	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EK	TECHO AMARRE#123 - Longitud del borde 1	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EL	TECHO AMARRE#123 - Longitud del borde 2	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EM	TECHO AMARRE#130 - Longitud del borde 1	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EN	TECHO AMARRE#130 - Longitud del borde 2	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EO	TECHO AMARRE#2 - Longitud del borde 1	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EP	TECHO AMARRE#2 - Longitud del borde 2	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EQ	TECHO AMARRE#88 - Longitud del borde 1	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+ER	TECHO AMARRE#88 - Longitud del borde 2	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+ES	TECHO AMARRE#90 - Longitud del borde 1	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+ET	TECHO AMARRE#90 - Longitud del borde 2	1	570 mm	19 mm	2 mm	570 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EU	BASE#3 - Longitud del borde 1	1	560 mm	19 mm	2 mm	560 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EV	BASE#3 - Longitud del borde 2	1	560 mm	19 mm	2 mm	560 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EW	TECHO AMARRE#130 - Ancho de borde 2	1	549 mm	19 mm	2 mm	549 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EX	TECHO AMARRE#130 - Ancho del borde 1	1	549 mm	19 mm	2 mm	549 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EY	TECHO#91 - Longitud del borde 1	1	546 mm	19 mm	2 mm	546 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+EZ	TECHO#91 - Longitud del borde 2	1	546 mm	19 mm	2 mm	546 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FA	BASE#55 - Longitud del borde 1	5	544 mm	19 mm	2 mm	544 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FB	BASE#55 - Longitud del borde 2	5	544 mm	19 mm	2 mm	544 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FC	BASE#6 - Longitud del borde 1	5	544 mm	19 mm	2 mm	544 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FD	BASE#6 - Longitud del borde 2	5	544 mm	19 mm	2 mm	544 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FE	BASE#67 - Longitud del borde 1	5	544 mm	19 mm	2 mm	544 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FF	BASE#67 - Longitud del borde 2	5	544 mm	19 mm	2 mm	544 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FG	BASE AUX#6 - Ancho de borde 2	1	539 mm	19 mm	2 mm	539 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FH	BASE AUX#6 - Ancho del borde 1	1	539 mm	19 mm	2 mm	539 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FI	TECHO#108 - Longitud del borde 1	5	530 mm	19 mm	2 mm	530 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FJ	TECHO#108 - Longitud del borde 2	5	530 mm	19 mm	2 mm	530 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FK	TECHO#109 - Longitud del borde 1	5	530 mm	19 mm	2 mm	530 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FL	TECHO#109 - Longitud del borde 2	5	530 mm	19 mm	2 mm	530 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FM	TECHO#176 - Longitud del borde 1	5	530 mm	19 mm	2 mm	530 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FN	TECHO#176 - Longitud del borde 2	5	530 mm	19 mm	2 mm	530 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FO	BASE#26 - Longitud del borde 1	1	530 mm	19 mm	2 mm	530 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FP	BASE#26 - Longitud del borde 2	1	530 mm	19 mm	2 mm	530 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FQ	BASE#57 - Longitud del borde 1	5	514 mm	19 mm	2 mm	514 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FR	BASE#57 - Longitud del borde 2	5	514 mm	19 mm	2 mm	514 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FS	BASE#64 - Longitud del borde 1	5	514 mm	19 mm	2 mm	514 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FT	BASE#64 - Longitud del borde 2	5	514 mm	19 mm	2 mm	514 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FU	BASE#9 - Longitud del borde 1	5	514 mm	19 mm	2 mm	514 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FV	BASE#9 - Longitud del borde 2	5	514 mm	19 mm	2 mm	514 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FW	TECHO#108 - Ancho de borde 2	5	491 mm	19 mm	2 mm	491 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FX	TECHO#108 - Ancho del borde 1	5	491 mm	19 mm	2 mm	491 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FY	TECHO#109 - Ancho de borde 2	5	491 mm	19 mm	2 mm	491 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+FZ	TECHO#109 - Ancho del borde 1	5	491 mm	19 mm	2 mm	491 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GA	TECHO#176 - Ancho de borde 2	5	491 mm	19 mm	2 mm	491 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GB	TECHO#176 - Ancho del borde 1	5	491 mm	19 mm	2 mm	491 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GC	TECHO#116 - Longitud del borde 1	3	491 mm	19 mm	2 mm	491 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GD	TECHO#116 - Longitud del borde 2	3	491 mm	19 mm	2 mm	491 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GE	BASE#38 - Longitud del borde 1	5	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GF	BASE#38 - Longitud del borde 2	5	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GG	BASE#39 - Longitud del borde 1	5	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GH	BASE#39 - Longitud del borde 2	5	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GI	BASE#53 - Longitud del borde 1	5	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GJ	BASE#53 - Longitud del borde 2	5	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GK	BASE#54 - Longitud del borde 1	5	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GL	BASE#54 - Longitud del borde 2	5	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GM	BASE#58 - Longitud del borde 1	5	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GN	BASE#58 - Longitud del borde 2	5	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GO	BASE#63 - Longitud del borde 1	5	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GP	BASE#63 - Longitud del borde 2	5	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GQ	BASE#133 - Longitud del borde 1	3	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GR	BASE#133 - Longitud del borde 2	3	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GS	BASE#135 - Longitud del borde 1	3	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GT	BASE#135 - Longitud del borde 2	3	485 mm	19 mm	2 mm	485 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GU	TECHO#91 - Ancho de borde 2	1	441 mm	19 mm	2 mm	441 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GV	TECHO#91 - Ancho del borde 1	1	441 mm	19 mm	2 mm	441 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GW	BASE#27 - Longitud del borde 1	1	435 mm	19 mm	2 mm	435 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GX	BASE#27 - Longitud del borde 2	1	435 mm	19 mm	2 mm	435 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GY	BASE#28 - Longitud del borde 1	1	435 mm	19 mm	2 mm	435 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+GZ	BASE#28 - Longitud del borde 2	1	435 mm	19 mm	2 mm	435 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HA	BASE#179 - Ancho de borde 2	3	400 mm	19 mm	2 mm	400 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HB	BASE#179 - Ancho del borde 1	3	400 mm	19 mm	2 mm	400 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HC	TECHO AMARRE#393 - Longitud del borde 1	3	400 mm	19 mm	2 mm	400 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HD	TECHO AMARRE#393 - Longitud del borde 2	3	400 mm	19 mm	2 mm	400 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HE	TECHO#38 - Ancho de borde 2	3	397 mm	19 mm	2 mm	397 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HF	TECHO#38 - Ancho del borde 1	3	397 mm	19 mm	2 mm	397 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HG	LATERAL DER#61 - Ancho de borde 2	1	397 mm	19 mm	2 mm	397 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HH	LATERAL DER#61 - Ancho del borde 1	1	397 mm	19 mm	2 mm	397 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HI	LATERAL DER#79 - Ancho de borde 2	1	397 mm	19 mm	2 mm	397 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HJ	LATERAL DER#79 - Ancho del borde 1	1	397 mm	19 mm	2 mm	397 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HK	TECHO#118 - Ancho de borde 2	3	382 mm	19 mm	2 mm	382 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HL	TECHO#118 - Ancho del borde 1	3	382 mm	19 mm	2 mm	382 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HM	TECHO AMARRE#261 - Longitud del borde 1	3	370 mm	19 mm	2 mm	370 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HN	TECHO AMARRE#261 - Longitud del borde 2	3	370 mm	19 mm	2 mm	370 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HO	TECHO AMARRE#274 - Longitud del borde 1	3	370 mm	19 mm	2 mm	370 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HP	TECHO AMARRE#274 - Longitud del borde 2	3	370 mm	19 mm	2 mm	370 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HQ	TECHO AMARRE#611 - Longitud del borde 1	3	370 mm	19 mm	2 mm	370 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HR	TECHO AMARRE#611 - Longitud del borde 2	3	370 mm	19 mm	2 mm	370 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HS	TECHO AMARRE#612 - Longitud del borde 1	3	370 mm	19 mm	2 mm	370 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HT	TECHO AMARRE#612 - Longitud del borde 2	3	370 mm	19 mm	2 mm	370 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HU	TECHO#143 - Longitud del borde 1	3	370 mm	19 mm	2 mm	370 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HV	TECHO#143 - Longitud del borde 2	3	370 mm	19 mm	2 mm	370 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HW	TECHO#70 - Ancho de borde 2	1	361 mm	19 mm	2 mm	361 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HX	TECHO#70 - Ancho del borde 1	1	361 mm	19 mm	2 mm	361 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HY	LATERAL DER#73 - Ancho de borde 2	1	359 mm	19 mm	2 mm	359 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+HZ	LATERAL DER#73 - Ancho del borde 1	1	359 mm	19 mm	2 mm	359 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IA	BASE#120 - Longitud del borde 1	3	344 mm	19 mm	2 mm	344 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IB	BASE#120 - Longitud del borde 2	3	344 mm	19 mm	2 mm	344 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IC	TECHO#116 - Ancho de borde 2	3	330 mm	19 mm	2 mm	330 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+ID	TECHO#116 - Ancho del borde 1	3	330 mm	19 mm	2 mm	330 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IE	TECHO#53 - Ancho de borde 2	1	320 mm	19 mm	2 mm	320 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IF	TECHO#53 - Ancho del borde 1	1	320 mm	19 mm	2 mm	320 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IG	TECHO#89 - Ancho de borde 2	5	320 mm	19 mm	2 mm	320 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IH	TECHO#89 - Ancho del borde 1	5	320 mm	19 mm	2 mm	320 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+II	BASE#137 - Longitud del borde 1	3	314 mm	19 mm	2 mm	314 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IJ	BASE#137 - Longitud del borde 2	3	314 mm	19 mm	2 mm	314 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IK	BASE#160 - Ancho de borde 2	5	300 mm	19 mm	2 mm	300 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IL	BASE#160 - Ancho del borde 1	5	300 mm	19 mm	2 mm	300 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IM	LATERAL DER#90 - Ancho de borde 2	5	300 mm	19 mm	2 mm	300 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IN	LATERAL DER#90 - Ancho del borde 1	5	300 mm	19 mm	2 mm	300 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IO	LATERAL IZQ#42 - Ancho de borde 2	5	300 mm	19 mm	2 mm	300 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IP	LATERAL IZQ#42 - Ancho del borde 1	5	300 mm	19 mm	2 mm	300 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IQ	TECHO AMARRE#561 - Ancho de borde 2	5	300 mm	19 mm	2 mm	300 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IR	TECHO AMARRE#561 - Ancho del borde 1	5	300 mm	19 mm	2 mm	300 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IS	LATERAL DER#60 - Ancho de borde 2	5	297 mm	19 mm	2 mm	297 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IT	LATERAL DER#60 - Ancho del borde 1	5	297 mm	19 mm	2 mm	297 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IU	LATERAL DER#68 - Ancho de borde 2	5	297 mm	19 mm	2 mm	297 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IV	LATERAL DER#68 - Ancho del borde 1	5	297 mm	19 mm	2 mm	297 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IW	BASE AUX#15 - Longitud del borde 1	5	279 mm	19 mm	2 mm	279 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IX	BASE AUX#15 - Longitud del borde 2	5	279 mm	19 mm	2 mm	279 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IY	BASE AUX#83 - Longitud del borde 1	5	279 mm	19 mm	2 mm	279 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+IZ	BASE AUX#83 - Longitud del borde 2	5	279 mm	19 mm	2 mm	279 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JA	LATERAL DER#89 - Ancho de borde 2	5	279 mm	19 mm	2 mm	279 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JB	LATERAL DER#89 - Ancho del borde 1	5	279 mm	19 mm	2 mm	279 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JC	BASE AUX#15 - Ancho de borde 2	5	277 mm	19 mm	2 mm	277 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JD	BASE AUX#15 - Ancho del borde 1	5	277 mm	19 mm	2 mm	277 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JE	BASE AUX#83 - Ancho de borde 2	5	277 mm	19 mm	2 mm	277 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JF	BASE AUX#83 - Ancho del borde 1	5	277 mm	19 mm	2 mm	277 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JG	BASE#58 - Ancho de borde 2	5	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JH	BASE#58 - Ancho del borde 1	5	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JI	BASE#63 - Ancho de borde 2	5	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JJ	BASE#63 - Ancho del borde 1	5	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JK	BASE#67 - Ancho de borde 2	5	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JL	BASE#67 - Ancho del borde 1	5	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JM	BASE#120 - Ancho de borde 2	3	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JN	BASE#120 - Ancho del borde 1	3	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JO	BASE#133 - Ancho de borde 2	3	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JP	BASE#133 - Ancho del borde 1	3	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JQ	BASE#135 - Ancho de borde 2	3	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JR	BASE#135 - Ancho del borde 1	3	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JS	BASE#3 - Ancho de borde 2	1	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JT	BASE#3 - Ancho del borde 1	1	200 mm	19 mm	2 mm	200 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JU	BASE#64 - Ancho de borde 2	5	179 mm	19 mm	2 mm	179 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JV	BASE#64 - Ancho del borde 1	5	179 mm	19 mm	2 mm	179 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JW	BASE#137 - Ancho de borde 2	3	179 mm	19 mm	2 mm	179 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JX	BASE#137 - Ancho del borde 1	3	179 mm	19 mm	2 mm	179 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JY	BASE#26 - Ancho de borde 2	1	179 mm	19 mm	2 mm	179 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+JZ	BASE#26 - Ancho del borde 1	1	179 mm	19 mm	2 mm	179 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KA	TECHO AMARRE#183 - Ancho de borde 2	5	170 mm	19 mm	2 mm	170 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KB	TECHO AMARRE#183 - Ancho del borde 1	5	170 mm	19 mm	2 mm	170 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KC	TECHO AMARRE#393 - Ancho de borde 2	3	170 mm	19 mm	2 mm	170 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KD	TECHO AMARRE#393 - Ancho del borde 1	3	170 mm	19 mm	2 mm	170 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KE	TECHO AMARRE#436 - Ancho de borde 2	1	170 mm	19 mm	2 mm	170 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KF	TECHO AMARRE#436 - Ancho del borde 1	1	170 mm	19 mm	2 mm	170 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KG	TECHO#84 - Ancho de borde 2	5	159 mm	19 mm	2 mm	159 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KH	TECHO#84 - Ancho del borde 1	5	159 mm	19 mm	2 mm	159 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KI	TECHO#96 - Ancho de borde 2	5	159 mm	19 mm	2 mm	159 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KJ	TECHO#96 - Ancho del borde 1	5	159 mm	19 mm	2 mm	159 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KK	BASE#38 - Ancho de borde 2	5	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KL	BASE#38 - Ancho del borde 1	5	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KM	BASE#39 - Ancho de borde 2	5	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KN	BASE#39 - Ancho del borde 1	5	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KO	BASE#53 - Ancho de borde 2	5	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KP	BASE#53 - Ancho del borde 1	5	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KQ	BASE#54 - Ancho de borde 2	5	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KR	BASE#54 - Ancho del borde 1	5	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KS	BASE#55 - Ancho de borde 2	5	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KT	BASE#55 - Ancho del borde 1	5	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KU	BASE#6 - Ancho de borde 2	5	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KV	BASE#6 - Ancho del borde 1	5	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KW	BASE#27 - Ancho de borde 2	1	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KX	BASE#27 - Ancho del borde 1	1	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KY	BASE#28 - Ancho de borde 2	1	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+KZ	BASE#28 - Ancho del borde 1	1	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LA	TECHO AMARRE#96 - Ancho de borde 2	1	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LB	TECHO AMARRE#96 - Ancho del borde 1	1	100 mm	19 mm	2 mm	100 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LC	TECHO AMARRE#17 - Ancho de borde 2	5	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LD	TECHO AMARRE#17 - Ancho del borde 1	5	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LE	TECHO AMARRE#206 - Ancho de borde 2	5	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LF	TECHO AMARRE#206 - Ancho del borde 1	5	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LG	TECHO AMARRE#208 - Ancho de borde 2	5	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LH	TECHO AMARRE#208 - Ancho del borde 1	5	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LI	TECHO AMARRE#32 - Ancho de borde 2	5	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LJ	TECHO AMARRE#32 - Ancho del borde 1	5	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LK	TECHO AMARRE#351 - Ancho de borde 2	5	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LL	TECHO AMARRE#351 - Ancho del borde 1	5	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LM	TECHO AMARRE#358 - Ancho de borde 2	5	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LN	TECHO AMARRE#358 - Ancho del borde 1	5	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LO	TECHO AMARRE#261 - Ancho de borde 2	3	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LP	TECHO AMARRE#261 - Ancho del borde 1	3	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LQ	TECHO AMARRE#274 - Ancho de borde 2	3	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LR	TECHO AMARRE#274 - Ancho del borde 1	3	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LS	TECHO AMARRE#611 - Ancho de borde 2	3	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LT	TECHO AMARRE#611 - Ancho del borde 1	3	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LU	TECHO AMARRE#612 - Ancho de borde 2	3	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LV	TECHO AMARRE#612 - Ancho del borde 1	3	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LW	TECHO AMARRE#123 - Ancho de borde 2	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LX	TECHO AMARRE#123 - Ancho del borde 1	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LY	TECHO AMARRE#2 - Ancho de borde 2	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+LZ	TECHO AMARRE#2 - Ancho del borde 1	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MA	TECHO AMARRE#674 - Ancho de borde 2	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MB	TECHO AMARRE#674 - Ancho del borde 1	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MC	TECHO AMARRE#783 - Ancho de borde 2	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MD	TECHO AMARRE#783 - Ancho del borde 1	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+ME	TECHO AMARRE#784 - Ancho de borde 2	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MF	TECHO AMARRE#784 - Ancho del borde 1	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MG	TECHO AMARRE#88 - Ancho de borde 2	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MH	TECHO AMARRE#88 - Ancho del borde 1	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MI	TECHO AMARRE#90 - Ancho de borde 2	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MJ	TECHO AMARRE#90 - Ancho del borde 1	1	90 mm	19 mm	2 mm	90 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MK	BASE#57 - Ancho de borde 2	5	79 mm	19 mm	2 mm	79 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+ML	BASE#57 - Ancho del borde 1	5	79 mm	19 mm	2 mm	79 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MM	BASE#9 - Ancho de borde 2	5	79 mm	19 mm	2 mm	79 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MN	BASE#9 - Ancho del borde 1	5	79 mm	19 mm	2 mm	79 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MO	TECHO#361 - Ancho de borde 2	5	60 mm	19 mm	2 mm	60 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MP	TECHO#361 - Ancho del borde 1	5	60 mm	19 mm	2 mm	60 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MQ	TECHO#143 - Ancho de borde 2	3	60 mm	19 mm	2 mm	60 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+MR	TECHO#143 - Ancho del borde 1	3	60 mm	19 mm	2 mm	60 mm	19 mm	2 mm	""	Canto	SIN CANTO	""	""	""	""	""	""	""	""	""	""	""	""	""
+A	CLIP#1	1	100 mm	50 mm	15 mm	100 mm	50 mm	15 mm	""	Accesorio	GOM001	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+B	CLIP#1	1	100 mm	48 mm	15 mm	100 mm	48 mm	15 mm	""	Accesorio	GOM001	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+A	MONTANTE A#2	1	211 mm	44 mm	35 mm	211 mm	44 mm	35 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+B	MONTANTE B	1	211 mm	44 mm	35 mm	211 mm	44 mm	35 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+C	MONTANTE A#2	1	211 mm	44 mm	34 mm	211 mm	44 mm	34 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+D	MONTANTE B	1	211 mm	44 mm	34 mm	211 mm	44 mm	34 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+E	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#11	5	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+F	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#17	5	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	BISAGRA DE CAZOLETA copy 001	""	""	""	""	""	""	""	""	""	Layer0
+G	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#42	5	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+H	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#43	5	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	BISAGRA DE CAZOLETA copy 001	""	""	""	""	""	""	""	""	""	Layer0
+I	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#1	1	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	BISAGRA DE CAZOLETA copy 001	""	""	""	""	""	""	""	""	""	Layer0
+J	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#15	1	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+K	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#38	1	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+L	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#39	1	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	BISAGRA DE CAZOLETA copy 001	""	""	""	""	""	""	""	""	""	Layer0
+M	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#40	1	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+N	09HER_3.0_BISAGRA_CAZ_90x1_Master_G2(rev1)#41	1	70 mm	49 mm	20 mm	70 mm	49 mm	20 mm	""	Accesorio	MMA01	""	""	BISAGRA DE CAZOLETA copy 001	""	""	""	""	""	""	""	""	""	Layer0
+O	BISAGRA#2	10	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+P	BISAGRA#2	10	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+Q	BISAGRA#3	2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+R	BISAGRA#3	2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+S	BISAGRA#6	2	28 mm	19 mm	16 mm	28 mm	19 mm	16 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+T	RIEL	1	393 mm	20 mm	15 mm	393 mm	20 mm	15 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+U	RIEL	1	393 mm	20 mm	15 mm	393 mm	20 mm	15 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+V	CAZOLETA MOVIL#41	5	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+W	CAZOLETA MOVIL#69	5	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+X	CAZOLETA MOVIL#70	5	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+Y	CAZOLETA MOVIL#71	5	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+Z	CAZOLETA MOVIL#17	1	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AA	CAZOLETA MOVIL#18	1	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AB	CAZOLETA MOVIL#49	1	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AC	CAZOLETA MOVIL#50	1	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AD	CAZOLETA MOVIL#51	1	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AE	CAZOLETA MOVIL#52	1	23 mm	23 mm	13 mm	23 mm	23 mm	13 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AF	MONTANTE#49	5	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AG	MONTANTE#50	5	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AH	MONTANTE#51	5	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AI	MONTANTE#52	5	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AJ	MONTANTE#53	5	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AK	MONTANTE#54	5	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AL	MONTANTE#40	3	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AM	MONTANTE#57	3	500 mm	45 mm	11 mm	500 mm	45 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AN	RIEL#14	5	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AO	RIEL#15	5	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AP	RIEL#41	5	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AQ	RIEL#43	5	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AR	RIEL#44	5	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AS	RIEL#46	5	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AT	RIEL#56	3	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AU	RIEL#57	3	490 mm	35 mm	11 mm	490 mm	35 mm	11 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AV	RIEL INT	1	275 mm	10 mm	9 mm	275 mm	10 mm	9 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AW	RIEL INT	1	275 mm	10 mm	9 mm	275 mm	10 mm	9 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+AX	Corredera Telescópica#49	5	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AY	Corredera Telescópica#50	5	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+AZ	Corredera Telescópica#51	5	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BA	Corredera Telescópica#52	5	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BB	Corredera Telescópica#53	5	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BC	Corredera Telescópica#54	5	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BD	Corredera Telescópica#37	3	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BE	Corredera Telescópica#39	3	21 mm	9 mm	8 mm	21 mm	9 mm	8 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BF	CORREDERA#49	5	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BG	CORREDERA#50	5	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BH	CORREDERA#51	5	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BI	CORREDERA#52	5	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BJ	CORREDERA#53	5	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BK	CORREDERA#54	5	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BL	CORREDERA#42	3	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BM	CORREDERA#57	3	500 mm	24 mm	7 mm	500 mm	24 mm	7 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BN	TOPE	1	11 mm	9 mm	5 mm	11 mm	9 mm	5 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BO	TOPE	1	11 mm	9 mm	5 mm	11 mm	9 mm	5 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+BP	BISAGRA CAZOLETA#1	10	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BQ	BISAGRA CAZOLETA#1	10	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BR	BISAGRA CAZOLETA#6	2	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BS	BISAGRA CAZOLETA#6	2	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+BT	BISAGRA CAZOLETA#9	2	66 mm	35 mm	0 mm	66 mm	35 mm	0 mm	""	Accesorio	MMA01	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	PATA POS N1#1	24	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	PATA FR copy 001,PATA TR copy 001	""	""	""	""	""	""	""	""	""	Layer0
+B	PATA POS N1#58	12	170 mm	60 mm	60 mm	170 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	PATA FR copy 001,PATA TR copy 001	""	""	""	""	""	""	""	""	""	Layer0
+C	PATA POS N1#5	4	100 mm	60 mm	60 mm	100 mm	60 mm	60 mm	""	Accesorio	PATAS PLASTICAS	""	""	PATA FR copy 001,PATA TR copy 001	""	""	""	""	""	""	""	""	""	Layer0
+A	ESCALON#1	1	1000 mm	848 mm	588 mm	1000 mm	848 mm	588 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+B	ESCALON	9	1000 mm	423 mm	406 mm	1000 mm	423 mm	406 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+C	ESCALON#3	1	1000 mm	423 mm	406 mm	1000 mm	423 mm	406 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+D	ESCALON#2	1	1000 mm	406 mm	228 mm	1000 mm	406 mm	228 mm	""	Indefinido	94_cracked paint wood PBR texture-seamless	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	Componente#72	1	595 mm	155 mm	24 mm	595 mm	155 mm	24 mm	""	Indefinido	CLC2-MICRO H40 TRADI	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+A	MICROONDAS DE MESA#14	1	520 mm	420 mm	310 mm	520 mm	420 mm	310 mm	""	Indefinido	INOX1	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+B	HORNO EMPOTRABLE#16	1	543 mm	506 mm	306 mm	543 mm	506 mm	306 mm	""	Indefinido	INOX1	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+C	Componente#70	1	310 mm	109 mm	39 mm	310 mm	109 mm	39 mm	""	Indefinido	INOX1	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+D	Componente#71	1	595 mm	445 mm	24 mm	595 mm	445 mm	24 mm	""	Indefinido	INOX1	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	Componente#73	1	595 mm	440 mm	53 mm	595 mm	440 mm	53 mm	""	Indefinido	Negro	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES
+B	PTA#18	1	427 mm	310 mm	24 mm	427 mm	310 mm	24 mm	""	Indefinido	Negro	""	""	""	""	""	""	""	""	""	""	""	""	Layer0
+A	Componente#6	1	535 mm	500 mm	500 mm	535 mm	500 mm	500 mm	""	Indefinido	Standardmaterial	""	""	""	""	""	""	""	""	""	""	""	""	0.APAGAR PIEZAS ESPECIALES

@@ -1,0 +1,291 @@
+{
+  "modelo": "/Users/owner/war-room-holding-os/clientes/cocina-isla-gola-prueba/cocina/cocina-isla-gola-prueba-cocina-v2.skp",
+  "presets_export": [
+
+  ],
+  "presets_cutlist": [
+
+  ],
+  "cutlist_options": {
+    "auto_orient": true,
+    "flipped_detection": true,
+    "smart_material": true,
+    "dynamic_attributes_name": false,
+    "part_number_with_letters": true,
+    "part_number_sequence_by_group": true,
+    "part_folding": false,
+    "hide_entity_names": false,
+    "hide_descriptions": false,
+    "hide_tags": false,
+    "hide_cutting_dimensions": false,
+    "hide_bbox_dimensions": false,
+    "hide_final_areas": true,
+    "hide_edges": true,
+    "hide_faces": true,
+    "hide_material_colors": false,
+    "minimize_on_highlight": true,
+    "group_order_strategy": "material_type>material_name>-std_width>-std_thickness",
+    "part_order_strategy": "-thickness>-length>-width>-count>name>-edge_pattern>tags>thickness_layer_count",
+    "dimension_column_order_strategy": "length>width>thickness",
+    "tags": [
+
+    ],
+    "hidden_group_ids": [
+
+    ]
+  },
+  "cutlist_export_options": {
+    "source": 1,
+    "format": "csv",
+    "csv_col_sep": 2,
+    "csv_encoding": 0,
+    "source_col_defs": {
+      "0": [
+        {
+          "name": "material_type",
+          "align": "left"
+        },
+        {
+          "name": "material_name",
+          "align": "left"
+        },
+        {
+          "name": "material_std_dimension",
+          "align": "left"
+        },
+        {
+          "name": "material_description",
+          "align": "left"
+        },
+        {
+          "name": "material_url",
+          "align": "left"
+        },
+        {
+          "name": "part_count",
+          "align": "center"
+        },
+        {
+          "name": "total_cutting_length",
+          "align": "right"
+        },
+        {
+          "name": "total_cutting_area",
+          "align": "right"
+        },
+        {
+          "name": "total_cutting_volume",
+          "align": "right"
+        },
+        {
+          "name": "total_final_area",
+          "align": "right"
+        }
+      ],
+      "1": [
+        {
+          "name": "number",
+          "align": "center"
+        },
+        {
+          "name": "name",
+          "align": "left"
+        },
+        {
+          "name": "count",
+          "align": "center"
+        },
+        {
+          "name": "cutting_length",
+          "align": "right"
+        },
+        {
+          "name": "cutting_width",
+          "align": "right"
+        },
+        {
+          "name": "cutting_thickness",
+          "align": "right"
+        },
+        {
+          "name": "bbox_length",
+          "align": "right"
+        },
+        {
+          "name": "bbox_width",
+          "align": "right"
+        },
+        {
+          "name": "bbox_thickness",
+          "align": "right"
+        },
+        {
+          "name": "final_area",
+          "align": "right"
+        },
+        {
+          "name": "material_type",
+          "align": "left"
+        },
+        {
+          "name": "material_name",
+          "align": "left"
+        },
+        {
+          "name": "material_description",
+          "align": "left"
+        },
+        {
+          "name": "material_url",
+          "align": "left"
+        },
+        {
+          "name": "entity_names",
+          "align": "left"
+        },
+        {
+          "name": "description",
+          "align": "left"
+        },
+        {
+          "name": "url",
+          "align": "left"
+        },
+        {
+          "name": "tags",
+          "align": "left"
+        },
+        {
+          "name": "edge_ymin",
+          "align": "center"
+        },
+        {
+          "name": "edge_ymax",
+          "align": "center"
+        },
+        {
+          "name": "edge_xmin",
+          "align": "center"
+        },
+        {
+          "name": "edge_xmax",
+          "align": "center"
+        },
+        {
+          "name": "face_zmax",
+          "align": "center"
+        },
+        {
+          "name": "face_zmin",
+          "align": "center"
+        },
+        {
+          "name": "layers",
+          "align": "left"
+        }
+      ],
+      "2": [
+        {
+          "name": "number",
+          "align": "center"
+        },
+        {
+          "name": "path",
+          "align": "left"
+        },
+        {
+          "name": "instance_name",
+          "align": "left"
+        },
+        {
+          "name": "name",
+          "align": "left"
+        },
+        {
+          "name": "cutting_length",
+          "align": "right"
+        },
+        {
+          "name": "cutting_width",
+          "align": "right"
+        },
+        {
+          "name": "cutting_thickness",
+          "align": "right"
+        },
+        {
+          "name": "bbox_length",
+          "align": "right"
+        },
+        {
+          "name": "bbox_width",
+          "align": "right"
+        },
+        {
+          "name": "bbox_thickness",
+          "align": "right"
+        },
+        {
+          "name": "final_area",
+          "align": "right"
+        },
+        {
+          "name": "material_type",
+          "align": "left"
+        },
+        {
+          "name": "material_name",
+          "align": "left"
+        },
+        {
+          "name": "material_description",
+          "align": "left"
+        },
+        {
+          "name": "material_url",
+          "align": "left"
+        },
+        {
+          "name": "description",
+          "align": "left"
+        },
+        {
+          "name": "url",
+          "align": "left"
+        },
+        {
+          "name": "tags",
+          "align": "left"
+        },
+        {
+          "name": "edge_ymin",
+          "align": "center"
+        },
+        {
+          "name": "edge_ymax",
+          "align": "center"
+        },
+        {
+          "name": "edge_xmin",
+          "align": "center"
+        },
+        {
+          "name": "edge_xmax",
+          "align": "center"
+        },
+        {
+          "name": "face_zmax",
+          "align": "center"
+        },
+        {
+          "name": "face_zmin",
+          "align": "center"
+        },
+        {
+          "name": "layer",
+          "align": "left"
+        }
+      ]
+    }
+  }
+}
