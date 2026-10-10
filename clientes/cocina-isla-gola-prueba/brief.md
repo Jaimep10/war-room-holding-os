@@ -47,9 +47,8 @@ Plan: `outputs/muebles/plan-espacial.json` · Planta: `outputs/muebles/planta-pr
 - **Torre horno + micro:** `CLMH.PGL.60.1K.PBIM` (cajón abajo, hueco 45.5–150, puerta arriba).
 - **Altos:** `CAR.FP.60.2PBM`, borde inferior a **143 cm** (arriba 223, alineado con la torre).
 
-Borrador: `cocina/cocina-isla-gola-prueba-cocina.skp` · Vistas: `outputs/muebles/borrador-iso.png`, `borrador-planta.png`
+Borrador vigente: `cocina/cocina-isla-gola-prueba-cocina-v2.skp` (pared derecha corrida 3 cm, 0 cruces) · Vistas: `outputs/muebles/borrador-iso-v2.png`, `borrador-planta-v2.png` (v1: `borrador-iso.png`, `borrador-planta.png`)
 
 ## Pendientes
 
-1. **Cruce en la esquina fregadero/torre:** el pilar mide 57 de fondo y los bajos 60, así que la torre (que arranca en 57) choca 3 cm con el último bajo del fregadero (y su frente de 5.2 cm). Decidir: correr la pared derecha 3 cm (torre desde 60; lo libre queda en 92) u otra solución.
-2. Aprobación del borrador para entregables.
+1. Aprobación del borrador v2 para entregables.

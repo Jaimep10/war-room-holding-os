@@ -24,6 +24,10 @@
     {
       "evento": "Borrador armado: 15 módulos en cocina/cocina-isla-gola-prueba-cocina.skp. Observación: FREGADERO-05 y TORRES-02 se cruzan 5.2 x 3 cm en la esquina (pilar de 57 < fondo de bajo de 60). Pendiente de decisión del usuario",
       "timestamp": "2026-10-10T04:02:28.719356Z"
+    },
+    {
+      "evento": "Borrador v2: pared derecha corrida 3 cm (aprobado por el usuario). 15 módulos, 0 cruces. Vistas v2 exportadas",
+      "timestamp": "2026-10-10T12:21:52.662013Z"
     }
   ]
 }
