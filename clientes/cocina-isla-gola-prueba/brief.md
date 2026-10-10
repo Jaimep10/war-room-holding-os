@@ -51,4 +51,4 @@ Borrador vigente: `cocina/cocina-isla-gola-prueba-cocina-v2.skp` (pared derecha 
 
 ## Pendientes
 
-1. Aprobación del borrador v2 para entregables.
+1. Borrador v2 **aprobado** (10-oct-2026). Falta definir qué entregables: cortes, presupuesto, renders y/o planos.

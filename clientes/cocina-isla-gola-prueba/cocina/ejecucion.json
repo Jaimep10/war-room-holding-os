@@ -1,13 +1,13 @@
 {
   "modoSolicitado": "borrador",
   "partesSolicitadas": {
-    "cortes": false,
-    "presupuesto": false,
+    "cortes": true,
+    "presupuesto": true,
     "renders": false,
     "planos": false
   },
-  "estado": "borrador_listo_pendiente_aprobacion",
-  "aprobado": false,
+  "estado": "entregables_solicitados",
+  "aprobado": true,
   "historial": [
     {
       "evento": "Usuario pidió dibujar el plano en modelo GOLA, con cajones abajo y cubertero (solo .skp)",
@@ -28,6 +28,14 @@
     {
       "evento": "Borrador v2: pared derecha corrida 3 cm (aprobado por el usuario). 15 módulos, 0 cruces. Vistas v2 exportadas",
       "timestamp": "2026-10-10T12:21:52.662013Z"
+    },
+    {
+      "evento": "Usuario aprobó el borrador v2 (cocina-isla-gola-prueba-cocina-v2.skp) para entregables. Falta definir qué entregables",
+      "timestamp": "2026-10-10T12:24:15.292123Z"
+    },
+    {
+      "evento": "Usuario pidió entregables: cortes y presupuesto",
+      "timestamp": "2026-10-10T12:25:52.537802Z"
     }
   ]
 }
