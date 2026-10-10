@@ -105,7 +105,7 @@
       <div class="row"><label for="wC">C — península (no es muro)</label><input type="number" id="wC" min="50" step="1"></div>
       <div class="row"><label for="iB">B arranca a (cm de la esquina A)</label><input type="number" id="iB" min="0" step="1"></div>
       <div class="row"><label for="iC">C arranca a (cm del fondo)</label><input type="number" id="iC" min="0" step="1"></div>
-      <p class="note">B arranca después de la pata en L (80 cm) del esquinero de A. C arranca después del fondo de B, así la esquina B/C queda libre.</p>
+      <p class="note">B arranca a 80 cm de la esquina: el esquinero ciego CBECRD.TI.80 de A (80 × 58, no L) cubre hasta ~63.5 cm y el hueco 63.5–80 queda libre (aceptado). C arranca después del fondo de B, así la esquina B/C queda libre.</p>
     </section>
 
     <section>
@@ -163,14 +163,15 @@ function variantesDe(code) {
 //   B: izquierda = esquina con A, derecha = esquina con C
 //   C: izquierda = fondo (esquina con B), derecha = frente abierto
 // "inicio": cm desde la esquina en que arranca la corrida de módulos.
-//   B arranca después de la pata en L (80 cm) del esquinero CBECRD.TI.80 de A.
+//   B arranca a 80 cm: CBECRD.TI.80 de A es un esquinero ciego 80 × 58 (medido en
+//   SketchUp, NO es L); su frente llega a ~63.5 cm y el hueco 63.5–80 es aceptado.
 //   C arranca después del fondo de B: la esquina B/C queda libre.
 // ---------------------------------------------------------------------------
 const ORIGINAL = {
   cliente: "cocina-demo-prueba",
   walls: {
     A: { len: 270, inicio: 0 },
-    B: { len: 230, inicio: 80, holguraAceptada: true }, // holgura de 10 cm contra la esquina C (confirmado)
+    B: { len: 230, inicio: 80, holguraAceptada: true, huecoEsquinero: { desde: 63.5, hasta: 80 } }, // holgura de 10 cm contra la esquina C (confirmado)
     C: { len: 230, inicio: 60, sobresaleAceptado: true },
   },
   depth: { bajo: 60, alto: 35, torre: 60 },
@@ -179,7 +180,7 @@ const ORIGINAL = {
       { code: null, label: "ESPACIO 50", type: "espacio", w: 50, note: "Espacio libre para lavavajillas futuro (CBA.50 no existe en KSmart)." },
       { code: "CBA.60", type: "bajo", role: "fregadero", note: "Fregadero" },
       { code: "CBR.TI.80", type: "bajo" },
-      { code: "CBECRD.TI.80", type: "bajo", cornerL: 80, note: "Esquinero en L 80×80: 80 cm sobre A y 80 cm sobre B (confirmado por el usuario)." },
+      { code: "CBECRD.TI.80", type: "bajo", note: "Esquinero ciego recto 80 × 58 (medido en SketchUp, no es L): puerta en 40 cm, 40 cm ciegos contra la esquina A/B." },
     ],
     B: [
       { code: "CLMH.TI.60", type: "torre", role: "coccion", note: "Torre de hornos. Sin altos encima." },
@@ -202,7 +203,7 @@ const ORIGINAL = {
 };
 
 const REF_DEPTH = { bajo: 60, alto: 35, torre: 60 };
-const STORE_KEY = "layout-cocina-u:cocina-demo-prueba:v4";
+const STORE_KEY = "layout-cocina-u:cocina-demo-prueba:v5";
 let uid = 0;
 
 function hydrate(src) {
@@ -319,6 +320,9 @@ function validate() {
       if (W === "C") issues.push({ sev: "aviso", title: "Alto sobre la península", text: `C no es muro, así que ${nameOf(a)} no tiene dónde colgarse.`, ids: [a.id] });
     }
   }
+
+  const hB = S.walls.B.huecoEsquinero;
+  if (hB) issues.push({ sev: "info", title: `Pared B: hueco de ~${Math.floor(hB.hasta - hB.desde)} cm junto al esquinero`, text: `CBECRD.TI.80 medido: esquinero ciego 80x58, no L. Su frente llega a ~${hB.desde} cm de la Pared A. La torre se queda en B=${hB.hasta} y el hueco ${hB.desde}–${hB.hasta} queda libre. Decisión del usuario, 25-sep-2026.`, ids: [] });
 
   const finC = (S.walls.C.inicio || 0) + S.walls.C.len;
   if (finC > S.walls.A.len && S.walls.C.sobresaleAceptado) issues.push({ sev: "info", title: `La península sobresale ${finC - S.walls.A.len} cm`, text: `Termina a ${finC} cm y la Pared A mide ${S.walls.A.len} cm. Aceptado por el usuario como volado extra del desayunador.`, ids: [] });

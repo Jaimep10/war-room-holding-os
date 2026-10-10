@@ -15,6 +15,8 @@ partida a verificar, nunca como un hecho ya confirmado: si al buscar ahí no
 aparecen estos archivos, es NEEDS_CONTEXT ("¿en qué carpeta están hoy estos
 archivos de KSmart?"), nunca asumir que se movieron o que no existen.
 
+**Ruta actual (provisional, sin confirmar):** `~/Downloads/`
+
 ## Colecciones (.zip) — ruta provisional `~/Downloads/`
 
 - `COLECCION KSMART GOLA.zip`
