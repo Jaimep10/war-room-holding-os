@@ -1,0 +1,333 @@
+{
+  "cliente": "cocina-isla-gola-prueba",
+  "generado": "2026-10-10T03:28:55.306640Z",
+  "unidades": "cm",
+  "coleccion": "GOLA",
+  "cuarto": {
+    "ancho": 360,
+    "fondo": 419,
+    "techo": 250
+  },
+  "profundidades": {
+    "bajo": 60,
+    "alto": 30,
+    "torre": 60
+  },
+  "marcos": {
+    "FREGADERO": {
+      "origen": [
+        0,
+        0
+      ],
+      "t": [
+        1,
+        0
+      ],
+      "n": [
+        0,
+        -1
+      ],
+      "nota": "pared de arriba del plano; s desde la pared izquierda"
+    },
+    "TORRES": {
+      "origen": [
+        360,
+        0
+      ],
+      "t": [
+        0,
+        -1
+      ],
+      "n": [
+        -1,
+        0
+      ],
+      "nota": "pared derecha; s desde la pared de arriba"
+    },
+    "ISLA": {
+      "origen": [
+        69,
+        -236
+      ],
+      "t": [
+        1,
+        0
+      ],
+      "n": [
+        0,
+        1
+      ],
+      "nota": "isla 162 x 93.5 (y del plano 176-269.5); módulos de un solo lado, frente hacia el fregadero; dorso en y=236, barra de 33.5 detrás"
+    }
+  },
+  "paredes": {
+    "FREGADERO": {
+      "bajos_torres": [
+        {
+          "codigo_dado": "CAJONERA 60 GOLA",
+          "archivo_ksmart": "CB.3G.GLM.60.K.2C.skp",
+          "tipo": "bajo",
+          "ancho": 60,
+          "desde": 0,
+          "hasta": 60,
+          "rol": null,
+          "cubertero": true,
+          "etiqueta": "CB.3G.GLM.60.K.2C"
+        },
+        {
+          "codigo_dado": "CAJONERA 60 GOLA",
+          "archivo_ksmart": "CB.3G.GLM.60.K.2C.skp",
+          "tipo": "bajo",
+          "ancho": 60,
+          "desde": 60,
+          "hasta": 120,
+          "rol": null,
+          "etiqueta": "CB.3G.GLM.60.K.2C"
+        },
+        {
+          "codigo_dado": "CB.PGL.40.1K",
+          "archivo_ksmart": "CB.PGL.40.1K.skp",
+          "tipo": "bajo",
+          "ancho": 40,
+          "desde": 120,
+          "hasta": 160,
+          "rol": null,
+          "etiqueta": "CB.PGL.40.1K"
+        },
+        {
+          "codigo_dado": "CBR.PGL.80.2PBM",
+          "archivo_ksmart": "CBR.PGL.80.2PBM.skp",
+          "tipo": "bajo",
+          "ancho": 80,
+          "desde": 160,
+          "hasta": 240,
+          "rol": "fregadero",
+          "accesorio": "basurero bajo el fregadero",
+          "etiqueta": "CBR.PGL.80.2PBM"
+        },
+        {
+          "codigo_dado": "CAJONERA 60 GOLA",
+          "archivo_ksmart": "CB.3G.GLM.60.K.2C.skp",
+          "tipo": "bajo",
+          "ancho": 60,
+          "desde": 240,
+          "hasta": 300,
+          "rol": null,
+          "etiqueta": "CB.3G.GLM.60.K.2C"
+        }
+      ],
+      "altos": [
+        {
+          "codigo_dado": "ALTO 60 GOLA",
+          "archivo_ksmart": "CAR.FP.60.2PBM.skp",
+          "ancho": 60,
+          "desde": 0,
+          "hasta": 60
+        },
+        {
+          "codigo_dado": "ALTO 60 GOLA",
+          "archivo_ksmart": "CAR.FP.60.2PBM.skp",
+          "ancho": 60,
+          "desde": 60,
+          "hasta": 120
+        },
+        {
+          "codigo_dado": "ALTO 60 GOLA",
+          "archivo_ksmart": "CAR.FP.60.2PBM.skp",
+          "ancho": 60,
+          "desde": 120,
+          "hasta": 180
+        },
+        {
+          "codigo_dado": "ALTO 60 GOLA",
+          "archivo_ksmart": "CAR.FP.60.2PBM.skp",
+          "ancho": 60,
+          "desde": 180,
+          "hasta": 240
+        },
+        {
+          "codigo_dado": "ALTO 60 GOLA",
+          "archivo_ksmart": "CAR.FP.60.2PBM.skp",
+          "ancho": 60,
+          "desde": 240,
+          "hasta": 300
+        }
+      ]
+    },
+    "TORRES": {
+      "bajos_torres": [
+        {
+          "codigo_dado": "PILAR 60x57",
+          "archivo_ksmart": null,
+          "tipo": "espacio",
+          "ancho": 60,
+          "desde": 0,
+          "hasta": 60,
+          "rol": null,
+          "etiqueta": "PILAR",
+          "nota": "pilar 60x57 del plano; se toma 60 de fondo sobre la pared derecha para no chocar con los bajos de 60 (usuario, 10-oct-2026)"
+        },
+        {
+          "codigo_dado": "TORRE HORNO+MICRO 60 GOLA",
+          "archivo_ksmart": "CLMH.PGL.60.1K.PBIM.skp",
+          "tipo": "torre",
+          "ancho": 60,
+          "desde": 60,
+          "hasta": 120,
+          "rol": "coccion_horno",
+          "etiqueta": "CLMH.PGL.60.1K.PBIM"
+        },
+        {
+          "codigo_dado": "CB.PGL.40.1K",
+          "archivo_ksmart": "CB.PGL.40.1K.skp",
+          "tipo": "bajo",
+          "ancho": 40,
+          "desde": 120,
+          "hasta": 160,
+          "rol": null,
+          "nota": "apoyo junto al horno (decisión del agente: el usuario dijo 'tú decide')",
+          "etiqueta": "CB.PGL.40.1K"
+        },
+        {
+          "codigo_dado": "HOLGURA 2",
+          "archivo_ksmart": null,
+          "tipo": "espacio",
+          "ancho": 2,
+          "desde": 160,
+          "hasta": 162,
+          "rol": null
+        },
+        {
+          "codigo_dado": "NEVERA EMPOTRADA 60",
+          "archivo_ksmart": null,
+          "tipo": "espacio",
+          "ancho": 60,
+          "desde": 162,
+          "hasta": 222,
+          "rol": null,
+          "rol_guia": "refri",
+          "etiqueta": "NEVERA EMP."
+        },
+        {
+          "codigo_dado": "ESTANTERIA VISTA 105",
+          "archivo_ksmart": null,
+          "tipo": "espacio",
+          "ancho": 105,
+          "desde": 222,
+          "hasta": 327,
+          "rol": null,
+          "fondo": 40,
+          "etiqueta": "ESTANTERÍA VISTA"
+        }
+      ],
+      "altos": []
+    },
+    "ISLA": {
+      "bajos_torres": [
+        {
+          "codigo_dado": "CAJONERA 60 GOLA",
+          "archivo_ksmart": "CB.3G.GLM.60.K.2C.skp",
+          "tipo": "bajo",
+          "ancho": 60,
+          "desde": 0,
+          "hasta": 60,
+          "rol": null,
+          "cubertero": true,
+          "etiqueta": "CB.3G.GLM.60.K.2C"
+        },
+        {
+          "codigo_dado": "CAJONERA 60 GOLA",
+          "archivo_ksmart": "CB.3G.GLM.60.K.2C.skp",
+          "tipo": "bajo",
+          "ancho": 60,
+          "desde": 60,
+          "hasta": 120,
+          "rol": "coccion",
+          "nota": "debajo de la placa",
+          "etiqueta": "CB.3G.GLM.60.K.2C"
+        },
+        {
+          "codigo_dado": "CB.PGL.40.1K",
+          "archivo_ksmart": "CB.PGL.40.1K.skp",
+          "tipo": "bajo",
+          "ancho": 40,
+          "desde": 120,
+          "hasta": 160,
+          "rol": null,
+          "etiqueta": "CB.PGL.40.1K"
+        },
+        {
+          "codigo_dado": "HOLGURA 2",
+          "archivo_ksmart": null,
+          "tipo": "espacio",
+          "ancho": 2,
+          "desde": 160,
+          "hasta": 162,
+          "rol": null
+        }
+      ],
+      "altos": []
+    }
+  },
+  "triangulo": {
+    "fregadero_coccion_m": 1.23,
+    "coccion_refri_m": 1.42,
+    "refri_fregadero_m": 1.63
+  },
+  "pendientes": [],
+  "aceptados": [
+    {
+      "titulo": "Fregadero: puerta con basurero",
+      "detalle": "No hay módulo de puertas de 60 en GOLA: va CBR.PGL.80.2PBM (80, 2 puertas). La pared se reparte 60 + 60 + 40 + 80 + 60 = 300; el fregadero queda centrado en 200 (en el plano estaba en ~181)."
+    },
+    {
+      "titulo": "Isla de un solo lado",
+      "detalle": "Módulos con frente hacia el fregadero, barra de 33.5 detrás. 60 + 60 (placa) + 40 + 2 de holgura = 162; la placa queda centrada en 90 de la isla (en el plano, 81)."
+    },
+    {
+      "titulo": "Junto a la torre de hornos",
+      "detalle": "Los 42 cm que sobran del bloque de 102: CB.PGL.40.1K (cajón de 40) como apoyo al lado del horno + 2 cm de holgura."
+    },
+    {
+      "titulo": "Nevera empotrada",
+      "detalle": "GOLA no tiene mueble de refri: va como hueco de 60 (guía) entre la torre/apoyo y la estantería, con paneles laterales."
+    },
+    {
+      "titulo": "Estantería vista y pilar",
+      "detalle": "No son módulos KSmart: van como guías (estantería de 105 × 40; pilar de 60 × 57)."
+    },
+    {
+      "titulo": "Cajonera 60: CB.3G.GLM.60.K.2C",
+      "detalle": "Elegida por el usuario (2026-10-10) tras la inspección: 2 cajones chicos arriba (cubertero en el 1.º) + 1 grande abajo. Va en los 5 lugares."
+    },
+    {
+      "titulo": "Torre horno + micro: CLMH.PGL.60.1K.PBIM",
+      "detalle": "Elegida por el usuario (2026-10-10): cajón abajo (10–45.5), hueco 45.5–150, puerta arriba 150–223."
+    },
+    {
+      "titulo": "Altos: CAR.FP.60.2PBM a 143 cm",
+      "detalle": "Elegido por el usuario (2026-10-10): 60 × 80 × 30 (+1.5 de puerta), borde inferior 143, arriba 223 alineado con la torre."
+    },
+    {
+      "titulo": "Pared derecha corrida 3 cm",
+      "detalle": "Para no chocar con el último bajo del fregadero (fondo 60 vs pilar 57): torre desde 60, nevera 162–222, estantería 222–327; lo libre al fondo queda en 92. Aprobado por el usuario (10-oct-2026)."
+    }
+  ],
+  "aberturas": [
+    {
+      "pared": "izquierda",
+      "desde": 76.3,
+      "hasta": 285.8,
+      "nombre": "abertura 209.5"
+    }
+  ],
+  "islas": [
+    {
+      "x": 69,
+      "y": 176,
+      "ancho": 162,
+      "fondo": 93.5
+    }
+  ],
+  "altura_altos_cm": 143
+}

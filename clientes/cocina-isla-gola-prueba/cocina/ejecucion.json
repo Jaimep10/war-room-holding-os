@@ -1,0 +1,29 @@
+{
+  "modoSolicitado": "borrador",
+  "partesSolicitadas": {
+    "cortes": false,
+    "presupuesto": false,
+    "renders": false,
+    "planos": false
+  },
+  "estado": "borrador_listo_pendiente_aprobacion",
+  "aprobado": false,
+  "historial": [
+    {
+      "evento": "Usuario pidió dibujar el plano en modelo GOLA, con cajones abajo y cubertero (solo .skp)",
+      "timestamp": "2026-10-10T03:30:06.260789Z"
+    },
+    {
+      "evento": "Plan espacial y planta propuesta generados. Esperando inspección GOLA en SketchUp (inspeccionar.rb) + elección de cajonera, torre y altos",
+      "timestamp": "2026-10-10T03:30:06.260789Z"
+    },
+    {
+      "evento": "Inspección GOLA corrida en SketchUp (22 módulos, frente -y). Usuario eligió CB.3G.GLM.60.K.2C, CLMH.PGL.60.1K.PBIM y CAR.FP.60.2PBM a 143 cm",
+      "timestamp": "2026-10-10T04:02:28.719356Z"
+    },
+    {
+      "evento": "Borrador armado: 15 módulos en cocina/cocina-isla-gola-prueba-cocina.skp. Observación: FREGADERO-05 y TORRES-02 se cruzan 5.2 x 3 cm en la esquina (pilar de 57 < fondo de bajo de 60). Pendiente de decisión del usuario",
+      "timestamp": "2026-10-10T04:02:28.719356Z"
+    }
+  ]
+}

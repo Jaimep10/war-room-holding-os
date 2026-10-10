@@ -5,12 +5,20 @@
 # - Coloca cada módulo con su .skp real de KSmart: el dorso contra la pared
 #   (o contra la línea de la península), el borde izquierdo en "desde" y el
 #   frente mirando hacia adentro de la cocina.
-# - Espacios libres y volados NO son módulos: se marcan solo como guías.
+# - Espacios libres y volados NO son módulos: se marcan solo como guías
+#   (con su propio "fondo" si lo trae; si no, el fondo de los bajos).
 # - Si falta la orientación de algún módulo o la altura de los altos, se
 #   detiene sin colocar nada (nunca adivina).
 #
 # Coordenadas: las del plan (x hacia C, y hacia el frente abierto), con y
 # invertida en SketchUp para que la vista superior coincida con el canvas.
+#
+# Tramos que no son las paredes A/B/C de una U (una isla, una pared en otra
+# posición): el plan los declara en "marcos", en cm y coordenadas SketchUp:
+#   "marcos": { "ISLA": { "origen": [x, y], "t": [tx, ty], "n": [nx, ny] } }
+# origen = punto donde empieza el tramo (s = 0) sobre la línea del dorso,
+# t = hacia dónde crece s, n = hacia dónde mira el frente. t y n son ejes
+# unitarios (+-1 / 0). Un tramo declarado en "marcos" manda sobre A/B/C.
 #
 # Uso (consola Ruby de SketchUp):
 #   load '/ruta/a/armar_borrador.rb'
@@ -30,6 +38,10 @@ module KsmartBorrador
 
   # [origen (cm, coords SketchUp), tangente t (s crece), normal n (hacia adentro)]
   def self.marco(plan, pared)
+    m = (plan['marcos'] || {})[pared]
+    return [m['origen'], m['t'], m['n']] if m
+    return nil unless %w[A B C].include?(pared)
+
     a = plan['walls']['A']['len']
     b = plan['walls']['B']['len']
     case pared
@@ -43,7 +55,8 @@ module KsmartBorrador
     faltan = []
     faltan << 'plan-espacial.json tiene pendientes sin resolver' unless (plan['pendientes'] || []).empty?
     plan['paredes'].each do |pared, v|
-      (v['bajos_torres'] + v['altos']).each do |m|
+      faltan << "#{pared}: tramo sin marco (no es A/B/C y no está en \"marcos\")" unless marco(plan, pared)
+      ((v['bajos_torres'] || []) + (v['altos'] || [])).each do |m|
         next if %w[volado espacio].include?(m['tipo'])
         arch = m['archivo_ksmart']
         if arch.nil?
@@ -53,7 +66,7 @@ module KsmartBorrador
         faltan << "#{arch}: no está en #{cfg['modulos_dir']}" unless File.exist?(File.join(cfg['modulos_dir'], arch))
         faltan << "#{arch}: falta la orientación del frente" unless EJES[cfg.dig('orientacion', arch, 'frente')]
       end
-      faltan << 'falta altura_altos_cm' if !v['altos'].empty? && !cfg['altura_altos_cm'].is_a?(Numeric)
+      faltan << 'falta altura_altos_cm' if !(v['altos'] || []).empty? && !cfg['altura_altos_cm'].is_a?(Numeric)
     end
     faltan << "no existe la plantilla #{cfg['plantilla']}" unless File.exist?(cfg['plantilla'])
     faltan.uniq
@@ -118,10 +131,10 @@ module KsmartBorrador
     begin
       plan['paredes'].each do |pared, v|
         mc = marco(plan, pared)
-        items = v['bajos_torres'].map { |m| [m, m['tipo']] } + v['altos'].map { |m| [m, 'alto'] }
+        items = (v['bajos_torres'] || []).map { |m| [m, m['tipo']] } + (v['altos'] || []).map { |m| [m, 'alto'] }
         items.each_with_index do |(m, tipo), i|
           if %w[volado espacio].include?(tipo)
-            g = guia(model.active_entities, mc, m['desde'], m['hasta'], prof['bajo'], "#{m['codigo_dado']} (#{m['ancho']} cm)")
+            g = guia(model.active_entities, mc, m['desde'], m['hasta'], m['fondo'] || prof['bajo'], "#{m['codigo_dado']} (#{m['ancho']} cm)")
             g.layer = tags['guia']
             next
           end
