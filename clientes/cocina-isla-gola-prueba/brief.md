@@ -49,6 +49,10 @@ Plan: `outputs/muebles/plan-espacial.json` · Planta: `outputs/muebles/planta-pr
 
 Borrador vigente: `cocina/cocina-isla-gola-prueba-cocina-v2.skp` (pared derecha corrida 3 cm, 0 cruces) · Vistas: `outputs/muebles/borrador-iso-v2.png`, `borrador-planta-v2.png` (v1: `borrador-iso.png`, `borrador-planta.png`)
 
+## Presupuesto — respuestas del usuario
+
+- 10-oct-2026: todos los tableros (BLANCO y MADERADO) en **NOVOPAN «BLANCO 15 2C»**, a $40.77 la plancha según la hoja de precios. Falta: medida de la plancha Novopan, precio de los fondos de 6 mm y del VID1.
+
 ## Pendientes
 
 1. Borrador v2 **aprobado** (10-oct-2026). Falta definir qué entregables: cortes, presupuesto, renders y/o planos.
