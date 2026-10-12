@@ -1,0 +1,322 @@
+{
+  "estado": "borrador_listo",
+  "salida": "/Users/owner/war-room-holding-os/clientes/cocina-isla-gola-prueba/cocina/cocina-isla-gola-prueba-cocina-v2.skp",
+  "colocados": [
+    {
+      "instancia": "FREGADERO-01 CB.3G.GLM.60.K.2C",
+      "archivo": "CB.3G.GLM.60.K.2C.skp",
+      "pared": "FREGADERO",
+      "desde": 0,
+      "hasta": 60,
+      "caja_cm": {
+        "x": [
+          0.0,
+          60.0
+        ],
+        "y": [
+          -60.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          88.0
+        ]
+      }
+    },
+    {
+      "instancia": "FREGADERO-02 CB.3G.GLM.60.K.2C",
+      "archivo": "CB.3G.GLM.60.K.2C.skp",
+      "pared": "FREGADERO",
+      "desde": 60,
+      "hasta": 120,
+      "caja_cm": {
+        "x": [
+          60.0,
+          120.0
+        ],
+        "y": [
+          -60.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          88.0
+        ]
+      }
+    },
+    {
+      "instancia": "FREGADERO-03 CB.PGL.40.1K",
+      "archivo": "CB.PGL.40.1K.skp",
+      "pared": "FREGADERO",
+      "desde": 120,
+      "hasta": 160,
+      "caja_cm": {
+        "x": [
+          120.0,
+          160.0
+        ],
+        "y": [
+          -60.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          88.0
+        ]
+      }
+    },
+    {
+      "instancia": "FREGADERO-04 CBR.PGL.80.2PBM",
+      "archivo": "CBR.PGL.80.2PBM.skp",
+      "pared": "FREGADERO",
+      "desde": 160,
+      "hasta": 240,
+      "caja_cm": {
+        "x": [
+          160.0,
+          240.0
+        ],
+        "y": [
+          -60.1,
+          0.0
+        ],
+        "z": [
+          0.0,
+          88.0
+        ]
+      }
+    },
+    {
+      "instancia": "FREGADERO-05 CB.3G.GLM.60.K.2C",
+      "archivo": "CB.3G.GLM.60.K.2C.skp",
+      "pared": "FREGADERO",
+      "desde": 240,
+      "hasta": 300,
+      "caja_cm": {
+        "x": [
+          240.0,
+          300.0
+        ],
+        "y": [
+          -60.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          88.0
+        ]
+      }
+    },
+    {
+      "instancia": "FREGADERO-06 CAR.FP.60.2PBM",
+      "archivo": "CAR.FP.60.2PBM.skp",
+      "pared": "FREGADERO",
+      "desde": 0,
+      "hasta": 60,
+      "caja_cm": {
+        "x": [
+          0.0,
+          60.0
+        ],
+        "y": [
+          -31.5,
+          0.0
+        ],
+        "z": [
+          143.0,
+          223.0
+        ]
+      }
+    },
+    {
+      "instancia": "FREGADERO-07 CAR.FP.60.2PBM",
+      "archivo": "CAR.FP.60.2PBM.skp",
+      "pared": "FREGADERO",
+      "desde": 60,
+      "hasta": 120,
+      "caja_cm": {
+        "x": [
+          60.0,
+          120.0
+        ],
+        "y": [
+          -31.5,
+          0.0
+        ],
+        "z": [
+          143.0,
+          223.0
+        ]
+      }
+    },
+    {
+      "instancia": "FREGADERO-08 CAR.FP.60.2PBM",
+      "archivo": "CAR.FP.60.2PBM.skp",
+      "pared": "FREGADERO",
+      "desde": 120,
+      "hasta": 180,
+      "caja_cm": {
+        "x": [
+          120.0,
+          180.0
+        ],
+        "y": [
+          -31.5,
+          0.0
+        ],
+        "z": [
+          143.0,
+          223.0
+        ]
+      }
+    },
+    {
+      "instancia": "FREGADERO-09 CAR.FP.60.2PBM",
+      "archivo": "CAR.FP.60.2PBM.skp",
+      "pared": "FREGADERO",
+      "desde": 180,
+      "hasta": 240,
+      "caja_cm": {
+        "x": [
+          180.0,
+          240.0
+        ],
+        "y": [
+          -31.5,
+          0.0
+        ],
+        "z": [
+          143.0,
+          223.0
+        ]
+      }
+    },
+    {
+      "instancia": "FREGADERO-10 CAR.FP.60.2PBM",
+      "archivo": "CAR.FP.60.2PBM.skp",
+      "pared": "FREGADERO",
+      "desde": 240,
+      "hasta": 300,
+      "caja_cm": {
+        "x": [
+          240.0,
+          300.0
+        ],
+        "y": [
+          -31.5,
+          0.0
+        ],
+        "z": [
+          143.0,
+          223.0
+        ]
+      }
+    },
+    {
+      "instancia": "TORRES-02 CLMH.PGL.60.1K.PBIM",
+      "archivo": "CLMH.PGL.60.1K.PBIM.skp",
+      "pared": "TORRES",
+      "desde": 60,
+      "hasta": 120,
+      "caja_cm": {
+        "x": [
+          294.8,
+          360.0
+        ],
+        "y": [
+          -120.0,
+          -60.0
+        ],
+        "z": [
+          0.0,
+          223.0
+        ]
+      }
+    },
+    {
+      "instancia": "TORRES-03 CB.PGL.40.1K",
+      "archivo": "CB.PGL.40.1K.skp",
+      "pared": "TORRES",
+      "desde": 120,
+      "hasta": 160,
+      "caja_cm": {
+        "x": [
+          300.0,
+          360.0
+        ],
+        "y": [
+          -160.0,
+          -120.0
+        ],
+        "z": [
+          0.0,
+          88.0
+        ]
+      }
+    },
+    {
+      "instancia": "ISLA-01 CB.3G.GLM.60.K.2C",
+      "archivo": "CB.3G.GLM.60.K.2C.skp",
+      "pared": "ISLA",
+      "desde": 0,
+      "hasta": 60,
+      "caja_cm": {
+        "x": [
+          69.0,
+          129.0
+        ],
+        "y": [
+          -236.0,
+          -176.0
+        ],
+        "z": [
+          0.0,
+          88.0
+        ]
+      }
+    },
+    {
+      "instancia": "ISLA-02 CB.3G.GLM.60.K.2C",
+      "archivo": "CB.3G.GLM.60.K.2C.skp",
+      "pared": "ISLA",
+      "desde": 60,
+      "hasta": 120,
+      "caja_cm": {
+        "x": [
+          129.0,
+          189.0
+        ],
+        "y": [
+          -236.0,
+          -176.0
+        ],
+        "z": [
+          0.0,
+          88.0
+        ]
+      }
+    },
+    {
+      "instancia": "ISLA-03 CB.PGL.40.1K",
+      "archivo": "CB.PGL.40.1K.skp",
+      "pared": "ISLA",
+      "desde": 120,
+      "hasta": 160,
+      "caja_cm": {
+        "x": [
+          189.0,
+          229.0
+        ],
+        "y": [
+          -236.0,
+          -176.0
+        ],
+        "z": [
+          0.0,
+          88.0
+        ]
+      }
+    }
+  ],
+  "fecha": "2026-10-10 00:04:40 -0400"
+}

@@ -329,5 +329,40 @@
       "fondo": 93.5
     }
   ],
-  "altura_altos_cm": 143
+  "altura_altos_cm": 143,
+  "arquitectura": {
+    "espesor_pared_cm": 15,
+    "muros": [
+      "arriba",
+      "derecha",
+      "izquierda"
+    ],
+    "aberturas": [
+      {
+        "pared": "izquierda",
+        "tipo": "ventana",
+        "desde": 76.3,
+        "hasta": 285.8,
+        "antepecho_cm": 110,
+        "alto_cm": 100,
+        "nota": "antepecho 1.10 y dintel 2.10 (usuario, 11-oct-2026)"
+      }
+    ],
+    "pilares": [
+      {
+        "x": [
+          300,
+          360
+        ],
+        "y": [
+          -57,
+          0
+        ],
+        "nota": "pilar 60x57 de la esquina, cuadro oscuro del plano"
+      }
+    ],
+    "tumbado": true,
+    "puerta_alto_cm": 210,
+    "nota": "lado de abajo abierto, sin puerta (usuario, 11-oct-2026)"
+  }
 }

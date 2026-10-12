@@ -47,11 +47,11 @@ Plan: `outputs/muebles/plan-espacial.json` · Planta: `outputs/muebles/planta-pr
 - **Torre horno + micro:** `CLMH.PGL.60.1K.PBIM` (cajón abajo, hueco 45.5–150, puerta arriba).
 - **Altos:** `CAR.FP.60.2PBM`, borde inferior a **143 cm** (arriba 223, alineado con la torre).
 
-Borrador vigente: `cocina/cocina-isla-gola-prueba-cocina-v2.skp` (pared derecha corrida 3 cm, 0 cruces) · Vistas: `outputs/muebles/borrador-iso-v2.png`, `borrador-planta-v2.png` (v1: `borrador-iso.png`, `borrador-planta.png`)
+Borrador vigente: `cocina/cocina-isla-gola-prueba-cocina-v3.skp` (sin plantilla, con muros de 15, ventana con antepecho 1.10 y dintel 2.10, pilar y tumbado a 2.50; lado de abajo abierto, sin puerta) · Vistas: `outputs/muebles/borrador-iso-v3.png`, `borrador-planta-v3.png` · v2: `borrador-iso-v2.png`, `borrador-planta-v2.png` (v1: `borrador-iso.png`, `borrador-planta.png`)
 
 ## Presupuesto — respuestas del usuario
 
-- 10-oct-2026: todos los tableros (BLANCO y MADERADO) en **NOVOPAN «BLANCO 15 2C»**, a $40.77 la plancha según la hoja de precios. Falta: medida de la plancha Novopan, precio de los fondos de 6 mm y del VID1.
+- 10-oct-2026: todos los tableros (BLANCO y MADERADO) en **NOVOPAN «BLANCO 15 2C»**, a $40.77 la plancha según la hoja de precios. Plancha Novopan **2440 × 2130** (usuario, 11-oct-2026) → **8 planchas** con el motor 2D de OpenCutList (piezas BLANCO + MADERADO juntas, sierra 3 mm, refilado 10 mm) = **$326.16**. Falta: precio de los fondos de 6 mm y del VID1.
 
 ## Pendientes
 

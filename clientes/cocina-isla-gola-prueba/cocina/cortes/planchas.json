@@ -1,0 +1,16 @@
+{
+  "grupos": [
+    "BLANCO 15 mm",
+    "MADERADO 19 mm",
+    "MADERADO 18 mm",
+    "MADERADO 15 mm"
+  ],
+  "piezas": 246,
+  "plancha": "2440 x 2130 mm",
+  "sierra": "3 mm",
+  "refilado": "10 mm",
+  "error": 0,
+  "planchas": 8,
+  "sin_colocar": 0,
+  "eficiencia": 87.605475
+}

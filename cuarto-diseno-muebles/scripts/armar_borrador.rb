@@ -1,7 +1,10 @@
 # Armado del borrador .skp desde plan-espacial.json (agente-ksmart-ejecutor).
 #
 # - Copia la plantilla de arranque a la ruta de salida y la abre como un
-#   documento NUEVO (no toca el modelo que el usuario tenga abierto).
+#   documento NUEVO (no toca el modelo que el usuario tenga abierto). Sin
+#   plantilla ("plantilla" => nil) arranca en un modelo vacío, en mm.
+# - Si el plan trae "arquitectura", dibuja antes paredes, ventanas, pilares,
+#   piso y tumbado (ver armar_arquitectura.rb).
 # - Coloca cada módulo con su .skp real de KSmart: el dorso contra la pared
 #   (o contra la línea de la península), el borde izquierdo en "desde" y el
 #   frente mirando hacia adentro de la cocina.
@@ -23,11 +26,12 @@
 # Uso (consola Ruby de SketchUp):
 #   load '/ruta/a/armar_borrador.rb'
 #   KsmartBorrador.run(config_hash)
-# config: plan, plantilla, modulos_dir, salida, log,
+# config: plan, plantilla (ruta o nil), modulos_dir, salida, log,
 #         orientacion { "archivo.skp" => { "frente" => "+x|-x|+y|-y" } },
 #         altura_altos_cm (borde inferior de los altos, desde el piso)
 require 'json'
 require 'fileutils'
+load File.join(File.dirname(__FILE__), 'armar_arquitectura.rb')
 
 module KsmartBorrador
   EJES = { '+x' => [1, 0], '-x' => [-1, 0], '+y' => [0, 1], '-y' => [0, -1] }.freeze
@@ -68,7 +72,8 @@ module KsmartBorrador
       end
       faltan << 'falta altura_altos_cm' if !(v['altos'] || []).empty? && !cfg['altura_altos_cm'].is_a?(Numeric)
     end
-    faltan << "no existe la plantilla #{cfg['plantilla']}" unless File.exist?(cfg['plantilla'])
+    faltan << "no existe la plantilla #{cfg['plantilla']}" if cfg['plantilla'] && !File.exist?(cfg['plantilla'])
+    faltan.concat(KsmartArquitectura.validar(plan).map { |f| "falta #{f}" })
     faltan.uniq
   end
 
@@ -112,9 +117,20 @@ module KsmartBorrador
       UI.messagebox("Ya existe #{cfg['salida']}. No se sobrescribe: muévelo o bórralo y vuelve a correr.")
       return
     end
-    FileUtils.cp(cfg['plantilla'], cfg['salida'])
     anterior = Sketchup.active_model
-    Sketchup.open_file(cfg['salida'])
+    if cfg['plantilla']
+      FileUtils.cp(cfg['plantilla'], cfg['salida'])
+      Sketchup.open_file(cfg['salida'])
+    else
+      Sketchup.file_new
+      vacio = Sketchup.active_model
+      if vacio && !vacio.equal?(anterior)
+        vacio.entities.clear!
+        vacio.options['UnitsOptions']['LengthUnit'] = 2 # mm
+        vacio.options['UnitsOptions']['LengthFormat'] = 0 # decimal
+        vacio.save(cfg['salida'])
+      end
+    end
     model = Sketchup.active_model
     unless model && !model.equal?(anterior) && File.identical?(model.path.to_s, cfg['salida'])
       UI.messagebox('No se pudo abrir la copia de la plantilla como documento nuevo. No se colocó nada.')
@@ -127,8 +143,13 @@ module KsmartBorrador
       'alto' => model.layers.add('KSMART altos'), 'guia' => model.layers.add('Guías plan-espacial')
     }
     colocados = []
+    arquitectura = []
     model.start_operation('Borrador KSmart', true)
     begin
+      if plan['arquitectura']
+        arq_tags = %w[paredes aberturas pilares piso tumbado].to_h { |k| [k, model.layers.add("ARQ #{k}")] }
+        arquitectura = KsmartArquitectura.dibujar(model, plan, arq_tags)
+      end
       plan['paredes'].each do |pared, v|
         mc = marco(plan, pared)
         items = (v['bajos_torres'] || []).map { |m| [m, m['tipo']] } + (v['altos'] || []).map { |m| [m, 'alto'] }
@@ -161,7 +182,7 @@ module KsmartBorrador
     end
 
     model.save
-    File.write(cfg['log'], JSON.pretty_generate('estado' => 'borrador_listo', 'salida' => cfg['salida'], 'colocados' => colocados, 'fecha' => Time.now.to_s))
+    File.write(cfg['log'], JSON.pretty_generate('estado' => 'borrador_listo', 'salida' => cfg['salida'], 'arquitectura' => arquitectura, 'colocados' => colocados, 'fecha' => Time.now.to_s))
     UI.messagebox("Borrador listo: #{colocados.size} módulos colocados.\n#{cfg['salida']}")
   end
 end

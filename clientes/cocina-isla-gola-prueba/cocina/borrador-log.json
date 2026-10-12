@@ -1,6 +1,14 @@
 {
   "estado": "borrador_listo",
-  "salida": "/Users/owner/war-room-holding-os/clientes/cocina-isla-gola-prueba/cocina/cocina-isla-gola-prueba-cocina-v2.skp",
+  "salida": "/Users/owner/war-room-holding-os/clientes/cocina-isla-gola-prueba/cocina/cocina-isla-gola-prueba-cocina-v3.skp",
+  "arquitectura": [
+    "muro arriba 15 cm",
+    "muro derecha 15 cm",
+    "ventana izquierda 76.3-285.8 z 110-210",
+    "muro izquierda 15 cm",
+    "pilar x 300-360 y -57-0",
+    "tumbado a 250"
+  ],
   "colocados": [
     {
       "instancia": "FREGADERO-01 CB.3G.GLM.60.K.2C",
@@ -318,5 +326,5 @@
       }
     }
   ],
-  "fecha": "2026-10-10 00:04:40 -0400"
+  "fecha": "2026-10-11 20:44:14 -0400"
 }

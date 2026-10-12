@@ -40,6 +40,10 @@
     {
       "evento": "Cortes listos con OpenCutList 7.1.0 sobre el v2: cocina/cortes/despiece-cocina.csv (63 filas) y resumen-cocina.csv (sin los escalones de la plantilla). Presupuesto esperando datos del usuario",
       "timestamp": "2026-10-10T12:28:54.620410Z"
+    },
+    {
+      "evento": "Borrador v3: modelo vacío (sin plantilla) con arquitectura del plan: muros de 15 arriba/derecha/izquierda, ventana izquierda 76.3–285.8 (antepecho 110, dintel 210), pilar, piso y tumbado a 250; lado de abajo abierto, sin puerta. 15 módulos, 0 cruces. Vistas v3 exportadas",
+      "timestamp": "2026-10-12T02:49:08.589853Z"
     }
   ]
 }
